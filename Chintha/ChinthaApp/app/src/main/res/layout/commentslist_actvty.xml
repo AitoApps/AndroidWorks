@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/options"
+            android:layout_toRightOf="@+id/moveback"
+            android:paddingTop="5.0dip"
+            android:text="Comments"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/commentblock"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/options"
+            android:padding="8.0dip"
+            app:srcCompat="@drawable/img_cmntblock"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/options"
+            android:layout_width="40.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12.0dip"
+            app:srcCompat="@drawable/option" />
+
+        <ImageView
+            android:id="@+id/del"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/commentblock"
+            app:srcCompat="@drawable/img_drpicicon"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/private1"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/del"
+            app:srcCompat="@drawable/img_chnthfavorute"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_below="@+id/titlebar"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2432830627480060/7328046981" />
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_lyt"
+        android:layout_below="@+id/adView1">
+
+        <ImageView
+            android:id="@+id/emptydata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40.0dip"
+            app:srcCompat="@drawable/img_nocomments"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nonets"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_nonet"
+            android:visibility="gone" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotty_loadin"
+            android:layout_width="250.0dip"
+            android:layout_height="250.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading.json"
+            app:lottie_loop="true" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5.0dip"
+        android:layout_toLeftOf="@+id/lytaddstatus">
+
+        <RelativeLayout
+            android:id="@+id/messagepart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundebg2">
+
+            <ImageView
+                android:id="@+id/emoji"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:baselineAlignBottom="true"
+                android:padding="10.0dip"
+                app:srcCompat="@drawable/emojies" />
+
+            <com.suhi_chintha.StatusEditText
+                android:id="@+id/commentslist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/emoji"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:fadeScrollbars="false"
+                android:hint="Type a comment"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:minLines="1"
+                android:padding="5.0dip"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytaddstatus"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5.0dip">
+
+        <ImageView
+            android:id="@+id/comment_add"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_addstatus"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

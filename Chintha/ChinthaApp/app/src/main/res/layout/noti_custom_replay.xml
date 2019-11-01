@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundebg">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:background="@drawable/img_noimage" />
+
+        <TextView
+            android:id="@+id/countofnoti"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_toRightOf="@+id/img"
+            android:text="Sample"
+            android:textColor="#ff000000"
+            android:textSize="14.0dip"
+            android:textStyle="bold" />
+
+        <com.suhi_chintha.ExtendTextView
+            android:id="@+id/notitext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countofnoti"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_toRightOf="@+id/img"
+            android:lineSpacingExtra="5.0sp"
+            android:text="nall vakkukal nall janmammanu jeevith avzhiyil"
+            android:textColor="#ff000000"
+            android:textSize="12.0dip"
+            />
+
+        <TextView
+            android:id="@+id/txttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notitext"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2.0dip"
+            android:text="12-84-207" />
+
+        <RelativeLayout
+            android:id="@+id/balnkspace"
+            android:layout_width="fill_parent"
+            android:layout_height="5.0dip"
+            android:layout_below="@+id/txttime" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="8.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/statuspart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8.0dip"
+        android:layout_toRightOf="@+id/img"
+        android:background="@drawable/roundebg_comment">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="2.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/post_time"
+            android:text="Sample"
+            android:textColor="#ff000000"
+            android:textSize="16.0dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="2.0dip"
+            android:text="Jun 25 10:40 AM"
+            android:textSize="10.0dip" />
+
+        <com.suhi_chintha.ExtendTextView
+            android:id="@+id/chintha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:lineSpacingExtra="3.0sp"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:paddingBottom="5.0dip"
+            android:text="nall vakkukal nall janmammanu jeevith avzhiyil"
+            android:textColor="#ff000000"
+            android:textSize="15.0dip"
+            />
+
+        <ImageView
+            android:id="@+id/del"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/chintha"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/edit"
+            android:padding="2.0dip"
+            emojicon:srcCompat="@drawable/img_drpicicon" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/chintha"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5.0dip"
+            android:padding="2.0dip"
+            emojicon:srcCompat="@drawable/edit" />
+
+        <ImageView
+            android:id="@+id/blocksinguser"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/chintha"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5.0dip"
+            android:padding="3.0dip"
+            emojicon:srcCompat="@drawable/img_userblockone" />
+        one"
+        />
+    </RelativeLayout>
+</RelativeLayout>

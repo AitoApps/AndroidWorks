@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/totalcount"
+            android:layout_toRightOf="@+id/back"
+            android:text="Pick Your Location"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_margin="5.0dip"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/pincode"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/search"
+            android:layout_toRightOf="@+id/radio1"
+            android:background="@drawable/the_border1"
+            android:hint="Enter pincode"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="5.0dip" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5.0dip"
+            android:padding="5.0dip"
+            android:src="@drawable/searchicon" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/pincode"
+            android:layout_margin="10.0dip"
+            android:background="#ffcccccc" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_below="@+id/view1"
+            android:layout_margin="5.0dip" />
+
+        <TextView
+            android:id="@+id/gps"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/view1"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/radio2"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="5.0dip"
+            android:text="Current Location (GPS)"
+            android:textColor="#ff000000" />
+
+        <RelativeLayout
+            android:id="@+id/lytmap"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/gps"
+            android:layout_marginBottom="8.0dip">
+
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <ImageView
+                android:id="@+id/mapicon"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/location" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffffff">
+
+            <TextView
+                android:id="@+id/txtsetdelivery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:text="Your Locality"
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtlocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtsetdelivery"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="15.0dip"
+                android:layout_marginRight="10.0dip"
+                android:text="LOCATION"
+                android:textSize="10.0dip" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtlocation"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:text="Identifying Your Location..."
+                android:textColor="#ff000000"
+                android:textSize="12.0dip"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/pb"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="5.0dip"
+                android:layout_below="@+id/location"
+                android:layout_marginTop="5.0dip"
+                android:indeterminate="true"
+                android:theme="@style/LinearProgress"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/confirmloc"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="200.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/pb"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:gravity="center"
+                android:text="CONFIRM LOCATION"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

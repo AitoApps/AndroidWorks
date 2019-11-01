@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_mystatus"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/totalcount"
+            android:layout_toRightOf="@+id/moveback"
+            android:paddingTop="5.0dip"
+            android:text="Sample"
+            android:textColor="#ffffffff" />
+
+        <RelativeLayout
+            android:id="@+id/totalcount"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10.0dip">
+
+            <ImageView
+                android:id="@+id/imgstcount"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="1.0dip"
+                app:srcCompat="@drawable/img_addstatus" />
+
+            <TextView
+                android:id="@+id/statuscount"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgstcount"
+                android:paddingBottom="2.0dip"
+                android:text="150"
+                android:textColor="#ffffffff"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/progress_pb1"
+                style="?android:progressBarStyleLarge"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/imgstcount"
+                android:progressDrawable="@drawable/img_pbcircular" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adView1"
+        android:layout_below="@+id/titlebar">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null" />
+
+        <ImageView
+            android:id="@+id/emptydata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_smptystays"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nonets"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_nonet"
+            android:visibility="gone" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotty_loadin"
+            android:layout_width="250.0dip"
+            android:layout_height="250.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading.json"
+            app:lottie_loop="true" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2432830627480060/7328046981" />
+</RelativeLayout>

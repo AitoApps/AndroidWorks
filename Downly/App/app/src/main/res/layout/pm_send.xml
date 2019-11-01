@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundedcornerbackground">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/txtcontact"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Chat with unknown number"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:id="@+id/contactnumber"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/txtcontact"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:hint="Enter Number With Country Code"
+            android:padding="5.0dip" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/contactnumber"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Chat"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

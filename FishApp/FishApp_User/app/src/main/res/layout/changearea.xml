@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundedcornerbackground">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/txtarea"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Change Area"
+            android:textColor="#ff000000" />
+
+
+        <Spinner
+            android:id="@+id/area"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_below="@+id/txtarea"
+            android:background="@drawable/the_border1" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/area"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Update"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</ScrollView>

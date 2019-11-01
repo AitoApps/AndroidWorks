@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newbillfrag"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/grayColor">
+
+        <TextView
+            android:id="@+id/newbill"
+            android:layout_width="250.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:text="New Bill"
+            android:textColor="#ff000000"
+            android:textSize="12.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchlyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="10.0dip"
+        android:background="@drawable/clearroundedlayout">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border"
+            android:hint="Search Product"
+            android:padding="5.0dip" />
+
+        <ImageView
+            android:id="@+id/voicesearch"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5.0dip"
+            android:padding="6.0dip"
+            android:src="@drawable/voicesearch" />
+
+        <TextView
+            android:id="@+id/txtbycatogery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:layout_margin="5.0dip"
+            android:text="By Catogery" />
+
+        <RelativeLayout
+            android:id="@+id/lytcatogery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtbycatogery"
+            android:layout_margin="5.0dip">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/groccery"
+                        android:layout_width="75.0dip"
+                        android:layout_height="75.0dip"
+                        android:src="@drawable/homeicon" />
+
+                    <ImageView
+                        android:id="@+id/vegitables"
+                        android:layout_width="75.0dip"
+                        android:layout_height="75.0dip"
+                        android:src="@drawable/homeicon" />
+
+                    <ImageView
+                        android:id="@+id/specialoffer"
+                        android:layout_width="75.0dip"
+                        android:layout_height="75.0dip"
+                        android:src="@drawable/homeicon" />
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/billslayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/searchlyt"
+        android:layout_margin="5.0dip">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

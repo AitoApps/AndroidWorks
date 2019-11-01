@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10.0dip"
+    android:layout_marginTop="20.0dip"
+    android:layout_marginRight="10.0dip"
+    android:layout_marginBottom="30.0dip"
+    android:background="@drawable/clearroundedlayout">
+
+    <RelativeLayout
+        android:id="@+id/lysearch"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/searhicon"
+            android:background="@drawable/the_border1"
+            android:hint="Search your best offer"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:padding="5.0dip" />
+
+        <ImageView
+            android:id="@+id/searhicon"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2.0dip"
+            android:padding="5.0dip"
+            android:src="@drawable/searchdrwable" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nointernet1"
+        android:layout_width="150.0dip"
+        android:layout_height="150.0dip"
+        android:layout_centerInParent="true"
+        android:src="@drawable/nointernet"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/heart1"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+        android:id="@+id/recylerview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/lysearch"
+        android:descendantFocusability="blocksDescendants"
+        android:splitMotionEvents="false" />
+</RelativeLayout>

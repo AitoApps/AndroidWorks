@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Clients"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/lytsearch"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="5.0dip"
+                android:paddingTop="5.0dip"
+                android:paddingRight="50.0dip" />
+        </RelativeLayout>
+
+        <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+            android:id="@+id/recylerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytsearch"
+            android:splitMotionEvents="false" />
+
+        <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+            android:id="@+id/searchrecylerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytsearch"
+            android:splitMotionEvents="false"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/nodata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/noclinets"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

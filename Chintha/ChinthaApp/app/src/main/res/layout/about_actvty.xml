@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_about__us"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="?colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_lyt">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_margin="5.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/logtext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip">
+
+                    <ImageView
+                        android:id="@+id/applogo"
+                        android:layout_width="100.0dip"
+                        android:layout_height="100.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5.0dip"
+                        app:srcCompat="@drawable/applogo" />
+
+                    <TextView
+                        android:id="@+id/text"
+                        style="@android:style/TextAppearance.Large"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/applogo"
+                        android:layout_marginTop="5.0dip"
+                        android:gravity="center"
+                        android:lineSpacingExtra="3.0sp"
+                        android:text=""
+                        android:textColor="#ffffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logtext"
+                    android:layout_marginTop="30.0dip">
+
+                    <TextView
+                        android:id="@+id/makedby"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="Developed By"
+                        android:textColor="#ffffffff"
+                        android:textSize="30.0dip"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/makername"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/makedby"
+                        android:layout_marginTop="20.0dip"
+                        android:gravity="center"
+                        android:text="Salman Ponnani"
+                        android:textColor="#ffffffff"
+                        android:textSize="30.0dip" />
+
+                    <TextView
+                        android:id="@+id/app_ver"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/makername"
+                        android:layout_marginTop="20.0dip"
+                        android:gravity="center"
+                        android:text="Ver 1.0"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/copyrite"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@+id/app_ver"
+                        android:layout_marginTop="15.0dip"
+                        android:gravity="center"
+                        android:text="This software is copy protected"
+                        android:textColor="#ffffffff"
+                        android:textSize="25.0dip" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/copyrite"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5.0dip"
+                        android:padding="5.0dip">
+
+                        <ImageView
+                            android:id="@+id/wplogo"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginRight="5.0dip"
+                            app:srcCompat="@drawable/img_wplogo" />
+
+                        <ImageView
+                            android:id="@+id/fblogo"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_toRightOf="@+id/wplogo"
+                            app:srcCompat="@drawable/fblogo" />
+
+                        <ImageView
+                            android:id="@+id/ytlogo"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginTop="2.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_toRightOf="@+id/fblogo"
+                            app:srcCompat="@drawable/img_ytlogo" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/contact1"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip"
+            android:text="Contact :"
+            android:textColor="#ffffffff" />
+
+        <RelativeLayout
+            android:id="@+id/cntct_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="75.0dip"
+            android:layout_below="@+id/contact1"
+            android:background="@drawable/roundedbg1">
+
+            <TextView
+                android:id="@+id/contacts"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="+91 9037631786"
+                android:textColor="#ff075a50"
+                android:textSize="30.0dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

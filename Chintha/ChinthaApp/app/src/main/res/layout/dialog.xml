@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/color_dialogView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/color_viewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:paddingLeft="@dimen/color_spacer"
+        android:paddingTop="@dimen/color_spacer"
+        android:paddingRight="@dimen/color_spacer"
+        android:paddingBottom="@dimen/color_spacer">
+
+        <com.suhi_chintha.ColorPickerKotak
+            android:id="@+id/color_viewSatBri"
+            android:layout_width="@dimen/color_hsvWidth"
+            android:layout_height="@dimen/color_hsvHeight"
+            android:layerType="software" />
+
+        <ImageView
+            android:id="@+id/color_viewHue"
+            android:layout_width="@dimen/color_hueWidth"
+            android:layout_height="@dimen/color_hsvHeight"
+            android:layout_marginLeft="@dimen/color_spacer"
+            android:layout_toRightOf="@+id/color_viewSatBri"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_huecolor" />
+
+        <ImageView
+            android:id="@+id/color_cursor"
+            android:layout_width="9.0dip"
+            android:layout_height="9.0dip"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/img_cusrorcolor" />
+
+        <ImageView
+            android:id="@+id/color_target"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/img_targetcolor" />
+
+        <LinearLayout
+            android:id="@+id/color_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/color_viewSatBri"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/color_spacer"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/color_warnaLama"
+                android:layout_width="60.0dip"
+                android:layout_height="30.0dip"
+                android:background="#ffffaaaa" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/color_spacer"
+                android:paddingRight="@dimen/color_spacer"
+                app:srcCompat="@drawable/img_arrowright" />
+
+            <View
+                android:id="@+id/color_warnaBaru"
+                android:layout_width="60.0dip"
+                android:layout_height="30.0dip"
+                android:background="#ffaaaaff" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

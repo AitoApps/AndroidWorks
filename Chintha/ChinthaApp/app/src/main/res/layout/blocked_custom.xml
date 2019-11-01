@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundebg">
+
+        <RelativeLayout
+            android:id="@+id/part_first"
+            android:layout_width="fill_parent"
+            android:layout_height="54.0dip">
+
+            <RelativeLayout
+                android:id="@+id/lyt_first"
+                android:layout_width="wrap_content"
+                android:layout_height="54.0dip"
+                android:layout_margin="2.0dip"
+                android:background="@drawable/roundedbg1">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/img_noimage" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lyt_second"
+                android:layout_width="fill_parent"
+                android:layout_height="54.0dip"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginBottom="2.0dip"
+                android:layout_toRightOf="@+id/lyt_first"
+                android:background="@drawable/roundedbg1">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/chintha_histroy"
+                    android:text="Sample"
+                    android:textColor="#ff000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:id="@+id/chintha_histroy"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    emojicon:srcCompat="@drawable/img_drpicicon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/balnkspace"
+                android:layout_width="fill_parent"
+                android:layout_height="5.0dip"
+                android:layout_below="@+id/lyt_second" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/hori_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/part_first"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+</RelativeLayout>

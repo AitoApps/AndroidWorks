@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "project_number": "509312196971",
+    "firebase_url": "https://dialybill.firebaseio.com",
+    "project_id": "dialybill",
+    "storage_bucket": "dialybill.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509312196971:android:f407cf7b7c83076db36c2e",
+        "android_client_info": {
+          "package_name": "com.dailybill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdKUJ1GuN_zlm2QrWOMjukKhFyxmJgnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509312196971:android:4c2f8d8ee58bf38fb36c2e",
+        "android_client_info": {
+          "package_name": "com.dailybill_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdKUJ1GuN_zlm2QrWOMjukKhFyxmJgnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509312196971:android:ea491d32801e1934b36c2e",
+        "android_client_info": {
+          "package_name": "com.dailybill_delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdKUJ1GuN_zlm2QrWOMjukKhFyxmJgnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509312196971:android:316b0fec640f29d8b36c2e",
+        "android_client_info": {
+          "package_name": "com.dailybill_marketter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdKUJ1GuN_zlm2QrWOMjukKhFyxmJgnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509312196971:android:22a4943a5007bdadb36c2e",
+        "android_client_info": {
+          "package_name": "com.dialybill_shops"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdKUJ1GuN_zlm2QrWOMjukKhFyxmJgnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509312196971-h4r308n9300l4gq51cql0c21sklvks0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

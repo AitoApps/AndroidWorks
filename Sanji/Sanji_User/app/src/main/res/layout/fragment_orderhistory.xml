@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/orderhistoryfrag" android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView android:id="@+id/recylerview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:splitMotionEvents="false" />
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <ImageView android:id="@+id/nointernet" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/nointernet" android:layout_centerInParent="true" />
+        <ImageView android:id="@+id/heart" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" />
+        <ImageView android:id="@+id/nodata" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/noorders" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

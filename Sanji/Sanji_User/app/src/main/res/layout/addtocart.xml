@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundedcornerbackground3">
+
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:text="Item Name"
+        android:textColor="#ff000000"
+        android:textSize="16.0dip" />
+
+    <EditText
+        android:id="@+id/qty"
+        android:layout_width="100.0dip"
+        android:layout_height="40.0dip"
+        android:layout_below="@+id/itemname"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/the_border1"
+        android:inputType="numberDecimal"
+        android:padding="5.0dip" />
+
+    <TextView
+        android:id="@+id/unittype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemname"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_toRightOf="@+id/qty"
+        android:text="Unit Type"
+        android:textColor="#ff000000"
+        android:textSize="16.0dip" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemname"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="12.0dip"
+        android:layout_toRightOf="@+id/unittype"
+        android:text="Price"
+        android:textColor="#ff000000"
+        android:textSize="16.0dip" />
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="70.0dip"
+        android:layout_height="30.0dip"
+        android:layout_below="@+id/price"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbutton"
+        android:gravity="center"
+        android:text="ORDER"
+        android:textColor="#ffffffff"
+        android:textSize="13.0dip"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/adminclose"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_alignParentRight="true"
+        android:padding="5.0dip"
+        android:src="@drawable/delete" />
+</RelativeLayout>

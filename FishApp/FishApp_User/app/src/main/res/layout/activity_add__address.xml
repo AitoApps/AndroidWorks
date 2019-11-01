@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add / Edit Address"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Enter name"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtplace"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Place"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/place"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtmobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Mobile 1"
+                    android:textColor="#ff000000" />
+            </TableRow>
+            ̥
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/mobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:inputType="number"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtmobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Mobile 2"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/mobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:inputType="number"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtpincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Pincode"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/pincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:inputType="number"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtaddress"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Email"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/address"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:gravity="center|left|top"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtlandmark"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Land Mark"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/landmark"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border1"
+                    android:gravity="center|left|top"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/update"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/roundedcornerbutton"
+                    android:text="Update"
+                    android:textColor="#ffffffff" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

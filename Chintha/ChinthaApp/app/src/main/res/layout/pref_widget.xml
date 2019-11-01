@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.suhi_chintha.ColorPickerPreferenceView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ambilwarna_pref_widget_kotak"
+    android:layout_width="24.0dip"
+    android:layout_height="24.0dip"
+    android:layout_gravity="center_vertical"
+    android:layout_marginRight="6.0dip"
+    android:clickable="false"
+    android:focusable="false" />

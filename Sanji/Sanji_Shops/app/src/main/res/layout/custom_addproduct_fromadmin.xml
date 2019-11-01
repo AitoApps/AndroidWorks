@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundedcornerbackground"
+    android:orientation="vertical"
+    android:padding="2.0dip">
+
+    <RelativeLayout
+        android:id="@+id/lytpriceinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtpriceinfo"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/itemname"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Item Name"
+            android:textColor="#ff000000" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/itemname"
+            android:layout_margin="5.0dip"
+            android:background="#ffcccccc" />
+
+        <TextView
+            android:id="@+id/txtunit"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_margin="5.0dip"
+            android:text="Unit"
+            android:textColor="#ff000000" />
+
+        <Spinner
+            android:id="@+id/unit"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/txtunit"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:padding="5.0dip" />
+
+        <TextView
+            android:id="@+id/txtminimum"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/unit"
+            android:layout_margin="5.0dip"
+            android:text="Minimum Qty"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:id="@+id/minimum"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/txtminimum"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:padding="5.0dip" />
+
+        <TextView
+            android:id="@+id/txtorginalprice"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minimum"
+            android:layout_margin="5.0dip"
+            android:text="Orginal Price"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:id="@+id/orginalprice"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/txtorginalprice"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:padding="5.0dip" />
+
+        <TextView
+            android:id="@+id/txtofferprice"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orginalprice"
+            android:layout_margin="5.0dip"
+            android:text="Offer Price"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:id="@+id/offerprice"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/txtofferprice"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:padding="5.0dip" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="100.0dip"
+        android:layout_height="40.0dip"
+        android:layout_below="@+id/lytpriceinfo"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbutton"
+        android:text="Add"
+        android:textColor="#ffffffff" />
+</RelativeLayout>

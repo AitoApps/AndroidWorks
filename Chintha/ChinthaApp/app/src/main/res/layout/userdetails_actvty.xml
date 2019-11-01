@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_editdetails"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/moveback"
+            android:paddingTop="5.0dip"
+            android:text="Registration"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_lyt"
+        android:layout_below="@+id/titlebar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/photo"
+                android:layout_width="250.0dip"
+                android:layout_height="250.0dip"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundebg">
+
+                <ImageView
+                    android:id="@+id/userphoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/img_noimage" />
+
+                <ProgressBar
+                    android:id="@+id/porgress_B"
+                    style="?android:progressBarStyleLarge"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10.0dip"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/details"
+                android:layout_width="250.0dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/photo"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundebg">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="250.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_margin="5.0dip"
+                    android:hint="Name"
+                    android:maxLines="1" />
+
+                <EditText
+                    android:id="@+id/mobile"
+                    android:layout_width="250.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_below="@+id/name"
+                    android:layout_margin="5.0dip"
+                    android:enabled="false"
+                    android:hint="Mobile Number"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="200.0dip"
+                    android:layout_height="35.0dip"
+                    android:layout_below="@+id/mobile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/roundedbtnbutton"
+                    android:text="Update"
+                    android:textColor="#ffffffff" />
+
+                <RelativeLayout
+                    android:layout_width="250.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_below="@+id/submit" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

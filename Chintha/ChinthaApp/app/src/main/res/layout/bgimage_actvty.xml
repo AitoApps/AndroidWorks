@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_background_image"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/save"
+            android:layout_toRightOf="@+id/moveback"
+            android:text="Wallpaper"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            app:srcCompat="@drawable/img_tik" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlebar">
+
+        <com.suhi_chintha.Zoomable_image
+            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="5.0dip"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/img_wallpaper"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/porgress_B"
+            style="?android:progressBarStyleLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

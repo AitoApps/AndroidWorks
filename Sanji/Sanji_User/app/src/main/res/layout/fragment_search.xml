@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/searchfrag" android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/header" android:background="@color/grayColor" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/location" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/location" android:layout_centerVertical="true" />
+        <TextView android:textSize="12.0dip" android:textColor="#ff000000" android:id="@+id/loctext" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Select Your Locality" android:layout_toRightOf="@+id/location" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/cartlyt" android:layout_below="@+id/header">
+        <RelativeLayout android:id="@+id/lysearch" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <EditText android:id="@+id/search" android:background="@drawable/the_border1" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="50.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" android:hint="Search" android:inputType="text" android:imeOptions="actionSearch" />
+            <ImageView android:id="@+id/voicesearch" android:padding="10.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/voicesearch" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/searchrecylerview" android:padding="5.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:layout_below="@+id/lysearch" android:splitMotionEvents="false" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recylerview" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:layout_below="@+id/lysearch" android:splitMotionEvents="false" />
+        <ImageView android:id="@+id/nointernet" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/nointernet" android:layout_centerInParent="true" />
+        <ImageView android:id="@+id/heart" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/cartlyt" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textColor="#ffffffff" android:id="@+id/itemcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="2 Items | 4399" android:layout_centerVertical="true" />
+        <ImageView android:id="@+id/carticon" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/whitecart" android:layout_toLeftOf="@+id/viewcart" />
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@+id/viewcart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="View Cart" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

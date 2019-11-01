@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/clearroundedlayout"
+        android:padding="5.0dip">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7.0dip"
+            android:layout_toRightOf="@+id/image"
+            android:stretchColumns="*">
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Name"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Area"
+                    android:textColor="#ff000000"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Mobile"
+                    android:textColor="#ff000000" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/staffs"
+            android:layout_width="100.0dip"
+            android:layout_height="30.0dip"
+            android:layout_below="@+id/table"
+            android:layout_marginRight="20.0dip"
+            android:layout_toLeftOf="@+id/edit"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Staff"
+            android:textColor="#ffffffff"
+            android:textSize="14.0dip"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/table"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/closeicon" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/table"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@+id/delete"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+</RelativeLayout>

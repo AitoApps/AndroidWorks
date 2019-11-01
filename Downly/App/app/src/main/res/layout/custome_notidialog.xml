@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/clearroundedlayout">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello how Are you"
+            android:padding="5dp"
+            android:textColor="#000"
+            />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Update"
+            android:background="@drawable/roundedcornerbutton"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="OK"
+            android:background="@drawable/roundedcornerbutton"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title"
+            android:layout_margin="5dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

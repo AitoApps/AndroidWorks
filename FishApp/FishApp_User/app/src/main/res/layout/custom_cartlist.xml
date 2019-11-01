@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5.0dip"
+    android:orientation="vertical"
+    android:padding="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/the_border1"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/itemname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="Nalla Mean"
+            android:textColor="#ff000000"
+            android:textSize="14.0dip" />
+
+        <ImageView
+            android:id="@+id/image"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="100.0dip"
+            android:layout_height="75.0dip"
+            android:layout_below="@+id/itemname"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/nophoto"
+            android:scaleType="fitCenter" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemname"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/image"
+            android:stretchColumns="*">
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtitemqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7.0dip"
+                    android:gravity="end"
+                    android:text="Qty"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/txtitemtotalqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7.0dip"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+
+                <RelativeLayout
+                    android:id="@+id/pricelyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/minus"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:padding="5.0dip"
+                        android:src="@drawable/minus" />
+
+                    <RelativeLayout
+                        android:id="@+id/qtylyt"
+                        android:layout_width="70.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11.0dip"
+                        android:layout_toRightOf="@+id/minus"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/qty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100.75"
+                            android:textColor="#ff000000"
+                            android:textSize="14.0dip" />
+
+                        <TextView
+                            android:id="@+id/unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/qty"
+                            android:text=" Kg"
+                            android:textColor="#ff000000"
+                            android:textSize="14.0dip" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/plus"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/qtylyt"
+                        android:padding="5.0dip"
+                        android:src="@drawable/plus" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtitemprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Price"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/txtitempricedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@+id/itemprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:gravity="start"
+                    android:text="100"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+            </TableRow>
+        </TableLayout>
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_below="@+id/table"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/delete" />
+    </RelativeLayout>
+</RelativeLayout>

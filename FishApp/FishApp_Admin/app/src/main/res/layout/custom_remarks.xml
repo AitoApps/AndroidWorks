@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <EditText
+            android:id="@+id/remarks"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:gravity="center|left|top"
+            android:hint="Remarks"
+            android:padding="5.0dip" />
+
+        <Button
+            android:id="@+id/delivery"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/remarks"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Delivery"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/delireturn"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/remarks"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Return"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

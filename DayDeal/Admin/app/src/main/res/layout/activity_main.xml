@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:text="DayDeal Admin"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <Button
+            android:id="@+id/marketting"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_margin="5.0dip"
+            android:padding="5.0dip"
+            android:text="Marketting" />
+
+        <Button
+            android:id="@+id/shops"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/marketting"
+            android:padding="5.0dip"
+            android:text="Shops" />
+
+        <Button
+            android:id="@+id/catogery"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/marketting"
+            android:layout_margin="5.0dip"
+            android:padding="5.0dip"
+            android:text="Catogery" />
+
+        <Button
+            android:id="@+id/addoffer"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/marketting"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/catogery"
+            android:padding="5.0dip"
+            android:text="Offer Management" />
+
+        <Button
+            android:id="@+id/productverification"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/catogery"
+            android:layout_margin="5.0dip"
+            android:padding="5.0dip"
+            android:text="Offer Verification" />
+
+        <Button
+            android:id="@+id/ordermanagement"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/catogery"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/productverification"
+            android:padding="5.0dip"
+            android:text="Order Management" />
+    </RelativeLayout>
+</RelativeLayout>

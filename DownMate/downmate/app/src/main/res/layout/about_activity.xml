@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lytfooter"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_back"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            />
+
+        <ScrollView
+            android:id="@+id/scrollcontents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/textlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/img_applogo" />
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DownMate"
+                        android:layout_below="@+id/logo"
+                        android:lineSpacingExtra="3sp"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        style="@android:style/TextAppearance.Large"
+                        android:textColor="#000"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textlayout"
+                    android:layout_marginTop="30dp"
+                    >
+                    <TextView
+                        android:id="@+id/developed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        style="@android:style/TextAppearance.Medium"
+                        android:text="Developed By"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/develpdby"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Sayed Salman Ponnani"
+                        android:gravity="center"
+                        style="@android:style/TextAppearance.Medium"
+                        android:textColor="#000"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/developed"
+                        />
+
+                    <TextView
+                        android:id="@+id/version"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Ver 2.0"
+                        android:gravity="center"
+                        style="@android:style/TextAppearance.Medium"
+                        android:textColor="#000"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/develpdby"
+                        />
+
+                    <TextView
+                        android:id="@+id/copyright"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="This app and contents is copy protected"
+                        android:gravity="center"
+                        style="@android:style/TextAppearance.Medium"
+                        android:textColor="#000"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/version"
+                        />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytfooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/mobile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suggestions , Whatsapp Please"
+            android:textColor="#000"
+            android:padding="5dp"
+            style="@android:style/TextAppearance.Small"
+            />
+
+        <RelativeLayout
+            android:id="@+id/contactlayout"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/round_background1"
+            android:layout_below="@+id/mobile1"
+            >
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+91 9037631786"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

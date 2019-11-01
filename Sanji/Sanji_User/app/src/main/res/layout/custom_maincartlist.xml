@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:numberpicker="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/lytshops" android:background="@drawable/roundedcornerbackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <ImageView android:id="@+id/shopimg" android:background="@drawable/noproductphoto" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="5.0dip" />
+        <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:id="@+id/shopname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="15.0dip" android:text="Nalla Mean" android:layout_toRightOf="@+id/shopimg" />
+        <com.sanji.MyListView android:id="@+id/list" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:layout_below="@+id/shopimg" />
+        <TableLayout android:id="@+id/table" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:stretchColumns="*" android:layout_below="@+id/list">
+            <TableRow>
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="right" android:id="@+id/txtnettotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Net Total : " />
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="left" android:id="@+id/nettotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Net Total" />
+            </TableRow>
+            <TableRow>
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="right" android:id="@+id/txtdeliverycharge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Delivery Charge : " />
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="left" android:id="@+id/deliverycharge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Delivery Charge : " />
+            </TableRow>
+            <TableRow>
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="right" android:id="@+id/txtgrandtotal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Grand Total : " />
+                <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:layout_gravity="left" android:id="@+id/grandtotal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Grand Total : " />
+            </TableRow>
+        </TableLayout>
+        <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@+id/deliverydisc" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Delivery Disc" android:layout_below="@+id/table" />
+    </RelativeLayout>
+</RelativeLayout>

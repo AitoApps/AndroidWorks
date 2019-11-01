@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/clearroundedlayout"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/shopname"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop Name"
+            android:textColor="#ff000000" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@+id/shopname"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/nophoto"
+            android:scaleType="centerCrop" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopname"
+            android:layout_margin="7.0dip"
+            android:layout_toRightOf="@+id/image"
+            android:stretchColumns="*">
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/ownername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Owner Name"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/mobile1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Mobile"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/mobile2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Mobile"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Place"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/expiredate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12-08-2018"
+                    android:textColor="#ffaf0101" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/disable"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/table"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:background="#ff205c14"
+            android:text="Active"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/relogin"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/table"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toRightOf="@+id/disable"
+            android:src="@drawable/reloaginico" />
+
+        <ImageView
+            android:id="@+id/timeextend"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/table"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toRightOf="@+id/relogin"
+            android:src="@drawable/timeicon" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/table"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/closeicon" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/table"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@+id/delete"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+</RelativeLayout>

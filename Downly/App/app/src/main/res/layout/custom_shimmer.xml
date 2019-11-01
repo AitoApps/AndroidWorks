@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="75.0dip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5.0dip"
+        android:padding="5.0dip">
+
+         <ImageView
+             android:id="@+id/iconshimmer"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:background="#dddddd"
+             />
+        <ImageView
+            android:id="@+id/filesizeshimmer"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#dddddd"
+            android:layout_toRightOf="@+id/iconshimmer"
+            android:layout_margin="5dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

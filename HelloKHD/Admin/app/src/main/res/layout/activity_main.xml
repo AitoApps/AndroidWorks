@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#515151"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Admin"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                >
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/advts"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/adsmngment"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/stages"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/stages"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/markadmin"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/markadmin"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/veriadmin"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/markverificationadmin"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/shops"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/shops"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/tourspot"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/touristspot"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/room"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/rooms"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/docters"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/docters"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/video"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/videos"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/announcment"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/announcement"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/news"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/news"
+                        android:layout_margin="5dp"
+                        />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

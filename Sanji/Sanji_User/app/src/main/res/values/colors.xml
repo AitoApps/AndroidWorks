@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ff17d18e</color>
+    <color name="colorLightGray">#ffd8d8d8</color>
+    <color name="colorNavIcon">@color/colorAccent</color>
+    <color name="colorNavText">#ff000000</color>
+    <color name="colorPrimary">#ff17d18e</color>
+    <color name="colorPrimaryDark">#ff17d18e</color>
+
+    <color name="grayColor">#fff2f2f2</color>
+</resources>

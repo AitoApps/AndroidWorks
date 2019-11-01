@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10.0dip"
+    android:layout_marginTop="30.0dip"
+    android:layout_marginRight="10.0dip"
+    android:layout_marginBottom="30.0dip"
+    android:background="@drawable/roundedlayout">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/txtmsg"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:gravity="center"
+            android:text="Thankyou ! Your post will be public after verification.Please wait upto 6 hrs to verification"
+            android:textColor="#ff000000" />
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtmsg"
+            android:layout_margin="5.0dip"
+            android:text="Notification"
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+</ScrollView>

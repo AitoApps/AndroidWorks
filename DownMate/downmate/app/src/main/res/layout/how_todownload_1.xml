@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical" >
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:scrollbars="none"
+        android:layout_above="@+id/lytfooter"
+        android:background="@drawable/round_backgorund2"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How to Download from TIKTOK ?"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:textColor="#000"
+                />
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt"
+                android:background="#000"
+                android:layout_margin="5dp"
+                android:adjustViewBounds="true"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/lytfooter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_backgorund2"
+        >
+
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="OK"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_cornerbtn"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/msg"
+            android:layout_margin="5dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

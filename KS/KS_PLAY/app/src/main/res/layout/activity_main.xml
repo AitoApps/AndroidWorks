@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:alpha="0.4"
+        />
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/img_header"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dot"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suthra"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/logo"
+            android:layout_margin="5dp"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        >
+
+
+        <ImageView
+            android:id="@+id/positions"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/positionbutton"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/help1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Please"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:shadowColor="#7F000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            />
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="130dp"
+              android:layout_below="@+id/help1"
+              android:gravity="center"
+              android:layout_margin="10dp"
+              >
+
+              <ImageView
+                  android:id="@+id/web"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:src="@drawable/webicon"
+                  android:padding="10dp"
+                  />
+
+                <TextView
+                    android:id="@+id/txtweb"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/web"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    />
+
+              <ImageView
+                  android:id="@+id/whatsapp"
+                  android:layout_width="100dp"
+                  android:layout_height="100dp"
+                  android:layout_toRightOf="@+id/web"
+                  android:layout_marginLeft="100dp"
+                  android:src="@drawable/whatsapp"
+                  android:padding="10dp"
+                  />
+
+              <TextView
+                  android:id="@+id/txtwhatsapp"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"
+                  android:text="Whatsapp"
+                  android:gravity="center_horizontal"
+                  android:layout_below="@+id/whatsapp"
+                  android:layout_alignRight="@+id/whatsapp"
+                  android:textColor="#fff"
+                  android:textStyle="bold"
+                  />
+          </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

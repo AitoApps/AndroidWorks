@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/clearroundedlayout"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/itemname"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Nalla Mean"
+            android:textColor="#ff000000" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@+id/itemname"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/nophoto"
+            android:scaleType="centerCrop" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemname"
+            android:layout_margin="7.0dip"
+            android:layout_toRightOf="@+id/image"
+            android:stretchColumns="*">
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtunit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Unit"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/txtunitdot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="100"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtofferprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Offer Price"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/txtofferpricedot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/offerprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="100"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtorginalprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Orginal Price"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/txtorginalpricedot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/orginalprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="100"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtminqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Min Qty"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/txtminqtydot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/minqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="100"
+                    android:textColor="#ff000000" />
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:id="@+id/shopdetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_margin="5.0dip">
+
+            <TextView
+                android:id="@+id/shopname"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5.0dip"
+                android:text=""
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shopmobile"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopname"
+                android:padding="5.0dip"
+                android:text=""
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/unverify"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/shopdetails"
+            android:layout_margin="5.0dip"
+            android:padding="5.0dip"
+            android:src="@drawable/closeicon" />
+
+        <Button
+            android:id="@+id/active"
+            android:layout_width="130.0dip"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/shopdetails"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="ACTIVE"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/inactive"
+            android:layout_width="130.0dip"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/shopdetails"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerspecial"
+            android:text="INACTIVE"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

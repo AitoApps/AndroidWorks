@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundebg">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jdbfdsfdsfhgdgfhjdgfdfgdgfhd"
+            android:textColor="#ff000000"
+            android:textSize="18.0dip" />
+
+        <CheckBox
+            android:id="@+id/chkstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="10.0dip"
+            android:text="Status"
+            android:textColor="#ff000000" />
+
+        <CheckBox
+            android:id="@+id/chklikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chkstatus"
+            android:layout_marginTop="10.0dip"
+            android:text="Status Likes"
+            android:textColor="#ff000000" />
+
+        <CheckBox
+            android:id="@+id/chkcomments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chklikes"
+            android:layout_marginTop="10.0dip"
+            android:text="Status Comments"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+</RelativeLayout>

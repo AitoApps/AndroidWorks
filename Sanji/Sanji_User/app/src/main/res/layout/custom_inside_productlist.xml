@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="190.0dip"
+    android:layout_margin="2.0dip"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="250.0dip"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:padding="5.0dip">
+
+        <RelativeLayout
+            android:id="@+id/namelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/productname"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/discription"
+                android:gravity="left"
+                android:text="Kidilan Avo"
+                android:textColor="#ff000000"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:id="@+id/shopdetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productname"
+                android:layout_toLeftOf="@+id/discription"
+                android:gravity="left"
+                android:paddingBottom="5.0dip"
+                android:text="Gtec"
+                android:textColor="#ff000000"
+                android:textSize="10.0dip" />
+
+            <ImageView
+                android:id="@+id/discription"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3.0dip"
+                android:src="@drawable/informationicon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytimage"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_below="@+id/namelayout"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="5.0dip">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="120.0dip"
+                android:layout_height="120.0dip"
+                android:background="@drawable/noproductphoto"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytshopstatus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytimage"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginTop="2.0dip">
+
+            <TextView
+                android:id="@+id/shopstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:text="Closed Open 11 AM"
+                android:textColor="#ffe6593d"
+                android:textSize="13.0dip" />
+
+            <TextView
+                android:id="@+id/shoptiming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopstatus"
+                android:layout_marginTop="2.0dip"
+                android:text="Closed Open 11 AM"
+                android:textColor="#ff464646"
+                android:textSize="13.0dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_below="@+id/namelayout"
+            android:layout_alignLeft="@+id/lytimage"
+            android:layout_marginLeft="-8.0dip"
+            android:background="@drawable/circle">
+
+            <TextView
+                android:id="@+id/offerpersentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0%"
+                android:textColor="#ffffffff"
+                android:textSize="10.0dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/productdetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/namelayout"
+            android:layout_marginTop="5.0dip"
+            android:layout_toRightOf="@+id/lytimage">
+
+            <TextView
+                android:id="@+id/orginalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:text="100"
+                android:textColor="#ff000000"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@+id/offerprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/orginalprice"
+                android:text="100 / Qty"
+                android:textColor="#ff000000"
+                android:textSize="16.0dip" />
+
+            <Button
+                android:id="@+id/buy"
+                android:layout_width="70.0dip"
+                android:layout_height="30.0dip"
+                android:layout_below="@+id/offerprice"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:gravity="center"
+                android:text="ORDER"
+                android:textColor="#ffffffff"
+                android:textSize="13.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/location"
+            android:padding="9.0dip"
+            android:src="@drawable/telephone" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="8.0dip"
+            android:src="@drawable/location" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/load"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/layout"
+        android:padding="5.0dip"
+        android:src="@drawable/more"
+        android:visibility="visible" />
+</RelativeLayout>

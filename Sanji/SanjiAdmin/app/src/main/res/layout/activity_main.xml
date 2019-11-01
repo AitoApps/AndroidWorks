@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Sanchi - Admin"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/productverification"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:src="@drawable/productverification" />
+
+                <ImageView
+                    android:id="@+id/shopmanagmenet"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/productverification"
+                    android:src="@drawable/shopmanagement" />
+
+                <ImageView
+                    android:id="@+id/shopcontroller"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_below="@+id/productverification"
+                    android:layout_margin="5.0dip"
+                    android:src="@drawable/shopcontroller" />
+
+                <ImageView
+                    android:id="@+id/addcatogery"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_below="@+id/shopmanagmenet"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/shopcontroller"
+                    android:src="@drawable/productcatogery" />
+
+                <ImageView
+                    android:id="@+id/franchises"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_below="@+id/shopcontroller"
+                    android:layout_margin="5.0dip"
+                    android:src="@drawable/franchesis" />
+
+                <ImageView
+                    android:id="@+id/catogerychange"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_below="@+id/addcatogery"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/franchises"
+                    android:src="@drawable/catogerychangenoti" />
+
+                <ImageView
+                    android:id="@+id/products"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_below="@+id/franchises"
+                    android:layout_margin="5.0dip"
+                    android:src="@drawable/productreport" />
+
+                <ImageView
+                    android:id="@+id/productmanagement"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_below="@+id/franchises"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/products"
+                    android:src="@drawable/productmanagement" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/roundedcornerbackground">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/appupdate"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_margin="10.0dip"
+                android:src="@drawable/appupdate" />
+
+            <ImageView
+                android:id="@+id/loadcatogery"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_margin="10.0dip"
+                android:layout_toRightOf="@+id/appupdate"
+                android:src="@drawable/loadcatogery" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_notifications"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9ebee"
+    tools:context=".List_noti">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebars"
+        >
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Notifications"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@+id/moveback"
+            android:layout_toLeftOf="@+id/readall"
+            android:textColor="#ffffff"
+            style="@android:style/TextAppearance.Medium"
+            />
+        <ImageView
+            android:id="@+id/readall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            app:srcCompat="@drawable/readall"
+            android:layout_toLeftOf="@+id/deleteall"
+            />
+        <ImageView
+            android:id="@+id/deleteall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/img_deleteall"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar"
+        android:layout_above="@+id/adView1"
+        android:layout_margin="5dp"
+        >
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+        <ImageView
+            android:id="@+id/emptydata"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/img_nonotis"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2432830627480060/7328046981" />
+</RelativeLayout>

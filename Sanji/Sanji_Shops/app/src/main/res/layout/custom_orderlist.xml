@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout" android:background="@drawable/roundedcornerbackground3" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <TextView android:textColor="#ff000000" android:id="@+id/itemname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nalla Mean" style="@android:style/TextAppearance.Medium" />
+        <ImageView android:id="@+id/image" android:layout_width="100.0dip" android:layout_height="76.0dip" android:layout_margin="5.0dip" android:scaleType="fitCenter" android:layout_below="@+id/itemname" />
+        <TableLayout android:id="@+id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="7.0dip" android:stretchColumns="*" android:layout_toRightOf="@+id/image" android:layout_below="@+id/itemname">
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff000000" android:gravity="end" android:id="@+id/txtorderid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order ID" />
+                <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/txtorderiddor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/orderid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" />
+            </TableRow>
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff000000" android:gravity="end" android:id="@+id/txtorderdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order Date" />
+                <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/txtorderdatedor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/orderdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" />
+            </TableRow>
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff000000" android:gravity="end" android:id="@+id/txtitemprice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Price" />
+                <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/txtitempricedor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/itemprice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" />
+            </TableRow>
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff000000" android:gravity="end" android:id="@+id/txtitemqty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qty" />
+                <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/txtitemqtydor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/itemqty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" />
+            </TableRow>
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff000000" android:gravity="end" android:id="@+id/txtitemtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total" />
+                <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/txtitemtotaldor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/itemtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" />
+            </TableRow>
+        </TableLayout>
+        <ImageView android:id="@+id/delete" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/closeicon" android:layout_below="@+id/table" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

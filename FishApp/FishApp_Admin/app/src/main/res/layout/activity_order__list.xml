@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Sample"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contactdetails"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_below="@+id/header"
+        android:background="@drawable/roundedcornerbackground">
+
+        <ImageView
+            android:id="@+id/call1"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:padding="5.0dip"
+            android:src="@drawable/callicon1" />
+
+        <ImageView
+            android:id="@+id/call2"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/call1"
+            android:padding="5.0dip"
+            android:src="@drawable/callicon2" />
+
+        <TextView
+            android:id="@+id/username"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/address"
+            android:layout_toRightOf="@+id/call2"
+            android:text="Username"
+            android:textColor="#ff000000" />
+
+        <ImageView
+            android:id="@+id/address"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:padding="5.0dip"
+            android:src="@drawable/homeicon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/contactdetails">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null" />
+
+        <ImageView
+            android:id="@+id/nodata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/noorders"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/roundedcornerbackground">
+
+        <ImageView
+            android:id="@+id/cancell"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/cancel"
+            android:text="Cancell" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/txttotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total : "
+                android:textColor="#ff000000"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txttotal"
+                android:text=""
+                android:textColor="#ff000000"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/confirm"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/confirm" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add /Edit Offer"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtproductinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Product Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytproductinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtproductinfo"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtcatogery"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Catogery"
+                    android:textColor="#ff000000" />
+
+                <Spinner
+                    android:id="@+id/catogery"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtcatogery"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtitemname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/catogery"
+                    android:layout_margin="5.0dip"
+                    android:text="Item Name"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/itemname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtitemname"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtitemkeywords"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemname"
+                    android:layout_margin="5.0dip"
+                    android:text="Search KeyWords"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/itemkeywords"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtitemkeywords"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtdiscription"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemkeywords"
+                    android:layout_margin="5.0dip"
+                    android:text="Discription"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/discription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100.0dip"
+                    android:layout_below="@+id/txtdiscription"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:gravity="center|left|top"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtpriceinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytproductinfo"
+                android:layout_margin="5.0dip"
+                android:text="Price Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytpriceinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtpriceinfo"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtorginalprice"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Orginal Price"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/orginalprice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtorginalprice"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtoffferprice"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orginalprice"
+                    android:layout_margin="5.0dip"
+                    android:text="Offer Price"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/offerprice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtoffferprice"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtcashback"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/offerprice"
+                    android:layout_margin="5.0dip"
+                    android:text="CashBack"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/cashback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtcashback"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtphotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytpriceinfo"
+                android:layout_margin="5.0dip"
+                android:text="Photos"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytphotos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtphotos"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtphoto1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Product Photo"
+                    android:textColor="#ff000000" />
+
+                <RelativeLayout
+                    android:id="@+id/lytphoto1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtphoto1"
+                    android:layout_margin="5.0dip">
+
+                    <ImageView
+                        android:id="@+id/photo1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/nophoto"
+                        android:scaleType="fitCenter" />
+
+                    <ProgressBar
+                        android:id="@+id/pb1"
+                        style="?android:progressBarStyleLarge"
+                        android:layout_width="70.0dip"
+                        android:layout_height="70.0dip"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/lytphotos"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

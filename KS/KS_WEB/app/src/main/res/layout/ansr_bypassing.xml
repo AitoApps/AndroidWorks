@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/roundedcornerbackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@+id/locklyt" android:background="@drawable/roundedlayout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TableLayout android:id="@+id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:stretchColumns="*" android:layout_centerHorizontal="true">
+                <TableRow>
+                    <TextView android:textSize="15.0dip" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@+id/txtquestion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Question" />
+                </TableRow>
+                <TableRow>
+                    <EditText android:textColor="#ff000000" android:id="@+id/answer" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" />
+                </TableRow>
+            </TableLayout>
+            <Button android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/verify" android:background="@drawable/btn_paymnt" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:text="OK" android:layout_below="@+id/table" android:layout_alignRight="@+id/table" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

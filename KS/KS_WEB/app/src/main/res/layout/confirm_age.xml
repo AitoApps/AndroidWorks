@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/roundedcornerbackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout" android:layout_width="fill_parent" android:layout_height="250.0dip" android:layout_margin="5.0dip" android:layout_centerInParent="true">
+        <ScrollView android:id="@+id/scrv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/hideandshow">
+            <TextView android:id="@+id/hideinform" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="" style="@android:style/TextAppearance.Medium" />
+        </ScrollView>
+        <Button android:textColor="#ffffffff" android:id="@+id/hideandshow" android:background="@drawable/btn_green_pymnt" android:layout_width="250.0dip" android:layout_height="40.0dip" android:layout_margin="3.0dip" android:text="I AGREE" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+</RelativeLayout>

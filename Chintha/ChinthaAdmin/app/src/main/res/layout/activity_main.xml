@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/notificationlogo" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Status Admin"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/uploadlyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/instagramtofacebook"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Insta To facebook"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/instagramtoyoutube"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/instagramtofacebook"
+                    android:layout_margin="10.0dip"
+                    android:text="Insta To Youtube"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uplaodtochintha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/instagramtoyoutube"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To Chintha"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/ksrechargenew"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/uploadlyt"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="50.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="#ff227c3e"
+                android:text="KS EC RECHARGE NEW"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/ksusers"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/ksrechargenew"
+                android:layout_margin="5.0dip"
+                android:background="#ffb80d0d"
+                android:text="USERS"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/uplaodvideo"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/ksusers"
+                android:layout_margin="5.0dip"
+                android:background="#ff227c3e"
+                android:text="Up Status Video"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/reportstatus"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/uplaodvideo"
+                android:layout_margin="5.0dip"
+                android:background="#ff227c3e"
+                android:text="Report Status"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/newusers"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/reportstatus"
+                android:layout_margin="5.0dip"
+                android:background="#ffb80d0d"
+                android:text="NEW USERS"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/verification"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/newusers"
+                android:layout_margin="5.0dip"
+                android:background="#ff227c3e"
+                android:text="VERIFICATION CODE"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/secretkey"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/verification"
+                android:layout_margin="5.0dip"
+                android:background="#ffb80d0d"
+                android:text="SECRET KEY and UNBLOCK"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

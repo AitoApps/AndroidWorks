@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/img_header">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/aboutus"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textSize="18.0dip"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/aboutus"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/appshare"
+            android:src="@drawable/img_aboutus" />
+
+        <ImageView
+            android:id="@+id/appshare"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/img_share" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:splitMotionEvents="false" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/img_listbg">
+
+        <Button
+            android:id="@+id/hideapp"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/img_header"
+            android:text="Hide App"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/patternlyt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:background="@drawable/bg">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/patterntext"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="5.0dip"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#ffffffff" />
+
+            <com.andrognito.patternlockview.PatternLockView
+                android:id="@+id/patternview_lock"
+                android:layout_width="280.0dip"
+                android:layout_height="280.0dip"
+                android:layout_below="@+id/patterntext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25.0dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

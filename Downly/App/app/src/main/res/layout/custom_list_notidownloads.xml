@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70.0dip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/roundedcornerbackground3"
+        android:padding="5.0dip">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/logo_small" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/image">
+
+            <TextView
+                android:id="@+id/title"
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="3.0dip"
+                android:text="Download Complete"
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="3.0dip"
+                android:text=""
+                android:textColor="#ff000000"
+                android:textSize="10.0dip" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/logo_small" />
+    </RelativeLayout>
+</RelativeLayout>

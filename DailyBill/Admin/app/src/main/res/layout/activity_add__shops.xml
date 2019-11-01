@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff6f6f6"
+    tools:context=".Add_Shops">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add / Edit Shops"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtbasicinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Basic Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/basicinform"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtbasicinfo"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtcatogery"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemkeywords"
+                    android:layout_margin="5.0dip"
+                    android:text="Catogery"
+                    android:textColor="#ff000000" />
+
+                <io.apptik.widget.multiselectspinner.MultiSelectSpinner
+                    android:id="@+id/catogery"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/txtcatogery"
+                    />
+
+                <TextView
+                    android:id="@+id/txtshopname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Shop Name"
+                    android:layout_below="@+id/catogery"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/shopname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtshopname"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtownername"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopname"
+                    android:layout_margin="5.0dip"
+                    android:text="Owner Name"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/ownername"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtownername"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtmobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ownername"
+                    android:layout_margin="5.0dip"
+                    android:text="Mobile 1"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/mobile1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtmobile1"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtmobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile1"
+                    android:layout_margin="5.0dip"
+                    android:text="Mobile 2"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/mobile2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtmobile2"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtplace"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile2"
+                    android:layout_margin="5.0dip"
+                    android:text="Place"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/place"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtplace"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtminimcharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basicinform"
+                android:layout_margin="5.0dip"
+                android:text="Minimum Amount of Order"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytminimumcharge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtminimcharge"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtminimumcharge"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="Amount"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/minimumcharge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtminimumcharge"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtshoptiming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytminimumcharge"
+                android:layout_margin="5.0dip"
+                android:text="Shop Timing"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/shoptiming"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtshoptiming"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtlytclosing"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Open and Closing Time"
+                    android:textColor="#ff000000" />
+
+                <RelativeLayout
+                    android:id="@+id/lytclosing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtlytclosing"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5.0dip"
+                    android:padding="5.0dip">
+
+                    <EditText
+                        android:id="@+id/open"
+                        android:layout_width="100.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_margin="5.0dip"
+                        android:background="@drawable/the_border"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:padding="5.0dip" />
+
+                    <TextView
+                        android:id="@+id/txtto"
+                        style="@android:style/TextAppearance.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/open"
+                        android:text="To"
+                        android:textColor="#ff000000" />
+
+                    <EditText
+                        android:id="@+id/close"
+                        android:layout_width="100.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/txtto"
+                        android:background="@drawable/the_border"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:maxLines="1"
+                        android:padding="5.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/daysbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/lytclosing"
+                    android:layout_centerHorizontal="true">
+
+                    <Button
+                        android:id="@+id/sunday"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="S"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:id="@+id/monday"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/sunday"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="M"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:id="@+id/tuesday"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/monday"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="T"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:id="@+id/wendesday"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/tuesday"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="W"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:id="@+id/thursday"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/wendesday"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="T"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:id="@+id/friday"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/thursday"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="F"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:id="@+id/satrdy"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_margin="5.0dip"
+                        android:layout_toRightOf="@+id/friday"
+                        android:background="@drawable/roundedcornerspecial"
+                        android:text="S"
+                        android:textColor="#ffffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtshoplocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shoptiming"
+                android:layout_margin="5.0dip"
+                android:text="Shop Location"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/shoplocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtshoplocation"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/txtlattiude"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="Latitude"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/lattiude"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtlattiude"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/location"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtlongtitude"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lattiude"
+                    android:layout_margin="5.0dip"
+                    android:text="Longtitude"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/longtitude"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtlongtitude"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/location"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtdeliveryinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shoplocation"
+                android:layout_margin="5.0dip"
+                android:text="Delivery Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/deliveryinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtdeliveryinfo"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtdeliinkm"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Delivery in Km"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+
+                <EditText
+                    android:id="@+id/deliinkm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtdeliinkm"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtdeli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deliinkm"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:text="Choose your delivery charge"
+                    android:textColor="#ff000000"
+                    android:textSize="14.0dip" />
+
+                <EditText
+                    android:id="@+id/toamt"
+                    android:layout_width="150.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_below="@+id/txtdeli"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:hint="Limit Amount"
+                    android:inputType="number"
+                    android:padding="5.0dip" />
+
+                <EditText
+                    android:id="@+id/charge"
+                    android:layout_width="75.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_below="@+id/txtdeli"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/toamt"
+                    android:background="@drawable/the_border"
+                    android:hint="Charge"
+                    android:inputType="number"
+                    android:padding="5.0dip" />
+
+                <Button
+                    android:id="@+id/chargeadd"
+                    android:layout_width="90.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_below="@+id/txtdeli"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/charge"
+                    android:background="@drawable/roundedcornerbutton"
+                    android:text="Add"
+                    android:textColor="#ffffffff"
+                    android:textSize="14.0dip" />
+
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/toamt"
+                    android:layout_margin="5.0dip"
+                    android:scrollbars="none" />
+
+                <EditText
+                    android:id="@+id/deliverydisc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100.0dip"
+                    android:layout_below="@+id/list"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:gravity="center|left|top"
+                    android:hint="Discription"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txthomedelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deliveryinfo"
+                android:layout_margin="5.0dip"
+                android:text="Home Delivery"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/lythomedelivery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txthomedelivery"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/roundedcornerbackground"
+            android:padding="5.0dip">
+
+
+            <CheckBox
+                android:id="@+id/homedelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I have option for home delivery"
+                />
+
+        </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txtphoto1"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lythomedelivery"
+                android:layout_margin="5.0dip"
+                android:text="Shop Photo"
+                android:textColor="#ff000000" />
+
+            <RelativeLayout
+                android:id="@+id/lytphoto1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtphoto1"
+                android:layout_margin="5.0dip">
+
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nophoto"
+                    android:scaleType="fitCenter" />
+
+                <ProgressBar
+                    android:id="@+id/pb1"
+                    style="?android:progressBarStyleLarge"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/lytphoto1"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search__list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            app:srcCompat="@drawable/img_moveback"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/searchbox"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/search"
+            android:layout_toRightOf="@+id/moveback"
+            android:background="@drawable/textborder"
+            android:hint="Search name"
+            android:maxLines="1"
+            android:paddingLeft="5.0dip"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            app:srcCompat="@drawable/img_lence" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adView1"
+        android:layout_below="@+id/titlebar">
+
+        <TextView
+            android:id="@+id/loading"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5.0dip"
+            android:text="Loading...Please Wait"
+            android:textColor="#ffffffff"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/loading"
+            android:divider="@null" />
+
+        <ImageView
+            android:id="@+id/nonets"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_nonet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/emptydata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_nodata"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2432830627480060/7328046981" />
+</RelativeLayout>

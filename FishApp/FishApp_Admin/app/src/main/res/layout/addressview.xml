@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcornerbackground">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5.0dip"
+            android:stretchColumns="*">
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Name : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtplace"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Place : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/place"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtmobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Mobile 1 : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/mobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtmobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Mobile 2 : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/mobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtaddress"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Address : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+
+                <TextView
+                    android:id="@+id/txtpincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Pincode : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/pincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtlandmark"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Landmark : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/landmark"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text=""
+                    android:textColor="#ff000000" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>

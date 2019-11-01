@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@+id/layout" android:background="@drawable/roundedcornerbackground3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout2" android:layout_width="fill_parent" android:layout_height="35.0dip">
+        <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:id="@+id/catogeryname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Catogery" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/layout3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_below="@+id/layout2">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recylerview1" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:splitMotionEvents="false" />
+    </RelativeLayout>
+</RelativeLayout>

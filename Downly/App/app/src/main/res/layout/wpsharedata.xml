@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/roundedcornerbutton"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
+
+             <RelativeLayout
+                 android:id="@+id/wp_layout"
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp">
+
+                 <ImageView
+                     android:id="@+id/wp"
+                     android:layout_width="40dp"
+                     android:layout_marginLeft="5dp"
+                     android:layout_height="40dp"
+                     android:src="@drawable/logo_whatsapp"
+                     android:layout_centerVertical="true"
+                     />
+
+                    <TextView
+                        android:id="@+id/wp_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whatsapp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/wp"
+                        android:layout_marginLeft="5dp"
+                        style="@android:style/TextAppearance.Medium"
+                        />
+
+
+
+
+             </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/wp_layout"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray"/>
+
+
+            <RelativeLayout
+                android:id="@+id/wpbus_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/view2"
+                >
+
+                <ImageView
+                    android:id="@+id/wpbus"
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/busslogo_whatsapp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/wpbus_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Whatsapp Bhussinus"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/wpbus"
+                    style="@android:style/TextAppearance.Medium"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/wpbus_layout"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+
+            <RelativeLayout
+                android:id="@+id/lytgbwhatsappbus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/view3"
+                >
+
+                <ImageView
+                    android:id="@+id/gbwhatsappbus"
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/whatsapp_gb"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/txtgbwhatsappbus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GB Whatsapp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/gbwhatsappbus"
+                    android:layout_marginLeft="5dp"
+                    style="@android:style/TextAppearance.Medium"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

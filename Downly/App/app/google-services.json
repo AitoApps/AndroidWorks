@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "92792909751",
+    "firebase_url": "https://downly-5169d.firebaseio.com",
+    "project_id": "downly-5169d",
+    "storage_bucket": "downly-5169d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92792909751:android:5dc67a63e435ec08c48232",
+        "android_client_info": {
+          "package_name": "com.downly_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92792909751-bl1e3hna0h08qnueshkava0pq3g36nbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjVrT5eibnsCWewVdFPdIpb9ZMRdrSBD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92792909751-bl1e3hna0h08qnueshkava0pq3g36nbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

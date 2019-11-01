@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundebg">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="350.0dip"
+        android:layout_centerInParent="true"
+        android:layout_margin="5.0dip">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/agree">
+
+            <TextView
+                android:id="@+id/text"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="jdbfdsfdsfhgdgfhjdgfdfgdgfhd" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/agree"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignRight="@+id/scrollview"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="3.0dip"
+            android:background="@drawable/roundedbtnbutton"
+            android:text="I Agree"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

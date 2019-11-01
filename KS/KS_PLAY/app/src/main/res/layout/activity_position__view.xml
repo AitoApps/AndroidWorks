@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Position_View">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/img_header">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/ads_remove"
+            android:layout_toRightOf="@+id/moveback"
+            android:text="Malayalam"
+            android:textColor="#ffffffff"
+            android:textSize="18.0dip"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="200.0dip"
+        android:layout_height="150.0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40.0dip"
+        android:src="@drawable/img_loading"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/content1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tempimg"
+                />
+
+            <TextView
+                android:id="@+id/help1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Please"
+                android:layout_margin="10dp"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:shadowColor="#7F000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="10"
+                />
+
+            <TextView
+                android:id="@+id/watchvideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/help1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="50dp"
+                android:text="Watch Video"
+                android:textColor="#fff"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbackground">
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2.0dip"
+                    android:padding="5.0dip"
+                    android:textColor="#ff000000"
+                    android:textSize="18.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/slidehelp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/helpslide" />
+
+        <ImageView
+            android:layout_width="200.0dip"
+            android:layout_height="223.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10.0dip"
+            android:src="@drawable/slide" />
+
+        <TextView
+            android:id="@+id/help_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100.0dip"
+            android:gravity="center"
+            android:text="dshgdhgsfgdhfsg"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/movenext"
+        android:layout_width="30.0dip"
+        android:layout_height="59.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/nextmove" />
+
+    <ImageView
+        android:id="@+id/move_back"
+        android:layout_width="30.0dip"
+        android:layout_height="59.0dip"
+        android:layout_centerVertical="true"
+        android:src="@drawable/backmove" />
+
+</RelativeLayout>

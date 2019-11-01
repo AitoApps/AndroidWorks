@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    tools:context=".YoutubeFormat_Window">
+
+      <RelativeLayout
+          android:id="@+id/content"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:background="@drawable/the_border2"
+          >
+
+          <RelativeLayout
+              android:id="@+id/header"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_marginLeft="2dp"
+              android:layout_marginRight="2dp"
+              android:background="@drawable/titlebargradiant"
+              >
+
+              <TextView
+                  android:id="@+id/txtheader"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Please wait...."
+                  android:textSize="18dp"
+                  android:textColor="#fff"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="10dp"
+                  android:textStyle="bold"
+                  />
+
+          </RelativeLayout>
+
+
+
+          <com.facebook.shimmer.ShimmerFrameLayout
+              android:id="@+id/shimmer_view_container"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:orientation="vertical"
+              android:layout_below="@+id/header"
+              shimmer:duration="800">
+
+              <!-- Adding 3 rows of placeholders -->
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+                  <include layout="@layout/custom_shimmer" />
+                  <include layout="@layout/custom_shimmer" />
+                  <include layout="@layout/custom_shimmer" />
+                  <include layout="@layout/custom_shimmer" />
+                  <include layout="@layout/custom_shimmer" />
+
+              </LinearLayout>
+
+          </com.facebook.shimmer.ShimmerFrameLayout>
+
+          <com.google.android.gms.ads.AdView
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/adView1"
+              android:layout_below="@+id/header"
+              ads:adSize="BANNER"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              ads:adUnitId="ca-app-pub-8933294539595122/5905173429"
+              android:visibility="visible"
+              />
+
+          <ListView
+              android:layout_below="@+id/adView1"
+              android:id="@+id/list"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:listSelector="@android:color/transparent"
+              android:divider="@null"
+              android:scrollbars="none"
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="10dp"
+              />
+
+
+      </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout" android:background="@drawable/clearroundedlayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/lyt_addnew" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:id="@+id/addnew" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Add New" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+        </RelativeLayout>
+        <View android:id="@+id/view1" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@+id/lyt_addnew" />
+        <RelativeLayout android:id="@+id/fromdb_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@+id/view1">
+            <TextView android:id="@+id/fromdb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Choose Delivery Boy" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

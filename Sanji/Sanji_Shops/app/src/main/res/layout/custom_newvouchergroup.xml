@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout" android:background="@drawable/clearroundedlayout" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <ImageView android:id="@+id/image" android:background="@drawable/noproductphoto" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_margin="5.0dip" android:scaleType="centerCrop" />
+        <TextView android:textColor="#ff000000" android:id="@+id/itemname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="" android:layout_toRightOf="@+id/image" style="@android:style/TextAppearance.Large" />
+        <TextView android:textColor="#ffb50027" android:id="@+id/voucher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="100 Voucher" android:layout_alignBottom="@+id/image" android:layout_alignParentRight="true" style="@android:style/TextAppearance.Medium" />
+        <ImageView android:id="@+id/vouchertag" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginBottom="2.0dip" android:src="@drawable/vouchercount" android:layout_toLeftOf="@+id/voucher" android:layout_alignBottom="@+id/image" />
+    </RelativeLayout>
+</RelativeLayout>

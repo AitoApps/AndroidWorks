@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout" android:background="@drawable/roundedcornerbackground3" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="#ff000000" android:id="@+id/itemname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Item Name" />
+    <EditText android:id="@+id/qty" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:layout_below="@+id/itemname" android:inputType="numberDecimal" />
+    <TextView android:textSize="16.0dip" android:textColor="#ff000000" android:id="@+id/unittype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="12.0dip" android:text="Unit Type" android:layout_toRightOf="@+id/qty" android:layout_below="@+id/itemname" />
+    <TextView android:textSize="16.0dip" android:textColor="#ff000000" android:id="@+id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.0dip" android:text="Price" android:layout_toRightOf="@+id/unittype" android:layout_below="@+id/itemname" />
+    <Button android:textSize="13.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/buy" android:background="@drawable/roundedcornerbutton" android:visibility="visible" android:layout_width="70.0dip" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:text="UPDATE" android:layout_below="@+id/price" android:layout_alignParentRight="true" />
+    <ImageView android:id="@+id/adminclose" android:padding="5.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/delete" android:layout_alignParentRight="true" />
+</RelativeLayout>

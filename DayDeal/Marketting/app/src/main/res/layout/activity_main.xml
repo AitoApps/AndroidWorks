@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="DayDeal - Marketter"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="300.0dip">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/loading"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/reports"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:stretchColumns="*">
+
+                        <TableRow android:layout_margin="5.0dip">
+
+                            <TextView
+                                android:id="@+id/txtcommision"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="Commision : "
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+
+                            <TextView
+                                android:id="@+id/commision"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text=""
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+                        </TableRow>
+
+                        <TableRow android:layout_margin="5.0dip">
+
+                            <TextView
+                                android:id="@+id/txtincentive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="Incentive : "
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+
+                            <TextView
+                                android:id="@+id/incentive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text=""
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+                        </TableRow>
+
+                        <TableRow android:layout_margin="5.0dip">
+
+                            <TextView
+                                android:id="@+id/txttotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="Total : "
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+
+                            <TextView
+                                android:id="@+id/total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text=""
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+                        </TableRow>
+
+                        <TableRow android:layout_margin="5.0dip">
+
+                            <TextView
+                                android:id="@+id/txtpaid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="Paid : "
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+
+                            <TextView
+                                android:id="@+id/paid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text=""
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+                        </TableRow>
+
+                        <TableRow android:layout_margin="5.0dip">
+
+                            <TextView
+                                android:id="@+id/txtbalance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="Balance : "
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+
+                            <TextView
+                                android:id="@+id/balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text=""
+                                android:textColor="#ff000000"
+                                android:textSize="18.0dip" />
+                        </TableRow>
+                    </TableLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <Button
+            android:id="@+id/shops"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/layout"
+            android:layout_margin="5.0dip"
+            android:padding="5.0dip"
+            android:text="Shops" />
+
+        <Button
+            android:id="@+id/users"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/layout"
+            android:layout_margin="5.0dip"
+            android:layout_toRightOf="@+id/shops"
+            android:padding="5.0dip"
+            android:text="Users" />
+    </RelativeLayout>
+</RelativeLayout>

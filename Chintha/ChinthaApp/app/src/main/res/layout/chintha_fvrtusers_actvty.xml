@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/addfvrt"
+            android:layout_toRightOf="@+id/moveback"
+            android:paddingTop="5.0dip"
+            android:text="Priyapettavurde Statusukal"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/addfvrt"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            app:srcCompat="@drawable/img_plusicon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlebar">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottom_lyt">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylerview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:splitMotionEvents="false" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/nonets"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_nonet"
+            android:visibility="gone" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotty_loadin"
+            android:layout_width="250.0dip"
+            android:layout_height="250.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading.json"
+            app:lottie_loop="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/settingslayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlebar"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/alphalayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:alpha="0.6"
+            android:background="#ff000000"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/extrasettings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_backgorund2"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/lyt_third"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="1.0dip"
+                android:background="#ffffffff"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@+id/imgcopy"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_margin="2.0dip"
+                    android:padding="3.0dip"
+                    app:srcCompat="@drawable/img_copy" />
+
+                <TextView
+                    android:id="@+id/txtcopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/imgcopy"
+                    android:gravity="center_vertical"
+                    android:text="Copy"
+                    android:textColor="#ff000000"
+                    android:textSize="17.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fifth"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/lyt_third"
+                android:layout_marginTop="1.0dip"
+                android:background="#ffffffff"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@+id/reporticon"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_margin="2.0dip"
+                    android:padding="3.0dip"
+                    app:srcCompat="@drawable/report" />
+
+                <TextView
+                    android:id="@+id/txtreportstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/reporticon"
+                    android:gravity="center_vertical"
+                    android:text="Report Status"
+                    android:textColor="#ff000000"
+                    android:textSize="17.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sixth"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/fifth"
+                android:layout_marginTop="1.0dip"
+                android:background="#ffffffff"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@+id/statustoimage"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_margin="2.0dip"
+                    android:padding="3.0dip"
+                    app:srcCompat="@drawable/img_imgstatus" />
+
+                <TextView
+                    android:id="@+id/txtstatustoimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/statustoimage"
+                    android:gravity="center_vertical"
+                    android:text="Statuc Image"
+                    android:textColor="#ff000000"
+                    android:textSize="17.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

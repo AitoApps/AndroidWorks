@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/back" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toLeftOf="@+id/voicesearch"
+            android:layout_toRightOf="@+id/back"
+            android:hint="Search Products..." />
+
+        <ImageView
+            android:id="@+id/voicesearch"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:padding="10.0dip"
+            android:src="@drawable/voicesearch_white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+                android:id="@+id/recylerview"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:clipToPadding="false"
+                android:splitMotionEvents="false" />
+        </RelativeLayout>
+
+        <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+            android:id="@+id/searchrecylerview"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:clipToPadding="false"
+            android:splitMotionEvents="false" />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nodata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nooffers"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cartlyt"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/itemcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:text="2 Items | 4399"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/carticon"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_toLeftOf="@+id/viewcart"
+            android:padding="8.0dip"
+            android:src="@drawable/whitecart" />
+
+        <TextView
+            android:id="@+id/viewcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:text="View Cart"
+            android:textColor="#ffffffff"
+            android:textSize="14.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

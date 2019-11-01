@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="color_hsvHeight">240dp</dimen>
+    <dimen name="color_hsvWidth">240dp</dimen>
+    <dimen name="color_hueWidth">30dp</dimen>
+    <dimen name="color_spacer">8dp</dimen>
+</resources>

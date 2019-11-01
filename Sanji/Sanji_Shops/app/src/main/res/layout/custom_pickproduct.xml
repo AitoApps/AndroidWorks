@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout" android:background="@drawable/clearroundedlayout" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <RelativeLayout android:id="@+id/lytpick" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="5.0dip">
+            <TextView android:textColor="#ff000000" android:id="@+id/pickproduct" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pick Product" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:id="@+id/view1" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@+id/lytpick" />
+        <RelativeLayout android:id="@+id/lytaddnewprod" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_below="@+id/view1">
+            <TextView android:textColor="#ff000000" android:id="@+id/addnewprod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add New Product" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout" android:background="@drawable/roundedcornerbackground3" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <TableLayout android:id="@+id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="*" android:layout_toLeftOf="@+id/lyttotalcost">
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff205c14" android:gravity="end" android:id="@+id/txtoid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order ID  : " style="@android:style/TextAppearance.Medium" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/oid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="100" android:layout_weight="1.0" style="@android:style/TextAppearance.Medium" />
+            </TableRow>
+            <TableRow android:layout_marginTop="5.0dip">
+                <TextView android:textColor="#ff000000" android:gravity="end" android:id="@+id/txtorderdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order Date  : " style="@android:style/TextAppearance.Medium" />
+                <TextView android:textColor="#ff000000" android:gravity="start" android:id="@+id/orderdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="100" android:layout_weight="1.0" style="@android:style/TextAppearance.Medium" />
+            </TableRow>
+        </TableLayout>
+        <RelativeLayout android:id="@+id/lyttotalcost" android:background="@drawable/roundedcornergreen" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_alignParentRight="true">
+            <TextView android:textSize="15.0dip" android:textColor="#ffffffff" android:id="@+id/totalcost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10000" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/nophoto"
+            />
+        <TextView
+            android:id="@+id/itemname"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Nalla Mean"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+
+
+        <Button
+            android:id="@+id/disable"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_toRightOf="@+id/image"
+            android:layout_below="@+id/itemname"
+            android:layout_margin="5.0dip"
+            android:background="#ff205c14"
+            android:text="Active"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/disable"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/disable"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@+id/delete"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+</RelativeLayout>

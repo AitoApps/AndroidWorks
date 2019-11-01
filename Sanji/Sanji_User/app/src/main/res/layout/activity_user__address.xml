@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/header" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/back" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="User Details" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+        <ImageView android:id="@+id/addaddress" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:src="@drawable/addnewaddress" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@+id/header">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@+id/list" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+            <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/nodata" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="No Address" android:layout_centerInParent="true" style="@android:style/TextAppearance.Large" />
+            <ImageView android:id="@+id/nointernet" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/nointernet" android:layout_centerInParent="true" />
+            <ImageView android:id="@+id/heart" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/footer" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_alignParentBottom="true">
+            <Button android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/ordernow" android:background="@drawable/roundedcornergreen" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="15.0dip" android:text="Order Now" style="@android:style/TextAppearance.Medium" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

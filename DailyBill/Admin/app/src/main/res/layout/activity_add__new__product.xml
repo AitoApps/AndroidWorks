@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add New Product"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtitemname"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Item Name"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/itemname"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtitemname"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtitemkeywords"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemname"
+                android:layout_margin="5.0dip"
+                android:text="Key Words"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/itemkeywords"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtitemkeywords"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtcatogery"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemkeywords"
+                android:layout_margin="5.0dip"
+                android:text="Catogery"
+                android:textColor="#ff000000" />
+
+            <Spinner
+                android:id="@+id/catogery"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtcatogery"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border" />
+
+            <TextView
+                android:id="@+id/txtunit"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/catogery"
+                android:layout_margin="5.0dip"
+                android:text="Units"
+                android:textColor="#ff000000" />
+
+            <Spinner
+                android:id="@+id/unit"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtunit"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/lytphoto1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unit"
+                android:layout_margin="5.0dip">
+
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nophoto"
+                    android:scaleType="fitCenter" />
+
+                <ProgressBar
+                    android:id="@+id/pb1"
+                    style="?android:progressBarStyleLarge"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/lytphoto1"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

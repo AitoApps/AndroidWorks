@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1013706593415",
+    "firebase_url": "https://chinthaapp.firebaseio.com",
+    "project_id": "chinthaapp",
+    "storage_bucket": "chinthaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013706593415:android:4376646df5168b5a",
+        "android_client_info": {
+          "package_name": "com.chintha_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013706593415-q2g3sn1lc1ohss61opr9afeg87dsh8fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzDjLF3X35FgYwtt8AI1tn-kZV2JsjF8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013706593415-q2g3sn1lc1ohss61opr9afeg87dsh8fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

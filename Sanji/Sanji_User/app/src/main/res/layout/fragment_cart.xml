@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/cartfrag" android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/cartlyt" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textColor="#ffffffff" android:id="@+id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Cart" android:layout_toLeftOf="@+id/totalcount" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+        <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/totalcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/footer" android:layout_below="@+id/cartlyt">
+        <ListView android:id="@+id/list" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+        <ImageView android:id="@+id/nodata" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/emptycart" android:layout_centerInParent="true" />
+        <ProgressBar android:id="@+id/pb" android:visibility="invisible" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" style="?android:progressBarStyleLarge" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/footer" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/ordernow" android:background="@drawable/roundedcornergreen" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:text="Order Now" />
+    </RelativeLayout>
+</RelativeLayout>

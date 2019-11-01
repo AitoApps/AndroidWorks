@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Search Product"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/searchlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip">
+
+            <Spinner
+                android:id="@+id/catogery"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtfilter"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/catogery"
+                android:layout_margin="5.0dip"
+                android:text="Filter"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/txtfilter"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:hint="Search"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/searchlyt"
+            android:background="#ffcccccc" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recylerview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_centerInParent="true"
+            android:descendantFocusability="blocksDescendants"
+            android:splitMotionEvents="false" />
+
+        <ImageView
+            android:id="@+id/nodata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/noproducts"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

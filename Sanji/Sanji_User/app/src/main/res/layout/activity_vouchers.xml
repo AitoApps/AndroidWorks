@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/header" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="25.0dip">
+        <ImageView android:id="@+id/back" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Vouchers" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@+id/tabLayout" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/header" app:tabIndicatorColor="@android:color/white" />
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@+id/tabLayout" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Your Whatsapp Status"
+            android:textColor="#ffffffff"
+            android:textSize="18.0dip" />
+
+        <ImageView
+            android:id="@+id/whatsapp"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:padding="7.0dip"
+            android:src="@drawable/logo_whatsapp" />
+
+        <ImageView
+            android:id="@+id/whatsappbus"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:padding="7.0dip"
+            android:src="@drawable/busslogo_whatsapp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adView1"
+        android:layout_below="@+id/header">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/nodownloads"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5.0dip"
+            android:gravity="center"
+            android:text="Whatsapp status will be enlisted here once you view them and you can download them here"
+            android:textColor="#ff000000"
+            android:textSize="20.0dip" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="?android:progressBarStyleLarge"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        ads:adSize="BANNER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="ca-app-pub-8933294539595122/5905173429"
+        android:visibility="visible"
+        />
+</RelativeLayout>

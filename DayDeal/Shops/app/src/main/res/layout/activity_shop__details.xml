@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="My Shop"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtbasicinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Basic Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/basicinform"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtbasicinfo"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/txtshopname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Shop Name"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/shopname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtshopname"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtownername"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopname"
+                    android:layout_margin="5.0dip"
+                    android:text="Owner Name"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/ownername"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtownername"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtmobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ownername"
+                    android:layout_margin="5.0dip"
+                    android:text="Mobile 1"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/mobile1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtmobile1"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtmobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile1"
+                    android:layout_margin="5.0dip"
+                    android:text="Mobile 2"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/mobile2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtmobile2"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtplace"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mobile2"
+                    android:layout_margin="5.0dip"
+                    android:text="Place"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/place"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtplace"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtshoplocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basicinform"
+                android:layout_margin="5.0dip"
+                android:text="Shop Location"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/shoplocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtshoplocation"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/txtlattiude"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="Latitude"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/lattiude"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtlattiude"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/location"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+
+                <TextView
+                    android:id="@+id/txtlongtitude"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lattiude"
+                    android:layout_margin="5.0dip"
+                    android:text="Longtitude"
+                    android:textColor="#ff000000" />
+
+                <EditText
+                    android:id="@+id/longtitude"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/txtlongtitude"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/location"
+                    android:background="@drawable/the_border"
+                    android:maxLines="1"
+                    android:padding="5.0dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtphoto1"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shoplocation"
+                android:layout_margin="5.0dip"
+                android:text="Shop Photo"
+                android:textColor="#ff000000" />
+
+            <RelativeLayout
+                android:id="@+id/lytphoto1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtphoto1"
+                android:layout_margin="5.0dip">
+
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nophoto"
+                    android:scaleType="fitCenter" />
+
+                <ProgressBar
+                    android:id="@+id/pb1"
+                    style="?android:progressBarStyleLarge"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/lytphoto1"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/nointernet"
+        android:layout_width="150.0dip"
+        android:layout_height="150.0dip"
+        android:layout_centerInParent="true"
+        android:src="@drawable/nointernet"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/header" android:background="@drawable/titlebargradiant" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/back" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/logo" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:id="@+id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Sanchi Shops" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+    <ScrollView android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/footer" android:layout_below="@+id/header">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <ImageView android:id="@+id/neworder" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/neworder" />
+                <ImageView android:id="@+id/productmanagement" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/productmanagement" android:layout_toRightOf="@+id/neworder" />
+                <ImageView android:id="@+id/salsemanmanagement" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/salesmanmanagement" android:layout_below="@+id/neworder" />
+                <ImageView android:id="@+id/shopdetails" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/shopdetails" android:layout_toRightOf="@+id/salsemanmanagement" android:layout_below="@+id/productmanagement" />
+                <ImageView android:id="@+id/priceupdate" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/priceupdate" android:layout_below="@+id/salsemanmanagement" />
+                <ImageView android:id="@+id/checkexpire" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/checkexpire" android:layout_toRightOf="@+id/priceupdate" android:layout_below="@+id/salsemanmanagement" />
+                <ImageView android:id="@+id/deliveryreports" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_margin="5.0dip" android:src="@drawable/delieryreports" android:layout_below="@+id/priceupdate" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@+id/footer" android:background="@drawable/roundedcornerbackground" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@+id/appupdate" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="10.0dip" android:src="@drawable/appupdate" />
+            <ImageView android:id="@+id/loadcatogery" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="10.0dip" android:src="@drawable/loadcatogery" android:layout_toRightOf="@+id/appupdate" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/piclayout"
+        android:layout_width="fill_parent"
+        android:layout_height="300.0dip"
+        android:background="@drawable/noproductphoto">
+
+        <ImageView
+            android:id="@+id/shopimg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dummyshop"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/footer"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:alpha="0.8"
+                android:background="#ff000000">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/location">
+
+                    <TextView
+                        android:id="@+id/shopname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2.0dip"
+                        android:text="Shop Name"
+                        android:textColor="#ffffffff"
+                        android:textSize="14.0dip" />
+
+                    <TextView
+                        android:id="@+id/placename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shopname"
+                        android:layout_marginLeft="2.0dip"
+                        android:ellipsize="end"
+                        android:maxWidth="200.0dip"
+                        android:maxLines="1"
+                        android:text="Place , "
+                        android:textColor="#ffffffff"
+                        android:textSize="10.0dip" />
+
+                    <TextView
+                        android:id="@+id/km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shopname"
+                        android:layout_toRightOf="@+id/placename"
+                        android:ellipsize="end"
+                        android:maxWidth="200.0dip"
+                        android:maxLines="1"
+                        android:text="KM"
+                        android:textColor="#ffffffff"
+                        android:textSize="10.0dip" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentRight="true"
+                    android:padding="10.0dip"
+                    android:src="@drawable/icon_location" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

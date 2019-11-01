@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+
+        <Spinner
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/the_border1"
+            />
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/language"
+            android:layout_margin="5.0dip"
+            android:layout_alignRight="@+id/language"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Choose"
+            android:textColor="#ffffffff" />
+
+    </RelativeLayout>
+</RelativeLayout>

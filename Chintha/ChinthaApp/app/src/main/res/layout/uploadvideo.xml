@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10.0dip"
+    android:background="@drawable/round_backgorund3">
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/textborder"
+        android:gravity="center|left|top"
+        android:hint="Type a message"
+        android:padding="5.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/lytpickertype"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="5.0dip"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/pickimage"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            app:srcCompat="@drawable/add_image_select" />
+
+        <ImageView
+            android:id="@+id/pickvideo"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginLeft="100.0dip"
+            android:layout_toRightOf="@+id/pickimage"
+            app:srcCompat="@drawable/add_video_unselect" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/picklyt"
+        android:layout_width="fill_parent"
+        android:layout_height="300.0dip"
+        android:layout_below="@+id/lytpickertype"
+        android:layout_marginTop="5.0dip">
+
+        <ImageView
+            android:id="@+id/previewimage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/img_nofbimages" />
+
+        <VideoView
+            android:id="@+id/previewvideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/playicon"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_iconplay"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/pauseicon"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/img_iconpause"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/uplaodlyt"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_below="@+id/picklyt"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/round_backgorund2">
+
+        <RelativeLayout
+            android:id="@+id/persentagelayout"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginLeft="10.0dip">
+
+            <ProgressBar
+                android:id="@+id/pb1"
+                style="?android:progressBarStyleLarge"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/persentage"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="#ff000000"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtlaoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/stop"
+            android:layout_toRightOf="@+id/persentagelayout"
+            android:text="Uploading..."
+            android:textColor="#ff000000"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/addvideo"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedbtnbutton"
+            android:text="Upload"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

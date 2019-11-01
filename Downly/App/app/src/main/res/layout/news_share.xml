@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundedcornerbackground">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip">
+
+        <RelativeLayout
+            android:id="@+id/lytwhatsapp"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+
+            <ImageView
+                android:id="@+id/whatsapp"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/logo_whatsapp" />
+
+            <TextView
+                android:id="@+id/txtwhatsapp"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@+id/whatsapp"
+                android:text="Whatsapp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/lytwhatsapp"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginBottom="5.0dip"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/lytfacebook"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/view1">
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/logo_facebook" />
+
+            <TextView
+                android:id="@+id/txtfacebook"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@+id/facebook"
+                android:text="Whatsapp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@+id/lytfacebook"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginBottom="5.0dip"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/lytwhatsappbus"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_below="@+id/view2">
+
+            <ImageView
+                android:id="@+id/whatsappbus"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/busslogo_whatsapp" />
+
+            <TextView
+                android:id="@+id/txtwhatsappbus"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@+id/whatsappbus"
+                android:text="Whatsapp Bhussinus" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

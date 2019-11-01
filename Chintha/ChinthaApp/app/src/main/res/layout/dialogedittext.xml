@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundebg">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip">
+
+            <EditText
+                android:id="@+id/chintha"
+                android:layout_width="fill_parent"
+                android:layout_height="175.0dip"
+                android:layout_margin="3.0dip"
+                android:background="@drawable/textborder"
+                android:gravity="center|left|top"
+                android:padding="5.0dip"
+                android:paddingLeft="5.0dip"
+                android:textSize="16.0dip" />
+
+            <Button
+                android:id="@+id/rpt_update"
+                android:layout_width="100.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/chintha"
+                android:layout_alignRight="@+id/chintha"
+                android:layout_margin="3.0dip"
+                android:background="@drawable/roundedbtnbutton"
+                android:text="Update"
+                android:textColor="#ffffffff"
+                android:textSize="14.0dip" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

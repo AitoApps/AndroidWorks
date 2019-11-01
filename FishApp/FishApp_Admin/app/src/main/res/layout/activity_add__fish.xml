@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add /Edit Fish"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtfishname"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Fish Name"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/fishname"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtfishname"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtqty"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fishname"
+                android:layout_margin="5.0dip"
+                android:text="Qty"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/qty"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtqty"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtunit"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qty"
+                android:layout_margin="5.0dip"
+                android:text="Unit"
+                android:textColor="#ff000000" />
+
+            <Spinner
+                android:id="@+id/unit"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtunit"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtprice"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unit"
+                android:layout_margin="5.0dip"
+                android:text="Price"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txtprice"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtdiscription"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price"
+                android:layout_margin="5.0dip"
+                android:text="Discription"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/discription"
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_below="@+id/txtdiscription"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:gravity="center|left|top"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtphoto1"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discription"
+                android:layout_margin="5.0dip"
+                android:text="Fish Photo"
+                android:textColor="#ff000000" />
+
+            <RelativeLayout
+                android:id="@+id/lytphoto1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtphoto1"
+                android:layout_margin="5.0dip">
+
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nophoto"
+                    android:scaleType="fitCenter" />
+
+                <ProgressBar
+                    android:id="@+id/pb1"
+                    style="?android:progressBarStyleLarge"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/lytphoto1"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

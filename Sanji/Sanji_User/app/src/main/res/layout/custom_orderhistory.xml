@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout" android:background="@drawable/clearroundedlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="#ff000000" android:id="@+id/txtgroupid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Order Id : " />
+    <TextView android:textColor="#ff000000" android:id="@+id/groupid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="100" android:layout_toRightOf="@+id/txtgroupid" />
+    <TextView android:textColor="#ff000000" android:id="@+id/orderdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="100" android:layout_alignParentRight="true" />
+    <ImageView android:id="@+id/dot1" android:layout_width="fill_parent" android:layout_height="5.0dip" android:src="@drawable/dotted" android:layout_below="@+id/txtgroupid" android:layerType="software" />
+    <com.sanji.MyListView android:id="@+id/list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:divider="@null" android:layout_below="@+id/dot1" />
+    <ImageView android:id="@+id/dot2" android:layout_width="fill_parent" android:layout_height="5.0dip" android:src="@drawable/dotted" android:layout_below="@+id/list" android:layerType="software" />
+    <TableLayout android:id="@+id/table1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/dot2" android:layout_alignParentRight="true">
+        <TableRow>
+            <TextView android:textColor="#ff000000" android:layout_gravity="center|right" android:id="@+id/txtdeliverycharge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Delivery Charge : " />
+            <TextView android:textColor="#ff000000" android:layout_gravity="center|right" android:id="@+id/deliverycharge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="" android:layout_centerVertical="true" />
+        </TableRow>
+        <TableRow>
+            <TextView android:textColor="#ff000000" android:layout_gravity="center|right" android:id="@+id/txttoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Total : " />
+            <TextView android:textColor="#ff000000" android:layout_gravity="center|right" android:id="@+id/total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Total" android:layout_centerVertical="true" />
+        </TableRow>
+    </TableLayout>
+    <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Not Active" android:layout_below="@+id/table1" />
+</RelativeLayout>

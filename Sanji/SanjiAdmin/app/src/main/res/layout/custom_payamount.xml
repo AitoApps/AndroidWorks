@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground3"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/txtamount"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Enter Amount"
+            android:textColor="#ff000000" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/txtamount"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/the_border1"
+            android:padding="5.0dip" />
+
+        <Button
+            android:id="@+id/confirm"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="150.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/amount"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Confirm"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

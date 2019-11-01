@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Users"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/mkcounts"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:text=""
+                android:textSize="30.0dip" />
+
+            <TextView
+                android:id="@+id/hindicounts"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mkcounts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:text=""
+                android:textSize="30.0dip" />
+
+            <TextView
+                android:id="@+id/kisscounts"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hindicounts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:text=""
+                android:textSize="30.0dip" />
+
+            <TextView
+                android:id="@+id/capsulecounts"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kisscounts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:text=""
+                android:textSize="30.0dip" />
+
+            <TextView
+                android:id="@+id/hindinew"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/capsulecounts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:text=""
+                android:textSize="30.0dip" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

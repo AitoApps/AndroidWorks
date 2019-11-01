@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Set Your Location"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/lytpincode"
+            android:layout_width="fill_parent"
+            android:layout_height="150.0dip"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/roundedcornerbackground">
+
+            <TextView
+                android:id="@+id/txtpincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Enter Your Pincode"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/pincode"
+                android:layout_width="200.0dip"
+                android:layout_height="50.0dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/the_border" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_centerVertical="true"
+                android:layout_margin="5.0dip"
+                android:layout_toRightOf="@+id/pincode"
+                android:src="@drawable/searchicon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytpincode"
+            android:gravity="center_horizontal"
+            android:text="OR"
+            android:textColor="#ff000000"
+            android:textSize="20.0dip" />
+
+        <RelativeLayout
+            android:id="@+id/lytlocation"
+            android:layout_width="fill_parent"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/txtor"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/roundedcornerbackground">
+
+            <RelativeLayout
+                android:id="@+id/lytusinggps"
+                android:layout_width="200.0dip"
+                android:layout_height="50.0dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/the_border">
+
+                <ImageView
+                    android:id="@+id/gpsicon"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:padding="5.0dip"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/usinggps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/gpsicon"
+                    android:text="Using GPS"
+                    android:textColor="#ff000000"
+                    android:textSize="20.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="170.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffffff"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/txtcurrentlocation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:text="Your Location"
+            android:textColor="#ff000000"
+            android:textSize="20.0dip" />
+
+        <TextView
+            android:id="@+id/currentlocation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/confirmloc"
+            android:layout_below="@+id/txtcurrentlocation"
+            android:layout_margin="10.0dip"
+            android:gravity="center_horizontal"
+            android:text="Ponnani , Kerala"
+            android:textColor="#ff000000"
+            android:textSize="20.0dip" />
+
+        <Button
+            android:id="@+id/confirmloc"
+            android:layout_width="150.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Confirm"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

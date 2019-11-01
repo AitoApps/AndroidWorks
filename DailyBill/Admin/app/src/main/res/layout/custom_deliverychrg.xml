@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/clearroundedlayout"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/toamt"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:text="100 - "
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/charge"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_toRightOf="@+id/toamt"
+            android:text="20"
+            android:textColor="#ff000000" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/closeicon" />
+    </RelativeLayout>
+</RelativeLayout>

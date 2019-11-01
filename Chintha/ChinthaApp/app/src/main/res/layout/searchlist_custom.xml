@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundebg">
+
+        <RelativeLayout
+            android:id="@+id/part_first"
+            android:layout_width="fill_parent"
+            android:layout_height="54.0dip"
+            android:background="#fff1f1f1">
+
+            <RelativeLayout
+                android:id="@+id/lyt_first"
+                android:layout_width="wrap_content"
+                android:layout_height="54.0dip"
+                android:layout_margin="2.0dip"
+                android:background="@drawable/roundedbg1">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    app:srcCompat="@drawable/img_noimage" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lyt_second"
+                android:layout_width="fill_parent"
+                android:layout_height="54.0dip"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginBottom="2.0dip"
+                android:layout_toRightOf="@+id/lyt_first"
+                android:background="@drawable/roundedbg1">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/chintha_histroy"
+                    android:text="Sample"
+                    android:textColor="#ff000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:id="@+id/blockuser"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_toLeftOf="@+id/unblockuser"
+                    app:srcCompat="@drawable/img_userblock"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/unblockuser"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_toLeftOf="@+id/chintha_histroy"
+                    app:srcCompat="@drawable/img_usrunblock"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/chintha_histroy"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    android:layout_toLeftOf="@+id/liked"
+                    app:srcCompat="@drawable/img_addstatus" />
+
+                <ImageView
+                    android:id="@+id/liked"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    app:srcCompat="@drawable/img_chnthfavorute" />
+
+                <ImageView
+                    android:id="@+id/nolike"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5.0dip"
+                    app:srcCompat="@drawable/img_nolikes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/balnkspace"
+                android:layout_width="fill_parent"
+                android:layout_height="5.0dip"
+                android:layout_below="@+id/lyt_second" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

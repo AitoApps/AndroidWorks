@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/lyt_first"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/anjali"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Anjali"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lyt_second"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/lyt_first"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/chilanka"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Chilanka"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lyt_third"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/lyt_second"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/karumbi"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Karumbi"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lyt_fourth"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/lyt_third"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/keraleeyam"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Keraleeyam"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fifth"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/lyt_fourth"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/manjari"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Manjari"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sixth"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/fifth"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/meera"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Meera"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/seventh"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/sixth"
+            android:layout_marginTop="1.0dip"
+            android:background="#ffffffff"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@+id/rachana"
+                style="@android:style/TextAppearance.Large"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="Rachana"
+                android:textColor="#ff000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

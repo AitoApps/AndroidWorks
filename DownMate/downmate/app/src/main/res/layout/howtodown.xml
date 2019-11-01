@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/img_lyt_rounded"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/tiktok_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/tiktok"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/img_tikdown"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tiktok_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tiktok"
+                    android:layout_marginLeft="5dp"
+                    android:text="Download From TikTok"
+                    style="@android:style/TextAppearance.Medium"
+                    />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/tiktok_layout"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/darker_gray"/>
+
+             <RelativeLayout
+                 android:id="@+id/fb_layout"
+                 android:layout_width="match_parent"
+                 android:layout_height="50dp"
+                 android:layout_below="@+id/view3"
+                 >
+
+                 <ImageView
+                     android:id="@+id/facebook"
+                     android:layout_width="40dp"
+                     android:layout_centerVertical="true"
+                     android:layout_height="40dp"
+                     android:src="@drawable/img_fbdown"
+                     android:layout_marginLeft="5dp"
+                     />
+
+                    <TextView
+                        android:id="@+id/fb_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/facebook"
+                        android:layout_marginLeft="5dp"
+                        android:text="Download From Facebook"
+                        android:layout_centerVertical="true"
+                        style="@android:style/TextAppearance.Medium"
+                        />
+             </RelativeLayout>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/fb_layout"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+
+            <RelativeLayout
+                android:id="@+id/insta_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/view1"
+                >
+
+                <ImageView
+                    android:id="@+id/instagram"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/img_instadown"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/insta_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/instagram"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Download From Instagram"
+                    style="@android:style/TextAppearance.Medium"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/insta_layout"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/darker_gray"/>
+
+
+            <RelativeLayout
+                android:id="@+id/sharechat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/view4"
+                >
+
+                <ImageView
+                    android:id="@+id/sharechat"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/img_sharechatdown"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/sharechat_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/sharechat"
+                    android:layout_marginLeft="5dp"
+                    android:text="Download From ShareChat"
+                    style="@android:style/TextAppearance.Medium"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

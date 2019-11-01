@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/img_serach"
+            android:title="Search" />
+        <item
+            android:id="@+id/myprofile"
+            android:icon="@drawable/img_myinfo"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/fvrtupdates"
+            android:icon="@drawable/img_updatefvrt"
+            android:title="Favorite Updates" />
+        <item
+            android:id="@+id/blockedlist"
+            android:icon="@drawable/img_blockedlist"
+            android:title="Blocked List" />
+        <item
+            android:id="@+id/mystatus"
+            android:icon="@drawable/img_mychintha"
+            android:title="My Status" />
+        <item
+            android:id="@+id/myfvrtlist"
+            android:icon="@drawable/img_fvrtchinthers"
+            android:title="Favorite List" />
+        <item
+            android:id="@+id/myfvrtusers"
+            android:icon="@drawable/img_fvrtschtrhers"
+            android:title="Favorite Users" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/img_notis"
+            android:title="Notification" />
+        <item
+            android:id="@+id/backgroundimg"
+            android:icon="@drawable/img_abckground_image"
+            android:title="Wallpaper" />
+        <item
+            android:id="@+id/clearmmry"
+            android:icon="@drawable/img_memmoryclear"
+            android:title="Clear Memmory" />
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/notificationissue"
+                android:icon="@drawable/img_notierror"
+                android:title="Notification Issue ?" />
+            <item
+                android:id="@+id/rpt_update"
+                android:icon="@drawable/img_checkupdate"
+                android:title="Update App" />
+            <item
+                android:id="@+id/shareapp"
+                android:icon="@drawable/img_shareicon"
+                android:title="Share App" />
+            <item
+                android:id="@+id/whoabout"
+                android:icon="@drawable/img_admin"
+                android:title="About Us" />
+        </menu>
+    </item>
+</menu>

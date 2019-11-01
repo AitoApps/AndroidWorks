@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homefrag"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grayColor">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:background="@drawable/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/lyttitles"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/appname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toLeftOf="@+id/lytwalletamount"
+            android:layout_toRightOf="@+id/logo"
+            android:text="DayDeal"
+            android:textColor="#ffffffff" />
+
+        <RelativeLayout
+            android:id="@+id/lytwalletamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/txtwallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Wallet : "
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:id="@+id/walletamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txtwallet"
+                android:text="30 Rs"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:layout_below="@+id/lyttitles"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:gravity="center_horizontal">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <RelativeLayout
+                    android:id="@+id/lytrequestmoney"
+                    android:layout_width="100.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_margin="5.0dip">
+
+                    <ImageView
+                        android:id="@+id/imgrequestmoney"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5.0dip"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:id="@+id/txtrequestmony"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgrequestmoney"
+                        android:gravity="center_horizontal"
+                        android:text="Request Money"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytshopping"
+                    android:layout_width="100.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_margin="5.0dip">
+
+                    <ImageView
+                        android:id="@+id/imgshopping"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5.0dip"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:id="@+id/txtshopping"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgshopping"
+                        android:gravity="center_horizontal"
+                        android:text="Shopping"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytwallethistory"
+                    android:layout_width="100.0dip"
+                    android:layout_height="80.0dip"
+                    android:layout_margin="5.0dip">
+
+                    <ImageView
+                        android:id="@+id/imgwallethistory"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="5.0dip"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:id="@+id/txtwallethistory"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgwallethistory"
+                        android:gravity="center_horizontal"
+                        android:text="Wallet History"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/buttons"
+        android:layout_marginTop="10.0dip">
+
+        <RelativeLayout
+            android:id="@+id/locationlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:background="@drawable/roundedcornerbackground">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toLeftOf="@+id/locationicon"
+                android:text="Ponnani"
+                android:textColor="#ff000000" />
+
+            <ImageView
+                android:id="@+id/locationicon"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/location" />
+        </RelativeLayout>
+
+        <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+            android:id="@+id/recylerview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/locationlyt"
+            android:descendantFocusability="blocksDescendants"
+            android:splitMotionEvents="false" />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

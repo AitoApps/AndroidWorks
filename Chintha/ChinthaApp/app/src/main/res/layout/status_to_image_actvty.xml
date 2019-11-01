@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_status__image"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebars">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_moveback" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/save"
+            android:layout_toRightOf="@+id/moveback"
+            android:paddingTop="5.0dip"
+            android:text="Status On Image"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            app:srcCompat="@drawable/img_tik" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_lyt"
+        android:layout_below="@+id/titlebar">
+
+        <com.suhi_chintha.Zoomable_image
+            android:id="@+id/bgimage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_trap"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/statustext"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="fdsfdsf"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_lyt"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/titlebars">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50.0dip"
+            android:layout_above="@+id/adView1"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/addimage"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                app:srcCompat="@drawable/imageicon" />
+
+            <ImageView
+                android:id="@+id/addtext"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/addimage"
+                app:srcCompat="@drawable/img_icontext" />
+
+            <ImageView
+                android:id="@+id/bgcolor"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/addtext"
+                app:srcCompat="@drawable/img_bgcolor" />
+
+            <ImageView
+                android:id="@+id/forcolor"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/bgcolor"
+                app:srcCompat="@drawable/img_coloretrext" />
+
+            <ImageView
+                android:id="@+id/setfont"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/forcolor"
+                app:srcCompat="@drawable/img_fontset" />
+
+            <ImageView
+                android:id="@+id/increment"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/setfont"
+                app:srcCompat="@drawable/img_plusicon" />
+
+            <ImageView
+                android:id="@+id/decrement"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/increment"
+                app:srcCompat="@drawable/img_decrement" />
+        </RelativeLayout>
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-2432830627480060/7328046981" />
+    </RelativeLayout>
+</RelativeLayout>

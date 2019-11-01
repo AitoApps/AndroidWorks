@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/statuslyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="#ffffffff"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/writings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/statusheader"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="5.0dip">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_toRightOf="@+id/img"
+                    android:text="Sample"
+                    android:textColor="#ff000000"
+                    android:textSize="16.0dip"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/verifiedicon"
+                    android:layout_width="15.0dip"
+                    android:layout_height="15.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginBottom="2.0dip"
+                    android:layout_toRightOf="@+id/name"
+                    app:srcCompat="@drawable/img_verify"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_toRightOf="@+id/verifiedicon"
+                    android:text="\ 9037631786"
+                    android:textColor="#ff000000"
+                    android:textSize="12.0dip"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:id="@+id/shotlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip"
+                    android:layout_below="@+id/name"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@+id/img">
+
+                    <com.pkmmte.view.CircularImageView
+                        android:id="@+id/doticon"
+                        android:layout_width="5.0dip"
+                        android:layout_height="5.0dip"
+                        android:layout_marginTop="6.0dip"
+                        android:background="@color/colorAccent"
+                        app:border="true"
+                        app:border_width="1.0dip" />
+
+                    <TextView
+                        android:id="@+id/shotstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@+id/doticon"
+                        android:text="shortstatus parayoo kerala fj bfjb jhbfhs dbfhbdsh bfhds bfhb shjdhjfb sdbfh bsdhfb hjdsbfh dbsfhb sdhfhj dbf"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/settings"
+                    android:layout_width="25.0dip"
+                    android:layout_height="25.0dip"
+                    android:layout_alignParentRight="true"
+                    android:padding="2.0dip"
+                    app:srcCompat="@drawable/optionmenu" />
+
+                <ImageView
+                    android:id="@+id/block"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_toLeftOf="@+id/settings"
+                    android:padding="2.0dip"
+                    app:srcCompat="@drawable/report"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/del"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_toLeftOf="@+id/block"
+                    android:padding="2.0dip"
+                    app:srcCompat="@drawable/img_drpicicon"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/doverify"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_toLeftOf="@+id/del"
+                    android:padding="2.0dip"
+                    app:srcCompat="@drawable/img_verify"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/statuspart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusheader">
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:id="@+id/chintha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8.0sp"
+                    android:padding="5.0dip"
+                    android:text="Temporary Problem"
+                    android:textColor="#ff000000"
+                    android:textSize="16.0dip"/>
+
+                <TextView
+                    android:id="@+id/chinthacount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chintha"
+                    android:layout_marginLeft="5.0dip"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10.0dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chintha"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="2.0dip"
+                    android:text="Jun 25 10:40 AM"
+                    android:textColor="#ff000000"
+                    android:textSize="10.0dip"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/hori_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_below="@+id/statuspart"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginBottom="2.0dip"
+                android:background="@color/colorAccent" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hori_line">
+
+                <RelativeLayout
+                    android:id="@+id/likelyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5.0dip">
+
+                    <ImageView
+                        android:id="@+id/imgnolike"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:padding="10.0dip"
+                        app:srcCompat="@drawable/like" />
+
+                    <ImageView
+                        android:id="@+id/imglike"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:padding="10.0dip"
+                        app:srcCompat="@drawable/nolike"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/txtlike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imglike"
+                        android:text="Like"
+                        android:textColor="#ff000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/commentlyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgcomment"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:padding="10.0dip"
+                        app:srcCompat="@drawable/comment" />
+
+                    <TextView
+                        android:id="@+id/txtcomment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imgcomment"
+                        android:text="Comment"
+                        android:textColor="#ff000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sharelyt"
+                    android:layout_width="120.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15.0dip"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/imgshare"
+                        android:layout_width="40.0dip"
+                        android:layout_height="40.0dip"
+                        android:padding="10.0dip"
+                        app:srcCompat="@drawable/share" />
+
+                    <TextView
+                        android:id="@+id/txtshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imgshare"
+                        android:text="Share"
+                        android:textColor="#ff000000" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/feedlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/feedlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:id="@+id/feedtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5.0dip"
+                    android:text="Sample"
+                    android:textColor="#ff000000"
+                    android:textSize="16.0dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/feedimagelyt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/feedtitle">
+
+                    <ImageView
+                        android:id="@+id/feedimg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3.0dip"
+                        android:adjustViewBounds="true"
+                        android:background="#ffc9c9c9"
+                        android:minHeight="200.0dip" />
+
+                    <ImageView
+                        android:id="@+id/feedplayicon"
+                        android:layout_width="80.0dip"
+                        android:layout_height="80.0dip"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/img_playocons" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/feedfooter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30.0dip"
+                    android:layout_below="@+id/feedimagelyt">
+
+                    <TextView
+                        android:id="@+id/feedtime"
+                        android:layout_width="70.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5.0dip"
+                        android:text="Time"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12.0dip"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/feeddownloadicon"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5.0dip"
+                        app:srcCompat="@drawable/img_download" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/adplaceholder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statuslyt"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="#ffffffff"
+        android:visibility="gone" />
+</RelativeLayout>

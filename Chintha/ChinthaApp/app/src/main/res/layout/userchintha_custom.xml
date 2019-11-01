@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/roundebg">
+
+        <RelativeLayout
+            android:id="@+id/contentlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+                android:id="@+id/chintha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/roundedbg1"
+                android:lineSpacingExtra="5.0sp"
+                android:padding="5.0dip"
+                android:text=""
+                android:textColor="#ff000000"
+                android:textSize="16.0dip"
+                />
+            <RelativeLayout
+                android:id="@+id/pictstua"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chintha">
+
+                <ImageView
+                    android:id="@+id/photostatus"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="#ffc9c9c9"
+                    android:minHeight="200.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentlyt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2.0dip"
+            android:text="Jun 25 10:40 AM"
+            android:textSize="10.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@+id/layout"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/roundedbg1">
+
+        <ImageView
+            android:id="@+id/liked"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2.0dip"
+            emojicon:srcCompat="@drawable/img_chnthfavorute" />
+
+        <ImageView
+            android:id="@+id/nolike"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2.0dip"
+            emojicon:srcCompat="@drawable/img_nolikes" />
+
+        <TextView
+            android:id="@+id/likecount"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/liked"
+            android:gravity="center_vertical"
+            android:text="10000"
+            android:textColor="#ff616060"
+            android:textSize="16.0dip" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toRightOf="@+id/likecount"
+            android:gravity="center_vertical"
+            android:text="2 Comments"
+            android:textColor="#ff616060"
+            android:textSize="16.0dip" />
+
+        <ImageView
+            android:id="@+id/imagetostatus"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.0dip"
+            android:layout_toLeftOf="@+id/share"
+            android:padding="5.0dip"
+            emojicon:srcCompat="@drawable/img_imgstatus" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:padding="5.0dip"
+            emojicon:srcCompat="@drawable/img_share" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/balnkspace"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/controls"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/roundebg" />
+</RelativeLayout>

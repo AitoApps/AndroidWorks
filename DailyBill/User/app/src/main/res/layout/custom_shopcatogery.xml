@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip"
+    android:background="@drawable/roundedcornerbackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="#ffffffff">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/catogeryname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/viewall"
+            android:text="200 % Offer ningakk kittum"
+            android:textColor="#ff000000"
+            android:textSize="18.0dip" />
+
+        <ImageView
+            android:id="@+id/viewall"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:padding="10.0dip"
+            android:src="@drawable/viewall" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview"
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout_below="@+id/heading" />
+</RelativeLayout>

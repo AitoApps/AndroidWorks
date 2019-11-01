@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180.0dip"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:padding="5.0dip">
+
+        <RelativeLayout
+            android:id="@+id/namelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/productname"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Kidilan Avo"
+                android:textColor="#ff000000"
+                android:textSize="14.0dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytimage"
+            android:layout_width="120.0dip"
+            android:layout_height="90.0dip"
+            android:layout_below="@+id/namelayout"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="5.0dip">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="120.0dip"
+                android:layout_height="90.0dip"
+                android:background="@drawable/noproductphoto"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/productdetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytimage"
+            android:layout_marginTop="5.0dip">
+
+            <Button
+                android:id="@+id/buy"
+                android:layout_width="70.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:gravity="center"
+                android:text="ORDER"
+                android:textColor="#ffffffff"
+                android:textSize="13.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/header" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/back" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@+id/text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="Image Viewer" android:layout_toRightOf="@+id/back" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@+id/header">
+        <ImageView android:id="@+id/heart" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" />
+        <com.sanji.TouchImageView android:id="@+id/image" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

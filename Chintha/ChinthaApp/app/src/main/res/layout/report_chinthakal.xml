@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundebg">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:padding="10.0dip">
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jdbfdsfdsfhgdgfhjdgfdfgdgfhd" />
+
+        <RadioGroup
+            android:id="@+id/rdgroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="10.0dip">
+
+            <RadioButton
+                android:id="@+id/rpt_chatting"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:checked="false"
+                android:text="" />
+
+            <RadioButton
+                android:id="@+id/rpt_thery"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:checked="false"
+                android:text="Thery" />
+
+            <RadioButton
+                android:id="@+id/parihasam"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:checked="false"
+                android:text="Parihasam" />
+
+            <RadioButton
+                android:id="@+id/rpt_ashleelam"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:checked="false"
+                android:text="Ashleelam" />
+
+            <RadioButton
+                android:id="@+id/other"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:checked="false"
+                android:text="Other" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/text1"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rdgroup"
+            android:layout_margin="2.0dip"
+            android:text="jdbfdsfdsfhgdgfhjdgfdfgdgfhd" />
+
+        <Button
+            android:id="@+id/rpt_update"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/text1"
+            android:layout_alignRight="@+id/rdgroup"
+            android:layout_margin="3.0dip"
+            android:background="@drawable/roundedbtnbutton"
+            android:text="Report"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

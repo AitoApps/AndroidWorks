@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/header" android:background="@color/grayColor" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@+id/logo" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:src="@drawable/logo" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ff000000" android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Sanji" android:layout_toRightOf="@+id/logo" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/footer" android:layout_below="@+id/header">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@+id/place">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView android:id="@+id/recylerview" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:splitMotionEvents="false" />
+            </RelativeLayout>
+            <ImageView android:id="@+id/nointernet" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/nointernet" android:layout_centerInParent="true" />
+            <ImageView android:id="@+id/heart" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:id="@+id/footer" android:background="@color/grayColor" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="*">
+            <TableRow>
+                <RelativeLayout android:id="@+id/lytvouchers" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <ImageView android:id="@+id/vouchers" android:padding="5.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/orderhistory" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@+id/txtvouchers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="My Order" android:layout_below="@+id/vouchers" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/notilyt" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@+id/lytvouchers" android:layout_centerVertical="true">
+                    <ImageView android:id="@+id/notipic" android:padding="4.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/notificationicon" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="9.0dip" android:textColor="#ff000000" android:gravity="center" android:id="@+id/noticount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="1" />
+                    <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@+id/txtnoticount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Bell" android:layout_below="@+id/noticount" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/lytcart" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@+id/notilyt" android:layout_centerVertical="true">
+                    <ImageView android:id="@+id/cart" android:padding="4.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginTop="2.0dip" android:src="@drawable/carticons" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="9.0dip" android:textColor="#ff000000" android:id="@+id/cartcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_centerInParent="true" />
+                    <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@+id/txtcartcount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cart" android:layout_below="@+id/cart" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/lytsearch" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@+id/lytcart" android:layout_centerVertical="true">
+                    <ImageView android:id="@+id/search" android:padding="3.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/searchicon" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center_horizontal" android:id="@+id/txtsearch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Search" android:layout_below="@+id/search" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>

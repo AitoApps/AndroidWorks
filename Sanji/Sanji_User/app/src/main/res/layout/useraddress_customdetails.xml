@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:emojicon="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@+id/layout" android:background="@drawable/clearroundedlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+        <RadioButton android:id="@+id/radio1" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:layout_centerVertical="true" />
+        <TextView android:textStyle="bold" android:id="@+id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Sayyid Salman" android:layout_toLeftOf="@+id/edit" android:layout_toRightOf="@+id/radio1" style="@android:style/TextAppearance.Medium" />
+        <TextView android:id="@+id/address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Hassanganakath House Ponnai kErqalalasskalh jhgdjs hgd" android:layout_toRightOf="@+id/radio1" android:layout_below="@+id/name" style="@android:style/TextAppearance.Medium" />
+        <TextView android:textStyle="bold" android:id="@+id/place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:text="Ponnani" android:layout_toRightOf="@+id/radio1" android:layout_below="@+id/address" style="@android:style/TextAppearance.Medium" />
+        <TextView android:textStyle="bold" android:id="@+id/pincode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:text=", 679577" android:layout_toRightOf="@+id/place" android:layout_below="@+id/address" style="@android:style/TextAppearance.Medium" />
+        <TextView android:textStyle="italic" android:id="@+id/mobile1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="3.0dip" android:text="+91 9037631786 , 91037631786" android:layout_toRightOf="@+id/radio1" android:layout_below="@+id/place" style="@android:style/TextAppearance.Medium" />
+        <ImageView android:id="@+id/edit" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="5.0dip" android:src="@drawable/edit" android:layout_toLeftOf="@+id/delete" />
+        <ImageView android:id="@+id/delete" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_margin="5.0dip" android:src="@drawable/delete" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

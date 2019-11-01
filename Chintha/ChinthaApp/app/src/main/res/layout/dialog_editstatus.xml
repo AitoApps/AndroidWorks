@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundebg">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip">
+
+            <android.support.text.emoji.widget.EmojiAppCompatEditText
+                android:id="@+id/chintha"
+                android:layout_width="fill_parent"
+                android:layout_height="175.0dip"
+                android:layout_margin="3.0dip"
+                android:background="@drawable/textborder"
+                android:gravity="center|left|top"
+                android:hint="Comment"
+                android:lineSpacingExtra="8.0sp"
+                android:padding="5.0dip"
+                android:paddingLeft="5.0dip"
+                android:textSize="16.0dip"
+                 />
+
+            <Button
+                android:id="@+id/rpt_update"
+                android:layout_width="100.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/chintha"
+                android:layout_alignRight="@+id/chintha"
+                android:layout_margin="3.0dip"
+                android:background="@drawable/roundedbtnbutton"
+                android:text="Update"
+                android:textColor="#ffffffff"
+                android:textSize="14.0dip" />
+
+            <TextView
+                android:id="@+id/alert"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rpt_update"
+                android:layout_margin="5.0dip"
+                android:text="dsbjgjkdsjksdfsdfh gfhhf sdfg sdgfhjdsfhsg dfgsdfsdhf hjdsfhjgdsfhgsdf hgdfhg dfhgfhf"
+                android:textColor="#ff000000"
+                android:textSize="14.0dip" />
+
+            <Button
+                android:id="@+id/close"
+                android:layout_width="100.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/alert"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="3.0dip"
+                android:background="@drawable/roundebutton2"
+                android:text="Close"
+                android:textColor="#ffffffff"
+                android:textSize="14.0dip" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

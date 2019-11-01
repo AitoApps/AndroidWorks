@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:id="@+id/loctext"
+            android:layout_width="250.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/location"
+            android:text="Select Your Locality"
+            android:textColor="#ff000000"
+            android:textSize="12.0dip" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lytadvt"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/header"
+        >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytwallet"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/roundedcornerbackground"
+        android:layout_below="@+id/lytadvt"
+        android:layout_margin="5dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/lytbuttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lytwallet"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        >
+
+        <Button
+            android:id="@+id/newbill"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="New Bill"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/bills"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Bills"
+            android:layout_toRightOf="@+id/newbill"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/rewards"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Rewards"
+            android:layout_below="@+id/newbill"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/extra"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Extra"
+            android:layout_below="@+id/bills"
+            android:layout_toRightOf="@+id/rewards"
+            android:layout_margin="5dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Admin"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:gravity="center"
+        >
+
+         <Button
+             android:id="@+id/loanapps"
+             android:layout_width="150dp"
+             android:layout_height="150dp"
+             android:text="Loan Apps"
+             android:textColor="#000"
+             android:textSize="20dp"
+             android:layout_margin="10dp"
+             android:background="@drawable/the_border1"
+             />
+
+        <Button
+            android:id="@+id/gameapps"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Game Apps"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/loanapps"
+            android:layout_margin="10dp"
+            android:background="@drawable/the_border1"
+            />
+
+
+        <Button
+            android:id="@+id/otherapp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Other Apps"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/loanapps"
+            android:background="@drawable/the_border1"
+            />'
+        <Button
+            android:id="@+id/video"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Video"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/otherapp"
+            android:layout_below="@+id/gameapps"
+            android:layout_margin="10dp"
+            android:background="@drawable/the_border1"
+            />
+       </RelativeLayout>
+</RelativeLayout>

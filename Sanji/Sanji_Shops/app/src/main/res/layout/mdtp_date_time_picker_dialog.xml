@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/mdtp_date_picker_view_animator" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.TabLayout android:id="@+id/mdtp_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="enterAlways|scroll" />
+    <android.support.v4.view.ViewPager android:id="@+id/mdtp_pager" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <include layout="@layout/mdtp_done_button" />
+</LinearLayout>

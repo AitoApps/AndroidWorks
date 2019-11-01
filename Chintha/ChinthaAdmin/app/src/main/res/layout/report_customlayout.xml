@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground">
+
+        <RelativeLayout
+            android:id="@+id/msgpart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.chintha_admin.ExpandableTextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:layout_marginTop="2.0dip"
+                android:text="nall vakkukal nall janmammanu jeevith avzhiyil"
+                android:textColor="#ff000000"
+                android:textSize="16.0dip" />
+
+            <ImageView
+                android:id="@+id/photostatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/status"
+                android:adjustViewBounds="true"
+                android:background="#ffc9c9c9"
+                android:minHeight="200.0dip" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/reporttype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msgpart"
+            android:layout_margin="5.0dip"
+            android:layout_marginTop="2.0dip"
+            android:text="Report Type"
+            android:textColor="#ff000000"
+            android:textSize="16.0dip" />
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reporttype"
+            android:layout_margin="5.0dip">
+
+            <ImageView
+                android:id="@+id/verify"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_margin="5.0dip"
+                android:src="@drawable/varifiedicon" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginLeft="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/verify"
+                android:src="@drawable/closeicon" />
+
+            <TextView
+                android:id="@+id/txtreporttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/block"
+                android:text="Salman"
+                android:textColor="#ff000000"
+                android:textSize="18.0dip"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/block"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5.0dip"
+                android:src="@drawable/blockuser" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

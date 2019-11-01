@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/roundedcornerbackground4">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="250.0dip"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/playvideo"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_alignLeft="@+id/video"
+            android:layout_margin="5.0dip"
+            android:padding="10.0dip"
+            android:src="@drawable/icon_play"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/pausevideo"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_alignLeft="@+id/video"
+            android:layout_margin="5.0dip"
+            android:padding="10.0dip"
+            android:src="@drawable/icon_pause"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_below="@+id/layout"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/roundedcornerbackground3">
+
+        <ImageView
+            android:id="@+id/shareicon"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/downloadicon"
+            android:padding="7.0dip"
+            android:src="@drawable/share_blue" />
+
+        <ImageView
+            android:id="@+id/downloadicon"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:padding="7.0dip"
+            android:src="@drawable/download_blue" />
+    </RelativeLayout>
+</RelativeLayout>

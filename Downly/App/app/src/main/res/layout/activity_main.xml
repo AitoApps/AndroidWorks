@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/logo_small" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Downly"
+            android:textColor="#ffffffff" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/downloads"
+            android:padding="8.0dip"
+            android:src="@drawable/icon_share" />
+
+        <ImageView
+            android:id="@+id/downloads"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:padding="8.0dip"
+            android:src="@drawable/icon_download" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controller"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/header"
+        >
+
+        <RelativeLayout
+            android:id="@+id/lythowtodown"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/the_border3"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/download"
+            android:layout_marginLeft="10dp"
+            >
+
+            <TextView
+                android:id="@+id/howtodownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to Download ?"
+                android:layout_centerInParent="true"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <com.github.angads25.toggle.widget.LabeledSwitch
+            android:id="@+id/download"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="14.0sp"
+            app:colorBorder="#c50000"
+            app:colorOn="#3d5c35"
+            app:on="true"
+            app:textOff="Download Off"
+            app:textOn="Download On" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/controller"
+        android:layout_above="@+id/adView1"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/firstrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        >
+   <RelativeLayout
+       android:id="@+id/lytyoutube"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/the_border1"
+
+       android:layout_margin="5dp"
+       >
+    <ImageView
+        android:id="@+id/youtube"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"
+        android:src="@drawable/new_youtube"
+        />
+
+      <TextView
+          android:id="@+id/txtyoutube"
+          android:layout_width="110dp"
+          android:layout_height="30dp"
+          android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp"
+          android:textSize="14dp"
+          android:textStyle="bold"
+          android:layout_marginBottom="5dp"
+          android:gravity="center_horizontal"
+          android:layout_below="@+id/youtube"
+          android:text="Open Youtube"
+          android:textColor="#000"
+          />
+   </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lytfacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/the_border1"
+        android:layout_toRightOf="@+id/lytyoutube"
+        android:layout_margin="5dp"
+        >
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/new_fblogo"
+            />
+
+        <TextView
+            android:id="@+id/txtfacebook"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/facebook"
+            android:text="Open Facebook"
+            android:textColor="#000"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytinstagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/the_border1"
+        android:layout_toRightOf="@+id/lytfacebook"
+        android:layout_margin="5dp"
+        >
+        <ImageView
+            android:id="@+id/instagram"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/new_instagram"
+            />
+
+        <TextView
+            android:id="@+id/txtinstagram"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/instagram"
+            android:text="Open instagram"
+            android:textColor="#000"
+            />
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/firstrow"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/lyttiktok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/tiktok"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_tiktok"
+                />
+
+            <TextView
+                android:id="@+id/txttiktok"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/tiktok"
+                android:text="Open TikTok"
+                android:textColor="#000"
+                />
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lyttwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+            android:layout_toRightOf="@+id/lyttiktok"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_twitter"
+                />
+
+            <TextView
+                android:id="@+id/txttwitter"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/twitter"
+                android:text="Open Twitter"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lytsharechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+            android:layout_toRightOf="@+id/lyttwitter"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/sharechat"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_sharechat"
+                />
+
+            <TextView
+                android:id="@+id/txtsharechat"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/sharechat"
+                android:text="Open ShareChat"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thirdrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/secondrow"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/lytpintrest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/pintrest"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_pintrest"
+                />
+
+            <TextView
+                android:id="@+id/txtpintrest"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/pintrest"
+                android:text="Open Pinterest"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytwhatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+            android:layout_toRightOf="@+id/lytpintrest"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/whatsapp"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_whatsapp"
+                />
+
+            <TextView
+                android:id="@+id/txtwhatsapp"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/whatsapp"
+                android:text="Status Saver"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lytspliiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+            android:layout_toRightOf="@+id/lytwhatsapp"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/spliiter"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_splitter"
+                />
+
+            <TextView
+                android:id="@+id/txtspliiter"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/spliiter"
+                android:text="30s Splitter"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fourthrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/thirdrow"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/lytvideotomp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/the_border1"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/videotomp3"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_mp3"
+                />
+
+            <TextView
+                android:id="@+id/txtvideotomp3"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/videotomp3"
+                android:text="Video to MP3"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lythelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lytvideotomp3"
+            android:background="@drawable/the_border1"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/help"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_help"
+                />
+
+            <TextView
+                android:id="@+id/txthelp"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/help"
+                android:text="Help"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytabout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lythelp"
+            android:background="@drawable/the_border1"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@+id/about"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/new_about"
+                />
+
+            <TextView
+                android:id="@+id/txtabout"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/about"
+                android:text="About"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        ads:adSize="BANNER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="ca-app-pub-8933294539595122/5905173429"
+        android:visibility="visible"
+        />
+
+
+</RelativeLayout>

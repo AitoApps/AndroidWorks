@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shplyt"
+    android:layout_width="180.0dip"
+    android:layout_height="190.0dip"
+    android:layout_margin="2.0dip"
+    android:background="#ffffffff">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="170.0dip"
+        android:layout_height="128.0dip"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/noproductphoto"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/shopname"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/km"
+        android:layout_below="@+id/image"
+        android:layout_margin="5.0dip"
+        android:gravity="left"
+        android:text="Kidilan Medicals News "
+        android:textColor="#ff000000"
+        android:textSize="16.0dip" />
+
+    <TextView
+        android:id="@+id/place"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:layout_toLeftOf="@+id/km"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Place , "
+        android:textColor="#ff000000"
+        android:textSize="10.0dip" />
+
+    <TextView
+        android:id="@+id/km"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:text="3.2 Km"
+        android:textColor="#ff000000"
+        android:textSize="10.0dip" />
+</RelativeLayout>
