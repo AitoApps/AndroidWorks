@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,6 +16,8 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -55,7 +59,7 @@ public class Add_Apps extends AppCompatActivity {
     public TextView persentage;
     public Button stop;
 
-    public static String txt_english="",txt_malayalam="",txt_hindi="",txt_tamil="",txt_telugu="",txt_photopath="";
+    public String txt_english="",txt_malayalam="",txt_hindi="",txt_tamil="",txt_telugu="",txt_photopath="",txt_datasn="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,6 +152,17 @@ public class Add_Apps extends AppCompatActivity {
                         {
                             txt_photopath=txt_photopath+":%"+k[i];
                         }
+
+
+                        i=i+1;
+                        if(txt_datasn.equalsIgnoreCase(""))
+                        {
+                            txt_datasn=k[i];
+                        }
+                        else
+                        {
+                            txt_datasn=txt_datasn+":%"+k[i];
+                        }
                     }
 
                     uploadingprogress();
@@ -156,16 +171,9 @@ public class Add_Apps extends AppCompatActivity {
                 {
                     Toasty.info(getApplicationContext(),Temp.nointernet, Toast.LENGTH_SHORT).show();
                 }
-
-
-
-
             }
         });
     }
-
-
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -199,6 +207,10 @@ public class Add_Apps extends AppCompatActivity {
             item.setTelugu(k[i]);
             i++;
             item.setPhotopath(k[i]);
+            i++;
+            item.setDatasn(k[i]);
+            i++;
+            item.setFbpath(k[i]);
             feedItems.add(item);
         }
 
@@ -257,11 +269,18 @@ public class Add_Apps extends AppCompatActivity {
 
         MultipartBody.Builder bodyBuilder = new MultipartBody.Builder();
         bodyBuilder.setType(MultipartBody.FORM);
+        File sourceFile1 = new File(db.getphotopath());
 
-        if(!db.getphotopath().equalsIgnoreCase("NA") && !db.getphotopath().equalsIgnoreCase(""))
+        if(sourceFile1.exists())
         {
-            File sourceFile = new File(db.getphotopath());
-            bodyBuilder.addFormDataPart("applogo",sourceFile.getName(),RequestBody.create(MediaType.parse("image/png"), sourceFile));
+           
+            bodyBuilder.addFormDataPart("applogoexist", null,RequestBody.create(contentType,"exist"));
+
+            bodyBuilder.addFormDataPart("applogo",sourceFile1.getName(),RequestBody.create(MediaType.parse("image/png"), sourceFile1));
+        }
+        else
+        {
+            bodyBuilder.addFormDataPart("applogoexist", null,RequestBody.create(contentType,"no"));
         }
 
         if(txt_photopath.contains(":%"))
@@ -276,8 +295,16 @@ public class Add_Apps extends AppCompatActivity {
                 else
                 {
                     File sourceFile = new File(p[j]);
-                    bodyBuilder.addFormDataPart("photo"+(j+1)+"exist", null,RequestBody.create(contentType,"exit"));
-                    bodyBuilder.addFormDataPart("photo"+(j+1),sourceFile.getName(),RequestBody.create(MediaType.parse("image/jpg"), sourceFile));
+                    if(sourceFile.exists())
+                    {
+                        bodyBuilder.addFormDataPart("photo"+(j+1)+"exist", null,RequestBody.create(contentType,"exit"));
+                        bodyBuilder.addFormDataPart("photo"+(j+1),sourceFile.getName(),RequestBody.create(MediaType.parse("image/jpg"), sourceFile));
+
+                    }
+                    else
+                    {
+                        bodyBuilder.addFormDataPart("photo"+(j+1)+"exist", null,RequestBody.create(contentType,"NA"));
+                    }
                 }
 
             }
@@ -285,15 +312,28 @@ public class Add_Apps extends AppCompatActivity {
         }
         else if(!txt_photopath.equalsIgnoreCase(""))
         {
+
+
             if(txt_photopath.equalsIgnoreCase("NA"))
             {
                 bodyBuilder.addFormDataPart("photo1exist", null,RequestBody.create(contentType,"NA"));
             }
             else
             {
+
                 File sourceFile = new File(txt_photopath);
-                bodyBuilder.addFormDataPart("photo1exist", null,RequestBody.create(contentType,"exit"));
-                bodyBuilder.addFormDataPart("photo1",sourceFile.getName(),RequestBody.create(MediaType.parse("image/jpg"), sourceFile));
+                if(sourceFile.exists())
+                {
+                    bodyBuilder.addFormDataPart("photo1exist", null,RequestBody.create(contentType,"exit"));
+                    bodyBuilder.addFormDataPart("photo1",sourceFile.getName(),RequestBody.create(MediaType.parse("image/jpg"), sourceFile));
+
+                }
+                else
+                {
+                    bodyBuilder.addFormDataPart("photo1exist", null,RequestBody.create(contentType,"NA"));
+
+                }
+
             }
 
         }
@@ -304,16 +344,14 @@ public class Add_Apps extends AppCompatActivity {
 
         bodyBuilder.addFormDataPart("appname", null,RequestBody.create(contentType,db.getappname()));
         bodyBuilder.addFormDataPart("appurl", null,RequestBody.create(contentType, db.getappurl()));
-        bodyBuilder.addFormDataPart("opentitle", null,RequestBody.create(contentType, db.getopentitle()));
-        bodyBuilder.addFormDataPart("opendisc", null,RequestBody.create(contentType, db.getopendisc()));
-        bodyBuilder.addFormDataPart("disctitle", null,RequestBody.create(contentType, db.getdisctitle()));
-        bodyBuilder.addFormDataPart("discfooter", null,RequestBody.create(contentType, db.getdiscfooter()));
-
+        bodyBuilder.addFormDataPart("titles", null,RequestBody.create(contentType, db.gettitle()));
+        bodyBuilder.addFormDataPart("footer", null,RequestBody.create(contentType, db.getfooter()));
         bodyBuilder.addFormDataPart("english", null,RequestBody.create(contentType,txt_english));
         bodyBuilder.addFormDataPart("malayalam", null,RequestBody.create(contentType, txt_malayalam));
         bodyBuilder.addFormDataPart("hindi", null,RequestBody.create(contentType, txt_hindi));
         bodyBuilder.addFormDataPart("tamil", null,RequestBody.create(contentType, txt_tamil));
         bodyBuilder.addFormDataPart("telugu", null,RequestBody.create(contentType, txt_telugu));
+        bodyBuilder.addFormDataPart("datasn", null,RequestBody.create(contentType, txt_datasn));
         bodyBuilder.addFormDataPart("photopath", null,RequestBody.create(contentType, txt_photopath));
 
 
@@ -353,6 +391,7 @@ public class Add_Apps extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        Log.w("Resilt",Log.getStackTraceString(e));
                         pb1.setVisibility(View.GONE);
                         persentage.setVisibility(View.GONE);
                         update.setEnabled(true);
@@ -371,25 +410,31 @@ public class Add_Apps extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-
                             String result=response.body().string();
                             pb1.setVisibility(View.GONE);
                             persentage.setVisibility(View.GONE);
                             update.setEnabled(true);
                             dialog.dismiss();
                             if (result.contains("ok")) {
-//                                File file1 = new File(photopath1);
-//                                if (file1.exists()) {
-//                                    file1.delete();
-//                                }
+
+                                db.deleteappdetails();
+                                db.deleteappview();
+                                try
+                                {
+                                    File file1 = new File(Environment.getExternalStorageDirectory() + "/" + Temp.foldername);
+                                    FileUtils.cleanDirectory(file1);
+                                } catch (Exception ex)
+                                {
+                                }
                                 Toasty.info(getApplicationContext(), "Updated", Toast.LENGTH_SHORT).show();
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(intent);
                             } else if (result.contains("exit")) {
-                                Toasty.info(getApplicationContext(), "Sorry ! This Stage is exist", Toast.LENGTH_SHORT).show();
+                                Toasty.info(getApplicationContext(), "Sorry ! This app is exist", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toasty.info(getApplicationContext(), Temp.tempproblem, Toast.LENGTH_SHORT).show();
                             }
-
                         }
                         catch (Exception a)
                         {

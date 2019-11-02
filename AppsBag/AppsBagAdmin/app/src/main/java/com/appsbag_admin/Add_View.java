@@ -97,9 +97,18 @@ public class Add_View extends AppCompatActivity {
             tamil.setText(Temp.appview_tamil);
             telugu.setText(Temp.appview_telugu);
             photopath1=Temp.appview_photopath;
-            File file = new File(Temp.appview_photopath);
-            Uri imageUri = Uri.fromFile(file);
-            Glide.with(this).load(imageUri).transition(DrawableTransitionOptions.withCrossFade()).into(photo1);
+            if(Temp.appedit==1)
+            {
+
+                Glide.with(this).load(Temp.appview_fbpath).transition(DrawableTransitionOptions.withCrossFade()).into(photo1);
+            }
+            else
+            {
+                File file = new File(Temp.appview_photopath);
+                Uri imageUri = Uri.fromFile(file);
+                Glide.with(this).load(imageUri).transition(DrawableTransitionOptions.withCrossFade()).into(photo1);
+            }
+
 
         }
         photo1.setOnClickListener(new View.OnClickListener() {
@@ -179,11 +188,11 @@ public class Add_View extends AppCompatActivity {
 
                 if(Temp.appviewedit==1)
                 {
-                     db.addappview_update(Temp.appview_pkey,txt_english,txt_malayalam,txt_hindi,txt_tamil,txt_telugu,photopath1);
+                     db.addappview_update(Temp.appview_pkey,txt_english,txt_malayalam,txt_hindi,txt_tamil,txt_telugu,photopath1,Temp.appview_datasn);
                 }
                 else
                 {
-                    db.addappview(txt_english,txt_malayalam,txt_hindi,txt_tamil,txt_telugu,photopath1);
+                    db.addappview(txt_english,txt_malayalam,txt_hindi,txt_tamil,txt_telugu,photopath1,"0","");
                 }
 
                 finish();

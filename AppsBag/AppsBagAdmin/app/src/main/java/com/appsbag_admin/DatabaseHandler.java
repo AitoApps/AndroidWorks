@@ -20,10 +20,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final String appname = "appname";
     private static final String appurl = "appurl";
-    private static final String opentitle = "opentitle";
-    private static final String opendisc = "opendisc";
-    private static final String disctitle = "disctitle";
-    private static final String discfooter = "discfooter";
+    private static final String title = "title";
+    private static final String footer = "footer";
+
+
     private static final String photopath = "photopath";
 
     private static final String english = "english";
@@ -31,11 +31,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String hindi = "hindi";
     private static final String tamil = "tamil";
     private static final String telugu = "telugu";
+    private static final String datatid = "datatid";
+    private static final String fbpath = "fbpath";
 
     private static String CREATE_TABLE2 = "CREATE TABLE " + TABLE_name2 + "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+screenwidth+" TEXT"+")";
 
-    private static String CREATE_TABLE1 = "CREATE TABLE " + TABLE_name1 + "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+appname+" TEXT,"+appurl+" TEXT,"+opentitle+" TEXT,"+opendisc+" TEXT,"+disctitle+" TEXT,"+discfooter+" TEXT,"+photopath+" TEXT"+")";
-    private static String CREATE_TABLE3 = "CREATE TABLE " + TABLE_name3 + "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+english+" TEXT,"+malayalam+" TEXT,"+hindi+" TEXT,"+tamil+" TEXT,"+telugu+" TEXT,"+photopath+" TEXT"+")";
+    private static String CREATE_TABLE1 = "CREATE TABLE " + TABLE_name1 + "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+appname+" TEXT,"+appurl+" TEXT,"+title+" TEXT,"+footer+" TEXT,"+photopath+" TEXT"+")";
+    private static String CREATE_TABLE3 = "CREATE TABLE " + TABLE_name3 + "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+english+" TEXT,"+malayalam+" TEXT,"+hindi+" TEXT,"+tamil+" TEXT,"+telugu+" TEXT,"+photopath+" TEXT,"+datatid+" TEXT,"+fbpath+" TEXT"+")";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -60,8 +62,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name3);
         onCreate(db);
     }
-    public void addappview(String english1,String malayalam1,String hindi1,String tamil1,String telugu1,String photopath1) {
-        deleteappview();
+    public void addappview(String english1,String malayalam1,String hindi1,String tamil1,String telugu1,String photopath1,String datatid1,String fbpath1) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(english, english1);
@@ -70,11 +71,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(tamil, tamil1);
         values.put(telugu, telugu1);
         values.put(photopath, photopath1);
+        values.put(datatid,datatid1);
+        values.put(fbpath,fbpath1);
         db.insert(TABLE_name3, null, values);
         db.close();
     }
 
-    public void addappview_update(String pkey1, String english1,String malayalam1,String hindi1,String tamil1,String telugu1,String photopath1) {
+    public void addappview_update(String pkey1, String english1,String malayalam1,String hindi1,String tamil1,String telugu1,String photopath1,String datatid1) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(english, english1);
@@ -83,10 +86,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(tamil, tamil1);
         values.put(telugu, telugu1);
         values.put(photopath, photopath1);
+        values.put(datatid,datatid1);
         db.update(TABLE_name3, values, "pkey = ?", new String[]{pkey1});
         db.close();
     }
-
     public ArrayList<String> getappview() {
         ArrayList<String> arraylist = new ArrayList<>();
         Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM appviews ORDER BY pkey ASC", null);
@@ -98,6 +101,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             arraylist.add(c.getString(4));
             arraylist.add(c.getString(5));
             arraylist.add(c.getString(6));
+            arraylist.add(c.getString(7));
+            arraylist.add(c.getString(8));
         }
         c.close();
         return arraylist;
@@ -112,6 +117,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             arraylist.add(c.getString(4));
             arraylist.add(c.getString(5));
             arraylist.add(c.getString(6));
+            arraylist.add(c.getString(7));
         }
         c.close();
         return arraylist;
@@ -126,16 +132,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-    public void addappdetails(String appname1,String appurl1,String opentitle1,String opendisc1,String disctitle1,String discfooter1,String photopath1) {
+    public void addappdetails(String appname1,String appurl1,String title1,String footer1,String photopath1) {
         deleteappdetails();
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(appname, appname1);
         values.put(appurl, appurl1);
-        values.put(opentitle, opentitle1);
-        values.put(opendisc, opendisc1);
-        values.put(disctitle, disctitle1);
-        values.put(discfooter, discfooter1);
+        values.put(title, title1);
+        values.put(footer, footer1);
         values.put(photopath,photopath1);
         db.insert(TABLE_name1, null, values);
         db.close();
@@ -161,7 +165,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return link;
     }
 
-    public String getopentitle() {
+
+
+    public String gettitle() {
         String link = "";
         Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name1, null);
         while (c.moveToNext()) {
@@ -171,7 +177,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return link;
     }
 
-    public String getopendisc() {
+    public String getfooter() {
         String link = "";
         Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name1, null);
         while (c.moveToNext()) {
@@ -181,31 +187,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return link;
     }
 
-    public String getdisctitle() {
-        String link = "";
-        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name1, null);
-        while (c.moveToNext()) {
-            link = c.getString(5);
-        }
-        c.close();
-        return link;
-    }
-
-    public String getdiscfooter() {
-        String link = "";
-        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name1, null);
-        while (c.moveToNext()) {
-            link = c.getString(6);
-        }
-        c.close();
-        return link;
-    }
 
     public String getphotopath() {
         String link = "";
         Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name1, null);
         while (c.moveToNext()) {
-            link = c.getString(7);
+            link = c.getString(5);
         }
         c.close();
         return link;

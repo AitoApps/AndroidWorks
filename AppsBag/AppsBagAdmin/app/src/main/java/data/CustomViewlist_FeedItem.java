@@ -1,7 +1,23 @@
 package data;
 
 public class CustomViewlist_FeedItem {
-    private String pkey,english,malayalam,hindi,tamil,telugu,photopath;
+    private String pkey,english,malayalam,hindi,tamil,telugu,photopath,datasn,fbpath;
+
+    public String getFbpath() {
+        return fbpath;
+    }
+
+    public void setFbpath(String fbpath) {
+        this.fbpath = fbpath;
+    }
+
+    public String getDatasn() {
+        return datasn;
+    }
+
+    public void setDatasn(String datasn) {
+        this.datasn = datasn;
+    }
 
     public String getPkey() {
         return pkey;

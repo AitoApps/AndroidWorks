@@ -1,5 +1,6 @@
 package com.appsbag_admin;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -11,9 +12,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +28,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
+import com.bumptech.glide.signature.ObjectKey;
 import com.yalantis.ucrop.UCrop;
 
 import java.io.File;
@@ -38,14 +47,15 @@ public class App_Details extends AppCompatActivity {
 
     ImageView back;
     TextView text;
-    TextView txtappname,txtappurl,txtopenhead,txtopendisc,txtdisctitle,txtdiscfooter,txtphoto1;
-    EditText appname,appurl,openhead,opendisc,disctitle,discfooter;
+    TextView txtappname,txtappurl,txtphoto1,txtdiscsheader,txttitleeng,txttitlemal,txttitlehindi,txttitletamil,txttitletelugu,txtdiscsfooter,txtfootereng,txtfootermal,txtfooterhindi,txtfootertamil,txtfootertelugu;
+    EditText appname,appurl;
     Button next;
     Typeface face;
     ImageView clearall;
     ConnectionDetecter cd;
     final DatabaseHandler db=new DatabaseHandler(this);
-    public static String txt_appname="",txt_appurl="",txt_openhead="",txt_opendisc="",txt_disctitle="",txt_discfooter="";
+    public static String txt_appname="",txt_appurl="",txt_openhead="",txt_opendisc="";
+    EditText titleeng,titlemal,titlehindi,titletamil,titletelugu,footereng,footermal,footerhindi,footertamil,footertelugu;
     String photopath1 = "none";
     ImageView photo1;
     ProgressBar pb1;
@@ -66,36 +76,67 @@ public class App_Details extends AppCompatActivity {
         txtphoto1=findViewById(R.id.txtphoto1);
         txtappname=findViewById(R.id.txtappname);
         txtappurl=findViewById(R.id.txtappurl);
-        txtopenhead=findViewById(R.id.txtopenhead);
-        txtopendisc=findViewById(R.id.txtopendisc);
-        txtdisctitle=findViewById(R.id.txtdisctitle);
-        txtdiscfooter=findViewById(R.id.txtdiscfooter);
         appname=findViewById(R.id.appname);
         appurl=findViewById(R.id.appurl);
-        openhead=findViewById(R.id.openhead);
-        opendisc=findViewById(R.id.opendisc);
-        disctitle=findViewById(R.id.disctitle);
         clearall=findViewById(R.id.clearall);
-        discfooter=findViewById(R.id.discfooter);
         next=findViewById(R.id.next);
         cd=new ConnectionDetecter(this);
+
+
+        txtdiscsheader=findViewById(R.id.txtdiscsheader);
+        txttitleeng=findViewById(R.id.txttitleeng);
+        txttitlemal=findViewById(R.id.txttitlemal);
+        txttitlehindi=findViewById(R.id.txttitlehindi);
+        txttitletamil=findViewById(R.id.txttitletamil);
+        txttitletelugu=findViewById(R.id.txttitletelugu);
+        txtdiscsfooter=findViewById(R.id.txtdiscsfooter);
+        txtfootereng=findViewById(R.id.txtfootereng);
+        txtfootermal=findViewById(R.id.txtfootermal);
+        txtfooterhindi=findViewById(R.id.txtfooterhindi);
+        txtfootertamil=findViewById(R.id.txtfootertamil);
+        txtfootertelugu=findViewById(R.id.txtfootertelugu);
+        titleeng=findViewById(R.id.titleeng);
+        titlemal=findViewById(R.id.titlemal);
+        titlehindi=findViewById(R.id.titlehindi);
+        titletamil=findViewById(R.id.titletamil);
+        titletelugu=findViewById(R.id.titletelugu);
+        footereng=findViewById(R.id.footereng);
+        footermal=findViewById(R.id.footermal);
+        footerhindi=findViewById(R.id.footerhindi);
+        footertamil=findViewById(R.id.footertamil);
+        footertelugu=findViewById(R.id.footertelugu);
 
         text.setTypeface(face);
         txtphoto1.setTypeface(face);
         txtappname.setTypeface(face);
         txtappurl.setTypeface(face);
-        txtopenhead.setTypeface(face);
-        txtopendisc.setTypeface(face);
-        txtdisctitle.setTypeface(face);
-        txtdiscfooter.setTypeface(face);
         appname.setTypeface(face);
         appurl.setTypeface(face);
-        openhead.setTypeface(face);
-        opendisc.setTypeface(face);
-        disctitle.setTypeface(face);
-        discfooter.setTypeface(face);
         next.setTypeface(face);
 
+
+        txtdiscsheader.setTypeface(face);
+        txttitleeng.setTypeface(face);
+        txttitlemal.setTypeface(face);
+        txttitlehindi.setTypeface(face);
+        txttitletamil.setTypeface(face);
+        txttitletelugu.setTypeface(face);
+        txtdiscsfooter.setTypeface(face);
+        txtfootereng.setTypeface(face);
+        txtfootermal.setTypeface(face);
+        txtfooterhindi.setTypeface(face);
+        txtfootertamil.setTypeface(face);
+        txtfootertelugu.setTypeface(face);
+        titleeng.setTypeface(face);
+        titlemal.setTypeface(face);
+        titlehindi.setTypeface(face);
+        titletamil.setTypeface(face);
+        titletelugu.setTypeface(face);
+        footereng.setTypeface(face);
+        footermal.setTypeface(face);
+        footerhindi.setTypeface(face);
+        footertamil.setTypeface(face);
+        footertelugu.setTypeface(face);
 
         photo1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,7 +168,7 @@ public class App_Details extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(App_Details.this);
                 builder1.setMessage("Are you sure want to clear ?");
                 builder1.setCancelable(true);
 
@@ -138,6 +179,8 @@ public class App_Details extends AppCompatActivity {
                                 db.deleteappdetails();
                                 db.deleteappview();
                                 setprevious();
+                                photopath1 = "NA";
+                                photo1.setImageDrawable(getResources().getDrawable(R.drawable.nophoto));
                                 dialog.cancel();
                             }
                         });
@@ -175,43 +218,94 @@ public class App_Details extends AppCompatActivity {
                         txt_appname=appname.getText().toString();
                         txt_appurl=appurl.getText().toString();
 
-                         if(openhead.getText().toString().equalsIgnoreCase(""))
+                         if(titleeng.getText().toString().equalsIgnoreCase(""))
                          {
                              txt_openhead="NA";
                          }
                          else
                          {
-                             txt_openhead=openhead.getText().toString();
+                             txt_openhead=titleeng.getText().toString();
                          }
 
-                        if(opendisc.getText().toString().equalsIgnoreCase(""))
+                        if(titlemal.getText().toString().equalsIgnoreCase(""))
+                        {
+                            txt_openhead=txt_openhead+":%"+"NA";
+                        }
+                        else
+                        {
+                            txt_openhead=txt_openhead+":%"+titlemal.getText().toString();
+                        }
+
+                        if(titlehindi.getText().toString().equalsIgnoreCase(""))
+                        {
+                            txt_openhead=txt_openhead+":%"+"NA";
+                        }
+                        else
+                        {
+                            txt_openhead=txt_openhead+":%"+titlehindi.getText().toString();
+                        }
+                        if(titletamil.getText().toString().equalsIgnoreCase(""))
+                        {
+                            txt_openhead=txt_openhead+":%"+"NA";
+                        }
+                        else
+                        {
+                            txt_openhead=txt_openhead+":%"+titletamil.getText().toString();
+                        }
+                        if(titletelugu.getText().toString().equalsIgnoreCase(""))
+                        {
+                            txt_openhead=txt_openhead+":%"+"NA";
+                        }
+                        else
+                        {
+                            txt_openhead=txt_openhead+":%"+titletelugu.getText().toString();
+                        }
+
+                        if(footereng.getText().toString().equalsIgnoreCase(""))
                         {
                             txt_opendisc="NA";
                         }
                         else
                         {
-                            txt_opendisc=opendisc.getText().toString();
+                            txt_opendisc=footereng.getText().toString();
                         }
 
-                        if(disctitle.getText().toString().equalsIgnoreCase(""))
+                        if(footermal.getText().toString().equalsIgnoreCase(""))
                         {
-                            txt_disctitle="NA";
+                            txt_opendisc=txt_opendisc+":%"+"NA";
                         }
                         else
                         {
-                            txt_disctitle=disctitle.getText().toString();
+                            txt_opendisc=txt_opendisc+":%"+footermal.getText().toString();
                         }
 
-                        if(discfooter.getText().toString().equalsIgnoreCase(""))
+
+                        if(footerhindi.getText().toString().equalsIgnoreCase(""))
                         {
-                            txt_discfooter="NA";
+                            txt_opendisc=txt_opendisc+":%"+"NA";
                         }
                         else
                         {
-                            txt_discfooter=discfooter.getText().toString();
+                            txt_opendisc=txt_opendisc+":%"+footerhindi.getText().toString();
                         }
 
-                        db.addappdetails(txt_appname,txt_appurl,txt_openhead,txt_opendisc,txt_disctitle,txt_discfooter,photopath1);
+                        if(footertamil.getText().toString().equalsIgnoreCase(""))
+                        {
+                            txt_opendisc=txt_opendisc+":%"+"NA";
+                        }
+                        else
+                        {
+                            txt_opendisc=txt_opendisc+":%"+footertamil.getText().toString();
+                        }
+                        if(footertelugu.getText().toString().equalsIgnoreCase(""))
+                        {
+                            txt_opendisc=txt_opendisc+":%"+"NA";
+                        }
+                        else
+                        {
+                            txt_opendisc=txt_opendisc+":%"+footertelugu.getText().toString();
+                        }
+                        db.addappdetails(txt_appname,txt_appurl,txt_openhead,txt_opendisc,photopath1);
                         startActivity(new Intent(getApplicationContext(),Add_Apps.class));
                     }
                 }
@@ -223,11 +317,6 @@ public class App_Details extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
 
         try
         {
@@ -237,22 +326,159 @@ public class App_Details extends AppCompatActivity {
         {
 
         }
+
     }
+
+
 
     public void setprevious()
     {
         appname.setText(db.getappname());
         appurl.setText(db.getappurl());
-        openhead.setText(db.getopentitle());
-        opendisc.setText(db.getopendisc());
-        disctitle.setText(db.getdisctitle());
-        discfooter.setText(db.getdiscfooter());
+
+        if(!db.gettitle().equalsIgnoreCase(""))
+        {
+            String[] p=db.gettitle().split(":%");
+            if(p[0].equalsIgnoreCase("NA"))
+            {
+                titleeng.setText("");
+            }
+            else
+           {
+                    titleeng.setText(p[0]);
+                }
+
+            if(p[1].equalsIgnoreCase("NA"))
+            {
+                titlemal.setText("");
+            }
+            else
+            {
+                titlemal.setText(p[1]);
+            }
+
+            if(p[2].equalsIgnoreCase("NA"))
+            {
+                titlehindi.setText("");
+            }
+            else
+            {
+                titlehindi.setText(p[2]);
+            }
+            if(p[3].equalsIgnoreCase("NA"))
+            {
+                titletamil.setText("");
+            }
+            else
+            {
+                titletamil.setText(p[3]);
+            }
+            if(p[4].equalsIgnoreCase("NA"))
+            {
+                titletelugu.setText("");
+            }
+            else
+            {
+                titletelugu.setText(p[4]);
+            }
+        }
+        else
+        {
+            titleeng.setText("");
+            titletamil.setText("");
+            titlehindi.setText("");
+            titletamil.setText("");
+            titletelugu.setText("");
+        }
+
+        if(!db.getfooter().equalsIgnoreCase(""))
+        {
+            String[] p=db.getfooter().split(":%");
+
+            if(p[0].equalsIgnoreCase("NA"))
+            {
+                footereng.setText("");
+            }
+            else
+            {
+                footereng.setText(p[0]);
+            }
+
+            if(p[1].equalsIgnoreCase("NA"))
+            {
+                footermal.setText("");
+            }
+            else
+            {
+                footermal.setText(p[1]);
+            }
+
+            if(p[2].equalsIgnoreCase("NA"))
+            {
+                footerhindi.setText("");
+            }
+            else
+            {
+                footerhindi.setText(p[2]);
+            }
+            if(p[3].equalsIgnoreCase("NA"))
+            {
+                footertamil.setText("");
+            }
+            else
+            {
+                footertamil.setText(p[3]);
+            }
+            if(p[4].equalsIgnoreCase("NA"))
+            {
+                footertelugu.setText("");
+            }
+            else
+            {
+                footertelugu.setText(p[4]);
+            }
+        }
+        else
+        {
+            footereng.setText("");
+            footermal.setText("");
+            footerhindi.setText("");
+            footertamil.setText("");
+            footertelugu.setText("");
+        }
 
         try
         {
-            File file = new File(db.getphotopath());
-            Uri imageUri = Uri.fromFile(file);
-            Glide.with(this).load(imageUri).transition(DrawableTransitionOptions.withCrossFade()).into(photo1);
+            if(Temp.appedit==1)
+            {
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    public void run() {
+                        RequestBuilder apply = Glide.with(getApplicationContext()).asBitmap().apply(new RequestOptions().signature(new ObjectKey(Temp.appimgsig)));
+                        apply.load(Temp.weblink+"applogo/"+Temp.appeditsn+".png").into(new SimpleTarget<Bitmap>() {
+                            public void onResourceReady(Bitmap bitmap, Transition<? super Bitmap> transition) {
+                                photo1.setImageBitmap(bitmap);
+                            }
+
+                            public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                                super.onLoadFailed(errorDrawable);
+                                photo1.setImageResource(R.drawable.nophoto);
+                            }
+                        });
+                    }
+                });
+
+            }
+            else
+            {
+                if(!db.getphotopath().equalsIgnoreCase("") && !db.getphotopath().equalsIgnoreCase("NA") )
+                {
+                    File file = new File(db.getphotopath());
+                    Uri imageUri = Uri.fromFile(file);
+                    Glide.with(this).load(imageUri).transition(DrawableTransitionOptions.withCrossFade()).into(photo1);
+                }
+            }
+
+
         }
         catch (Exception a)
         {
@@ -314,16 +540,19 @@ public class App_Details extends AppCompatActivity {
                     options.setToolbarTitle("Crop Image");
                     UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4,4).start(App_Details.this);
                 } catch (Exception e2) {
+
+
+
                 }
             }
         });
         if (requestCode == UCrop.REQUEST_CROP) {
             try {
+
                 photopath1 = UCrop.getOutput(data2).getPath();
                 img = BitmapFactory.decodeFile(photopath1);
                 photo1.setImageBitmap(img);
             } catch (Exception e) {
-                Log.w("Result",Log.getStackTraceString(e));
             }
         }
     }

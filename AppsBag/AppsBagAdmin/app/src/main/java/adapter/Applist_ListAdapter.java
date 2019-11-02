@@ -11,6 +11,7 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,8 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.appsbag_admin.Add_Apps;
-import com.appsbag_admin.Add_Video;
 import com.appsbag_admin.Add_View;
+import com.appsbag_admin.App_Details;
+import com.appsbag_admin.Apps_List;
 import com.appsbag_admin.ConnectionDetecter;
 import com.appsbag_admin.DatabaseHandler;
 import com.appsbag_admin.R;
@@ -30,6 +32,8 @@ import com.appsbag_admin.Temp;
 import com.appsbag_admin.Video_List;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.signature.ObjectKey;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -40,22 +44,22 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.List;
 
+import data.Appslist_FeedItem;
 import data.CustomViewlist_FeedItem;
-import data.VideoList_FeedItem;
 
-public class Customview_ListAdapter extends BaseAdapter {
+public class Applist_ListAdapter extends BaseAdapter {
 
     public Activity activity;
     public ConnectionDetecter cd;
     public Context context;
     Typeface face;
-    public List<CustomViewlist_FeedItem> feedItems;
+    public List<Appslist_FeedItem> feedItems;
     private LayoutInflater inflater;
-    public String pcatid = "",viewsn="";
+    public String pcatid = "";
     ProgressDialog pd;
     int pos = 0;
     public DatabaseHandler db;
-    public Customview_ListAdapter(Activity activity2, List<CustomViewlist_FeedItem> feedItems2) {
+    public Applist_ListAdapter(Activity activity2, List<Appslist_FeedItem> feedItems2) {
         activity = activity2;
         feedItems = feedItems2;
         context = activity2.getApplicationContext();
@@ -82,7 +86,7 @@ public class Customview_ListAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.custom_views, null);
+            convertView = inflater.inflate(R.layout.custom_applist, null);
         }
         TextView title= (TextView) convertView.findViewById(R.id.title);
 
@@ -90,37 +94,23 @@ public class Customview_ListAdapter extends BaseAdapter {
         ImageView edit = (ImageView) convertView.findViewById(R.id.edit);
         ImageView image = (ImageView) convertView.findViewById(R.id.image);
 
-        CustomViewlist_FeedItem item = (CustomViewlist_FeedItem) feedItems.get(position);
+        Appslist_FeedItem item = (Appslist_FeedItem) feedItems.get(position);
 
-        try
-        {
-            File file = new File(item.getPhotopath());
 
-            if(file.exists())
-            {
+        RequestOptions rep = new RequestOptions().signature(new ObjectKey(item.getImgsig()));
+        Glide.with(context).load(Temp.weblink+"applogo/"+item.getSn()+".png").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(image);
 
-                Uri imageUri = Uri.fromFile(file);
-                Glide.with(context).load(imageUri).transition(DrawableTransitionOptions.withCrossFade()).into(image);
-            }
-            else
-            {
-                Glide.with(context).load(item.getFbpath()).transition(DrawableTransitionOptions.withCrossFade()).into(image);
-            }
-        }
-        catch (Exception a)
-        {
 
-        }
+
         title.setTypeface(face);
-        title.setText(item.getEnglish());
+        title.setText(item.getAppname());
 
         delete.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 try {
-                    CustomViewlist_FeedItem item = (CustomViewlist_FeedItem) feedItems.get(position);
-                     pcatid = item.getPkey();
-                     pos = position;
-                     viewsn=item.getDatasn();
+                    Appslist_FeedItem item = (Appslist_FeedItem) feedItems.get(position);
+                    pcatid = item.getSn();
+                    pos = position;
                    showalert_delete("Are you sure want to delete this ?");
                 } catch (Exception e) {
                 }
@@ -128,18 +118,39 @@ public class Customview_ListAdapter extends BaseAdapter {
         });
         edit.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
-                CustomViewlist_FeedItem item = (CustomViewlist_FeedItem) feedItems.get(position);
-                Temp.appviewedit=1;
-                Temp.appview_pkey=item.getPkey();
-                Temp.appview_english=item.getEnglish();
-                Temp.appview_malayalam=item.getMalayalam();
-                Temp.appview_hindi=item.getHindi();
-                Temp.appview_tamil=item.getTamil();
-                Temp.appview_telugu=item.getTelugu();
-                Temp.appview_datasn=item.getDatasn();
-                Temp.appview_photopath=item.getPhotopath();
-                Temp.appview_fbpath=item.getFbpath();
-                Intent i = new Intent(context, Add_View.class);
+                Appslist_FeedItem item = (Appslist_FeedItem) feedItems.get(position);
+                Temp.appedit = 1;
+                Temp.appeditsn=item.getSn();
+                Temp.appimgsig=item.getImgsig();
+                db.deleteappdetails();
+                db.deleteappview();
+                db.addappdetails(item.getAppname(),item.getAppurl(),item.getDisctitle(),item.getDiscfooter(),"NA");
+
+                if(!item.getAppdiscs().equalsIgnoreCase(""))
+                {
+                    if(item.getAppdiscs().contains("##"))
+                    {
+                        String[] p=item.getAppdiscs().split("##");
+                        for(int i=0;i<p.length;i++)
+                        {
+                            int a=i;
+                            i=i+1;
+                            int a1=i;
+                            i=i+1;
+                            int a2=i;
+                            i=i+1;
+                            int a3=i;
+                            i=i+1;
+                            int a4=i;
+                            i=i+1;
+                            int a5=i;
+                            i=i+1;
+                            int a6=i;
+                            db.addappview(p[a],p[a1],p[a2],p[a3],p[a4],"NA",p[a6],p[a5]);
+                        }
+                    }
+                }
+                Intent i = new Intent(context, App_Details.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
@@ -160,7 +171,7 @@ public class Customview_ListAdapter extends BaseAdapter {
         builder.setMessage(message).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 if (cd.isConnectingToInternet()) {
-                  new delete_product().execute();
+                    new delete_product().execute();
                     dialog.dismiss();
                 } else {
                     Toast.makeText(context, Temp.nointernet, Toast.LENGTH_SHORT).show();
@@ -175,6 +186,7 @@ public class Customview_ListAdapter extends BaseAdapter {
         builder.create().show();
     }
 
+
     public class delete_product extends AsyncTask<String, Void, String> {
 
         public void onPreExecute() {
@@ -187,9 +199,9 @@ public class Customview_ListAdapter extends BaseAdapter {
 
         public String doInBackground(String... arg0) {
             try {
-                String link= Temp.weblink +"delete_view.php";
+                String link= Temp.weblink +"delete_video.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(viewsn, "UTF-8");
+                        + "=" + URLEncoder.encode(pcatid, "UTF-8");
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);
@@ -218,14 +230,11 @@ public class Customview_ListAdapter extends BaseAdapter {
                 pd.dismiss();
                 if (result.contains("ok")) {
                     Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
-                    db.deleteappview_byid(pcatid);
-                    Add_Apps h=(Add_Apps)activity;
-                    h.removeitem(pos);
+                    ((Apps_List) activity).removeitem(pos);
                     return;
                 }
                 Toast.makeText(context, Temp.tempproblem, Toast.LENGTH_SHORT).show();
             }
         }
     }
-
 }

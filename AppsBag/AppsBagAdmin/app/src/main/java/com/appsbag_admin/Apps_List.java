@@ -35,7 +35,9 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapter.Applist_ListAdapter;
 import adapter.VideoList_ListAdapter;
+import data.Appslist_FeedItem;
 import data.VideoList_FeedItem;
 
 public class Apps_List extends AppCompatActivity {
@@ -44,16 +46,17 @@ public class Apps_List extends AppCompatActivity {
     ImageView back;
     ConnectionDetecter cd;
     Typeface face;
-    public List<VideoList_FeedItem> feedItems;
+    public List<Appslist_FeedItem> feedItems;
     RelativeLayout footerview;
     ImageView heart;
     public int limit = 0;
     ListView list;
-    public VideoList_ListAdapter listAdapter;
+    public Applist_ListAdapter listAdapter;
     ImageView nodata;
     ImageView nointernet;
     TextView text;
     boolean flag = false;
+    final DatabaseHandler db=new DatabaseHandler(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,11 +69,9 @@ public class Apps_List extends AppCompatActivity {
             public void onClick(View view) {
                 Temp.appedit = 0;
                 startActivity(new Intent(getApplicationContext(),App_Details.class));
-
             }
         });
-
-        text.setText("Video List");
+        text.setText("App List");
         text.setTypeface(face);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -86,7 +87,7 @@ public class Apps_List extends AppCompatActivity {
         list.addFooterView(footerview);
         footerview.setVisibility(View.GONE);
         feedItems = new ArrayList();
-        listAdapter = new VideoList_ListAdapter(this, feedItems);
+        listAdapter = new Applist_ListAdapter(this, feedItems);
         list.setAdapter(listAdapter);
         list.setOnScrollListener(new AbsListView.OnScrollListener() {
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
@@ -159,9 +160,9 @@ public class Apps_List extends AppCompatActivity {
         public String doInBackground(String... arg0) {
 
             try {
-                String link=Temp.weblink +"getvideolist.php";
+                String link=Temp.weblink +"getapplist_foradmin.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(limit+":%"+Temp.language, "UTF-8");
+                        + "=" + URLEncoder.encode(limit+":%"+Temp.appcatogery, "UTF-8");
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);
@@ -186,21 +187,27 @@ public class Apps_List extends AppCompatActivity {
 
         public void onPostExecute(String result) {
             try {
-                if (result.trim().contains(":%ok")) {
+                if (result.trim().contains("%%ok")) {
                     feedItems.clear();
-                    String[] got = result.trim().split(":%");
-                    int k = (got.length - 1) / 4;
+                    String[] got = result.trim().split("%%");
+                    int k = (got.length - 1) / 7;
                     int m = -1;
                     for (int i = 1; i <= k; i++) {
-                        VideoList_FeedItem item = new VideoList_FeedItem();
+                        Appslist_FeedItem item = new Appslist_FeedItem();
                         m=m+1;
                         item.setSn(got[m].trim());
                         m=m+1;
-                        item.setTitle(got[m]);
+                        item.setAppname(got[m]);
                         m=m+1;
-                        item.setVideoid(got[m]);
+                        item.setAppurl(got[m]);
                         m=m+1;
-                        item.setDuration(got[m]);
+                        item.setDisctitle(got[m]);
+                        m=m+1;
+                        item.setDiscfooter(got[m]);
+                        m=m+1;
+                        item.setImgsig(got[m]);
+                        m=m+1;
+                        item.setAppdiscs(got[m]);
                         feedItems.add(item);
                     }
                     heart.setVisibility(View.GONE);
@@ -225,9 +232,9 @@ public class Apps_List extends AppCompatActivity {
 
         public String doInBackground(String... arg0) {
             try {
-                String link=Temp.weblink +"getvideolist.php";
+                String link=Temp.weblink +"getapplist_foradmin.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(limit+":%"+Temp.language, "UTF-8");
+                        + "=" + URLEncoder.encode(limit+":%"+Temp.appcatogery, "UTF-8");
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);
@@ -252,20 +259,26 @@ public class Apps_List extends AppCompatActivity {
 
         public void onPostExecute(String result) {
             try {
-                if (result.trim().contains(":%ok")) {
-                    String[] got = result.trim().split(":%");
-                    int k = (got.length - 1) / 4;
+                if (result.trim().contains("%%ok")) {
+                    String[] got = result.trim().split("%%");
+                    int k = (got.length - 1) / 7;
                     int m = -1;
                     for (int i = 1; i <= k; i++) {
-                        VideoList_FeedItem item = new VideoList_FeedItem();
+                        Appslist_FeedItem item = new Appslist_FeedItem();
                         m=m+1;
                         item.setSn(got[m].trim());
                         m=m+1;
-                        item.setTitle(got[m]);
+                        item.setAppname(got[m]);
                         m=m+1;
-                        item.setVideoid(got[m]);
+                        item.setAppurl(got[m]);
                         m=m+1;
-                        item.setDuration(got[m]);
+                        item.setDisctitle(got[m]);
+                        m=m+1;
+                        item.setDiscfooter(got[m]);
+                        m=m+1;
+                        item.setImgsig(got[m]);
+                        m=m+1;
+                        item.setAppdiscs(got[m]);
                         feedItems.add(item);
                     }
                     listAdapter.notifyDataSetChanged();
