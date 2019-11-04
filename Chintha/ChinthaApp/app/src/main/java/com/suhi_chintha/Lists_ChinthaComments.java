@@ -57,6 +57,8 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdRequest.Builder;
 import com.google.android.gms.ads.AdView;
+import com.vanniktech.emoji.EmojiPopup;
+import com.vanniktech.emoji.EmojiTextView;
 
 import org.json.JSONObject;
 
@@ -135,7 +137,7 @@ public class Lists_ChinthaComments extends AppCompatActivity {
     public ImageView private1;
     int replaycount = 0;
     RotateAnimation rotate;
-    ExtendTextView status;
+    EmojiTextView status;
     public String statusid = "";
     public String statusimgsig = "0";
     public String statustype = "";
@@ -201,6 +203,7 @@ public class Lists_ChinthaComments extends AppCompatActivity {
         }
         try {
             headerview = (RelativeLayout) getLayoutInflater().inflate(R.layout.top_comments, null);
+
             layoutloadmore = (RelativeLayout) headerview.findViewById(R.id.layoutloadmore);
             loadmore = (TextView) headerview.findViewById(R.id.loadmore);
             pb1 = (ProgressBar) headerview.findViewById(R.id.progress_pb1);
@@ -210,12 +213,38 @@ public class Lists_ChinthaComments extends AppCompatActivity {
             layout = (RelativeLayout) findViewById(R.id.layout);
             comments = (EditText) findViewById(R.id.commentslist);
             addcomment = (ImageView) findViewById(R.id.comment_add);
-
-            comments.setOnClickListener(new OnClickListener() {
+            ImageView emoji=findViewById(R.id.emoji);
+            RelativeLayout layout=findViewById(R.id.layout);
+            final EmojiPopup emojiPopup = EmojiPopup.Builder.fromRootView(layout).build(comments);
+            emoji.setOnClickListener(new OnClickListener() {
+                @Override
                 public void onClick(View v) {
+
+                    if(emojiPopup.isShowing())
+                    {
+                        emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojies));
+                    }
+                    else
+                    {
+                        emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojikeyboard));
+                    }
+                    emojiPopup.toggle();
 
                 }
             });
+
+
+            comments.setOnClickListener(new OnClickListener() {
+                public void onClick(View v) {
+                    emojiPopup.dismiss();
+                    emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojies));
+
+                }
+            });
+
+
+
+
             drop.setOnClickListener(new OnClickListener() {
                 public void onClick(View v) {
                     showalert("Are you sure ?");
@@ -373,7 +402,6 @@ public class Lists_ChinthaComments extends AppCompatActivity {
         }
     };
     public void postcomment() {
-        String str = "";
         String txtname = name.getText().toString();
         addcomment.setEnabled(false);
         comments.setEnabled(false);
@@ -433,7 +461,7 @@ public class Lists_ChinthaComments extends AppCompatActivity {
                                     mp.start();
                                 } catch (Exception e2) {
                                 }
-                            } else if (result.contains("::img_userblock:%")) {
+                            } else if (result.contains("::blockuser:%")) {
                                 String[] p = result.split(":%");
                                 Context applicationContext = getApplicationContext();
                                 Toasty.info(applicationContext, "ക്ഷമിക്കണം !! താങ്കളെ "+p[1]+" ബ്ലോക്ക് ചെയ്തത് കാരണം ഈ പോസ്റ്റിന് കമന്റ് ചെയ്യുവാന്‍ സാധിക്കില്ല", Toast.LENGTH_LONG).show();
@@ -442,7 +470,8 @@ public class Lists_ChinthaComments extends AppCompatActivity {
                             } else if (result.contains("::block::")) {
                                 Toasty.info(getApplicationContext(), (CharSequence) "Sorry ! You are blocked by Admin", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toasty.info(getApplicationContext(), (CharSequence) result, Toast.LENGTH_SHORT).show();
+                                Toasty.info(getApplicationContext(), "കമന്റ് കുറച്ച് കൂടിപ്പോയി", Toast.LENGTH_SHORT).show();
+                                //Toasty.info(getApplicationContext(), (CharSequence) result, Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -603,7 +632,7 @@ public class Lists_ChinthaComments extends AppCompatActivity {
             LocalBroadcastManager.getInstance(this).registerReceiver(mHandleMessageReceiver, new IntentFilter("com.statusappkal.Message"));
             ImageView img = (ImageView) headerview.findViewById(R.id.img);
             name = (TextView) headerview.findViewById(R.id.name);
-            status = (ExtendTextView) headerview.findViewById(R.id.chintha);
+            status = (EmojiTextView) headerview.findViewById(R.id.chintha);
             photostatus = (ImageView) headerview.findViewById(R.id.photostatus);
             ArrayList<String> id1 = dataDb1.getcmntdetails();
             String[] c = (String[]) id1.toArray(new String[id1.size()]);
@@ -634,6 +663,22 @@ public class Lists_ChinthaComments extends AppCompatActivity {
                 status. setVisibility(View.GONE);
                 photostatus. setVisibility(View.GONE);
             }
+
+            status.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(status.getMaxLines()==Integer.MAX_VALUE)
+                    {
+                        status.setMaxLines(8);
+                    }
+                    else
+                    {
+                        status.setMaxLines(Integer.MAX_VALUE);
+                    }
+
+                }
+            });
+
             RequestOptions rep = new RequestOptions().signature(new ObjectKey(statusimgsig));
             Glide.with(this).load(Static_Variable.entypoint1+"userphotosmall/"+c[1]+".jpg").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(img);
             dataDb1.deletecmntvisible();

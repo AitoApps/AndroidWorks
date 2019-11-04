@@ -29,7 +29,7 @@
             android:textSize="14.0dip"
             android:textStyle="bold" />
 
-        <com.suhi_chintha.ExtendTextView
+        <com.vanniktech.emoji.EmojiTextView
             android:id="@+id/notitext"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -39,6 +39,9 @@
             android:layout_marginRight="5.0dip"
             android:layout_toRightOf="@+id/img"
             android:lineSpacingExtra="5.0sp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:singleLine="false"
             android:text="nall vakkukal nall janmammanu jeevith avzhiyil"
             android:textColor="#ff000000"
             android:textSize="12.0dip"

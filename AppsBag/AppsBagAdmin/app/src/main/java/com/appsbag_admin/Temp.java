@@ -1,7 +1,7 @@
 package com.appsbag_admin;
 
 public class Temp {
-    public static String weblink = "http://34.66.229.59/appsbag/";
+    public static String weblink = "https://apistatuschinthakal.in/appsbag/";
     public static String nointernet = "Please make sure your internet connection is active";
     public static String tempproblem = "Temporary Problem ! Please try later";
     public static String language="0",appcatogery="0";

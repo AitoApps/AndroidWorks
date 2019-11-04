@@ -13,18 +13,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdRequest.Builder;
-import com.google.android.gms.ads.AdView;
 import data.Position_Feed;
 import es.dmoral.toasty.Toasty;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Act_Pos_Subcat extends AppCompatActivity {
-    AdRequest adRequest1;
-    AdView adview1;
     ImageView bookmark;
     final DataBase dataBase = new DataBase(this);
     Typeface face;
@@ -41,7 +35,6 @@ public class Act_Pos_Subcat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView((int) R.layout.actvty_possubcat);
         try {
-            adview1 = (AdView) findViewById(R.id.adView1);
             favourits = (ImageView) findViewById(R.id.fvrts);
             pb = (ProgressBar) findViewById(R.id.pb);
             text = (TextView) findViewById(R.id.text);
@@ -54,23 +47,7 @@ public class Act_Pos_Subcat extends AppCompatActivity {
             feedItems = new ArrayList();
             listAdapter = new Position_Adapter(this, feedItems);
             listview.setAdapter(listAdapter);
-            adRequest1 = new Builder().build();
-            if (dataBase.get_purchase().equalsIgnoreCase("")) {
 
-                adview1.setVisibility(View.VISIBLE);
-                adview1.loadAd(adRequest1);
-                adview1.setAdListener(new AdListener() {
-                    public void onAdFailedToLoad(int i) {
-                        super.onAdFailedToLoad(i);
-                        adview1.loadAd(adRequest1);
-                    }
-                });
-            } else {
-
-
-
-                adview1.setVisibility(View.GONE);
-            }
             move_back.setOnClickListener(new OnClickListener() {
                 public void onClick(View arg0) {
                     onBackPressed();
@@ -112,11 +89,5 @@ public class Act_Pos_Subcat extends AppCompatActivity {
         listAdapter.notifyDataSetChanged();
     }
 
-    public void onBackPressed() {
-        try {
-            adview1 = null;
-        } catch (Exception e) {
-        }
-        super.onBackPressed();
-    }
+
 }

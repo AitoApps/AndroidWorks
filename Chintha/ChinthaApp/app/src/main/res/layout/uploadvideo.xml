@@ -30,7 +30,7 @@
             android:id="@+id/pickimage"
             android:layout_width="60.0dip"
             android:layout_height="60.0dip"
-            app:srcCompat="@drawable/add_image_select" />
+            android:src="@drawable/add_image_select" />
 
         <ImageView
             android:id="@+id/pickvideo"
@@ -38,7 +38,7 @@
             android:layout_height="60.0dip"
             android:layout_marginLeft="100.0dip"
             android:layout_toRightOf="@+id/pickimage"
-            app:srcCompat="@drawable/add_video_unselect" />
+            android:src="@drawable/add_video_unselect" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -53,7 +53,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/img_nofbimages" />
+            android:src="@drawable/img_nofbimages" />
 
         <VideoView
             android:id="@+id/previewvideo"
@@ -67,7 +67,7 @@
             android:layout_width="70.0dip"
             android:layout_height="70.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_iconplay"
+            android:src="@drawable/img_iconplay"
             android:visibility="invisible" />
 
         <ImageView
@@ -75,7 +75,7 @@
             android:layout_width="70.0dip"
             android:layout_height="70.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_iconpause"
+            android:src="@drawable/img_iconpause"
             android:visibility="invisible" />
     </RelativeLayout>
 

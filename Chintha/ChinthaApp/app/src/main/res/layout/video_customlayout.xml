@@ -41,7 +41,7 @@
                 android:layout_width="80.0dip"
                 android:layout_height="80.0dip"
                 android:layout_centerInParent="true"
-                app:srcCompat="@drawable/img_playocons" />
+                android:src="@drawable/img_playocons" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -67,7 +67,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="5.0dip"
-                app:srcCompat="@drawable/img_download" />
+                android:src="@drawable/img_download" />
         </RelativeLayout>
     </RelativeLayout>
 

@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/content"
         android:layout_alignParentBottom="true"
-        ads:adUnitId="ca-app-pub-8933294539595122/5905173429"
+        ads:adUnitId="ca-app-pub-5517777745693327/4015093400"
         android:visibility="visible"
         />
 </RelativeLayout>

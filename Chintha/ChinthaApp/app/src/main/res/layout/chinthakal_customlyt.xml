@@ -50,7 +50,7 @@
                     android:layout_marginTop="5.0dip"
                     android:layout_marginBottom="2.0dip"
                     android:layout_toRightOf="@+id/name"
-                    app:srcCompat="@drawable/img_verify"
+                    android:src="@drawable/img_verify"
                     android:visibility="visible" />
 
                 <TextView
@@ -101,7 +101,7 @@
                     android:layout_height="25.0dip"
                     android:layout_alignParentRight="true"
                     android:padding="2.0dip"
-                    app:srcCompat="@drawable/optionmenu" />
+                    android:src="@drawable/optionmenu" />
 
                 <ImageView
                     android:id="@+id/block"
@@ -109,8 +109,8 @@
                     android:layout_height="20.0dip"
                     android:layout_toLeftOf="@+id/settings"
                     android:padding="2.0dip"
-                    app:srcCompat="@drawable/report"
-                    android:visibility="visible" />
+                    android:src="@drawable/report"
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/del"
@@ -119,8 +119,8 @@
                     android:layout_marginRight="15.0dip"
                     android:layout_toLeftOf="@+id/block"
                     android:padding="2.0dip"
-                    app:srcCompat="@drawable/img_drpicicon"
-                    android:visibility="visible" />
+                    android:src="@drawable/img_drpicicon"
+                    android:visibility="gone" />
 
                 <ImageView
                     android:id="@+id/doverify"
@@ -129,8 +129,8 @@
                     android:layout_marginRight="15.0dip"
                     android:layout_toLeftOf="@+id/del"
                     android:padding="2.0dip"
-                    app:srcCompat="@drawable/img_verify"
-                    android:visibility="visible" />
+                    android:src="@drawable/img_verify"
+                    android:visibility="gone" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -143,8 +143,11 @@
                     android:id="@+id/chintha"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:lineSpacingExtra="8.0sp"
                     android:padding="5.0dip"
+                    android:lineSpacingExtra="8.0sp"
+                    android:ellipsize="end"
+                    android:maxLines="8"
+                    android:singleLine="false"
                     android:text="Temporary Problem"
                     android:textColor="#ff000000"
                     android:textSize="16.0dip"/>
@@ -199,14 +202,14 @@
                         android:layout_width="40.0dip"
                         android:layout_height="40.0dip"
                         android:padding="10.0dip"
-                        app:srcCompat="@drawable/like" />
+                        android:src="@drawable/like" />
 
                     <ImageView
                         android:id="@+id/imglike"
                         android:layout_width="40.0dip"
                         android:layout_height="40.0dip"
                         android:padding="10.0dip"
-                        app:srcCompat="@drawable/nolike"
+                        android:src="@drawable/nolike"
                         android:visibility="invisible" />
 
                     <TextView
@@ -230,7 +233,7 @@
                         android:layout_width="40.0dip"
                         android:layout_height="40.0dip"
                         android:padding="10.0dip"
-                        app:srcCompat="@drawable/comment" />
+                        android:src="@drawable/comment" />
 
                     <TextView
                         android:id="@+id/txtcomment"
@@ -255,7 +258,7 @@
                         android:layout_width="40.0dip"
                         android:layout_height="40.0dip"
                         android:padding="10.0dip"
-                        app:srcCompat="@drawable/share" />
+                        android:src="@drawable/share" />
 
                     <TextView
                         android:id="@+id/txtshare"
@@ -272,7 +275,9 @@
         <RelativeLayout
             android:id="@+id/feedlyt"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            >
 
             <RelativeLayout
                 android:id="@+id/feedlayout"
@@ -310,7 +315,7 @@
                         android:layout_width="80.0dip"
                         android:layout_height="80.0dip"
                         android:layout_centerInParent="true"
-                        app:srcCompat="@drawable/img_playocons" />
+                        android:src="@drawable/img_playocons" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -337,7 +342,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_margin="5.0dip"
-                        app:srcCompat="@drawable/img_download" />
+                        android:src="@drawable/img_download" />
                 </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>

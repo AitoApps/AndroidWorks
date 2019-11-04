@@ -24,7 +24,7 @@ public class Static_Variable {
     public static String cpyright_app = "ഈ സോഫ്റ്റ് വെയര്‍ കോപ്പിറൈറ്റ് പ്രൊട്ടകറ്റ്ഡ് ആണ്‌ ";
     public static String delete_allnoti = "എല്ലാം നോട്ടിഫിക്കേഷനും കളയാം അല്ലെ..?";
     public static String dupli_post = "ശ്ശോ..ഈ ചിന്ത ഒരിക്കല്‍ ഒരാള്‍ പോസ്റ്റിയാതാണല്ലോ !!!";
-    public static String entypoint1 = "http://apistatuschinthakal.in/statuschintha/";
+    public static String entypoint1 = "https://apistatuschinthakal.in/chinthapp/";
     public static String err3_posting = "എന്ന വാചകം ഉള്‍പ്പെട്ട കാരണം താങ്കളുടെ ചിന്ത അപ്‌ഡേറ്റ് ചെയ്യാന്‍ സാധിച്ചില്ല.";
     public static String err_cmnt = "ക്ഷമിക്കണം ! ഒരക്ഷരത്തില്‍\n കൂടുതല്‍ ഉണ്ടെങ്കില്‍ മാത്രമേ താങ്കള്‍ക്ക് കമന്റ് പോസ്റ്റ് ചെയ്യാന്‍ സാധിക്കുകയൊള്ളൂ ";
     public static String error1 = "ക്ഷമിക്കണം ! ";

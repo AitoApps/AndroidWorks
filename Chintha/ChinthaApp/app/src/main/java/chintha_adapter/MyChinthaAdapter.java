@@ -36,7 +36,6 @@ import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
 import com.suhi_chintha.DataDB4;
 import com.suhi_chintha.DataDb;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.Lists_ChinthaComments;
 import com.suhi_chintha.My_Chinthakal;
 import com.suhi_chintha.NetConnection;
@@ -44,6 +43,7 @@ import com.suhi_chintha.R;
 import com.suhi_chintha.Static_Variable;
 import com.suhi_chintha.Status_To_Image;
 import com.suhi_chintha.User_DataDB;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -137,13 +137,12 @@ public class MyChinthaAdapter extends BaseAdapter {
         TextView count = (TextView) convertView2.findViewById(R.id.likecount);
         TextView comment = (TextView) convertView2.findViewById(R.id.comment);
         TextView posttime = (TextView) convertView2.findViewById(R.id.post_time);
-        ExtendTextView status = (ExtendTextView) convertView2.findViewById(R.id.chintha);
+        EmojiTextView status = (EmojiTextView) convertView2.findViewById(R.id.chintha);
         ImageView edit = (ImageView) convertView2.findViewById(R.id.edit);
         ImageView delete = (ImageView) convertView2.findViewById(R.id.del);
         ImageView cmntboxopen = (ImageView) convertView2.findViewById(R.id.cmntboxopen);
         TextView commentboxopentext2 = (TextView) convertView2.findViewById(R.id.commentboxopentext);
         MyChinthakalFeed item = (MyChinthakalFeed) feed.get(i);
-        View convertView3 = convertView2;
         if (item.get_lockedcomments().equalsIgnoreCase("1")) {
             comment.setVisibility(View.INVISIBLE);
             cmntboxopen.setVisibility(View.VISIBLE);
@@ -160,16 +159,13 @@ public class MyChinthaAdapter extends BaseAdapter {
             photostatus. setVisibility(View.GONE);
             statusimage.setVisibility(View.VISIBLE);
             try {
-                commentboxopentext = commentboxopentext2;
                 try {
                     status.setText(new String(Base64.decode(item.getchintha(), 0), StandardCharsets.UTF_8));
                 } catch (Exception e) {
                 }
             } catch (Exception e2) {
-                commentboxopentext = commentboxopentext2;
             }
         } else {
-            commentboxopentext = commentboxopentext2;
             if (item.get_statustype().equalsIgnoreCase("1")) {
                 status.setVisibility(View.VISIBLE);
                 photostatus.setVisibility(View.VISIBLE);
@@ -224,6 +220,20 @@ public class MyChinthaAdapter extends BaseAdapter {
                 } catch (Exception e) {
                 }
                 return false;
+            }
+        });
+        status.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(status.getMaxLines()==Integer.MAX_VALUE)
+                {
+                   status.setMaxLines(8);
+                }
+                else
+                {
+                    status.setMaxLines(Integer.MAX_VALUE);
+                }
+
             }
         });
         photostatus.setOnLongClickListener(new OnLongClickListener() {
@@ -298,7 +308,7 @@ public class MyChinthaAdapter extends BaseAdapter {
                 showalert_commentblokopen();
             }
         });
-        commentboxopentext.setOnClickListener(new OnClickListener() {
+        commentboxopentext2.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 MyChinthakalFeed item = (MyChinthakalFeed) feed.get(i);
                 pos = i;
@@ -328,7 +338,7 @@ public class MyChinthaAdapter extends BaseAdapter {
                 }
             }
         });
-        return convertView3;
+        return convertView2;
     }
 
     public void showalert_commentblokopen() {
@@ -435,7 +445,7 @@ public class MyChinthaAdapter extends BaseAdapter {
                             if (pd != null || pd.isShowing()) {
                                 pd.dismiss();
                                 if (result.contains("ok")) {
-                                    Toasty.info(context, (CharSequence) "Updated", Toast.LENGTH_SHORT).show();
+                                    Toasty.info(context, (CharSequence) "Deleted", Toast.LENGTH_SHORT).show();
                                     ((My_Chinthakal) activity).removeitem(pos);
                                     return;
                                 }

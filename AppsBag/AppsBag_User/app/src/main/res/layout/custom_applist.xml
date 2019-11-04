@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/roundedcornerbackground">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Title"
+            android:textSize="25dp"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+           <TextView
+               android:id="@+id/install"
+               android:layout_width="100dp"
+               android:layout_height="40dp"
+               android:layout_alignParentRight="true"
+               android:text="View"
+               android:textSize="17dp"
+               android:gravity="center"
+               android:layout_margin="5dp"
+               android:layout_alignParentBottom="true"
+               android:textColor="#fff"
+               android:background="@drawable/roundedcornergreen"
+               />
+
+
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5517777745693327/9893287802" />
+</RelativeLayout>

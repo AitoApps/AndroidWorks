@@ -89,7 +89,7 @@ public class Act_Pymnt_Card extends AppCompatActivity {
         payUmoneyConfig.setPayUmoneyActivityTitle("Purchase Full Version");
         payUmoneyConfig.disableExitConfirmation(false);
         PayUmoneySdkInitializer.PaymentParam.Builder builder = new PayUmoneySdkInitializer.PaymentParam.Builder();
-        String amount = "35.0";
+        String amount = "39.0";
         String txnId = System.currentTimeMillis() + "";
         String phone = mdb.get_mob();
         String productName = "Purchase Full Version";

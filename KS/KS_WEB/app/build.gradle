@@ -45,8 +45,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
     implementation 'com.github.GrenderG:Toasty:1.4.2'
-    implementation 'com.google.android.gms:play-services-ads:18.2.0'
     implementation 'com.github.bumptech.glide:glide:4.1.1'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

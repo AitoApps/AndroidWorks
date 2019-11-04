@@ -24,7 +24,7 @@
                 android:layout_width="40.0dip"
                 android:layout_height="40.0dip"
                 android:layout_alignParentRight="true"
-                app:srcCompat="@drawable/img_helps" />
+                android:src="@drawable/img_helps" />
 
             <RelativeLayout
                 android:id="@+id/logtext"
@@ -38,7 +38,7 @@
                     android:layout_height="100.0dip"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="5.0dip"
-                    app:srcCompat="@drawable/applogo" />
+                    android:src="@drawable/applogo" />
 
                 <TextView
                     android:id="@+id/text"

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1070290422056",
+    "firebase_url": "https://appsbag-ec457.firebaseio.com",
+    "project_id": "appsbag-ec457",
+    "storage_bucket": "appsbag-ec457.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070290422056:android:4acd3b01a9feaf3bcea81d",
+        "android_client_info": {
+          "package_name": "com.appsbag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070290422056-9ivtkp18r9cjknnnstklk7vq4btdvek4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKzCU6qR8l0HQt3mfqWS0gKUuGK6erpiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070290422056-9ivtkp18r9cjknnnstklk7vq4btdvek4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

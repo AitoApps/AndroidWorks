@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_moveback" />
+            android:src="@drawable/img_moveback" />
 
         <TextView
             android:id="@+id/text"
@@ -47,7 +47,7 @@
                 android:layout_height="30.0dip"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="1.0dip"
-                app:srcCompat="@drawable/img_addstatus" />
+                android:src="@drawable/img_addstatus" />
 
             <TextView
                 android:id="@+id/statuscount"
@@ -90,7 +90,7 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_smptystays"
+            android:src="@drawable/img_smptystays"
             android:visibility="gone" />
 
         <ImageView
@@ -98,7 +98,7 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_nonet"
+            android:src="@drawable/img_nonet"
             android:visibility="gone" />
 
         <com.airbnb.lottie.LottieAnimationView

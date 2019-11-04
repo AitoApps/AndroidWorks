@@ -19,24 +19,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdRequest.Builder;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import es.dmoral.toasty.Toasty;
 import java.io.InputStream;
 
 public class Act_ReadView extends AppCompatActivity {
-    AdRequest adRequest1;
-    AdView adview;
+
     TextView article;
     TextView article_head;
     ImageView back;
     final DataBase dataBase = new DataBase(this);
     Typeface face;
-
-    public InterstitialAd interstitial1;
     ImageView minus;
     public String path = "";
     ImageView plus;
@@ -45,13 +37,11 @@ public class Act_ReadView extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((int) R.layout.acty_readingview);
-        adview = (AdView) findViewById(R.id.adView1);
         article_head = (TextView) findViewById(R.id.articleheading);
         article = (TextView) findViewById(R.id.article);
         text = (TextView) findViewById(R.id.text);
         face = Typeface.createFromAsset(getAssets(), "app_fonts/malfont.ttf");
         share = (ImageView) findViewById(R.id.appshare);
-        adRequest1 = new Builder().build();
         plus = (ImageView) findViewById(R.id.zoom_in);
         minus = (ImageView) findViewById(R.id.zoom_out);
         back = (ImageView) findViewById(R.id.moveback);
@@ -60,32 +50,7 @@ public class Act_ReadView extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        String str = "";
-        if (dataBase.get_purchase().equalsIgnoreCase(str)) {
-            adview.setVisibility(View.VISIBLE);
-            adview.loadAd(adRequest1);
-            adview.setAdListener(new AdListener() {
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    adview.loadAd(adRequest1);
-                }
-            });
-            interstitial1 = new InterstitialAd(this);
-            interstitial1.setAdUnitId("ca-app-pub-8933294539595122/6831825443");
-            interstitial1.loadAd(adRequest1);
-            interstitial1.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                    interstitial1.show();
-                }
 
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial1.loadAd(adRequest1);
-                }
-            });
-        } else {
-            adview.setVisibility(View.GONE);
-        }
         minus.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 try {
@@ -108,7 +73,7 @@ public class Act_ReadView extends AppCompatActivity {
             }
         });
         try {
-            if (!dataBase.get_sizefont().equalsIgnoreCase(str)) {
+            if (!dataBase.get_sizefont().equalsIgnoreCase("")) {
                 article.setTextSize(0, Float.parseFloat(dataBase.get_sizefont()));
                 article_head.setTextSize(0, Float.parseFloat(dataBase.get_sizefont()));
             }
@@ -273,12 +238,4 @@ public class Act_ReadView extends AppCompatActivity {
         }
     }
 
-    public void onBackPressed() {
-        super.onBackPressed();
-        try {
-            adview = null;
-            interstitial1 = null;
-        } catch (Exception e) {
-        }
-    }
 }

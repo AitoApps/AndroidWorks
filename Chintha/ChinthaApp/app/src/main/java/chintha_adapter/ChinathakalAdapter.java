@@ -20,7 +20,6 @@ import android.os.Handler;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,12 +34,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.signature.ObjectKey;
@@ -59,7 +57,6 @@ import com.pkmmte.view.CircularImageView;
 import com.suhi_chintha.Chintha_Likes;
 import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.HeartOf_App;
 import com.suhi_chintha.Image_View;
 import com.suhi_chintha.Lists_ChinthaComments;
@@ -293,8 +290,9 @@ public class ChinathakalAdapter extends Adapter<ViewHolder> {
                     } else {
                         viewHolder2.chinthacount.setVisibility(View.INVISIBLE);
                     }
-                    new RequestOptions().placeholder((int) R.drawable.img_noimage);
-                    Glide.with(context).load(item.get_dppic()).apply(RequestOptions.circleCropTransform().signature(new ObjectKey(item.getimgsig()))).transition(DrawableTransitionOptions.withCrossFade()).into(viewHolder2.img);
+
+
+                    Glide.with(context).load(item.get_dppic()).apply(RequestOptions.circleCropTransform().placeholder(R.drawable.img_placeholder).signature(new ObjectKey(item.getimgsig()))).transition(DrawableTransitionOptions.withCrossFade()).into(viewHolder2.img);
 
 
                     if (dataDb2.get_fvrt(item.getId().trim()).equalsIgnoreCase("")) {
@@ -331,6 +329,23 @@ public class ChinathakalAdapter extends Adapter<ViewHolder> {
                             return false;
                         }
                     });
+
+
+                    viewHolder2.status.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(viewHolder2.status.getMaxLines()==Integer.MAX_VALUE)
+                            {
+                                viewHolder2.status.setMaxLines(8);
+                            }
+                            else
+                            {
+                                viewHolder2.status.setMaxLines(Integer.MAX_VALUE);
+                            }
+
+                        }
+                    });
+
                     viewHolder2.settings.setOnClickListener(new OnClickListener() {
                         public void onClick(View arg0) {
                             try {
@@ -608,8 +623,6 @@ public class ChinathakalAdapter extends Adapter<ViewHolder> {
                 }
                 viewHolder2.adplaceholder. setVisibility(View.GONE);
             } catch (Exception e3) {
-
-               Log.w("Salmanponnani",Log.getStackTraceString(e3));
             }
         } else if (holder instanceof viewHolderFooter) {
             ViewHolder viewHolder3 = holder;

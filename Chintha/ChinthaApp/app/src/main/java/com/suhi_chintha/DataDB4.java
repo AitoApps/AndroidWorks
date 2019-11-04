@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DataDB4 extends SQLiteOpenHelper {
 
- 	private static final int DATABASE_VERSION =2;
+ 	private static final int DATABASE_VERSION =104;
 	private static final String DATABASE_NAME = "chinthadb9";
 	private static final String table1 = "commentlock";
 	private static final String table2 = "shortstatus";

@@ -16,6 +16,7 @@ import android.text.format.DateFormat;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -132,7 +133,26 @@ public class status_frag extends Fragment {
             emoji.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    if(emojiPopup.isShowing())
+                    {
+                       emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojies));
+                    }
+                    else
+                    {
+                        emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojikeyboard));
+                    }
                     emojiPopup.toggle();
+
+                }
+            });
+
+
+            status.setOnClickListener(new OnClickListener() {
+                public void onClick(View v) {
+                    emojiPopup.dismiss();
+                    emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojies));
+
                 }
             });
 
@@ -154,11 +174,7 @@ public class status_frag extends Fragment {
                 }
             });
 
-            status.setOnClickListener(new OnClickListener() {
-                public void onClick(View v) {
 
-                }
-            });
             statussettings.setOnClickListener(new OnClickListener() {
                 public void onClick(View view) {
                     settings_status();
@@ -218,7 +234,7 @@ public class status_frag extends Fragment {
             });
         } catch (Exception e3) {
 
-        Toast.makeText(context,Log.getStackTraceString(e3),Toast.LENGTH_LONG).show();
+        //Toast.makeText(context,Log.getStackTraceString(e3),Toast.LENGTH_LONG).show();
         }
 
 
@@ -771,7 +787,7 @@ public class status_frag extends Fragment {
         dialog2.getWindow().setBackgroundDrawable(new ColorDrawable(0));
         dialog2.setCancelable(false);
         dialog2.setContentView(R.layout.chintha_editchintha_custom);
-        final EditText status2 = (EditText) dialog2.findViewById(R.id.chintha);
+        final EmojiEditText status2 = (EmojiEditText) dialog2.findViewById(R.id.chintha);
         Button update = (Button) dialog2.findViewById(R.id.rpt_update);
         Button close = (Button) dialog2.findViewById(R.id.close);
         status2.setText(Static_Variable.chintha_text);

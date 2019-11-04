@@ -17,7 +17,7 @@
             android:layout_height="25.0dip"
             android:layout_margin="5.0dip"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_moveback" />
+            android:src="@drawable/img_moveback" />
 
         <ScrollView
             android:id="@+id/content"
@@ -43,7 +43,7 @@
                         android:layout_height="100.0dip"
                         android:layout_centerHorizontal="true"
                         android:layout_margin="5.0dip"
-                        app:srcCompat="@drawable/applogo" />
+                        android:src="@drawable/applogo" />
 
                     <TextView
                         android:id="@+id/text"
@@ -121,7 +121,7 @@
                             android:layout_height="50.0dip"
                             android:layout_marginLeft="5.0dip"
                             android:layout_marginRight="5.0dip"
-                            app:srcCompat="@drawable/img_wplogo" />
+                            android:src="@drawable/img_wplogo" />
 
                         <ImageView
                             android:id="@+id/fblogo"
@@ -130,7 +130,7 @@
                             android:layout_marginLeft="5.0dip"
                             android:layout_marginRight="5.0dip"
                             android:layout_toRightOf="@+id/wplogo"
-                            app:srcCompat="@drawable/fblogo" />
+                            android:src="@drawable/fblogo" />
 
                         <ImageView
                             android:id="@+id/ytlogo"
@@ -140,7 +140,7 @@
                             android:layout_marginTop="2.0dip"
                             android:layout_marginRight="5.0dip"
                             android:layout_toRightOf="@+id/fblogo"
-                            app:srcCompat="@drawable/img_ytlogo" />
+                            android:src="@drawable/img_ytlogo" />
                     </RelativeLayout>
                 </RelativeLayout>
             </RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Title"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="#ff000000" />
+
+        <RelativeLayout
+            android:id="@+id/lytimag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            >
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#fff"
+                android:padding="5dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/playicon"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/playicon" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#000"
+            android:textColor="#fff"
+            android:text="30:40"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_alignBottom="@+id/lytimag"
+            />
+
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/adplaceholder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:visibility="visible" />
+</RelativeLayout>

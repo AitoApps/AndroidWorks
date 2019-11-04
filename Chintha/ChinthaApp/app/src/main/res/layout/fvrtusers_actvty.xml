@@ -18,7 +18,7 @@
             android:layout_height="20.0dip"
             android:layout_centerVertical="true"
             android:layout_marginRight="5.0dip"
-            app:srcCompat="@drawable/img_moveback"
+            android:src="@drawable/img_moveback"
             android:visibility="visible" />
 
         <TextView
@@ -59,7 +59,7 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_nonet"
+            android:src="@drawable/img_nonet"
             android:visibility="gone" />
 
         <ImageView
@@ -67,7 +67,7 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_fvriur_chinthers_no"
+            android:src="@drawable/img_fvriur_chinthers_no"
             android:visibility="gone" />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -106,6 +106,6 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
-            app:srcCompat="@drawable/img_next" />
+            android:src="@drawable/img_next" />
     </RelativeLayout>
 </RelativeLayout>

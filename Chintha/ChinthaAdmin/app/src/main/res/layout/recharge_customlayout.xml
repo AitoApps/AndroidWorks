@@ -23,15 +23,15 @@
                 <TableRow android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/txtoperator"
+                        android:id="@+id/txtdate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5.0dip"
-                        android:text="Amount :"
+                        android:text="Date / Mobile :"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/operator"
+                        android:id="@+id/date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5.0dip"
@@ -45,15 +45,15 @@
                     android:minHeight="60.0dip">
 
                     <TextView
-                        android:id="@+id/txtcoupon"
+                        android:id="@+id/txtamount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5.0dip"
-                        android:text="Time :"
+                        android:text="Amount "
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/coupon"
+                        android:id="@+id/amount"
                         android:layout_width="150.0dip"
                         android:layout_height="wrap_content"
                         android:padding="5.0dip"
@@ -62,7 +62,9 @@
                         android:textColor="#ff228108"
                         android:textSize="18.0dip"
                         android:textStyle="bold" />
+
                 </TableRow>
+
             </TableLayout>
         </RelativeLayout>
 

@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Build.VERSION;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,11 +25,11 @@ import com.bumptech.glide.signature.ObjectKey;
 import com.suhi_chintha.Chintha_Likes;
 import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.Lists_ChinthaComments;
 import com.suhi_chintha.R;
 import com.suhi_chintha.Replay;
 import com.suhi_chintha.Static_Variable;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -42,8 +43,8 @@ public class NotiAdapter extends BaseAdapter {
     public AppCompatActivity activity;
 
     public Context context;
-    public DataDB1 dataDb1 = new DataDB1(context);
-    public DataDB2 dataDb2 = new DataDB2(context);
+    public DataDB1 dataDb1;
+    public DataDB2 dataDb2;
 
     public List<NotiFeed> feed;
     private LayoutInflater inflater;
@@ -52,6 +53,8 @@ public class NotiAdapter extends BaseAdapter {
         activity = activity2;
         feed = feed2;
         context = activity2.getApplicationContext();
+        dataDb1= new DataDB1(context);
+        dataDb2= new DataDB2(context);
     }
 
     public int getCount() {
@@ -78,7 +81,7 @@ public class NotiAdapter extends BaseAdapter {
             convertView2 = convertView;
         }
         TextView noticount = (TextView) convertView2.findViewById(R.id.countofnoti);
-        ExtendTextView text_noti = (ExtendTextView) convertView2.findViewById(R.id.notitext);
+        EmojiTextView text_noti = (EmojiTextView) convertView2.findViewById(R.id.notitext);
         TextView txttime = (TextView) convertView2.findViewById(R.id.txttime);
         ImageView img = (ImageView) convertView2.findViewById(R.id.img);
         RelativeLayout layouts = (RelativeLayout) convertView2.findViewById(R.id.layout);
@@ -131,6 +134,8 @@ public class NotiAdapter extends BaseAdapter {
         Glide.with(context).load(Static_Variable.entypoint1+"userphotosmall/"+item.getuserid()+".jpg").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(img);
         text_noti.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
+
+                Log.w("Salmana",item.gettype());
                 NotiFeed item = (NotiFeed) feed.get(i);
                 if (item.gettype().equalsIgnoreCase("0")) {
                     dataDb1.updatereadstatus(item.getpkey());
@@ -155,7 +160,7 @@ public class NotiAdapter extends BaseAdapter {
                         Intent i3 = new Intent(context, Replay.class);
                         i3.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(i3);
-                    } else if (item.gettype().equalsIgnoreCase("4")) {
+                    } else if (item.gettype().equalsIgnoreCase("2")) {
                         dataDb1.updatereadstatus(item.getpkey());
                         dataDb2.add_replycmnt(item.get_ogId(), item.get_chinthauserid(), item.get_chintha_username(),Static_Variable.entypoint1+"userphotosmall/"+item.get_chinthauserid()+".jpg", item.gettext(), item.get_imgsig());
                         dataDb2.add_rplyvisible("1");
@@ -192,7 +197,7 @@ public class NotiAdapter extends BaseAdapter {
                         Intent i3 = new Intent(context, Replay.class);
                         i3.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(i3);
-                    } else if (item.gettype().equalsIgnoreCase("4")) {
+                    } else if (item.gettype().equalsIgnoreCase("2")) {
                         dataDb1.updatereadstatus(item.getpkey());
                         dataDb2.add_replycmnt(item.get_ogId(), item.get_chinthauserid(), item.get_chintha_username(), Static_Variable.entypoint1 + "userphotosmall/" + item.get_chinthauserid() + ".jpg", item.gettext(), item.get_imgsig());
                         dataDb2.add_rplyvisible("1");

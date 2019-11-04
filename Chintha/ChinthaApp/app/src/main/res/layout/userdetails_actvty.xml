@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_moveback" />
+            android:src="@drawable/img_moveback" />
 
         <TextView
             android:id="@+id/text"
@@ -58,7 +58,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/img_noimage" />
+                    android:src="@drawable/img_noimage" />
 
                 <ProgressBar
                     android:id="@+id/porgress_B"

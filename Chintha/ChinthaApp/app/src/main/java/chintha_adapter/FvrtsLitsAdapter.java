@@ -32,13 +32,13 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.suhi_chintha.DataDB2;
 import com.suhi_chintha.DataDb;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.FvrtChinthakal_List;
 import com.suhi_chintha.Image_View;
 import com.suhi_chintha.R;
 import com.suhi_chintha.Static_Variable;
 import com.suhi_chintha.Status_To_Image;
 import com.suhi_chintha.Users_Chinthakal;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -55,16 +55,20 @@ public class FvrtsLitsAdapter extends BaseAdapter {
     public AppCompatActivity activity;
 
     public Context context;
-    public DataDb dataDb = new DataDb(context);
-    public DataDB2 dataDb2 = new DataDB2(context);
-    Typeface face = Typeface.createFromAsset(context.getAssets(), "asset_fonts/font_rachana.ttf");
+    public DataDb dataDb;
+    public DataDB2 dataDb2;
+    Typeface face;
 
     public List<ChinthaFeed> feed;
     private LayoutInflater inflater;
 
     public FvrtsLitsAdapter(AppCompatActivity activity2, List<ChinthaFeed> feed2) {
         activity = activity2;
+        context = activity2.getApplicationContext();
         feed = feed2;
+        dataDb= new DataDb(context);
+        dataDb2= new DataDB2(context);
+        face=Typeface.createFromAsset(context.getAssets(), "asset_fonts/font_rachana.ttf");
         context = activity2.getApplicationContext();
     }
 
@@ -93,7 +97,7 @@ public class FvrtsLitsAdapter extends BaseAdapter {
         }
         TextView name = (TextView) convertView2.findViewById(R.id.name);
         TextView phone = (TextView) convertView2.findViewById(R.id.mobile);
-        ExtendTextView status = (ExtendTextView) convertView2.findViewById(R.id.chintha);
+        EmojiTextView status = (EmojiTextView) convertView2.findViewById(R.id.chintha);
         final ImageView img = (ImageView) convertView2.findViewById(R.id.img);
         ImageView statusimage = (ImageView) convertView2.findViewById(R.id.imagetostatus);
         RelativeLayout layout = (RelativeLayout) convertView2.findViewById(R.id.layout);
@@ -162,6 +166,21 @@ public class FvrtsLitsAdapter extends BaseAdapter {
                 return false;
             }
         });
+        status.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(status.getMaxLines()==Integer.MAX_VALUE)
+                {
+                    status.setMaxLines(8);
+                }
+                else
+                {
+                    status.setMaxLines(Integer.MAX_VALUE);
+                }
+
+            }
+        });
+
         img.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
                 ChinthaFeed item = (ChinthaFeed) feed.get(i);

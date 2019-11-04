@@ -57,7 +57,7 @@ public class MK_EASY_RECHARGE_NEW extends AppCompatActivity {
                     flag = false;
                     if (!cd.isConnectingToInternet()) {
                         Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
-                    } else if (footerview.getVisibility() != 0) {
+                    } else if (footerview.getVisibility() != View.VISIBLE) {
                         limit += 30;
                         new loadlikes1().execute(new String[0]);
                     }
@@ -130,6 +130,7 @@ public class MK_EASY_RECHARGE_NEW extends AppCompatActivity {
         }
         public void onPostExecute(String result) {
             try {
+
                 if (result.contains("%:ok")) {
                     feedItems.clear();
                     String[] got = result.split("%:");
@@ -138,13 +139,13 @@ public class MK_EASY_RECHARGE_NEW extends AppCompatActivity {
                     for (int i = 1; i <= k; i++) {
                         Recharge_FeedItem item = new Recharge_FeedItem();
                         m=m+1;
-                        item.setsn(got[m]);
+                        item.setSn(got[m]);
                         m=m+1;
-                        item.setuserid(got[m]);
+                        item.setUserid(got[m]);
                         m=m+1;
-                        item.setoperator(got[m]);
+                        item.setStrdate(got[m]);
                         m=m+1;
-                        item.setcoponcode(got[m]);
+                        item.setStramt(got[m]);
                         feedItems.add(item);
                     }
                     pb.setVisibility(View.GONE);
@@ -200,13 +201,13 @@ public class MK_EASY_RECHARGE_NEW extends AppCompatActivity {
                     for (int i = 1; i <= k; i++) {
                         Recharge_FeedItem item = new Recharge_FeedItem();
                         m=m+1;
-                        item.setsn(got[m]);
+                        item.setSn(got[m]);
                         m=m+1;
-                        item.setuserid(got[m]);
+                        item.setUserid(got[m]);
                         m=m+1;
-                        item.setoperator(got[m]);
+                        item.setStrdate(got[m]);
                         m=m+1;
-                        item.setcoponcode(got[m]);
+                        item.setStramt(got[m]);
                         feedItems.add(item);
                     }
                     footerview.setVisibility(View.GONE);

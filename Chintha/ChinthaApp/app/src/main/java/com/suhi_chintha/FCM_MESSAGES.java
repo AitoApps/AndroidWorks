@@ -706,7 +706,7 @@ public class FCM_MESSAGES extends FirebaseMessagingService {
     public void gen_reply(final String comment, final String userid, final String username, final String imgsig) {
         try {
 
-            final Intent intent = new Intent(this, List_noti.class);
+            final Intent intent = new Intent(this, Replay.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             final PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
             final Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);

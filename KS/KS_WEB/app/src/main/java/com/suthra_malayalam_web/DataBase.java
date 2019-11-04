@@ -23,14 +23,12 @@ public class DataBase extends SQLiteOpenHelper {
     private static final String TABLE_name23 = "passkey";
     private static final String TABLE_name24 = "securityquestion";
     private static final String TABLE_name25 = "adcounts";
-    private static final String TABLE_name26 = "screenwidth";
     private static final String TABLE_name29 = "pos_bypass";
-    private static final String TABLE_name30 = "isunlock";
-    private static final String TABLE_name4 = "bookmark";
+   private static final String TABLE_name4 = "bookmark";
     private static final String TABLE_name5 = "ispurchased";
-    private static final String TABLE_name6 = "firstdown";
     private static final String TABLE_name7 = "catogery";
     private static final String TABLE_name8 = "subcatogery";
+
     private static final String adcount = "question2";
     private static final String firstdown = "firstdown";
     private static final String pkey = "pkey";
@@ -39,6 +37,7 @@ public class DataBase extends SQLiteOpenHelper {
     private static final String question2 = "question2";
     private static final String screenwidth = "screenwidth";
     private static final String title = "title";
+
 
     private static String CREATE_videoid_TABLE1 = "CREATE TABLE fvrts(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
     private static String CREATE_videoid_TABLE11 = "CREATE TABLE album_fvrts(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
@@ -61,7 +60,6 @@ public class DataBase extends SQLiteOpenHelper {
     private static String CREATE_videoid_TABLE6 = "CREATE TABLE firstdown(pkey INTEGER PRIMARY KEY AUTOINCREMENT,firstdown TEXT)";
     private static String CREATE_videoid_TABLE7 = "CREATE TABLE catogery(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
     private static String CREATE_videoid_TABLE8 = "CREATE TABLE subcatogery(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
-
     public DataBase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

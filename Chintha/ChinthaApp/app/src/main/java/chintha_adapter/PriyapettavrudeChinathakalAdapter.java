@@ -48,7 +48,6 @@ import com.suhi_chintha.Chintha_Fvrtusers;
 import com.suhi_chintha.Chintha_Likes;
 import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.Image_View;
 import com.suhi_chintha.Lists_ChinthaComments;
 import com.suhi_chintha.NetConnection;
@@ -57,6 +56,7 @@ import com.suhi_chintha.Static_Variable;
 import com.suhi_chintha.Updates_ChinthaLikes;
 import com.suhi_chintha.User_DataDB;
 import com.suhi_chintha.Users_Chinthakal;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -103,7 +103,7 @@ public class PriyapettavrudeChinathakalAdapter extends Adapter<ViewHolder> {
         RelativeLayout sharelyt;
         RelativeLayout shotlayout;
         TextView shotstatus;
-        ExtendTextView status;
+        EmojiTextView status;
         RelativeLayout statuslyt;
         RelativeLayout statuspart;
         TextView txtcomment;
@@ -133,7 +133,7 @@ public class PriyapettavrudeChinathakalAdapter extends Adapter<ViewHolder> {
             statuspart = (RelativeLayout) itemView.findViewById(R.id.statuspart);
             doverify = (ImageView) itemView.findViewById(R.id.doverify);
             posttime = (TextView) itemView.findViewById(R.id.post_time);
-            status = (ExtendTextView) itemView.findViewById(R.id.chintha);
+            status = (EmojiTextView) itemView.findViewById(R.id.chintha);
             veriicon = (ImageView) itemView.findViewById(R.id.verifiedicon);
             shotstatus = (TextView) itemView.findViewById(R.id.shotstatus);
             shotlayout = (RelativeLayout) itemView.findViewById(R.id.shotlayout);
@@ -259,18 +259,35 @@ public class PriyapettavrudeChinathakalAdapter extends Adapter<ViewHolder> {
                 if (!TextUtils.isEmpty(item.getStatus())) {
                     try {
                         viewHolder2.status.setText(item.getStatus());
+
                     } catch (Exception e2) {
                     }
                 } else {
                     viewHolder2.status. setVisibility(View.GONE);
                 }
+                viewHolder2.status.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(viewHolder2.status.getMaxLines()==Integer.MAX_VALUE)
+                        {
+                            viewHolder2.status.setMaxLines(8);
+                        }
+                        else
+                        {
+                            viewHolder2.status.setMaxLines(Integer.MAX_VALUE);
+                        }
+
+                    }
+                });
+
                 if (Integer.parseInt(item.get_statuscount()) > 0) {
                     viewHolder2.chinthacount.setText("ചിന്ത : "+item.get_statuscount());
                 } else {
                     viewHolder2.chinthacount.setVisibility(View.INVISIBLE);
                 }
-                new RequestOptions().placeholder((int) R.drawable.img_noimage);
-                Glide.with(context).load(item.get_dppic()).apply(RequestOptions.circleCropTransform().signature(new ObjectKey(item.getimgsig()))).transition(DrawableTransitionOptions.withCrossFade()).into(viewHolder2.img);
+
+                Glide.with(context).load(item.get_dppic()).apply(RequestOptions.circleCropTransform().placeholder(R.drawable.img_placeholder).signature(new ObjectKey(item.getimgsig()))).transition(DrawableTransitionOptions.withCrossFade()).into(viewHolder2.img);
+
                 if (dataDb2.get_fvrt(item.getId().trim()).equalsIgnoreCase("")) {
                     viewHolder2.imgnolike.setVisibility(View.VISIBLE);
                     viewHolder2.imglike.setVisibility(View.INVISIBLE);

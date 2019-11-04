@@ -31,16 +31,6 @@ import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.PatternLockView.Dot;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
 import com.andrognito.patternlockview.utils.PatternLockUtils;
-import com.google.android.gms.ads.MobileAds;
-import com.payumoney.core.PayUmoneyConfig;
-import com.payumoney.core.PayUmoneyConstants;
-import com.payumoney.core.PayUmoneySdkInitializer;
-import com.payumoney.core.entity.TransactionResponse;
-import com.payumoney.sdkui.ui.utils.PayUmoneyFlowManager;
-import com.payumoney.sdkui.ui.utils.ResultModel;
-
-import org.json.JSONObject;
-
 import es.dmoral.toasty.Toasty;
 
 import java.io.File;
@@ -88,8 +78,6 @@ public class Cpanel extends AppCompatActivity {
         setContentView(R.layout.actvty_cpanel);
         String[] PERMISSIONS = {android.Manifest.permission.INTERNET, android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.READ_EXTERNAL_STORAGE, android.Manifest.permission.ACCESS_NETWORK_STATE};
 
-        MobileAds.initialize(this, "ca-app-pub-8933294539595122~5710315462");
-
         if (!check_permission(this, PERMISSIONS)) {
             ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
         }
@@ -120,6 +108,7 @@ public class Cpanel extends AppCompatActivity {
             app_lock.setText(Static_Veriable.forgotpattern);
             patterntext.setText(Static_Veriable.patterntext2);
         }
+
         share = (ImageView) findViewById(R.id.appshare);
         content = (ScrollView) findViewById(R.id.content);
         about_us = (ImageView) findViewById(R.id.aboutus);

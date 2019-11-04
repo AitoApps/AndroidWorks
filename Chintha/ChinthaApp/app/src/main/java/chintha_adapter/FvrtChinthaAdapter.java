@@ -44,7 +44,6 @@ import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
 import com.suhi_chintha.DataDB4;
 import com.suhi_chintha.DataDb;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.Image_View;
 import com.suhi_chintha.Lists_ChinthaComments;
 import com.suhi_chintha.NetConnection;
@@ -53,6 +52,7 @@ import com.suhi_chintha.Static_Variable;
 import com.suhi_chintha.Updates_ChinthaLikes;
 import com.suhi_chintha.User_DataDB;
 import com.suhi_chintha.Users_Chinthakal;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -103,7 +103,7 @@ public class FvrtChinthaAdapter extends Adapter<ViewHolder> {
         TextView posttime;
         ImageView settings;
         ImageView share;
-        ExtendTextView status;
+        EmojiTextView status;
         ImageView statusimage;
         RelativeLayout statuslyt;
         RelativeLayout statuspart;
@@ -118,7 +118,7 @@ public class FvrtChinthaAdapter extends Adapter<ViewHolder> {
             comment = (TextView) itemView.findViewById(R.id.comment);
             posttime = (TextView) itemView.findViewById(R.id.post_time);
             count = (TextView) itemView.findViewById(R.id.likecount);
-            status = (ExtendTextView) itemView.findViewById(R.id.chintha);
+            status = (EmojiTextView) itemView.findViewById(R.id.chintha);
             statusimage = (ImageView) itemView.findViewById(R.id.imagetostatus);
             img = (ImageView) itemView.findViewById(R.id.img);
             delete = (ImageView) itemView.findViewById(R.id.del);
@@ -281,6 +281,21 @@ public class FvrtChinthaAdapter extends Adapter<ViewHolder> {
                         } catch (Exception e) {
                         }
                         return false;
+                    }
+                });
+
+                viewHolder2.status.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(viewHolder2.status.getMaxLines()==Integer.MAX_VALUE)
+                        {
+                            viewHolder2.status.setMaxLines(8);
+                        }
+                        else
+                        {
+                            viewHolder2.status.setMaxLines(Integer.MAX_VALUE);
+                        }
+
                     }
                 });
                 viewHolder2.comment.setOnClickListener(new OnClickListener() {

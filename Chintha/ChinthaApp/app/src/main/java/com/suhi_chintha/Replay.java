@@ -47,6 +47,9 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdRequest.Builder;
 import com.google.android.gms.ads.AdView;
+import com.vanniktech.emoji.EmojiEditText;
+import com.vanniktech.emoji.EmojiPopup;
+
 import es.dmoral.toasty.Toasty;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -138,7 +141,7 @@ public class Replay extends AppCompatActivity {
     String replay_imgsig = "0";
     int replaycount = 0;
     String replayuserid = "";
-    public EditText reply;
+    public EmojiEditText reply;
     public String reply_commentid;
     RotateAnimation rotate;
     public TextView status1;
@@ -248,13 +251,33 @@ public class Replay extends AppCompatActivity {
                 }
             });
             add_rply = (ImageView) findViewById(R.id.addreplay);
-            reply = (EditText) findViewById(R.id.reply);
+            reply = (EmojiEditText) findViewById(R.id.reply);
             layout = (RelativeLayout) findViewById(R.id.layout);
             listview1.setAdapter(apater1);
+            ImageView emoji=findViewById(R.id.emoji);
+            RelativeLayout layout=findViewById(R.id.layout);
+            final EmojiPopup emojiPopup = EmojiPopup.Builder.fromRootView(layout).build(reply);
+            emoji.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(emojiPopup.isShowing())
+                    {
+                        emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojies));
+                    }
+                    else
+                    {
+                        emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojikeyboard));
+                    }
+                    emojiPopup.toggle();
+
+                }
+            });
 
             reply.setOnClickListener(new OnClickListener() {
                 public void onClick(View v) {
-
+                    emojiPopup.dismiss();
+                    emoji.setImageDrawable(getResources().getDrawable(R.drawable.emojies));
                 }
             });
             popup1.setOnClickListener(new OnClickListener() {
@@ -377,7 +400,7 @@ public class Replay extends AppCompatActivity {
                                     mp.start();
                                 } catch (Exception e2) {
                                 }
-                            } else if (result.contains("::img_userblock:%")) {
+                            } else if (result.contains("::blockuser:%")) {
                                 String[] p = result.split(":%");
                                 Toasty.info(getApplicationContext(), "ക്ഷമിക്കണം !! താങ്കളെ "+p[1]+" ബ്ലോക്ക് ചെയ്തത് കാരണം ഈ കമന്റിന് റിപ്ലേ ചെയ്യുവാന്‍ സാധിക്കില്ല", Toast.LENGTH_LONG).show();
                             } else if (result.contains("::block::")) {

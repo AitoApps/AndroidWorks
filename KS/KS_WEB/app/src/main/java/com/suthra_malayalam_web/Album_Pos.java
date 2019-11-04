@@ -20,18 +20,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdRequest.Builder;
-import com.google.android.gms.ads.InterstitialAd;
 import es.dmoral.toasty.Toasty;
 
 public class Album_Pos extends AppCompatActivity {
     public static ImageView moveback;
     public static ImageView movenext;
-    public static String t_answer = "30";
-    AdRequest adRequest1,adRequest2;
     ImageView addtofvrts;
     TextView amount;
     ImageView back;
@@ -46,8 +39,6 @@ public class Album_Pos extends AppCompatActivity {
     ImageView fvrts;
     TextView helptext;
     Zoomable_ImageView image;
-
-    public InterstitialAd interstitial1,interstitial2;
     ScrollView layoutlock;
     ImageView loading;
     NetConnect nc;
@@ -68,8 +59,6 @@ public class Album_Pos extends AppCompatActivity {
         } catch (Exception e) {
         }
         pd = new ProgressDialog(this);
-        adRequest1 = new Builder().build();
-        adRequest2= new Builder().build();
         upiid = (Button) findViewById(R.id.upiid);
         helptext = (TextView) findViewById(R.id.help_text);
         slidehelp = (RelativeLayout) findViewById(R.id.slidehelp);
@@ -99,39 +88,7 @@ public class Album_Pos extends AppCompatActivity {
         helptext.setTypeface(face);
         paymenttext.setText("35 രൂപ പേയ്‌മെന്റ് ചെയ്താല്‍ താങ്കള്‍ക്ക് എല്ലാ പൊസിഷനുകളും ആല്‍ബവും പരസ്യങ്ങളില്ലാതെ കാണാവുന്നതാണ്. താഴെയുള്ള ഏത് വഴി ഉപയോഗിച്ചും പേയ്‌മെന്റ് ചെയ്യാവുന്നതാണ്‌");
         paymenttext.setTypeface(face);
-        if (dataBase.get_purchase().equalsIgnoreCase("")) {
-            interstitial1 = new InterstitialAd(this);
-            interstitial1.setAdUnitId("ca-app-pub-8933294539595122/6831825443");
-            interstitial1.loadAd(adRequest1);
 
-            interstitial2 = new InterstitialAd(this);
-            interstitial2.setAdUnitId("ca-app-pub-8933294539595122/8205911433");
-            interstitial2.loadAd(adRequest2);
-
-            interstitial1.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                }
-
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial1.loadAd(adRequest1);
-                }
-            });
-
-            interstitial2.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                }
-
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial2.loadAd(adRequest2);
-                }
-            });
-
-            remove_ads.setVisibility(View.VISIBLE);
-        } else {
-            remove_ads.setVisibility(View.INVISIBLE);
-        }
         amount.setText("`35");
         amount.setTypeface(face2);
         amount.setTextColor(Color.RED);
@@ -266,21 +223,6 @@ public class Album_Pos extends AppCompatActivity {
                 image.setImageBitmap(BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length, options));
                 alpha_animation();
             } else if (nc.isConnectingToInternet()) {
-                if (interstitial1.isLoaded()) {
-                    interstitial1.show();
-                }
-                if (!interstitial1.isLoading()) {
-                    interstitial1.loadAd(adRequest1);
-                }
-
-
-                if (interstitial2.isLoaded()) {
-                    interstitial2.show();
-                }
-                if (!interstitial2.isLoading()) {
-                    interstitial2.loadAd(adRequest2);
-                }
-
                 count.setText(Static_Veriable.albumid+"");
 
                 byte[] decodedString2 = Base64.decode(dbHelper.getpic(Static_Veriable.albumid+""), 0);
@@ -309,10 +251,6 @@ public class Album_Pos extends AppCompatActivity {
             if (layoutlock.getVisibility() == View.VISIBLE) {
                 layoutlock.setVisibility(View.GONE);
                 return;
-            }
-            try {
-                interstitial1 = null;
-            } catch (Exception e) {
             }
             super.onBackPressed();
         } catch (Exception e2) {

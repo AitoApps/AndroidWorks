@@ -1,6 +1,8 @@
 package com.suthra_malayalam_web;
 
 public class Static_Veriable {
+
+    public static String task_appname="",task_appurl="",task_appheader="",task_appfooter="";
     public static String aagreeec = "താങ്കളുടെ പേയ്‌മെന്റ്‌ ഞങ്ങള്‍ അംഗീകരിച്ചിരിക്കുന്നു.";
     public static String aboutus_copyright = "ഈ സോഫ്റ്റ് വെയര്‍ കോപ്പിറൈറ്റ് പ്രൊട്ടകറ്റ്ഡ് ആണ്‌ ";
     public static String addedbkmrk = "ഈ പൊസിഷന്‍ ബുക്ക്മാര്‍ക്ക് ചെയ്തിരിക്കുന്നു.";
@@ -10,11 +12,12 @@ public class Static_Veriable {
     public static String afterpost = "വളരെ നന്ദി ! താങ്കള്‍ നല്‍കിയിട്ടുള്ള വിവരങ്ങള്‍ ശരിയാണെങ്കില്‍ 4 മണിക്കൂറിനുള്ളില്‍ താങ്കള്‍ക്ക് ബാക്കിയുള്ള പൊസിഷനുകള്‍ കാണാവുന്നതാണ്.";
     public static String albmtitle = "ആല്‍ബം";
     public static int albumid = 1;
+    public static String appid="";
     public static String answr_check = "താങ്കള്‍ നല്‍കിയ ഉത്തരങ്ങള്‍ ശരിയല്ല. ദയവായി പരിശോധിക്കുക.";
     public static String appname = "മലയാളം കാമസൂത്ര";
     public static String atmcard = "എ.ടി.എം കാര്‍ഡ്‌ / ബാങ്ക്‌ ";
     public static String backalert = "ശ്രദ്ധിക്കുക ! താങ്കളുടെ പേയ്‌മെന്റ് പൂര്‍ത്തിയായിട്ടില്ല.പേയ്‌മെന്റ് വിന്‍ഡോയില്‍ നിന്ന് പുറത്ത് കടക്കണമെന്നുള്ളത് ഉറപ്പാണോ ?";
-    public static String cardpayment = "ദയവായി 'എങ്ങനെ പേയ്‌മെന്റ് ചെയ്യാം' എന്ന ബട്ടണില്‍ പ്രസ്സ് ചെയ്ത് പേയ്‌മെന്റ് ചെയ്യുന്നത് എങ്ങിനെയാണെന്ന് പൂര്‍ണ്ണമായും മനസ്സിലാക്കിയതിന് ശേഷം പേയ്‌മെന്റ് ചെയ്യുക.";
+    public static String cardpayment = "പേയ്\u200Cമെന്റ് ബട്ടണില്\u200D പ്രസ്സ് ചെയ്ത് പേയ്\u200Cമെന്റ് ചെയ്യൂ.";
     public static String changepattern = "പാറ്റേണ്‍ മാറ്റാം";
     public static String checkec = "താങ്കള്‍ ചെയ്ത പേയ്‌മെന്റ്‌ ശരിയാണോ എന്ന് പരിശോധിക്കുന്നു.";
     public static int clickedmethod = 0;
@@ -39,14 +42,14 @@ public class Static_Veriable {
     public static String pattertntext1 = "താങ്കളുടെ പ്രൈവസിയെ മുന്‍നിര്‍ത്തിയാണ് ഈ പാറ്റേണ്‍ ലോക്ക് സംവിധാനം ഉള്‍പ്പെടുത്തിയിരിക്കുന്നത്. ദയവായി ഒരു പാറ്റേണ്‍ വരക്കുക. ശേഷം 'പാറ്റേണ്‍ സെറ്റ് ചെയ്യാം' എന്ന ബട്ടണില്‍ പ്രസ്സ് ചെയ്യുക.";
     public static String payment = "പേയ്‌മെന്റ്‌";
     public static String paymenthelp = "സഹായത്തിന് വാട്‌സ്ആപ്പ് മാത്രം";
-    public static String paytm;
+    public static String paytm="പേടിഎം ";
     public static String paytmtext;
     public static String paytmtext1 = "പേടിഎം വഴിയും താങ്കള്‍ക്ക് പേയ്‌മെന്റ് നടത്താം 9048801231 എന്ന പേടിഎം ഐഡിയിലേക്ക്";
     public static String paytmtext2 = "രൂപ അയച്ച് താഴെയുള്ള ബോക്‌സില്‍ പേയ്‌മെന്റ് ചെയ്ത തുകയും പേയ്‌മെന്റ് ചെയ്ത ഏകദേശ സമയവും കൊടുത്ത് വെരിഫൈ ബട്ടണ്‍ പ്രസ്സ് ചെയ്യുക ";
     public static int picid = 1;
     public static String pleasewaitdown = "സെക്‌സ് പൊസിഷനുകളിലേക്ക് ആവശ്യമായ ചിത്രങ്ങള്‍ ഡൗണ്‍ലോഡ് ചെയ്തുകൊണ്ടിരിക്കുകയാണ്.ദയവായി കാത്തിരിക്കുക.";
     public static String positions = "പൊസിഷനുകള്‍";
-    public static String posname;
+    public static String posname="";
     public static String pymenttext = "പരസ്യങ്ങളുടെ ശല്യം ഒഴിവാകുവാന്‍ താങ്കള്‍ 49 രൂപ പേയ്‌മെന്റ് ചെയ്യേണ്ടതായിട്ടുണ്ട്.താഴെയുള്ള 5 വഴികളില്‍ ഏതുവഴി ഉപയോഗിച്ചും താങ്കള്‍ക്ക് പേയ്‌മെന്റ് ചെയ്യാവുന്നതാണ്.";
     public static String pymnt_time = "പേയ്‌മെന്റ് ചെയ്ത സമയം ";
     public static String question1 = "താങ്കള്‍ക്കേറ്റവും ഇഷ്ടപ്പെട്ട സുഹൃത്തിന്റെ പേര്";
@@ -57,29 +60,18 @@ public class Static_Veriable {
     public static String secuirtytext = "ശ്രദ്ധിക്കുക ! ദയവായി താഴെയുള്ള ചോദ്യത്തിന്‌ ഉത്തരം നല്‍കുക. ഈ സംവിധാനം താങ്കള്‍ സെറ്റ് ചെയ്ത പാറ്റേണ്‍ മറക്കുകയാണെങ്കില്‍ ഉപയോഗിക്കുവാനുള്ളതാണ്.ആയതിനാല്‍ മറക്കുവാന്‍ സാധ്യതയില്ലാത്ത ഉത്തരം നല്‍കുക.";
     public static String setpattern = "പാറ്റേണ്‍ സെറ്റ് ചെയ്യാം";
     public static String shareapp = "മലയാളത്തിലെ ആദ്യത്തെ കാമസൂത്ര ആന്‍ഡ്രോയിഡ് ആപ്പ്.,എണ്ണൂറിലധികം സെക്‌സ് പൊസിഷന്‍ തുടങ്ങി ലൈംഗീകതയെ സംബന്ധിക്കുന്ന എല്ലാം വിവരങ്ങളും ഈ ആപ്ലിക്കേഷനില്‍ ലഭ്യമാണ്. ഡൗണ്‍ലോഡ് ചെയ്യുവാന്‍\n : https://malayalamakamasuthra.xyz";
-    public static String tempheading;
+    public static String tempheading="";
     public static String text_help = "ഒരു പൊസിഷനില്‍ നിന്നും മറ്റൊരു പൊസിഷനിലേക്ക് പോകണമെങ്കില്‍ സ്ലൈഡ് ചെയ്താല്‍ മതിയാകും \n\n പരസ്യം ഒഴിവാക്കണമെങ്കില്‍ മുകളിലുള്ള റിമൂവ് ആഡ്‌സ് എന്ന ബട്ടണ്‍ പ്രസ്സ് ചെയ്ത് പേയ്‌മെന്റ് ചെയ്താല്‍ മതി ";
     public static String tmpproblem = "താല്‍ക്കാലിക പ്രശ്‌നം ! അല്‍പ്പസമയം കഴിഞ്ഞ് ശ്രമിക്കുക.";
-    public static String upiid;
-    public static String upiidtext;
+    public static String upiid="യുപിഐ ഐഡി ";
+    public static String upiidtext="യുപിഐ ഐഡി ";
     public static String upitext1 = "യുപിഐ ഐഡി വഴിയും താങ്കള്‍ക്ക് പേയ്‌മെന്റ് നടത്താം abdulmanaf.info@okhdfcbank എന്ന യുപിഐ ഐഡിയിലേക്ക്‌";
     public static String verifybtn = "വെരിഫൈ ";
     public static String waintingec = "ദയവായി അല്‍പ്പസമയം കൂടി കാത്തിരിക്കുക.";
-    public static String weblink = "http://apistatuschinthakal.in/mknew/";
+    public static String weblink = "https://apistatuschinthakal.in/km/";
     public static String whatsapponly = "വാട്‌സ്ആപ്പ് മാത്രം ";
     public static String writepatterchange = "ദയവായി ഒരു പാറ്റേണ്‍ വരക്കുക. ശേഷം 'പാറ്റേണ്‍ സെറ്റ് ചെയ്യാം' എന്ന ബട്ടണില്‍ പ്രസ്സ് ചെയ്യുക.";
     public static String writepattern = "ദയവായി ഒരു പാറ്റേണ്‍ വരക്കുക";
     public static String zoomtext = "ചിത്രങ്ങള്‍ സൂം ചെയ്യാന്‍ സാധിക്കുന്നതാണ്‌  \n\n പരസ്യം ഒഴിവാക്കണമെങ്കില്‍ മുകളിലുള്ള റിമൂവ് ആഡ്‌സ് എന്ന ബട്ടണ്‍ പ്രസ്സ് ചെയ്ത് പേയ്‌മെന്റ് ചെയ്താല്‍ മതി\n";
 
-    static {
-        String str = "പേടിഎം ";
-        paytm = str;
-        String str2 = "യുപിഐ ഐഡി ";
-        upiid = str2;
-        upiidtext = str2;
-        paytmtext = str;
-        String str3 = "";
-        tempheading = str3;
-        posname = str3;
-    }
 }

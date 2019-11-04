@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends AppCompatActivity {
 
     TextView text;
-    Button loanapps,gameapps,otherapp,video;
+    Button loanapps,gameapps,video;
     Typeface face;
     List<String> lst_language = new ArrayList();
     @Override
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         text=findViewById(R.id.text);
         loanapps=findViewById(R.id.loanapps);
         gameapps=findViewById(R.id.gameapps);
-        otherapp=findViewById(R.id.otherapp);
         video=findViewById(R.id.video);
         face = Typeface.createFromAsset(getAssets(), "font/proxibold.otf");
 
@@ -58,13 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        otherapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Temp.appcatogery="3";
-                startActivity(new Intent(getApplicationContext(),Apps_List.class));
-            }
-        });
+
         video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

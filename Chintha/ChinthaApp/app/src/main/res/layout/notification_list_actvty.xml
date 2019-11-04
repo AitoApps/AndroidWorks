@@ -20,7 +20,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_moveback"
+            android:src="@drawable/img_moveback"
             android:layout_centerVertical="true"
             android:layout_marginLeft="3dp"
             />
@@ -44,7 +44,7 @@
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            app:srcCompat="@drawable/readall"
+            android:src="@drawable/readall"
             android:layout_toLeftOf="@+id/deleteall"
             />
         <ImageView
@@ -52,7 +52,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
-            app:srcCompat="@drawable/img_deleteall"
+            android:src="@drawable/img_deleteall"
             android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"
             />
@@ -74,7 +74,7 @@
             android:id="@+id/emptydata"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/img_nonotis"
+            android:src="@drawable/img_nonotis"
             android:layout_centerInParent="true"
             android:visibility="gone"
             />

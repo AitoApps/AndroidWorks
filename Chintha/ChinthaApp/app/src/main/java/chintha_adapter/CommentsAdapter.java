@@ -29,7 +29,6 @@ import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
 import com.suhi_chintha.DataDB4;
 import com.suhi_chintha.DataDb;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.Image_View;
 import com.suhi_chintha.Lists_ChinthaComments;
 import com.suhi_chintha.NetConnection;
@@ -38,6 +37,7 @@ import com.suhi_chintha.Replay;
 import com.suhi_chintha.Static_Variable;
 import com.suhi_chintha.User_DataDB;
 import com.suhi_chintha.Users_Chinthakal;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -107,7 +107,7 @@ public class CommentsAdapter extends BaseAdapter {
         }
         TextView name = (TextView) convertView2.findViewById(R.id.name);
         ImageView dppic = (ImageView) convertView2.findViewById(R.id.img);
-        final ExtendTextView status = (ExtendTextView) convertView2.findViewById(R.id.chintha);
+        final EmojiTextView status = (EmojiTextView) convertView2.findViewById(R.id.chintha);
         ImageView reportstatus1 = (ImageView) convertView2.findViewById(R.id.reportstatus1);
         TextView posttime = (TextView) convertView2.findViewById(R.id.post_time);
         TextView replay = (TextView) convertView2.findViewById(R.id.replay);
@@ -127,8 +127,7 @@ public class CommentsAdapter extends BaseAdapter {
         }
         posttime.setText(item.get_postdate());
         ArrayList<String> id1 = userDataDB.get_user();
-        TextView textView = posttime;
-        ArrayList arrayList = id1;
+
         if (item.getuserid().equalsIgnoreCase(((String[]) id1.toArray(new String[id1.size()]))[0])) {
             edit.setVisibility(View.VISIBLE);
             delete.setVisibility(View.VISIBLE);
@@ -142,13 +141,30 @@ public class CommentsAdapter extends BaseAdapter {
             try {
                 status.setText(new String(Base64.decode(item.getcomments(), 0), StandardCharsets.UTF_8));
                 status.setVisibility(View.VISIBLE);
+
+                status.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(status.getMaxLines()==Integer.MAX_VALUE)
+                        {
+                            status.setMaxLines(8);
+                        }
+                        else
+                        {
+                            status.setMaxLines(Integer.MAX_VALUE);
+                        }
+
+                    }
+                });
+
             } catch (Exception e) {
             }
         } else {
             status. setVisibility(View.GONE);
         }
-        new RequestOptions().placeholder((int) R.drawable.img_noimage);
-        Glide.with(context).load(item.get_dppic()).apply(RequestOptions.circleCropTransform().signature(new ObjectKey(item.get_imgsig()))).transition(DrawableTransitionOptions.withCrossFade()).into(dppic);
+
+        Glide.with(context).load(item.get_dppic()).apply(RequestOptions.circleCropTransform().placeholder(R.drawable.img_placeholder).signature(new ObjectKey(item.get_imgsig()))).transition(DrawableTransitionOptions.withCrossFade()).into(dppic);
+
         dppic.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
                 CommentFeed item = (CommentFeed) feed.get(i);

@@ -20,104 +20,122 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup,android:usesCleartextTraffic">
+        <activity android:name=".Complete_Task_Confirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
+        <activity
+            android:name=".App_Deatils"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Complete_Task"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <activity
-            android:name="com.suthra_malayalam_web.Cpanel"
+            android:name=".Cpanel"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8933294539595122~5710315462" />
 
         <activity
-            android:name="com.suthra_malayalam_web.Act_ReadView"
+            android:name=".Act_ReadView"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Album_Pos"
+            android:name=".Album_Pos"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.ReadView_Subcatogery"
+            android:name=".ReadView_Subcatogery"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Act_Pos_Subcat"
+            android:name=".Act_Pos_Subcat"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Act_Photoview_Pos"
+            android:name=".Act_Photoview_Pos"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Fvrt_POS"
+            android:name=".Fvrt_POS"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Album_Pos_Fvrt"
+            android:name=".Album_Pos_Fvrt"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Act_About"
+            android:name=".Act_About"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.UPIID"
+            android:name=".UPIID"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Position_View"
+            android:name=".Position_View"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.UnlockKey"
+            android:name=".UnlockKey"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Recharge"
+            android:name=".Recharge"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Paytm"
+            android:name=".Paytm"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Mobile_verification"
+            android:name=".Mobile_verification"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Act_Pymnt_Card"
+            android:name=".Act_Pymnt_Card"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.suthra_malayalam_web.Act_Payments"
+            android:name=".Act_Payments"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-
     </application>
 
 </manifest>

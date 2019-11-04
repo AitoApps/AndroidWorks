@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:padding="5.0dip">
 
-            <com.suhi_chintha.StatusEditText
+            <com.vanniktech.emoji.EmojiEditText
                 android:id="@+id/chintha"
                 android:layout_width="fill_parent"
                 android:layout_height="175.0dip"

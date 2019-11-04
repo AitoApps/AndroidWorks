@@ -28,7 +28,7 @@
                     android:id="@+id/img"
                     android:layout_width="50.0dip"
                     android:layout_height="50.0dip"
-                    app:srcCompat="@drawable/img_noimage" />
+                    android:src="@drawable/img_noimage" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -58,7 +58,7 @@
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:layout_toLeftOf="@+id/del"
-                    app:srcCompat="@drawable/img_addstatus" />
+                    android:src="@drawable/img_addstatus" />
 
                 <ImageView
                     android:id="@+id/del"
@@ -67,7 +67,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    app:srcCompat="@drawable/img_drpicicon" />
+                    android:src="@drawable/img_drpicicon" />
             </RelativeLayout>
 
             <RelativeLayout

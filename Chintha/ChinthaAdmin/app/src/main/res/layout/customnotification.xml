@@ -11,7 +11,7 @@
         android:layout_height="64.0dip"
         android:layout_alignParentLeft="true"
         android:layout_margin="5.0dip"
-        android:src="@drawable/logo" />
+        android:src="@drawable/mklogo" />
 
     <TextView
         android:id="@+id/title"

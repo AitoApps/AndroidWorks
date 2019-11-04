@@ -1,28 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:id="@+id/header" android:background="@drawable/img_header" android:layout_width="fill_parent" android:layout_height="50.0dip">
-        <ImageView android:id="@+id/moveback" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/img_back" android:scaleType="fitXY" android:layout_centerVertical="true" />
-        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/text" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="EC Recharge" android:layout_toRightOf="@+id/moveback" android:layout_centerVertical="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/img_header">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_back" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/moveback"
+            android:paddingTop="5.0dip"
+            android:text="EC Recharge"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
     </RelativeLayout>
-    <ScrollView android:id="@+id/locklyt" android:background="@drawable/bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/footer" android:layout_below="@+id/header">
-        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/pymenttext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="sahgshag" android:layout_centerHorizontal="true" />
-            <TableLayout android:id="@+id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:stretchColumns="*" android:layout_below="@+id/pymenttext" android:layout_centerHorizontal="true">
+
+    <ScrollView
+        android:id="@+id/locklyt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:background="@drawable/bg"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/pymenttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:gravity="center"
+                android:text="sahgshag"
+                android:textColor="#ffffffff"
+                android:textSize="20.0dip" />
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pymenttext"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10.0dip"
+                android:stretchColumns="*">
+
                 <TableRow>
-                    <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/txtdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Rechrgae Date" />
+
+                    <TextView
+                        android:id="@+id/txtdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:text="Rechrgae Date"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0dip" />
                 </TableRow>
+
                 <TableRow>
-                    <EditText android:textColor="#ff000000" android:id="@+id/date" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" android:hint="Time and Date" />
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_margin="5.0dip"
+                        android:background="@drawable/the_border1"
+                        android:hint="Time and Date"
+                        android:padding="5.0dip"
+                        android:textColor="#ff000000" />
                 </TableRow>
             </TableLayout>
-            <Button android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/verify" android:background="@drawable/btn_paymnt" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:text="Verify" android:layout_below="@+id/table" android:layout_alignRight="@+id/table" />
+
+            <Button
+                android:id="@+id/verify"
+                android:layout_width="100.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/table"
+                android:layout_alignRight="@+id/table"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/btn_paymnt"
+                android:text="Verify"
+                android:textColor="#ffffffff"
+                android:textSize="18.0dip" />
         </RelativeLayout>
     </ScrollView>
-    <RelativeLayout android:id="@+id/footer" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
-        <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/wponly" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Whatsapp Only" />
-        <RelativeLayout android:id="@+id/lytcontact" android:background="#ff1f7e3c" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_below="@+id/wponly">
-            <TextView android:textSize="30.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/contactme" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="+91 9048801231" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ff000000">
+
+        <TextView
+            android:id="@+id/wponly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip"
+            android:text="Whatsapp Only"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/lytcontact"
+            android:layout_width="fill_parent"
+            android:layout_height="75.0dip"
+            android:layout_below="@+id/wponly"
+            android:background="#ff1f7e3c">
+
+            <TextView
+                android:id="@+id/contactme"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="+91 9048801231"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip"
+                android:textStyle="bold" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

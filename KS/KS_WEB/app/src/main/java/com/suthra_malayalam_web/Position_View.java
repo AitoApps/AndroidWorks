@@ -25,46 +25,33 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdRequest.Builder;
-import com.google.android.gms.ads.InterstitialAd;
 import es.dmoral.toasty.Toasty;
 import java.io.InputStream;
 
 public class Position_View extends AppCompatActivity implements gest.SimpleGestureListener {
     public static ImageView back_move;
     public static ImageView next_move;
-    public static String t_answer = "30";
     ImageView addto_fvrt;
-    AdRequest adreq,adreq1;
-    TextView amount;
     ImageView back;
     ImageView bookmark;
-    Button btrmads;
-    Button card_atm;
+    Button completetask,payment;
+    TextView textor;
     NetConnect cd;
     TextView content;
     final DataBase db = new DataBase(this);
     DataBase_POS dbHelper;
     public gest detector;
-    Button ereacharge;
     Typeface face;
     Typeface face1;
     Typeface face2;
     TextView helptext;
     ImageView image;
-    public InterstitialAd interstitial1,interstitial2;
     ScrollView loacklayout;
     ImageView loading;
     TextView payment_text;
-    Button paytm;
     ProgressDialog pd;
-    ImageView remove_Ads;
     RelativeLayout sliderhelp;
     TextView text;
-    Button upiid;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,16 +60,14 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         } catch (Exception e) {
         }
-        btrmads = (Button) findViewById(R.id.btrmads);
         pd = new ProgressDialog(this);
-        card_atm = (Button) findViewById(R.id.atmcard);
-        paytm = (Button) findViewById(R.id.paytm);
-        upiid = (Button) findViewById(R.id.upiid);
+
         image = (ImageView) findViewById(R.id.image);
         content = (TextView) findViewById(R.id.content);
         text = (TextView) findViewById(R.id.text);
-        amount = (TextView) findViewById(R.id.amount);
-        ereacharge = (Button) findViewById(R.id.ecreacharge);
+        completetask=findViewById(R.id.completetask);
+        payment=findViewById(R.id.payment);
+        textor=findViewById(R.id.textor);
         bookmark = (ImageView) findViewById(R.id.bookmark);
         loading = (ImageView) findViewById(R.id.loading);
         next_move = (ImageView) findViewById(R.id.movenext);
@@ -91,7 +76,6 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
         helptext = (TextView) findViewById(R.id.help_text);
         sliderhelp = (RelativeLayout) findViewById(R.id.slidehelp);
         loacklayout = (ScrollView) findViewById(R.id.locklyt);
-        remove_Ads = (ImageView) findViewById(R.id.ads_remove);
         payment_text = (TextView) findViewById(R.id.pymenttext);
         cd = new NetConnect(this);
         face2 = Typeface.createFromAsset(getAssets(), "app_fonts/rupee.ttf");
@@ -101,25 +85,19 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
         text.setTypeface(face1);
         helptext.setText(Static_Veriable.text_help);
         helptext.setTypeface(face1);
-        payment_text.setText("35 രൂപ പേയ്‌മെന്റ് ചെയ്താല്‍ താങ്കള്‍ക്ക് എല്ലാ പൊസിഷനുകളും ആല്‍ബവും പരസ്യങ്ങളില്ലാതെ കാണാവുന്നതാണ്. താഴെയുള്ള ഏത് വഴി ഉപയോഗിച്ചും പേയ്‌മെന്റ് ചെയ്യാവുന്നതാണ്‌ ");
-        text.setText(Static_Veriable.posname);
+        payment_text.setText("ക്ഷമിക്കണം ! 5 പൊസിഷനുകള്‍ മാത്രമേ താങ്കള്‍ക്ക് സൗജന്യമായി കാണുവാന്‍ സാധിക്കുകയൊള്ളൂ.ബാക്കിയുള്ള പൊസിഷനുകളും ആല്‍ബവും കാണുവാന് ‍39 രൂപ പേയ്‌മെന്റ് ചെയ്യുകയോ ടാസ്‌ക് പൂര്‍ത്തിയാക്കുകയോ ചെയ്യുക.");
+                text.setText(Static_Veriable.posname);
         text.setTypeface(face1);
-        btrmads.setText("പരസ്യം ഒഴിവാക്കാം ");
-        btrmads.setTypeface(face1);
-        adreq = new Builder().build();
-        adreq1 = new Builder().build();
-        card_atm.setTypeface(face1);
-        amount.setText("`35");
-        amount.setTypeface(face2);
+
         payment_text.setTypeface(face1);
-        ereacharge.setText(Static_Veriable.eacyrecharge);
-        ereacharge.setTypeface(face1);
-        card_atm.setText(Static_Veriable.atmcard);
-        amount.setTextColor(Color.RED);
-        upiid.setText(Static_Veriable.upiid);
-        upiid.setTypeface(face1);
-        paytm.setText(Static_Veriable.paytm);
-        paytm.setTypeface(face1);
+        textor.setTypeface(face1);
+        completetask.setTypeface(face1);
+        payment.setTypeface(face1);
+
+        textor.setText("അല്ലെങ്കില്\u200D ");
+        completetask.setText("ടാസ്\u200Cക് പൂര്\u200Dത്തിയാക്കുക");
+        payment.setText("പേയ്\u200Cമെന്റ് ചെയ്യുക");
+
         detector = new gest(this, this);
         back = (ImageView) findViewById(R.id.moveback);
         back.setOnClickListener(new OnClickListener() {
@@ -127,40 +105,7 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                 onBackPressed();
             }
         });
-        if (db.get_purchase().equalsIgnoreCase("")) {
-            remove_Ads.setVisibility(View.VISIBLE);
-            btrmads.setVisibility(View.VISIBLE);
-            interstitial1 = new InterstitialAd(this);
-            interstitial1.setAdUnitId("ca-app-pub-8933294539595122/6831825443");
-            interstitial1.loadAd(adreq);
 
-            interstitial2 = new InterstitialAd(this);
-            interstitial2.setAdUnitId("ca-app-pub-8933294539595122/8205911433");
-            interstitial2.loadAd(adreq1);
-
-            interstitial1.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                }
-
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial1.loadAd(adreq);
-                }
-            });
-
-            interstitial2.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                }
-
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial2.loadAd(adreq1);
-                }
-            });
-        } else {
-            btrmads.setVisibility(View.GONE);
-            remove_Ads.setVisibility(View.GONE);
-        }
         addto_fvrt.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -178,34 +123,7 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                 startActivity(new Intent(getApplicationContext(), Act_Photoview_Pos.class));
             }
         });
-        upiid.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                try {
-                    Static_Veriable.clickedmethod = 4;
-                    startActivity(new Intent(getApplicationContext(), Mobile_verification.class));
-                } catch (Exception e) {
-                }
-            }
-        });
-        paytm.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                try {
-                    Static_Veriable.clickedmethod = 3;
-                    startActivity(new Intent(getApplicationContext(), Mobile_verification.class));
-                } catch (Exception e) {
-                }
-            }
-        });
-        ereacharge.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                if (cd.isConnectingToInternet()) {
-                    Static_Veriable.clickedmethod = 6;
-                    startActivity(new Intent(getApplicationContext(), Mobile_verification.class));
-                    return;
-                }
-                Toasty.info(getApplicationContext(), Static_Veriable.nonet, 0).show();
-            }
-        });
+
         bookmark.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
 
@@ -213,7 +131,13 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                 Toasty.info(getApplicationContext(), Static_Veriable.addedbkmrk, 0).show();
             }
         });
-        card_atm.setOnClickListener(new OnClickListener() {
+        completetask.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Complete_Task.class));
+            }
+        });
+       payment.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (cd.isConnectingToInternet()) {
                     Static_Veriable.clickedmethod = 5;
@@ -223,16 +147,7 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                 Toasty.info(getApplicationContext(), Static_Veriable.nonet, 0).show();
             }
         });
-        remove_Ads.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                loacklayout.setVisibility(View.VISIBLE);
-            }
-        });
-        btrmads.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                loacklayout.setVisibility(View.VISIBLE);
-            }
-        });
+
         back_move.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 if (loading.getVisibility() != View.VISIBLE && Static_Veriable.picid != 1) {
@@ -291,23 +206,20 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                 text.setText(File_Positions.positionlist[Static_Veriable.picid]);
                 new laoding_data().execute(new String[0]);
             } else if (cd.isConnectingToInternet()) {
-                if (interstitial1.isLoaded()) {
-                    interstitial1.show();
+
+                if(move>=6)
+                {
+                    loacklayout.setVisibility(View.VISIBLE);
                 }
-                if (!interstitial1.isLoading()) {
-                    interstitial1.loadAd(adreq);
+                else
+                {
+                    loacklayout.setVisibility(View.GONE);
+                    Static_Veriable.picid = move;
+                    text.setText(File_Positions.positionlist[Static_Veriable.picid]);
+                    new laoding_data().execute(new String[0]);
                 }
 
-                if (interstitial2.isLoaded()) {
-                    interstitial2.show();
-                }
-                if (!interstitial2.isLoading()) {
-                    interstitial2.loadAd(adreq1);
-                }
 
-                Static_Veriable.picid = move;
-                text.setText(File_Positions.positionlist[Static_Veriable.picid]);
-                new laoding_data().execute(new String[0]);
             } else {
                 Toasty.info(getApplicationContext(), Static_Veriable.nonet, 0).show();
             }
@@ -352,10 +264,7 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                 loacklayout.setVisibility(View.GONE);
                 return;
             }
-            try {
-                interstitial1 = null;
-            } catch (Exception e) {
-            }
+
             super.onBackPressed();
         } catch (Exception e2) {
         }

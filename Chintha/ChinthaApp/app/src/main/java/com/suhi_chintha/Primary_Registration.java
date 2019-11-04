@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -211,7 +212,7 @@ public class Primary_Registration extends AppCompatActivity {
                         @Override
                         public void run() {
                             pd.dismiss();
-                            Toasty.info(getApplicationContext(), Static_Variable.reason_tmpprobs, Toast.LENGTH_SHORT).show();
+                            Toasty.info(getApplicationContext(),Log.getStackTraceString(e), Toast.LENGTH_LONG).show();
                         }
                     });
                 }
@@ -224,7 +225,7 @@ public class Primary_Registration extends AppCompatActivity {
                             try {
 
                                 String result=response.body().string();
-
+                                Toasty.success(getApplicationContext(),result,Toast.LENGTH_LONG).show();
                                 if (result.contains("404")) {
                                     pd.dismiss();
 

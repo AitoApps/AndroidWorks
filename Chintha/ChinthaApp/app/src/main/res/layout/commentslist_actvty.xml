@@ -20,7 +20,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_moveback" />
+            android:src="@drawable/img_moveback" />
 
         <TextView
             android:id="@+id/text"
@@ -42,7 +42,7 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/options"
             android:padding="8.0dip"
-            app:srcCompat="@drawable/img_cmntblock"
+            android:src="@drawable/img_cmntblock"
             android:visibility="visible" />
 
         <ImageView
@@ -51,7 +51,7 @@
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
             android:padding="12.0dip"
-            app:srcCompat="@drawable/option" />
+            android:src="@drawable/option" />
 
         <ImageView
             android:id="@+id/del"
@@ -60,8 +60,8 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="5.0dip"
             android:layout_toLeftOf="@+id/commentblock"
-            app:srcCompat="@drawable/img_drpicicon"
-            android:visibility="visible" />
+            android:src="@drawable/img_drpicicon"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/private1"
@@ -70,8 +70,8 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="5.0dip"
             android:layout_toLeftOf="@+id/del"
-            app:srcCompat="@drawable/img_chnthfavorute"
-            android:visibility="visible" />
+            android:src="@drawable/img_chnthfavorute"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -97,7 +97,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="40.0dip"
-            app:srcCompat="@drawable/img_nocomments"
+            android:src="@drawable/img_nocomments"
             android:visibility="gone" />
 
         <ImageView
@@ -105,7 +105,7 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_nonet"
+            android:src="@drawable/img_nonet"
             android:visibility="gone" />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -146,9 +146,9 @@
                 android:layout_height="48.0dip"
                 android:baselineAlignBottom="true"
                 android:padding="10.0dip"
-                app:srcCompat="@drawable/emojies" />
+                android:src="@drawable/emojies" />
 
-            <com.suhi_chintha.StatusEditText
+            <com.vanniktech.emoji.EmojiEditText
                 android:id="@+id/commentslist"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
             android:layout_width="48.0dip"
             android:layout_height="48.0dip"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/img_addstatus"
+            android:src="@drawable/img_addstatus"
             android:visibility="visible" />
     </RelativeLayout>
 </RelativeLayout>

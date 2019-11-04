@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".App_Deatils">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/img_header">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_back" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/moveback"
+            android:text="Complete Task"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:padding="5dp"
+        >
+
+
+
+        <TextView
+            android:id="@+id/txtapplink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Link"
+            style="@android:style/TextAppearance.Medium"
+            android:textColor="#fff"
+            android:gravity="center_horizontal"
+            android:layout_margin="5dp"
+            />
+
+        <Button
+            android:id="@+id/applink"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtapplink"
+            android:text="Click here to Install App"
+            android:layout_margin="5dp"
+            android:textSize="18dp"
+            android:background="@drawable/btn_green_pymnt"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:id="@+id/headertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please complete task and enetr task"
+            style="@android:style/TextAppearance.Medium"
+            android:textColor="#fff"
+            android:layout_below="@+id/applink"
+            android:gravity="center_horizontal"
+            android:layout_margin="5dp"
+            />
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headertext"
+            android:layout_above="@+id/footertext"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/footertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please complete task and enetr task"
+            style="@android:style/TextAppearance.Medium"
+            android:textColor="#fff"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:layout_margin="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

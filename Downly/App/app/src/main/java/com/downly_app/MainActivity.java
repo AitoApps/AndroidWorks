@@ -139,12 +139,12 @@ public class MainActivity extends AppCompatActivity {
             StrictMode.setThreadPolicy(policy);
         }
 
-        MobileAds.initialize(this, "ca-app-pub-8933294539595122~6016854061");
+        MobileAds.initialize(this, "ca-app-pub-5517777745693327~5594950145");
         FirebaseApp.initializeApp(this);
         face = Typeface.createFromAsset(getAssets(), "commonfont.otf");
         adView1 = (AdView) findViewById(R.id.adView1);
         interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId("ca-app-pub-8933294539595122/5629841256");
+        interstitial.setAdUnitId("ca-app-pub-5517777745693327/1464133446");
         adRequest = new AdRequest.Builder().build();
         adRequest1 = new AdRequest.Builder().build();
 

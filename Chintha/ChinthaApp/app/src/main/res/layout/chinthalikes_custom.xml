@@ -56,7 +56,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    app:srcCompat="@drawable/img_addstatus" />
+                    android:src="@drawable/img_addstatus" />
             </RelativeLayout>
 
             <RelativeLayout

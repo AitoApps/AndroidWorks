@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class DataDB2 extends SQLiteOpenHelper {
 
- 	private static final int DATABASE_VERSION =35;
+ 	private static final int DATABASE_VERSION =103;
 	private static final String DATABASE_NAME = "chinathdb56";
 	private static final String table1 = "disbalenoti";
 	private static final String table14 = "disbalenotibld";

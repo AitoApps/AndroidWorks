@@ -27,7 +27,7 @@
                     android:id="@+id/img"
                     android:layout_width="50.0dip"
                     android:layout_height="50.0dip"
-                    app:srcCompat="@drawable/img_noimage" />
+                    android:src="@drawable/img_noimage" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -56,7 +56,7 @@
                     android:layout_height="30.0dip"
                     android:layout_marginRight="10.0dip"
                     android:layout_toLeftOf="@+id/unblockuser"
-                    app:srcCompat="@drawable/img_userblock"
+                    android:src="@drawable/img_userblock"
                     android:visibility="invisible" />
 
                 <ImageView
@@ -65,7 +65,7 @@
                     android:layout_height="30.0dip"
                     android:layout_marginRight="5.0dip"
                     android:layout_toLeftOf="@+id/chintha_histroy"
-                    app:srcCompat="@drawable/img_usrunblock"
+                    android:src="@drawable/img_usrunblock"
                     android:visibility="invisible" />
 
                 <ImageView
@@ -75,7 +75,7 @@
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
                     android:layout_toLeftOf="@+id/liked"
-                    app:srcCompat="@drawable/img_addstatus" />
+                    android:src="@drawable/img_addstatus" />
 
                 <ImageView
                     android:id="@+id/liked"
@@ -84,7 +84,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    app:srcCompat="@drawable/img_chnthfavorute" />
+                    android:src="@drawable/img_chnthfavorute" />
 
                 <ImageView
                     android:id="@+id/nolike"
@@ -93,7 +93,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_margin="5.0dip"
-                    app:srcCompat="@drawable/img_nolikes" />
+                    android:src="@drawable/img_nolikes" />
             </RelativeLayout>
 
             <RelativeLayout

@@ -65,7 +65,7 @@
                 android:layout_marginRight="10.0dip"
                 android:layout_toLeftOf="@+id/noties"
                 android:padding="5.0dip"
-                app:srcCompat="@drawable/img_fvrtusers"
+                android:src="@drawable/img_fvrtusers"
                 android:visibility="visible" />
 
             <ImageView
@@ -76,7 +76,7 @@
                 android:layout_marginRight="10.0dip"
                 android:layout_toLeftOf="@+id/options"
                 android:padding="5.0dip"
-                app:srcCompat="@drawable/img_mnotienabled"
+                android:src="@drawable/img_mnotienabled"
                 android:visibility="visible" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_height="fill_parent"
                 android:layout_alignParentRight="true"
                 android:padding="12.0dip"
-                app:srcCompat="@drawable/popup" />
+                android:src="@drawable/popup" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -132,7 +132,7 @@
                             android:layout_height="30.0dip"
                             android:layout_margin="1.0dip"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/img_notilogo" />
+                            android:src="@drawable/img_notilogo" />
 
                         <TextView
                             android:id="@+id/admintitle"
@@ -164,7 +164,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/img_nofbimages"
+                            android:src="@drawable/img_nofbimages"
                             android:visibility="gone" />
 
                         <ImageView
@@ -174,7 +174,7 @@
                             android:layout_alignParentRight="true"
                             android:layout_margin="5.0dip"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/img_drpicicon" />
+                            android:src="@drawable/img_drpicicon" />
                     </RelativeLayout>
                 </ScrollView>
             </RelativeLayout>
@@ -235,7 +235,7 @@
                         android:layout_height="30.0dip"
                         android:layout_margin="2.0dip"
                         android:padding="3.0dip"
-                        app:srcCompat="@drawable/edit" />
+                        android:src="@drawable/edit" />
 
                     <TextView
                         android:id="@+id/txtedit"
@@ -264,7 +264,7 @@
                         android:layout_height="30.0dip"
                         android:layout_margin="2.0dip"
                         android:padding="3.0dip"
-                        app:srcCompat="@drawable/img_drpicicon" />
+                        android:src="@drawable/img_drpicicon" />
 
                     <TextView
                         android:id="@+id/txtdelete"
@@ -293,7 +293,7 @@
                         android:layout_height="30.0dip"
                         android:layout_margin="2.0dip"
                         android:padding="3.0dip"
-                        app:srcCompat="@drawable/img_copy" />
+                        android:src="@drawable/img_copy" />
 
                     <TextView
                         android:id="@+id/txtcopy"
@@ -322,7 +322,7 @@
                         android:layout_height="30.0dip"
                         android:layout_margin="3.0dip"
                         android:padding="2.0dip"
-                        app:srcCompat="@drawable/nolike" />
+                        android:src="@drawable/nolike" />
 
                     <TextView
                         android:id="@+id/txtaddtofvrt"
@@ -351,7 +351,7 @@
                         android:layout_height="30.0dip"
                         android:layout_margin="2.0dip"
                         android:padding="3.0dip"
-                        app:srcCompat="@drawable/report" />
+                        android:src="@drawable/report" />
 
                     <TextView
                         android:id="@+id/txtreportstatus"
@@ -380,7 +380,7 @@
                         android:layout_height="30.0dip"
                         android:layout_margin="2.0dip"
                         android:padding="3.0dip"
-                        app:srcCompat="@drawable/img_imgstatus" />
+                        android:src="@drawable/img_imgstatus" />
 
                     <TextView
                         android:id="@+id/txtstatustoimage"

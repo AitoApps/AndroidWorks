@@ -19,16 +19,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdRequest.Builder;
-import com.google.android.gms.ads.InterstitialAd;
 import es.dmoral.toasty.Toasty;
 import java.util.ArrayList;
 
 public class Album_Pos_Fvrt extends AppCompatActivity {
-    public static String t_answer = "30";
-    AdRequest adRequest1,adRequest2;
     ImageView ads_remove;
     TextView amount;
     Button atmcard;
@@ -45,8 +39,6 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
     ImageView fvrt_remove;
     ArrayList<String> fvrtlist = new ArrayList<>();
     ImageView image;
-
-    public InterstitialAd interstitial1,interstitial2;
     ScrollView lyt_lock;
     NetConnect nc;
     ImageView next_move;
@@ -68,8 +60,6 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
         }
         back = (ImageView) findViewById(R.id.move_back);
         pd = new ProgressDialog(this);
-        adRequest1 = new Builder().build();
-        adRequest2 = new Builder().build();
         ads_remove = (ImageView) findViewById(R.id.removeads);
         next_move = (ImageView) findViewById(R.id.movenext);
         back_move = (ImageView) findViewById(R.id.move_back);
@@ -97,40 +87,6 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        if (dataBase.get_purchase().equalsIgnoreCase("")) {
-            interstitial1 = new InterstitialAd(this);
-            interstitial1.setAdUnitId("ca-app-pub-8933294539595122/6831825443");
-            interstitial1.loadAd(adRequest1);
-
-
-            interstitial2 = new InterstitialAd(this);
-            interstitial2.setAdUnitId("ca-app-pub-8933294539595122/8205911433");
-            interstitial2.loadAd(adRequest2);
-
-            interstitial1.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                }
-
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial1.loadAd(adRequest1);
-                }
-            });
-
-            interstitial2.setAdListener(new AdListener() {
-                public void onAdLoaded() {
-                }
-
-                public void onAdFailedToLoad(int i) {
-                    super.onAdFailedToLoad(i);
-                    interstitial2.loadAd(adRequest2);
-                }
-            });
-
-            ads_remove.setVisibility(View.VISIBLE);
-        } else {
-            ads_remove.setVisibility(View.INVISIBLE);
-        }
         ArrayList<String> id1 = dataBase.get_fvrt_albm();
         c = (String[]) id1.toArray(new String[id1.size()]);
         if (c.length > 0) {
@@ -294,20 +250,6 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
                 image.setImageBitmap(BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length, options));
                 alpha_ani();
             } else if (nc.isConnectingToInternet()) {
-                if (interstitial1.isLoaded()) {
-                    interstitial1.show();
-                }
-                if (!interstitial1.isLoading()) {
-                    interstitial1.loadAd(adRequest1);
-                }
-
-                if (interstitial2.isLoaded()) {
-                    interstitial2.show();
-                }
-                if (!interstitial2.isLoading()) {
-                    interstitial2.loadAd(adRequest2);
-                }
-
                 byte[] decodedString2 = Base64.decode(dbHelper.getpic(fvrtlist.get(pos2)), 0);
                 Options options2 = new Options();
                 options2.inPurgeable = true;
@@ -327,11 +269,4 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
         image.startAnimation(animation1);
     }
 
-    public void onBackPressed() {
-        try {
-            interstitial1 = null;
-        } catch (Exception e) {
-        }
-        super.onBackPressed();
-    }
 }

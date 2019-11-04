@@ -56,7 +56,7 @@
             android:id="@+id/gameapps"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:text="Game Apps"
+            android:text="Money Making Apps"
             android:textColor="#000"
             android:textSize="20dp"
             android:layout_toRightOf="@+id/loanapps"
@@ -64,18 +64,6 @@
             android:background="@drawable/the_border1"
             />
 
-
-        <Button
-            android:id="@+id/otherapp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:text="Other Apps"
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:layout_margin="10dp"
-            android:layout_below="@+id/loanapps"
-            android:background="@drawable/the_border1"
-            />'
         <Button
             android:id="@+id/video"
             android:layout_width="150dp"
@@ -83,10 +71,10 @@
             android:text="Video"
             android:textSize="20dp"
             android:textColor="#000"
-            android:layout_toRightOf="@+id/otherapp"
             android:layout_below="@+id/gameapps"
             android:layout_margin="10dp"
             android:background="@drawable/the_border1"
             />
+
        </RelativeLayout>
 </RelativeLayout>

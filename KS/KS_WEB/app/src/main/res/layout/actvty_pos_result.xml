@@ -27,22 +27,12 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10.0dip"
-            android:layout_toLeftOf="@+id/ads_remove"
+            android:layout_toLeftOf="@+id/bookmark"
             android:layout_toRightOf="@+id/moveback"
             android:text="Malayalam"
             android:textColor="#ffffffff"
             android:textSize="18.0dip"
             android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/ads_remove"
-            android:layout_width="35.0dip"
-            android:layout_height="35.0dip"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="7.0dip"
-            android:layout_toLeftOf="@+id/bookmark"
-            android:scaleType="fitXY"
-            android:src="@drawable/img_ads_removel" />
 
         <ImageView
             android:id="@+id/bookmark"
@@ -78,7 +68,6 @@
         android:id="@+id/content1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btrmads"
         android:layout_below="@+id/header">
 
         <RelativeLayout
@@ -152,7 +141,7 @@
         android:layout_height="fill_parent"
         android:layout_below="@+id/header"
         android:background="@drawable/bg"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -169,76 +158,50 @@
                 android:text="sahgshag"
                 android:textColor="#ffffffff" />
 
-            <TextView
-                android:id="@+id/amount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <Button
+                android:id="@+id/completetask"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="350.0dip"
+                android:layout_height="40.0dip"
                 android:layout_below="@+id/pymenttext"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="60.0dip"
+                android:background="@drawable/btn_paymnt"
+                android:gravity="center"
+                android:padding="1.0dip"
+                android:text="Task Complete"
+                android:textColor="#ffffffff"
+                android:textSize="20.0dip" />
+
+            <TextView
+                android:id="@+id/textor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/completetask"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dip"
+                android:gravity="center"
+                android:text="Or"
+                android:textColor="#ffffffff"
+                android:textSize="20.0dip" />
+
+            <Button
+                android:id="@+id/payment"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="350.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/textor"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="25.0dip"
-                android:gravity="center"
-                android:text="49"
-                android:textColor="#ffffffff"
-                android:textSize="40.0dip" />
-
-            <Button
-                android:id="@+id/atmcard"
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="250.0dip"
-                android:layout_height="40.0dip"
-                android:layout_below="@+id/amount"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20.0dip"
-                android:background="@drawable/btn_paymnt"
-                android:gravity="center"
-                android:padding="1.0dip"
-                android:text="ATM CARD"
-                android:textColor="#ffffffff"
-                android:textSize="15.0dip" />
-
-            <Button
-                android:id="@+id/ecreacharge"
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="250.0dip"
-                android:layout_height="40.0dip"
-                android:layout_below="@+id/atmcard"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20.0dip"
                 android:background="@drawable/btn_green_pymnt"
                 android:gravity="center"
                 android:padding="1.0dip"
-                android:text="EC RECHARGE"
+                android:text="Payment"
                 android:textColor="#ffffffff"
-                android:textSize="15.0dip" />
+                android:textSize="20.0dip" />
 
-            <Button
-                android:id="@+id/paytm"
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="250.0dip"
-                android:layout_height="40.0dip"
-                android:layout_below="@+id/ecreacharge"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20.0dip"
-                android:background="@drawable/btn_paymnt"
-                android:gravity="center"
-                android:padding="1.0dip"
-                android:text="PAYTM"
-                android:textColor="#ffffffff"
-                android:textSize="15.0dip" />
 
-            <Button
-                android:id="@+id/upiid"
-                android:layout_width="250.0dip"
-                android:layout_height="40.0dip"
-                android:layout_below="@+id/paytm"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20.0dip"
-                android:background="@drawable/btn_green_pymnt"
-                android:gravity="center"
-                android:padding="1.0dip"
-                android:text="UPI ID"
-                android:textColor="#ffffffff"
-                android:textSize="15.0dip" />
         </RelativeLayout>
     </ScrollView>
 
@@ -257,15 +220,4 @@
         android:layout_centerVertical="true"
         android:src="@drawable/img_backmove" />
 
-    <Button
-        android:id="@+id/btrmads"
-        android:layout_width="fill_parent"
-        android:layout_height="40.0dip"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/img_header"
-        android:gravity="center"
-        android:text="Remove Ads"
-        android:textColor="#ffffffff"
-        android:textSize="18.0dip"
-        android:visibility="gone" />
-</RelativeLayout>
+ </RelativeLayout>

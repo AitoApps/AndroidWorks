@@ -88,11 +88,6 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.chintha_admin.Mk_Recharge"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
             android:name="com.chintha_admin.MK_Users"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"

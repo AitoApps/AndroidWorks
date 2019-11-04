@@ -273,7 +273,7 @@ public class Add_Apps extends AppCompatActivity {
 
         if(sourceFile1.exists())
         {
-           
+
             bodyBuilder.addFormDataPart("applogoexist", null,RequestBody.create(contentType,"exist"));
 
             bodyBuilder.addFormDataPart("applogo",sourceFile1.getName(),RequestBody.create(MediaType.parse("image/png"), sourceFile1));

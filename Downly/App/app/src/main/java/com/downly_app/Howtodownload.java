@@ -55,7 +55,7 @@ public class Howtodownload extends AppCompatActivity {
         title.setText(Temp.helptitle);
 
         interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId("ca-app-pub-8933294539595122/5629841256");
+        interstitial.setAdUnitId("ca-app-pub-5517777745693327/1464133446");
         adRequest = new AdRequest.Builder().build();
         adRequest1 = new AdRequest.Builder().build();
         try {

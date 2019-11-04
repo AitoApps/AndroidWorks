@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_moveback" />
+            android:src="@drawable/img_moveback" />
 
         <TextView
             android:id="@+id/text"
@@ -41,7 +41,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="5.0dip"
-            app:srcCompat="@drawable/img_tik" />
+            android:src="@drawable/img_tik" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -87,7 +87,7 @@
                 android:layout_height="35.0dip"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="5.0dip"
-                app:srcCompat="@drawable/imageicon" />
+                android:src="@drawable/imageicon" />
 
             <ImageView
                 android:id="@+id/addtext"
@@ -96,7 +96,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8.0dip"
                 android:layout_toRightOf="@+id/addimage"
-                app:srcCompat="@drawable/img_icontext" />
+                android:src="@drawable/img_icontext" />
 
             <ImageView
                 android:id="@+id/bgcolor"
@@ -105,7 +105,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8.0dip"
                 android:layout_toRightOf="@+id/addtext"
-                app:srcCompat="@drawable/img_bgcolor" />
+                android:src="@drawable/img_bgcolor" />
 
             <ImageView
                 android:id="@+id/forcolor"
@@ -114,7 +114,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8.0dip"
                 android:layout_toRightOf="@+id/bgcolor"
-                app:srcCompat="@drawable/img_coloretrext" />
+                android:src="@drawable/img_coloretrext" />
 
             <ImageView
                 android:id="@+id/setfont"
@@ -123,7 +123,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8.0dip"
                 android:layout_toRightOf="@+id/forcolor"
-                app:srcCompat="@drawable/img_fontset" />
+                android:src="@drawable/img_fontset" />
 
             <ImageView
                 android:id="@+id/increment"
@@ -132,7 +132,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8.0dip"
                 android:layout_toRightOf="@+id/setfont"
-                app:srcCompat="@drawable/img_plusicon" />
+                android:src="@drawable/img_plusicon" />
 
             <ImageView
                 android:id="@+id/decrement"
@@ -141,7 +141,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="8.0dip"
                 android:layout_toRightOf="@+id/increment"
-                app:srcCompat="@drawable/img_decrement" />
+                android:src="@drawable/img_decrement" />
         </RelativeLayout>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"

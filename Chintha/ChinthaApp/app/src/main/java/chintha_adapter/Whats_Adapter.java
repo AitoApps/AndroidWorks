@@ -35,9 +35,9 @@ public class Whats_Adapter extends BaseAdapter {
     public Activity activity;
     private Context context;
     private List<Whats_Feed> dataItems;
-    Typeface face = Typeface.createFromAsset(context.getAssets(), "asset_fonts/common_heading.otf");
+    Typeface face;
     private LayoutInflater inflater;
-    DownloadManager manager = ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE));
+    DownloadManager manager;
     ProgressDialog pd;
 
     public Whats_Adapter(Activity activity2, List<Whats_Feed> dataItems2) {
@@ -45,6 +45,8 @@ public class Whats_Adapter extends BaseAdapter {
         dataItems = dataItems2;
         context = activity2.getApplicationContext();
         pd = new ProgressDialog(activity2);
+        face=Typeface.createFromAsset(context.getAssets(), "asset_fonts/common_heading.otf");
+        manager= ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE));
     }
 
     public int getCount() {
@@ -137,6 +139,7 @@ public class Whats_Adapter extends BaseAdapter {
                 }
             });
         } catch (Exception e) {
+
         }
         return convertView;
     }

@@ -32,7 +32,6 @@ import com.suhi_chintha.Chintha_Likes;
 import com.suhi_chintha.DataDB1;
 import com.suhi_chintha.DataDB2;
 import com.suhi_chintha.DataDb;
-import com.suhi_chintha.ExtendTextView;
 import com.suhi_chintha.Lists_ChinthaComments;
 import com.suhi_chintha.NetConnection;
 import com.suhi_chintha.R;
@@ -41,6 +40,7 @@ import com.suhi_chintha.Status_To_Image;
 import com.suhi_chintha.Updates_ChinthaLikes;
 import com.suhi_chintha.User_DataDB;
 import com.suhi_chintha.Users_Chinthakal;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -106,7 +106,7 @@ public class UserChinthaAdapter extends BaseAdapter {
         } else {
             convertView2 = convertView;
         }
-        ExtendTextView status = (ExtendTextView) convertView2.findViewById(R.id.chintha);
+        EmojiTextView status = (EmojiTextView) convertView2.findViewById(R.id.chintha);
         TextView count = (TextView) convertView2.findViewById(R.id.likecount);
         ImageView imgstatus = (ImageView) convertView2.findViewById(R.id.imagetostatus);
         final ImageView statusphoto = (ImageView) convertView2.findViewById(R.id.photostatus);
@@ -264,6 +264,22 @@ public class UserChinthaAdapter extends BaseAdapter {
                 return false;
             }
         });
+
+        status.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(status.getMaxLines()==Integer.MAX_VALUE)
+                {
+                    status.setMaxLines(8);
+                }
+                else
+                {
+                    status.setMaxLines(Integer.MAX_VALUE);
+                }
+
+            }
+        });
+
         share.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
                 try {

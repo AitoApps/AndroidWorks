@@ -29,6 +29,7 @@ import android.provider.MediaStore.Images;
 import android.provider.MediaStore.Video.Media;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.text.ClipboardManager;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -59,7 +60,6 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.emoji.text.EmojiCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -478,6 +478,7 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
                         settingslayout. setVisibility(View.GONE);
                         ((status_frag) adapter.getItem(0)).editstatus();
                     } catch (Exception e) {
+                        Log.w("Errror",Log.getStackTraceString(e));
                     }
                 }
             });
@@ -487,6 +488,7 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
                         settingslayout. setVisibility(View.GONE);
                         ((status_frag) adapter.getItem(0)).editstatus();
                     } catch (Exception e) {
+                        Log.w("Errror",Log.getStackTraceString(e));
                     }
                 }
             });
@@ -999,6 +1001,7 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
             try {
                 startActivity(new Intent(getApplicationContext(), FvrtChinthakal_List.class));
             } catch (Exception e) {
+
             }
         } else if (id == R.id.myfvrtusers) {
             Static_Variable.viewd_pfle = 1;

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AbsListView;
@@ -151,31 +152,11 @@ public class FvrtChinthakal_List extends AppCompatActivity {
                         flag = true;
                 }
             });
-            File f = new File(Environment.getExternalStorageDirectory() + File.separator + Static_Variable.foldername+"/bg/bg.png");
-            if(f.exists())
-            {
-                try
-                {
-                    Glide.with(getApplicationContext()).asBitmap().load(f).into(new SimpleTarget<Bitmap>() {
-                        @Override
-                        public void onResourceReady(Bitmap bitmap, Transition<? super Bitmap> transition) {
-                            Drawable drawable = new BitmapDrawable(getResources(), bitmap);
-                            content.setBackground(drawable);
-                        }
-                        @Override
-                        public void onLoadFailed(@Nullable Drawable errorDrawable) {
-                            super.onLoadFailed(errorDrawable);
 
-                        }
-                    });
-                }
-                catch(Exception a)
-                {
-                }
-            }
         }
         catch(Exception a)
         {
+            Log.w("Reee",Log.getStackTraceString(a));
         }
     }
     public void data_disply()

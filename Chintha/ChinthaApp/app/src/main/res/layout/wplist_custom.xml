@@ -33,7 +33,7 @@
             android:layout_alignLeft="@+id/video"
             android:layout_margin="5.0dip"
             android:padding="10.0dip"
-            app:srcCompat="@drawable/img_iconplay"
+            android:src="@drawable/img_iconplay"
             android:visibility="invisible" />
 
         <ImageView
@@ -43,7 +43,7 @@
             android:layout_alignLeft="@+id/video"
             android:layout_margin="5.0dip"
             android:padding="10.0dip"
-            app:srcCompat="@drawable/img_iconpause"
+            android:src="@drawable/img_iconpause"
             android:visibility="visible" />
     </RelativeLayout>
 
@@ -63,7 +63,7 @@
             android:layout_margin="5.0dip"
             android:layout_toLeftOf="@+id/downloadicon"
             android:padding="7.0dip"
-            app:srcCompat="@drawable/img_share" />
+            android:src="@drawable/img_share" />
 
         <ImageView
             android:id="@+id/downloadicon"
@@ -72,7 +72,7 @@
             android:layout_alignParentRight="true"
             android:layout_margin="5.0dip"
             android:padding="7.0dip"
-            app:srcCompat="@drawable/img_download" />
+            android:src="@drawable/img_download" />
     </RelativeLayout>
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#55ad55</color>
+    <color name="colorPrimaryDark">#55ad55</color>
+    <color name="colorAccent">#55ad55</color>
+    <color name="appgreen">#55ad55</color>
+    <color name="btncolor">#354922</color>
+    <color name="activtybackcolor">#dedede</color>
+    <color name="adcolor">#ffffcc66</color>
+</resources>

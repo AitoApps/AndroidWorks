@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -73,34 +74,33 @@ public class RechargeListAdapterNew extends BaseAdapter {
                 convertView = inflater.inflate(R.layout.recharge_customlayout, null);
             }
             views = convertView;
-            TextView operator = (TextView) convertView.findViewById(R.id.operator);
-            TextView coupon = (TextView) convertView.findViewById(R.id.coupon);
+            TextView date = (TextView) convertView.findViewById(R.id.date); //amount
+            TextView amount = (TextView) convertView.findViewById(R.id.amount); //date
+
             ImageView verify = (ImageView) convertView.findViewById(R.id.verify);
             ImageView delete = (ImageView) convertView.findViewById(R.id.delete);
+
             Recharge_FeedItem item = (Recharge_FeedItem) feedItems.get(position);
-            operator.setTag(Integer.valueOf(position));
-            coupon.setTag(Integer.valueOf(position));
-            verify.setTag(Integer.valueOf(position));
-            delete.setTag(Integer.valueOf(position));
-            operator.setText(item.getoperator());
-            coupon.setText(item.getcoponcode());
+
+            date.setText(item.getStrdate());
+            amount.setText(item.getStramt());
+
+
             verify.setOnClickListener(new OnClickListener() {
                 public void onClick(View arg0) {
-                    int position = ((Integer) arg0.getTag()).intValue();
                     Recharge_FeedItem item = (Recharge_FeedItem) feedItems.get(position);
-                    txtsn = item.getsn();
+                    txtsn = item.getSn();
                     pos = position;
-                    txtuserid = item.getuserid();
+                    txtuserid = item.getUserid();
                     showalert1("Are you sure want to agree this recharge ?");
                 }
             });
             delete.setOnClickListener(new OnClickListener() {
                 public void onClick(View v) {
-                    int position = ((Integer) v.getTag()).intValue();
                     Recharge_FeedItem item = (Recharge_FeedItem) feedItems.get(position);
-                    txtsn = item.getsn();
+                    txtsn = item.getSn();
                     pos = position;
-                    txtuserid = item.getuserid();
+                    txtuserid = item.getUserid();
                     showalert2("Are you sure want to DIS -DONT ALLOW agree this recharge ?");
                 }
             });

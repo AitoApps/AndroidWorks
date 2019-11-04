@@ -30,21 +30,21 @@
             android:layout_marginLeft="@dimen/color_spacer"
             android:layout_toRightOf="@+id/color_viewSatBri"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_huecolor" />
+            android:src="@drawable/img_huecolor" />
 
         <ImageView
             android:id="@+id/color_cursor"
             android:layout_width="9.0dip"
             android:layout_height="9.0dip"
             android:scaleType="matrix"
-            app:srcCompat="@drawable/img_cusrorcolor" />
+            android:src="@drawable/img_cusrorcolor" />
 
         <ImageView
             android:id="@+id/color_target"
             android:layout_width="15.0dip"
             android:layout_height="15.0dip"
             android:scaleType="matrix"
-            app:srcCompat="@drawable/img_targetcolor" />
+            android:src="@drawable/img_targetcolor" />
 
         <LinearLayout
             android:id="@+id/color_state"
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/color_spacer"
                 android:paddingRight="@dimen/color_spacer"
-                app:srcCompat="@drawable/img_arrowright" />
+                android:src="@drawable/img_arrowright" />
 
             <View
                 android:id="@+id/color_warnaBaru"
