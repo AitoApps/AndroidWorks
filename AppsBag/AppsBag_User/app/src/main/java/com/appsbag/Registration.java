@@ -83,14 +83,13 @@ public class Registration extends AppCompatActivity {
                     Toasty.info(getApplicationContext(), Temp.nointernet, Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    String str = "";
-                    if (name.getText().toString().equalsIgnoreCase(str)) {
+                    if (name.getText().toString().equalsIgnoreCase("")) {
                         Toasty.info(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT).show();
                         name.requestFocus();
-                    } else if (mobile.getText().toString().equalsIgnoreCase(str)) {
+                    } else if (mobile.getText().toString().equalsIgnoreCase("")) {
                         Toasty.info(getApplicationContext(), "Please enter your mobile", Toast.LENGTH_SHORT).show();
                         mobile.requestFocus();
-                    } else if (countryode.getText().toString().equalsIgnoreCase(str)) {
+                    } else if (countryode.getText().toString().equalsIgnoreCase("")) {
                         Toasty.info(getApplicationContext(), "Please enter country code", Toast.LENGTH_SHORT).show();
                         mobile.requestFocus();
                     } else if (!countryode.getText().toString().contains("+")) {
@@ -110,7 +109,6 @@ public class Registration extends AppCompatActivity {
                                 {
                                     udb.addfcmid(((InstanceIdResult) task.getResult()).getToken());
                                 }
-
                                 txtname = name.getText().toString();
                                 txtmobile = mobile.getText().toString();
                                 txtcountrycode = countryode.getText().toString();

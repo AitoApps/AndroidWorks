@@ -22,7 +22,7 @@ public class UserDatabaseHandler extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_videoid_TABLE1);
-        db.execSQL(CREATE_videoid_TABLE1);
+        db.execSQL(CREATE_videoid_TABLE2);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

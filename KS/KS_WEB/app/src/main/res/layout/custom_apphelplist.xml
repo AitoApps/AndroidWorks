@@ -19,7 +19,8 @@
             android:text="Title"
             android:textStyle="bold"
             android:padding="5dp"
-            android:textColor="#ff000000" />
+            android:textSize="18dp"
+            android:textColor="#ff670b" />
 
         <ImageView
             android:id="@+id/image"
@@ -27,11 +28,16 @@
             android:layout_height="200dp"
             android:layout_below="@+id/title"
             android:background="#fff"
-            android:padding="5dp"
+            android:padding="10dp"
             android:scaleType="fitXY" />
 
-
-
-
     </RelativeLayout>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5452894935816879/4193458310" />
 </RelativeLayout>

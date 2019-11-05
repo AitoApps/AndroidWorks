@@ -6,6 +6,6 @@ public class Temp {
     public static String packagename ="com.touchcarwashadmin";
     public static String foldername="TouchCarWashAdmin";
     public static String tempproblem = "Temporary Error ! Please try later";
-    public static String weblink = "http://apistatuschinthakal.in/touchcarwash/";
+    public static String weblink = "https://apistatuschinthakal.in/touchcarwash/";
 
 }

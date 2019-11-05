@@ -1,7 +1,5 @@
 package adapter;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -18,20 +16,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.suthra_malayalam_web.Act_Pos_Subcat;
-import com.suthra_malayalam_web.Album_Pos;
-import com.suthra_malayalam_web.DataBase;
-import com.suthra_malayalam_web.DataBase_MobileNumber;
-import com.suthra_malayalam_web.DataBase_POS;
-import com.suthra_malayalam_web.NetConnect;
-import com.suthra_malayalam_web.R;
-import com.suthra_malayalam_web.ReadView_Subcatogery;
-import com.suthra_malayalam_web.Static_Veriable;
-import es.dmoral.toasty.Toasty;
+import com.mal_suthra.Act_Pos_Subcat;
+import com.mal_suthra.Album_Pos;
+import com.mal_suthra.App_Deatils;
+import com.mal_suthra.Cpanel;
+import com.mal_suthra.DataBase;
+import com.mal_suthra.DataBase_MobileNumber;
+import com.mal_suthra.DataBase_POS;
+import com.mal_suthra.NetConnect;
+import com.mal_suthra.R;
+import com.mal_suthra.ReadView_Subcatogery;
+import com.mal_suthra.Static_Veriable;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
@@ -46,8 +48,10 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
+
 public class Parent_Adapter extends RecyclerView.Adapter<Parent_Adapter.Myviewholder> {
-    Activity activity;
+    AppCompatActivity activity;
 
     public Context context;
     DataBase_POS da;
@@ -318,7 +322,7 @@ public class Parent_Adapter extends RecyclerView.Adapter<Parent_Adapter.Myviewho
         }
     }
 
-    public Parent_Adapter(Activity activity2, List<Parent_Icons> items2, Context context2) {
+    public Parent_Adapter(AppCompatActivity activity2, List<Parent_Icons> items2, Context context2) {
         items = items2;
         context = context2;
         activity = activity2;
@@ -348,10 +352,18 @@ public class Parent_Adapter extends RecyclerView.Adapter<Parent_Adapter.Myviewho
                         mthr_hoods();
                     } else if (adapterPosition == 3) {
                         knwldge();
-                    } else if (adapterPosition == 4) {
+                    }
+                    else if (adapterPosition == 4) {
+                        loan();
+                    }
+                    else if (adapterPosition == 5) {
                         foods();
-                    } else if (adapterPosition == 5) {
+                    } else if (adapterPosition == 6) {
                         issues();
+                    }
+                    else if (adapterPosition == 7) {
+                        Cpanel cp=(Cpanel)activity;
+                        cp.loadurl();
                     }
                 }
             }
@@ -370,6 +382,13 @@ public class Parent_Adapter extends RecyclerView.Adapter<Parent_Adapter.Myviewho
         }
         Toasty.info(context, Static_Veriable.nonet, 0).show();
     }
+
+    public void loan()
+    {
+        context.startActivity(new Intent(context, App_Deatils.class));
+    }
+
+
 
     public void knwldge() {
         if (nc.isConnectingToInternet()) {

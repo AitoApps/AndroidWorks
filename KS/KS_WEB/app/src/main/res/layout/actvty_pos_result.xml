@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <TextView
             android:id="@+id/text"
@@ -42,7 +42,7 @@
             android:layout_marginRight="7.0dip"
             android:layout_toLeftOf="@+id/addtofvrt"
             android:scaleType="fitXY"
-            android:src="@drawable/img_bukamrk" />
+            app:srcCompat="@drawable/img_bukamrk" />
 
         <ImageView
             android:id="@+id/addtofvrt"
@@ -52,7 +52,7 @@
             android:layout_marginTop="10.0dip"
             android:layout_marginRight="7.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_addingtifvrt" />
+            app:srcCompat="@drawable/img_addingtifvrt" />
     </RelativeLayout>
 
     <ImageView
@@ -61,7 +61,7 @@
         android:layout_height="150.0dip"
         android:layout_centerInParent="true"
         android:layout_marginTop="40.0dip"
-        android:src="@drawable/img_conloading"
+        app:srcCompat="@drawable/img_conloading"
         android:visibility="gone" />
 
     <ScrollView
@@ -113,7 +113,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/img_helislide" />
+            app:srcCompat="@drawable/img_helislide" />
 
         <ImageView
             android:layout_width="200.0dip"
@@ -121,7 +121,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_margin="10.0dip"
-            android:src="@drawable/img_slide" />
+            app:srcCompat="@drawable/img_slide" />
 
         <TextView
             android:id="@+id/help_text"
@@ -211,13 +211,13 @@
         android:layout_height="59.0dip"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/img_nexmove" />
+        app:srcCompat="@drawable/img_nexmove" />
 
     <ImageView
         android:id="@+id/move_back"
         android:layout_width="30.0dip"
         android:layout_height="59.0dip"
         android:layout_centerVertical="true"
-        android:src="@drawable/img_backmove" />
+        app:srcCompat="@drawable/img_backmove" />
 
  </RelativeLayout>

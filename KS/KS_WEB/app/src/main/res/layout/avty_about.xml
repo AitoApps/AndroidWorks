@@ -16,7 +16,7 @@
             android:layout_height="25.0dip"
             android:layout_margin="5.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <ScrollView
             android:id="@+id/content"
@@ -42,7 +42,7 @@
                         android:layout_height="100.0dip"
                         android:layout_centerHorizontal="true"
                         android:layout_margin="5.0dip"
-                        android:src="@drawable/img_logo" />
+                        app:srcCompat="@drawable/img_logo" />
 
                     <TextView
                         android:id="@+id/text"

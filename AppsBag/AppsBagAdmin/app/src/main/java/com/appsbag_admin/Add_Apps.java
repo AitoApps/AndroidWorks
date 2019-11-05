@@ -391,7 +391,7 @@ public class Add_Apps extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Log.w("Resilt",Log.getStackTraceString(e));
+                        Toasty.success(getApplicationContext(),Log.getStackTraceString(e),Toast.LENGTH_LONG).show();
                         pb1.setVisibility(View.GONE);
                         persentage.setVisibility(View.GONE);
                         update.setEnabled(true);
@@ -411,6 +411,7 @@ public class Add_Apps extends AppCompatActivity {
                     public void run() {
                         try {
                             String result=response.body().string();
+                            Toasty.success(getApplicationContext(),result,Toast.LENGTH_LONG).show();
                             pb1.setVisibility(View.GONE);
                             persentage.setVisibility(View.GONE);
                             update.setEnabled(true);

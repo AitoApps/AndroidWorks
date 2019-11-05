@@ -3,17 +3,17 @@
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:emojicon="http://schemas.android.com/apk/res-auto">
     <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <RelativeLayout android:id="@+id/lytwhatsapp" android:layout_width="fill_parent" android:layout_height="50.0dip">
-            <ImageView android:id="@+id/whatsapp" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/wplogo" android:layout_centerVertical="true" />
+            <ImageView android:id="@+id/whatsapp" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" emojicon:srcCompat="@drawable/wplogo" android:layout_centerVertical="true" />
             <TextView android:id="@+id/txtwhatsapp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Whatsapp" android:layout_toRightOf="@+id/whatsapp" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
         </RelativeLayout>
         <View android:id="@+id/view1" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@+id/lytwhatsapp" />
         <RelativeLayout android:id="@+id/lytfacebook" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@+id/view1">
-            <ImageView android:id="@+id/facebook" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/fblogo" android:layout_centerVertical="true" />
+            <ImageView android:id="@+id/facebook" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" emojicon:srcCompat="@drawable/fblogo" android:layout_centerVertical="true" />
             <TextView android:id="@+id/txtfacebook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Whatsapp" android:layout_toRightOf="@+id/facebook" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
         </RelativeLayout>
         <View android:id="@+id/view2" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@+id/lytfacebook" />
         <RelativeLayout android:id="@+id/lytwhatsappbus" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@+id/view2">
-            <ImageView android:id="@+id/whatsappbus" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/wpbuslogo" android:layout_centerVertical="true" />
+            <ImageView android:id="@+id/whatsappbus" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" emojicon:srcCompat="@drawable/wpbuslogo" android:layout_centerVertical="true" />
             <TextView android:id="@+id/txtwhatsappbus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Whatsapp Bhussinus" android:layout_toRightOf="@+id/whatsappbus" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
         </RelativeLayout>
     </RelativeLayout>

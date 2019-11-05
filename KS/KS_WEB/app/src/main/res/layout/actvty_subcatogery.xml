@@ -17,7 +17,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <TextView
             android:id="@+id/text"
@@ -45,5 +45,14 @@
             android:layout_height="fill_parent"
             android:splitMotionEvents="false" />
     </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5452894935816879/4193458310" />
 
 </RelativeLayout>

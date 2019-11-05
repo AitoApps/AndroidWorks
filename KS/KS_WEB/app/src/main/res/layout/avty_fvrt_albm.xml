@@ -1,35 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@+id/header" android:background="@drawable/img_header" android:layout_width="fill_parent" android:layout_height="50.0dip">
-        <ImageView android:id="@+id/moveback" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/img_back" android:scaleType="fitXY" android:layout_centerVertical="true" />
-        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Gallery" android:layout_toLeftOf="@+id/removeads" android:layout_toRightOf="@+id/moveback" android:layout_centerVertical="true" />
-        <ImageView android:id="@+id/removeads" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/img_ads_removel" android:scaleType="fitXY" android:layout_toLeftOf="@+id/removefvrt" android:layout_centerVertical="true" />
-        <ImageView android:id="@+id/removefvrt" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/img_fvrtclose" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/img_header">
+
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_back" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/removeads"
+            android:layout_toRightOf="@+id/moveback"
+            android:text="Gallery"
+            android:textColor="#ffffffff"
+            android:textSize="18.0dip"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/removeads"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7.0dip"
+            android:layout_toLeftOf="@+id/removefvrt"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_ads_removel" />
+
+        <ImageView
+            android:id="@+id/removefvrt"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7.0dip"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_fvrtclose" />
     </RelativeLayout>
-    <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/footer" android:layout_below="@+id/header">
-        <com.suthra_malayalam_web.Zoomable_ImageView
-            android:id="@+id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" />
-        <ImageView android:id="@+id/emptydata" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="200.0dip" android:src="@drawable/img_nodata" android:scaleType="fitXY" android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header">
+
+        <com.mal_suthra.Zoomable_ImageView
+            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/emptydata"
+            android:layout_width="200.0dip"
+            android:layout_height="200.0dip"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:srcCompat="@drawable/img_nodata" />
     </RelativeLayout>
-    <ScrollView android:id="@+id/locklyt" android:background="@drawable/bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/footer" android:layout_below="@+id/header">
-        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@+id/pymenttext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="sahgshag" android:layout_centerHorizontal="true" style="@android:style/TextAppearance.Medium" />
-            <TextView android:textSize="40.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="49" android:layout_below="@+id/pymenttext" android:layout_centerHorizontal="true" />
-            <Button android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/atmcard" android:background="@drawable/btn_paymnt" android:padding="1.0dip" android:layout_width="250.0dip" android:layout_height="40.0dip" android:layout_marginTop="20.0dip" android:text="ATM CARD" android:layout_below="@+id/amount" android:layout_centerHorizontal="true" style="@android:style/TextAppearance.Medium" />
-            <Button android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/ecreacharge" android:background="@drawable/btn_green_pymnt" android:padding="1.0dip" android:layout_width="250.0dip" android:layout_height="40.0dip" android:layout_marginTop="20.0dip" android:text="EC RECHARGE" android:layout_below="@+id/atmcard" android:layout_centerHorizontal="true" style="@android:style/TextAppearance.Medium" />
-            <Button android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/paytm" android:background="@drawable/btn_paymnt" android:padding="1.0dip" android:layout_width="250.0dip" android:layout_height="40.0dip" android:layout_marginTop="20.0dip" android:text="PAYTM" android:layout_below="@+id/ecreacharge" android:layout_centerHorizontal="true" style="@android:style/TextAppearance.Medium" />
-            <Button android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/upiid" android:background="@drawable/btn_green_pymnt" android:padding="1.0dip" android:layout_width="250.0dip" android:layout_height="40.0dip" android:layout_marginTop="20.0dip" android:text="UPI ID" android:layout_below="@+id/paytm" android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:id="@+id/locklyt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:background="@drawable/bg"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/pymenttext"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5.0dip"
+                android:gravity="center"
+                android:text="sahgshag"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pymenttext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25.0dip"
+                android:gravity="center"
+                android:text="49"
+                android:textColor="#ffffffff"
+                android:textSize="40.0dip" />
+
+            <Button
+                android:id="@+id/atmcard"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="250.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/btn_paymnt"
+                android:gravity="center"
+                android:padding="1.0dip"
+                android:text="ATM CARD"
+                android:textColor="#ffffffff"
+                android:textSize="15.0dip" />
+
+            <Button
+                android:id="@+id/ecreacharge"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="250.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/atmcard"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/btn_green_pymnt"
+                android:gravity="center"
+                android:padding="1.0dip"
+                android:text="EC RECHARGE"
+                android:textColor="#ffffffff"
+                android:textSize="15.0dip" />
+
+            <Button
+                android:id="@+id/paytm"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="250.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/ecreacharge"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/btn_paymnt"
+                android:gravity="center"
+                android:padding="1.0dip"
+                android:text="PAYTM"
+                android:textColor="#ffffffff"
+                android:textSize="15.0dip" />
+
+            <Button
+                android:id="@+id/upiid"
+                android:layout_width="250.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/paytm"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/btn_green_pymnt"
+                android:gravity="center"
+                android:padding="1.0dip"
+                android:text="UPI ID"
+                android:textColor="#ffffffff"
+                android:textSize="15.0dip" />
         </RelativeLayout>
     </ScrollView>
-    <RelativeLayout android:background="@drawable/img_horiline" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_above="@+id/footer" />
-    <RelativeLayout android:id="@+id/footer" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_alignParentBottom="true">
-        <ImageView android:id="@+id/move_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/img_backmove" />
-        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
-            <TextView android:textSize="30.0dip" android:textColor="#ffbc0000" android:id="@+id/count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="0" />
-            <TextView android:textSize="30.0dip" android:textColor="#ffffffff" android:id="@+id/countslash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="/" android:layout_toRightOf="@+id/count" />
-            <TextView android:textSize="30.0dip" android:textColor="#ffffffff" android:id="@+id/totalcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="0" android:layout_toRightOf="@+id/countslash" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_above="@+id/footer"
+        android:background="@drawable/img_horiline" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/move_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            app:srcCompat="@drawable/img_backmove" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:text="0"
+                android:textColor="#ffbc0000"
+                android:textSize="30.0dip" />
+
+            <TextView
+                android:id="@+id/countslash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_toRightOf="@+id/count"
+                android:text="/"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip" />
+
+            <TextView
+                android:id="@+id/totalcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_toRightOf="@+id/countslash"
+                android:text="0"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip" />
         </RelativeLayout>
-        <ImageView android:id="@+id/movenext" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/img_nexmove" android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/movenext"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/img_nexmove" />
     </RelativeLayout>
 </RelativeLayout>

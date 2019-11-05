@@ -1,6 +1,5 @@
 package adapter;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -14,33 +13,31 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.signature.ObjectKey;
-import com.suthra_malayalam_web.App_Deatils;
-import com.suthra_malayalam_web.DataBase;
-import com.suthra_malayalam_web.Fvrt_POS;
-import com.suthra_malayalam_web.NetConnect;
-import com.suthra_malayalam_web.Position_View;
-import com.suthra_malayalam_web.R;
-import com.suthra_malayalam_web.Static_Veriable;
+import com.mal_suthra.App_Deatils;
+import com.mal_suthra.NetConnect;
+import com.mal_suthra.R;
+import com.mal_suthra.Static_Veriable;
 
 import java.util.List;
 
 import data.Applist_Feed;
-import data.Fvrt_Feed;
 import es.dmoral.toasty.Toasty;
 
 public class Applist_Adapter extends BaseAdapter {
 
-    public Activity activity;
+    public AppCompatActivity activity;
     public NetConnect cd;
     public Context context;
     public List<Applist_Feed> feedItems;
     private LayoutInflater inflater;
     ProgressDialog pd;
-    public Applist_Adapter(Activity activity2, List<Applist_Feed> feedItems2) {
+    public Applist_Adapter(AppCompatActivity activity2, List<Applist_Feed> feedItems2) {
         activity = activity2;
         feedItems = feedItems2;
         context = activity2.getApplicationContext();

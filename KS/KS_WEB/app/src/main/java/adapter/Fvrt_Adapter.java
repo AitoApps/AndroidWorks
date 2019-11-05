@@ -1,6 +1,5 @@
 package adapter;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,26 +11,31 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.suthra_malayalam_web.DataBase;
-import com.suthra_malayalam_web.Fvrt_POS;
-import com.suthra_malayalam_web.NetConnect;
-import com.suthra_malayalam_web.Position_View;
-import com.suthra_malayalam_web.R;
-import com.suthra_malayalam_web.Static_Veriable;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.mal_suthra.DataBase;
+import com.mal_suthra.Fvrt_POS;
+import com.mal_suthra.NetConnect;
+import com.mal_suthra.Position_View;
+import com.mal_suthra.R;
+import com.mal_suthra.Static_Veriable;
+
+import java.util.List;
+
 import data.Fvrt_Feed;
 import es.dmoral.toasty.Toasty;
-import java.util.List;
 
 public class Fvrt_Adapter extends BaseAdapter {
 
-    public Activity activity;
+    public AppCompatActivity activity;
     public NetConnect cd;
     public Context context;
     public DataBase dataBase;
     public List<Fvrt_Feed> feedItems;
     private LayoutInflater inflater;
     ProgressDialog pd;
-    public Fvrt_Adapter(Activity activity2, List<Fvrt_Feed> feedItems2) {
+    public Fvrt_Adapter(AppCompatActivity activity2, List<Fvrt_Feed> feedItems2) {
         activity = activity2;
         feedItems = feedItems2;
         context = activity2.getApplicationContext();

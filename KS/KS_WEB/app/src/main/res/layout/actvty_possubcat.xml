@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
@@ -16,7 +17,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <TextView
             android:id="@+id/text"
@@ -37,7 +38,7 @@
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
             android:layout_toLeftOf="@+id/fvrts"
-            android:src="@drawable/img_bukamrk" />
+            app:srcCompat="@drawable/img_bukamrk" />
 
         <ImageView
             android:id="@+id/fvrts"
@@ -46,7 +47,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
-            android:src="@drawable/img_fvrticon" />
+            app:srcCompat="@drawable/img_fvrticon" />
     </RelativeLayout>
 
     <RelativeLayout

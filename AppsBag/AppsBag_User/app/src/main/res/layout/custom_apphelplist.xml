@@ -19,7 +19,8 @@
             android:text="Title"
             android:textStyle="bold"
             android:padding="5dp"
-            android:textColor="#ff000000" />
+            android:textSize="18dp"
+            android:textColor="#ff670b" />
 
         <ImageView
             android:id="@+id/image"
@@ -27,7 +28,7 @@
             android:layout_height="200dp"
             android:layout_below="@+id/title"
             android:background="#fff"
-            android:padding="5dp"
+            android:padding="10dp"
             android:scaleType="fitXY" />
 
 

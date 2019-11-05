@@ -48,6 +48,7 @@ public class App_Details extends AppCompatActivity {
     ImageView nointernet;
     View headerview;
     View footerview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

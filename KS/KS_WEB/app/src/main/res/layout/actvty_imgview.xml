@@ -2,11 +2,11 @@
 <RelativeLayout android:background="@drawable/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout android:id="@+id/header" android:background="@drawable/img_header" android:layout_width="fill_parent" android:layout_height="50.0dip">
-        <ImageView android:id="@+id/moveback" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/img_back" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <ImageView android:id="@+id/moveback" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" app:srcCompat="@drawable/img_back" android:scaleType="fitXY" android:layout_centerVertical="true" />
         <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/text" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="" android:layout_toLeftOf="@+id/appshare" android:layout_toRightOf="@+id/moveback" android:layout_centerVertical="true" />
     </RelativeLayout>
     <RelativeLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@+id/header">
-        <com.suthra_malayalam_web.Zoomable_ImageView
+        <com.mal_suthra.Zoomable_ImageView
             android:id="@+id/image" android:background="@android:color/transparent" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:adjustViewBounds="true" android:layout_centerInParent="true" />
     </RelativeLayout>
 </RelativeLayout>

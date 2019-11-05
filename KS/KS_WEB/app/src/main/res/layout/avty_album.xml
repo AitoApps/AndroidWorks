@@ -18,7 +18,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <TextView
             android:id="@+id/text"
@@ -41,7 +41,7 @@
             android:layout_marginRight="7.0dip"
             android:layout_toLeftOf="@+id/fvrts"
             android:scaleType="fitXY"
-            android:src="@drawable/img_ads_removel" />
+            app:srcCompat="@drawable/img_ads_removel" />
 
         <ImageView
             android:id="@+id/fvrts"
@@ -50,7 +50,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
-            android:src="@drawable/img_fvrticon" />
+            app:srcCompat="@drawable/img_fvrticon" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -59,7 +59,7 @@
         android:layout_above="@+id/footer"
         android:layout_below="@+id/header">
 
-        <com.suthra_malayalam_web.Zoomable_ImageView
+        <com.mal_suthra.Zoomable_ImageView
             android:id="@+id/image"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -72,7 +72,7 @@
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
             android:layout_marginTop="40.0dip"
-            android:src="@drawable/img_conloading"
+            app:srcCompat="@drawable/img_conloading"
             android:visibility="gone" />
 
         <ImageView
@@ -81,7 +81,7 @@
             android:layout_height="50.0dip"
             android:layout_alignParentBottom="true"
             android:padding="8.0dip"
-            android:src="@drawable/img_addingtifvrt" />
+            app:srcCompat="@drawable/img_addingtifvrt" />
     </RelativeLayout>
 
     <ScrollView
@@ -197,7 +197,7 @@
             android:id="@+id/move_back"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:src="@drawable/img_backmove" />
+            app:srcCompat="@drawable/img_backmove" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -239,7 +239,7 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
-            android:src="@drawable/img_nexmove" />
+            app:srcCompat="@drawable/img_nexmove" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -253,7 +253,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/img_helislide" />
+            app:srcCompat="@drawable/img_helislide" />
 
         <ImageView
             android:layout_width="200.0dip"
@@ -261,7 +261,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:scaleType="fitXY"
-            android:src="@drawable/img_zooms" />
+            app:srcCompat="@drawable/img_zooms" />
 
         <TextView
             android:id="@+id/help_text"

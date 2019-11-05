@@ -61,14 +61,12 @@ public class AppList_Adapter extends Adapter<ViewHolder> {
         RelativeLayout layout;
         TextView title;
         TextView install;
-        AdView adView1;
         public viewHolder(View itemView) {
             super(itemView);
             layout = (RelativeLayout) itemView.findViewById(R.id.layout);
             image = (ImageView) itemView.findViewById(R.id.image);
             title=itemView.findViewById(R.id.title);
             install=itemView.findViewById(R.id.install);
-            adView1=itemView.findViewById(R.id.adView1);
         }
     }
 
@@ -118,8 +116,6 @@ public class AppList_Adapter extends Adapter<ViewHolder> {
                 RequestOptions rep = new RequestOptions().signature(new ObjectKey(item.getImgsig()));
                 Glide.with(context).load(Temp.weblink+"applogo/"+item.getSn()+".png").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(viewHolder2.image);
 
-                AdRequest adreq1 = new AdRequest.Builder().build();
-                viewHolder2.adView1.loadAd(adreq1);
 
                 viewHolder2.layout.setOnClickListener(new OnClickListener() {
                     public void onClick(View arg0) {
@@ -130,7 +126,7 @@ public class AppList_Adapter extends Adapter<ViewHolder> {
                             Temp.appurl=item.getAppurl();
                             String[] p=item.getDisctiltle().split(":%");
                             Temp.appheader=p[1];
-                            String[] p1=item.getDisctiltle().split(":%");
+                            String[] p1=item.getDiscfooter().split(":%");
                             Temp.appfooter=p1[1];
                             Intent i = new Intent(context, App_Details.class);
                             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -153,7 +149,7 @@ public class AppList_Adapter extends Adapter<ViewHolder> {
                             Temp.appurl=item.getAppurl();
                             String[] p=item.getDisctiltle().split(":%");
                             Temp.appheader=p[1];
-                            String[] p1=item.getDisctiltle().split(":%");
+                            String[] p1=item.getDiscfooter().split(":%");
                             Temp.appfooter=p1[1];
                             Intent i = new Intent(context, App_Details.class);
                             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

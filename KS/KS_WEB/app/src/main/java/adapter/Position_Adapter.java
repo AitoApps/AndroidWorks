@@ -1,6 +1,5 @@
 package adapter;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,17 +11,22 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.suthra_malayalam_web.DataBase;
-import com.suthra_malayalam_web.NetConnect;
-import com.suthra_malayalam_web.Position_View;
-import com.suthra_malayalam_web.R;
-import com.suthra_malayalam_web.Static_Veriable;
-import data.Position_Feed;
-import es.dmoral.toasty.Toasty;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.mal_suthra.DataBase;
+import com.mal_suthra.NetConnect;
+import com.mal_suthra.Position_View;
+import com.mal_suthra.R;
+import com.mal_suthra.Static_Veriable;
+
 import java.util.List;
 
+import data.Position_Feed;
+import es.dmoral.toasty.Toasty;
+
 public class Position_Adapter extends BaseAdapter {
-    private Activity activity;
+    private AppCompatActivity activity;
 
     public Context context;
     public DataBase dataBase = new DataBase(context);
@@ -33,7 +37,7 @@ public class Position_Adapter extends BaseAdapter {
     public NetConnect nc;
     ProgressDialog pd;
 
-    public Position_Adapter(Activity activity2, List<Position_Feed> feedItems2) {
+    public Position_Adapter(AppCompatActivity activity2, List<Position_Feed> feedItems2) {
         activity = activity2;
         feedItems = feedItems2;
         context = activity2.getApplicationContext();

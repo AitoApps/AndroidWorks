@@ -78,9 +78,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         try {
-
             MobileAds.initialize((Context) this, "ca-app-pub-5517777745693327~6877555307");
-
             cd = new ConnectionDetecter(this);
             if (udb.get_userid().equalsIgnoreCase("")) {
                 startActivity(new Intent(getApplicationContext(), Registration.class));
@@ -95,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception a) {
 
         }
-
         heart = (ImageView) findViewById(R.id.heart);
         nodata = (ImageView) findViewById(R.id.nodata);
         cd = new ConnectionDetecter(this);

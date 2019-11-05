@@ -18,7 +18,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <TextView
             android:id="@+id/text"
@@ -40,7 +40,7 @@
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
             android:layout_toLeftOf="@+id/zoom_in"
-            android:src="@drawable/img_share" />
+            app:srcCompat="@drawable/img_share" />
 
         <ImageView
             android:id="@+id/zoom_in"
@@ -49,7 +49,7 @@
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
             android:layout_toLeftOf="@+id/zoom_out"
-            android:src="@drawable/img_zoomin" />
+            app:srcCompat="@drawable/img_zoomin" />
 
         <ImageView
             android:id="@+id/zoom_out"
@@ -58,7 +58,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="5.0dip"
-            android:src="@drawable/img_zoomout" />
+            app:srcCompat="@drawable/img_zoomout" />
     </RelativeLayout>
 
     <ScrollView
@@ -96,7 +96,6 @@
                 android:background="#ffffffff"
                 android:minHeight="200.0dip"
                 android:padding="5.0dip">
-
                 <TextView
                     android:id="@+id/article"
                     android:layout_width="wrap_content"
@@ -104,6 +103,18 @@
                     android:lineSpacingExtra="10.0dip"
                     android:textColor="#ff000000"
                     android:textSize="18.0dip" />
+
+                <FrameLayout
+                    android:id="@+id/adplaceholder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/article"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:background="@drawable/roundedcornerbackground"
+                    android:visibility="visible" />
+
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

@@ -619,9 +619,12 @@ public class ChinathakalAdapter extends Adapter<ViewHolder> {
                             viewHolder2.adplaceholder.setVisibility(View.VISIBLE);
                         }
                     }).build().loadAd(new AdRequest.Builder().build());
-                    return;
                 }
-                viewHolder2.adplaceholder. setVisibility(View.GONE);
+                else
+                {
+                    viewHolder2.adplaceholder. setVisibility(View.GONE);
+                }
+
             } catch (Exception e3) {
             }
         } else if (holder instanceof viewHolderFooter) {

@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="#dedede"
     tools:context=".App_Deatils">
+
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="fill_parent"
         android:layout_height="50.0dip"
-        android:background="@drawable/img_header">
+        android:background="@drawable/title_barnew">
 
         <ImageView
-            android:id="@+id/moveback"
+            android:id="@+id/back"
             android:layout_width="20.0dip"
             android:layout_height="20.0dip"
             android:layout_centerVertical="true"
@@ -27,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10.0dip"
-            android:layout_toRightOf="@+id/moveback"
+            android:layout_toRightOf="@+id/back"
             android:text="Complete Task"
             android:textColor="#ffffffff"
             android:textSize="20.0dip"
@@ -39,66 +40,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/header"
-        android:padding="5dp"
         >
 
-
-
-        <TextView
-            android:id="@+id/txtapplink"
+        <RelativeLayout
+            android:id="@+id/mainlyt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="App Link"
-            style="@android:style/TextAppearance.Medium"
-            android:textColor="#fff"
-            android:gravity="center_horizontal"
-            android:layout_margin="5dp"
-            />
+            android:background="#fff"
+            >
 
-        <Button
-            android:id="@+id/applink"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/txtapplink"
-            android:text="Click here to Install App"
-            android:layout_margin="5dp"
-            android:textSize="18dp"
-            android:background="@drawable/btn_green_pymnt"
-            android:textColor="#fff"
-            />
+            <Button
+                android:id="@+id/applink"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Install App"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/roundedcornergreen"
+                android:textColor="#fff"
+                />
 
-        <TextView
-            android:id="@+id/headertext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Please complete task and enetr task"
-            style="@android:style/TextAppearance.Medium"
-            android:textColor="#fff"
-            android:layout_below="@+id/applink"
-            android:gravity="center_horizontal"
-            android:layout_margin="5dp"
-            />
+        </RelativeLayout>
 
 
-        <ListView
-            android:id="@+id/listview"
+        <com.takwolf.android.hfrecyclerview.HeaderAndFooterRecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/headertext"
-            android:layout_above="@+id/footertext"
-            android:layout_margin="5dp"/>
+            android:layout_below="@+id/mainlyt"
+            android:layout_margin="5.0dip" />
 
-        <TextView
-            android:id="@+id/footertext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Please complete task and enetr task"
-            style="@android:style/TextAppearance.Medium"
-            android:textColor="#fff"
-            android:layout_alignParentBottom="true"
-            android:gravity="center_horizontal"
-            android:layout_margin="5dp"
-            />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/heart"
@@ -108,5 +88,6 @@
             android:visibility="gone" />
 
     </RelativeLayout>
+
 
 </RelativeLayout>

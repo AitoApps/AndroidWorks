@@ -17,7 +17,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3.0dip"
             android:scaleType="fitXY"
-            android:src="@drawable/img_back" />
+            app:srcCompat="@drawable/img_back" />
 
         <TextView
             android:id="@+id/text"
@@ -50,7 +50,7 @@
             android:layout_width="140.0dip"
             android:layout_height="140.0dip"
             android:layout_centerInParent="true"
-            android:src="@drawable/img_conloading"
+            app:srcCompat="@drawable/img_conloading"
             android:visibility="gone" />
     </RelativeLayout>
 </RelativeLayout>
