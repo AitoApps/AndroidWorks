@@ -15,6 +15,7 @@
         android:allowBackup="true"
         android:icon="@drawable/img_logo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@drawable/img_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -25,11 +26,6 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden"
             ></activity>
-        <activity
-            android:name=".Complete_Task_Confirm"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -41,11 +37,6 @@
 
         <activity
             android:name=".App_Deatils"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".Complete_Task"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />

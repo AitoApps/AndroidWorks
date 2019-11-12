@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TouchCarWashAdmin</string>
+    <string name="Rs">₹</string>
+    <string name="app_name">TCW Admin</string>
 </resources>

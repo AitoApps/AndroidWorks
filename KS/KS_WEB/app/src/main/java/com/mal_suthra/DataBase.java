@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class DataBase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "db_suthra";
-    private static final int DATABASE_VERSION = 102;
+    private static final int DATABASE_VERSION = 132;
     private static final String TABLE_name1 = "fvrts";
     private static final String TABLE_name11 = "album_fvrts";
     private static final String TABLE_name12 = "album_bookmark";
@@ -28,6 +28,7 @@ public class DataBase extends SQLiteOpenHelper {
     private static final String TABLE_name31 = "adshouldshow";
     private static final String TABLE_name32 = "showedads";
     private static final String TABLE_name33 = "offershows";
+    private static final String TABLE_name34 = "ageconfirm";
 
     private static final String TABLE_name4 = "bookmark";
     private static final String TABLE_name5 = "ispurchased";
@@ -67,7 +68,7 @@ public class DataBase extends SQLiteOpenHelper {
     private static String CREATE_videoid_TABLE31 = "CREATE TABLE "+TABLE_name31+"(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
     private static String CREATE_videoid_TABLE32 = "CREATE TABLE "+TABLE_name32+"(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
     private static String CREATE_videoid_TABLE33 = "CREATE TABLE "+TABLE_name33+"(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
-
+    private static String CREATE_videoid_TABLE34 = "CREATE TABLE "+TABLE_name34+"(pkey INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT)";
 
     public DataBase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -98,6 +99,7 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL(CREATE_videoid_TABLE31);
         db.execSQL(CREATE_videoid_TABLE32);
         db.execSQL(CREATE_videoid_TABLE33);
+        db.execSQL(CREATE_videoid_TABLE34);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -125,6 +127,7 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name31);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name32);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name33);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name34);
         onCreate(db);
     }
 
@@ -153,7 +156,32 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name31);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name32);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name33);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name34);
         onCreate(db);
+    }
+
+
+    public void add_ageconfirm(String title1) {
+        drop_ageconfirm();
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(title, title1);
+        db.insert(TABLE_name34, null, values);
+        db.close();
+    }
+
+    public String get_ageconfirm() {
+        String link = "";
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name34, null);
+        while (c.moveToNext()) {
+            link = c.getString(1);
+        }
+        c.close();
+        return link;
+    }
+
+    public void drop_ageconfirm() {
+        getWritableDatabase().execSQL("delete from "+TABLE_name34);
     }
 
 

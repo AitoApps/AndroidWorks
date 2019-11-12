@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -158,6 +159,16 @@ public class Add_Shops extends AppCompatActivity implements GoogleApiClient.Conn
         {
             txtshopname.setText("Docter Name");
             text.setText("Add / Edit Docters");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("4"))
+        {
+            txtshopname.setText("ATM Name");
+            text.setText("Add / Edit ATM");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("5"))
+        {
+            txtshopname.setText("Pumb Name");
+            text.setText("Add / Edit Petrol Pumb");
         }
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -294,6 +305,14 @@ public class Add_Shops extends AppCompatActivity implements GoogleApiClient.Conn
         else if(Temp.shoptypes.equalsIgnoreCase("3"))
         {
             builder.setTitle("Docters Photo");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("4"))
+        {
+            builder.setTitle("ATM Photo");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("5"))
+        {
+            builder.setTitle("Pumb Photo");
         }
 
         builder.setItems(options, new DialogInterface.OnClickListener() {
@@ -545,6 +564,7 @@ public class Add_Shops extends AppCompatActivity implements GoogleApiClient.Conn
                         try {
 
                             String result=response.body().string();
+                            Log.w("Resue",result);
                             pb1.setVisibility(View.GONE);
                             persentage.setVisibility(View.GONE);
                             update.setEnabled(true);

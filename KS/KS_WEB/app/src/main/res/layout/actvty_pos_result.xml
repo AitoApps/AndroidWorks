@@ -135,75 +135,7 @@
             android:textSize="20.0dip" />
     </RelativeLayout>
 
-    <ScrollView
-        android:id="@+id/locklyt"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/header"
-        android:background="@drawable/bg"
-        android:visibility="visible">
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:id="@+id/pymenttext"
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="5.0dip"
-                android:gravity="center"
-                android:text="sahgshag"
-                android:textColor="#ffffffff" />
-
-
-            <Button
-                android:id="@+id/completetask"
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="350.0dip"
-                android:layout_height="40.0dip"
-                android:layout_below="@+id/pymenttext"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="60.0dip"
-                android:background="@drawable/btn_paymnt"
-                android:gravity="center"
-                android:padding="1.0dip"
-                android:text="Task Complete"
-                android:textColor="#ffffffff"
-                android:textSize="20.0dip" />
-
-            <TextView
-                android:id="@+id/textor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/completetask"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dip"
-                android:gravity="center"
-                android:text="Or"
-                android:textColor="#ffffffff"
-                android:textSize="20.0dip" />
-
-            <Button
-                android:id="@+id/payment"
-                style="@android:style/TextAppearance.Medium"
-                android:layout_width="350.0dip"
-                android:layout_height="40.0dip"
-                android:layout_below="@+id/textor"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25.0dip"
-                android:background="@drawable/btn_green_pymnt"
-                android:gravity="center"
-                android:padding="1.0dip"
-                android:text="Payment"
-                android:textColor="#ffffffff"
-                android:textSize="20.0dip" />
-
-
-        </RelativeLayout>
-    </ScrollView>
 
     <ImageView
         android:id="@+id/movenext"

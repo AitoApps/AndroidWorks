@@ -110,8 +110,11 @@ public class Add_Advt extends AppCompatActivity {
         referance.setTypeface(face);
         update.setTypeface(face);
         lst_advttype.add("Select Ad Type");
-        lst_advttype.add("Banner");
-        lst_advttype.add("FullScreen");
+        lst_advttype.add("Banner (4:1");
+        lst_advttype.add("FullScreen (720x1280)");
+        lst_advttype.add("Featured (350x350)");
+        lst_advttype.add("StartUp (720x1280)");
+
 
         ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lst_advttype) {
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -301,6 +304,11 @@ public class Add_Advt extends AppCompatActivity {
                     if(txt_adtype.equalsIgnoreCase("1"))
                     {
                         UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
+
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("3"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(1.0f, 1.0f).start(Add_Advt.this);
 
                     }
                 } catch (Exception e2) {

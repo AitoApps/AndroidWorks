@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Base64;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import es.dmoral.toasty.Toasty;
@@ -33,8 +35,6 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
     ImageView addto_fvrt;
     ImageView back;
     ImageView bookmark;
-    Button completetask,payment;
-    TextView textor;
     NetConnect cd;
     TextView content;
     final DataBase db = new DataBase(this);
@@ -45,9 +45,7 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
     Typeface face2;
     TextView helptext;
     ImageView image;
-    ScrollView loacklayout;
     ImageView loading;
-    TextView payment_text;
     ProgressDialog pd;
     RelativeLayout sliderhelp;
     TextView text;
@@ -59,121 +57,98 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         } catch (Exception e) {
         }
-        pd = new ProgressDialog(this);
 
-        image = (ImageView) findViewById(R.id.image);
-        content = (TextView) findViewById(R.id.content);
-        text = (TextView) findViewById(R.id.text);
-        completetask=findViewById(R.id.completetask);
-        payment=findViewById(R.id.payment);
-        textor=findViewById(R.id.textor);
-        bookmark = (ImageView) findViewById(R.id.bookmark);
-        loading = (ImageView) findViewById(R.id.loading);
-        next_move = (ImageView) findViewById(R.id.movenext);
-        back_move = (ImageView) findViewById(R.id.move_back);
-        addto_fvrt = (ImageView) findViewById(R.id.addtofvrt);
-        helptext = (TextView) findViewById(R.id.help_text);
-        sliderhelp = (RelativeLayout) findViewById(R.id.slidehelp);
-        loacklayout = (ScrollView) findViewById(R.id.locklyt);
-        payment_text = (TextView) findViewById(R.id.pymenttext);
-        cd = new NetConnect(this);
-        face2 = Typeface.createFromAsset(getAssets(), "app_fonts/rupee.ttf");
-        face = Typeface.createFromAsset(getAssets(), "app_fonts/heading.otf");
-        face1 = Typeface.createFromAsset(getAssets(), "app_fonts/malfont.ttf");
-        dbHelper = new DataBase_POS(this, "chithram.sqlite");
-        text.setTypeface(face1);
-        helptext.setText(Static_Veriable.text_help);
-        helptext.setTypeface(face1);
-        payment_text.setText("ക്ഷമിക്കണം ! 5 പൊസിഷനുകള്‍ മാത്രമേ താങ്കള്‍ക്ക് സൗജന്യമായി കാണുവാന്‍ സാധിക്കുകയൊള്ളൂ.ബാക്കിയുള്ള പൊസിഷനുകളും ആല്‍ബവും കാണുവാന് ‍39 രൂപ പേയ്‌മെന്റ് ചെയ്യുകയോ ടാസ്‌ക് പൂര്‍ത്തിയാക്കുകയോ ചെയ്യുക.");
-                text.setText(Static_Veriable.posname);
-        text.setTypeface(face1);
+        try
+        {
+            pd = new ProgressDialog(this);
 
-        payment_text.setTypeface(face1);
-        textor.setTypeface(face1);
-        completetask.setTypeface(face1);
-        payment.setTypeface(face1);
+            image = (ImageView) findViewById(R.id.image);
+            content = (TextView) findViewById(R.id.content);
+            text = (TextView) findViewById(R.id.text);
+            bookmark = (ImageView) findViewById(R.id.bookmark);
+            loading = (ImageView) findViewById(R.id.loading);
+            next_move = (ImageView) findViewById(R.id.movenext);
+            back_move = (ImageView) findViewById(R.id.move_back);
+            addto_fvrt = (ImageView) findViewById(R.id.addtofvrt);
+            helptext = (TextView) findViewById(R.id.help_text);
+            sliderhelp = (RelativeLayout) findViewById(R.id.slidehelp);
+            cd = new NetConnect(this);
+            face2 = Typeface.createFromAsset(getAssets(), "app_fonts/rupee.ttf");
+            face = Typeface.createFromAsset(getAssets(), "app_fonts/heading.otf");
+            face1 = Typeface.createFromAsset(getAssets(), "app_fonts/malfont.ttf");
+            dbHelper = new DataBase_POS(this, "chithram.sqlite");
+            text.setTypeface(face1);
+            helptext.setText(Static_Veriable.text_help);
+            helptext.setTypeface(face1);
+            text.setText(Static_Veriable.posname);
+            text.setTypeface(face1);
 
-        textor.setText("അല്ലെങ്കില്\u200D ");
-        completetask.setText("ടാസ്\u200Cക് പൂര്\u200Dത്തിയാക്കുക");
-        payment.setText("പേയ്\u200Cമെന്റ് ചെയ്യുക");
-
-        detector = new gest(this, this);
-        back = (ImageView) findViewById(R.id.moveback);
-        back.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
-        addto_fvrt.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-
-                db.deletefvrt(Static_Veriable.picid+"");
-                db.addfvrt(Static_Veriable.picid+"");
-                Toasty.info(getApplicationContext(), Static_Veriable.addtofvrt, 0).show();
-            }
-        });
-        loacklayout.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-            }
-        });
-        image.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-                startActivity(new Intent(getApplicationContext(), Act_Photoview_Pos.class));
-            }
-        });
-
-        bookmark.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-
-                db.addbkmrk(Static_Veriable.picid+"");
-                Toasty.info(getApplicationContext(), Static_Veriable.addedbkmrk, 0).show();
-            }
-        });
-        completetask.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Complete_Task.class));
-            }
-        });
-       payment.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                if (cd.isConnectingToInternet()) {
-                    Static_Veriable.clickedmethod = 5;
-                    startActivity(new Intent(getApplicationContext(), Mobile_verification.class));
-                    return;
+            detector = new gest(this, this);
+            back = (ImageView) findViewById(R.id.moveback);
+            back.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    onBackPressed();
                 }
-                Toasty.info(getApplicationContext(), Static_Veriable.nonet, 0).show();
-            }
-        });
+            });
 
-        back_move.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                if (loading.getVisibility() != View.VISIBLE && Static_Veriable.picid != 1) {
-                    refreshing_data(Static_Veriable.picid - 1);
+            addto_fvrt.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+
+                    db.deletefvrt(Static_Veriable.picid+"");
+                    db.addfvrt(Static_Veriable.picid+"");
+                    Toasty.info(getApplicationContext(), Static_Veriable.addtofvrt, 0).show();
                 }
-            }
-        });
-        next_move.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                if (loading.getVisibility() != View.VISIBLE && Static_Veriable.picid != 212) {
-                    refreshing_data(Static_Veriable.picid + 1);
+            });
+
+            image.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+                    startActivity(new Intent(getApplicationContext(), Act_Photoview_Pos.class));
                 }
+            });
+
+            bookmark.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+
+                    db.addbkmrk(Static_Veriable.picid+"");
+                    Toasty.info(getApplicationContext(), Static_Veriable.addedbkmrk, 0).show();
+                }
+            });
+
+
+            back_move.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (loading.getVisibility() != View.VISIBLE && Static_Veriable.picid != 1) {
+                        refreshing_data(Static_Veriable.picid - 1);
+                    }
+                }
+            });
+            next_move.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (loading.getVisibility() != View.VISIBLE && Static_Veriable.picid != 212) {
+                        refreshing_data(Static_Veriable.picid + 1);
+                    }
+                }
+            });
+            sliderhelp.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    db.add_poshelp_slide("1");
+                    sliderhelp.setVisibility(View.GONE);
+                }
+            });
+            try {
+                back_move.setAlpha(1.0f);
+                next_move.setAlpha(1.0f);
+                animation_back();
+                animation_next();
+            } catch (Exception e2) {
             }
-        });
-        sliderhelp.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                db.add_poshelp_slide("1");
-                sliderhelp.setVisibility(View.GONE);
-            }
-        });
-        try {
-            back_move.setAlpha(1.0f);
-            next_move.setAlpha(1.0f);
-            animation_back();
-            animation_next();
-        } catch (Exception e2) {
         }
+        catch (Exception a)
+        {
+
+            Toasty.info(getApplicationContext(), Log.getStackTraceString(a), Toast.LENGTH_LONG).show();
+        }
+
     }
 
     public boolean dispatchTouchEvent(MotionEvent me) {
@@ -200,20 +175,19 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
     public void refreshing_data(int move) {
         try {
 
-            if(db.get_shouldshow().equalsIgnoreCase("1"))
+            if(db.get_shouldshow().equalsIgnoreCase("1") && db.get_purchase().equalsIgnoreCase(""))
             {
                 startActivity(new Intent(getApplicationContext(),Lock_Layout.class));
             }
             else
             {
                 if (!db.get_purchase().equalsIgnoreCase("")) {
-                    loacklayout.setVisibility(View.GONE);
                     Static_Veriable.picid = move;
                     text.setText(File_Positions.positionlist[Static_Veriable.picid]);
                     new laoding_data().execute(new String[0]);
                 } else if (cd.isConnectingToInternet()) {
 
-                    if(Integer.parseInt(db.get_showedads())>=5)
+                    if(Integer.parseInt(db.get_showedads())>=10)
                     {
                         db.add_shouldshow("1");
                         startActivity(new Intent(getApplicationContext(),Lock_Layout.class));
@@ -221,7 +195,6 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                     else
                     {
                         db.add_showedads((Integer.parseInt(db.get_showedads())+1)+"");
-                        loacklayout.setVisibility(View.GONE);
                         Static_Veriable.picid = move;
                         text.setText(File_Positions.positionlist[Static_Veriable.picid]);
                         new laoding_data().execute(new String[0]);
@@ -253,12 +226,20 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
 
     public void onResume() {
         super.onResume();
-        if (db.get_poshlp_slide().equalsIgnoreCase("")) {
-            sliderhelp.setVisibility(View.VISIBLE);
-        } else {
-            sliderhelp.setVisibility(View.GONE);
+
+        try {
+            if (db.get_poshlp_slide().equalsIgnoreCase("")) {
+                sliderhelp.setVisibility(View.VISIBLE);
+            } else {
+                sliderhelp.setVisibility(View.GONE);
+            }
+            refreshing_data(Static_Veriable.picid);
         }
-        refreshing_data(Static_Veriable.picid);
+        catch (Exception a)
+        {
+            Toasty.info(getApplicationContext(), Log.getStackTraceString(a), Toast.LENGTH_LONG).show();
+        }
+
     }
 
     public static Spanned fromHtml(String html) {
@@ -268,17 +249,7 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
         return Html.fromHtml(html);
     }
 
-    public void onBackPressed() {
-        try {
-            if (loacklayout.getVisibility() == View.VISIBLE) {
-                loacklayout.setVisibility(View.GONE);
-                return;
-            }
 
-            super.onBackPressed();
-        } catch (Exception e2) {
-        }
-    }
     public class laoding_data extends AsyncTask<String, Void, String> {
         public void onPreExecute() {
             loading.setVisibility(View.VISIBLE);
@@ -312,7 +283,6 @@ public class Position_View extends AppCompatActivity implements gest.SimpleGestu
                     options.inPurgeable = true;
                     image.setImageBitmap(BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length, options));
                 } else {
-                    loacklayout.setVisibility(View.GONE);
 
                     byte[] decodedString2 = Base64.decode(dbHelper.getpic(Static_Veriable.picid+""), 0);
                     Options options2 = new Options();

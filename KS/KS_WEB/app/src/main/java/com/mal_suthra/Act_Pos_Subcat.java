@@ -34,7 +34,7 @@ public class Act_Pos_Subcat extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((int) R.layout.actvty_possubcat);
-        try {
+
             favourits = (ImageView) findViewById(R.id.fvrts);
             pb = (ProgressBar) findViewById(R.id.pb);
             text = (TextView) findViewById(R.id.text);
@@ -69,10 +69,7 @@ public class Act_Pos_Subcat extends AppCompatActivity {
                 }
             });
             data_loading();
-        } catch (Exception e) {
 
-           // Toasty.info(getApplicationContext(), Log.getStackTraceString(e), Toast.LENGTH_LONG).show();
-        }
     }
 
     public void data_loading() {

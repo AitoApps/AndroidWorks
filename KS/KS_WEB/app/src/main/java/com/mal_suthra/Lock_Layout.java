@@ -44,6 +44,8 @@ public class Lock_Layout extends AppCompatActivity {
     AdRequest adreq1,adreq2;
     int intcount = 0;
     int intcount1=0;
+
+    int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,29 +140,7 @@ public class Lock_Layout extends AppCompatActivity {
             }
         });
 
-        AdLoader.Builder builder = new AdLoader.Builder((this), "ca-app-pub-5452894935816879/7343694820");
-        builder.forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
-            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                if (nativeAd != null) {
-                    nativeAd.destroy();
-                }
-                nativeAd = unifiedNativeAd;
-                UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater().inflate(R.layout.ad_unified, null);
-                populateUnifiedNativeAdView(unifiedNativeAd, adView);
-                adplaceholder.removeAllViews();
-                adplaceholder.addView(adView);
-            }
-        });
-        builder.withNativeAdOptions(new NativeAdOptions.Builder().setVideoOptions(new VideoOptions.Builder().setStartMuted(true).build()).build());
-        builder.withAdListener(new AdListener() {
-            public void onAdFailedToLoad(int errorCode) {
-            }
-
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                adplaceholder.setVisibility(View.VISIBLE);
-            }
-        }).build().loadAd(new AdRequest.Builder().build());
+        refreshad();
 
         try {
             new CountDownTimer(20000, 1000) {
@@ -205,6 +185,42 @@ public class Lock_Layout extends AppCompatActivity {
         }
     }
 
+
+
+    public void refreshad()
+    {
+        AdLoader.Builder builder = new AdLoader.Builder((this), "ca-app-pub-5452894935816879/7343694820");
+        builder.forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+            public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                if (nativeAd != null) {
+                    nativeAd.destroy();
+                }
+                nativeAd = unifiedNativeAd;
+                UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater().inflate(R.layout.ad_unified, null);
+                populateUnifiedNativeAdView(unifiedNativeAd, adView);
+                adplaceholder.removeAllViews();
+                adplaceholder.addView(adView);
+            }
+        });
+        builder.withNativeAdOptions(new NativeAdOptions.Builder().setVideoOptions(new VideoOptions.Builder().setStartMuted(true).build()).build());
+
+        builder.withAdListener(new AdListener() {
+            public void onAdFailedToLoad(int errorCode) {
+                try {
+                    if (count <= 20) {
+
+                        refreshad();
+                        count++;
+                    }
+                } catch (Exception e) {
+                }
+            }
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                adplaceholder.setVisibility(View.VISIBLE);
+            }
+        }).build().loadAd(new AdRequest.Builder().build());
+    }
 
     @Override
     protected void onResume() {

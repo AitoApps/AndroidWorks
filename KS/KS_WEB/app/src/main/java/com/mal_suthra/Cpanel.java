@@ -29,10 +29,12 @@ import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.PatternLockView.Dot;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
 import com.andrognito.patternlockview.utils.PatternLockUtils;
+import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.FirebaseApp;
 
 import es.dmoral.toasty.Toasty;
 
@@ -58,6 +60,7 @@ public class Cpanel extends AppCompatActivity {
         setContentView(R.layout.actvty_cpanel);
 
         MobileAds.initialize((Context) this, "ca-app-pub-5452894935816879~2652026372");
+        FirebaseApp.initializeApp(this);
 
         String[] PERMISSIONS = {android.Manifest.permission.INTERNET, android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.READ_EXTERNAL_STORAGE, android.Manifest.permission.ACCESS_NETWORK_STATE};
 
@@ -94,6 +97,7 @@ public class Cpanel extends AppCompatActivity {
             app_lock.setText(Static_Veriable.forgotpattern);
             patterntext.setText(Static_Veriable.patterntext2);
         }
+
 
 
 
@@ -180,10 +184,20 @@ public class Cpanel extends AppCompatActivity {
         });
         about_us.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
+
                 try {
+
                     startActivity(new Intent(getApplicationContext(), Act_About.class));
-                } catch (Exception e) {
                 }
+                catch (Exception a)
+                {
+
+                }
+
+
+                   // Crashlytics.getInstance().crash(); // Force a crash
+
+
             }
         });
 
@@ -225,6 +239,25 @@ public class Cpanel extends AppCompatActivity {
             }
         }
         return true;
+    }
+
+
+    public void ageconfirm() {
+        final Dialog dialog3 = new Dialog(this);
+        dialog3.setContentView(R.layout.confirm_age);
+        dialog3.setTitle("Confirm age");
+        dialog3.setCancelable(false);
+        TextView hideinform = (TextView) dialog3.findViewById(R.id.hideinform);
+        Button agree = (Button) dialog3.findViewById(R.id.agree);
+        hideinform.setText("എന്റെ വയസ്സ് 18 ന് മുകളിലാണ്.ഈ ആപ്പ് ഉപയോഗിക്കുന്നത് എന്റെ ഇഷ്ടപ്രകാരം മാത്രമാണ്.");
+        hideinform.setTypeface(face);
+        agree.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                db.add_ageconfirm("ok");
+                dialog3.dismiss();
+            }
+        });
+        dialog3.show();
     }
 
     public void question_secure() {
@@ -307,6 +340,7 @@ public class Cpanel extends AppCompatActivity {
         startActivity(i);
     }
 
+
     @Override
     public void onBackPressed() {
 
@@ -350,6 +384,11 @@ public class Cpanel extends AppCompatActivity {
 
                 }
 
+            }
+
+            if(db.get_ageconfirm().equalsIgnoreCase(""))
+            {
+                ageconfirm();
             }
 
     }

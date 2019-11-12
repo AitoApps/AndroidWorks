@@ -14,12 +14,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final String TABLE_name2 = "scwidth";
 
-
     private static final String pkey = "pkey";
     private static final String screenwidth = "screenwidth";
     private static final String title = "title";
-
-
 
     private static String CREATE_videoid_TABLE2 = "CREATE TABLE scwidth(pkey INTEGER PRIMARY KEY AUTOINCREMENT,screenwidth TEXT)";
 

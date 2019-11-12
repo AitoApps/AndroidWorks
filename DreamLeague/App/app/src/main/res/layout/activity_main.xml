@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".MainActivity">
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/filterproperty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:background="#000"
+        android:visibility="gone"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filterlayout"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/brushproperty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:background="#fff"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/txtbrushwidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brush"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <SeekBar
+            android:id="@+id/brushwidth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:progress="40"
+            android:layout_below="@+id/txtbrushwidth"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/txtbrushopacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opacity"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/brushwidth"
+            />
+        <SeekBar
+            android:id="@+id/brushopacity"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtbrushopacity"
+            android:layout_margin="5dp"
+            android:progress="100"
+            android:layout_height="40dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/colorlayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/brushopacity"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+     </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/textproperty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:background="#fff"
+        android:visibility="gone"
+        >
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top|left"
+            android:padding="5dp"
+            android:hint="Enter Text"
+            android:background="@drawable/the_border1"
+            android:layout_margin="5dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/textscolorlayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/edittext"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:layout_toLeftOf="@+id/apply"
+            android:layout_margin="5dp"
+            android:textColor="#e33830"
+            android:padding="10dp"
+            android:background="@drawable/the_border1"
+            android:layout_below="@+id/textscolorlayout"
+            />
+
+        <TextView
+            android:id="@+id/apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="#185b1e"
+            android:background="@drawable/the_border1"
+            android:padding="10dp"
+            android:layout_below="@+id/textscolorlayout"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        >
+
+         <RelativeLayout
+             android:id="@+id/brushlyt"
+             android:layout_width="60dp"
+             android:layout_height="60dp"
+             android:gravity="center_horizontal"
+             >
+
+             <ImageView
+                 android:id="@+id/brush"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:src="@drawable/brush"
+                 android:padding="5dp"
+                 android:layout_centerHorizontal="true"
+                 />
+
+             <TextView
+                 android:id="@+id/txtbrush"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Brush"
+                 android:layout_below="@+id/brush"
+                 android:gravity="center_horizontal"
+                 android:textColor="#fff"
+                 />
+
+         </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/eraserlyt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/brushlyt"
+            >
+
+            <ImageView
+                android:id="@+id/eraser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/eraser"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/txteraser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eraser"
+                android:layout_below="@+id/eraser"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/textslyt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/eraserlyt"
+            >
+
+            <ImageView
+                android:id="@+id/texts"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/texticon"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/txttexts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:layout_below="@+id/texts"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/imagelyt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/textslyt"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/image"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/txtimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image"
+                android:layout_below="@+id/image"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filterlyt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imagelyt"
+            >
+
+            <ImageView
+                android:id="@+id/filter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/filtericon"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/txtfilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:layout_below="@+id/filter"
+                android:gravity="center_horizontal"
+                android:textColor="#fff"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

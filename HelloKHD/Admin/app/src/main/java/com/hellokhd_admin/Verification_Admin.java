@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -29,7 +30,7 @@ import adapter.VerificationAdminlist_ListAdapter;
 import data.MarkAdminlist_FeedItem;
 
 public class Verification_Admin extends AppCompatActivity {
-    ImageView addproduct;
+    Button addproduct;
     ImageView back;
     ConnectionDetecter cd;
     Typeface face;
@@ -47,7 +48,7 @@ public class Verification_Admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification__admin);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
-        addproduct = (ImageView) findViewById(R.id.addproduct);
+        addproduct = findViewById(R.id.addproduct);
         back = (ImageView) findViewById(R.id.back);
         text = (TextView) findViewById(R.id.text);
         addproduct.setOnClickListener(new View.OnClickListener() {

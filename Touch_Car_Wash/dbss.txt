@@ -1,0 +1,67 @@
+WashVehicle Management
+--------------------
+Sn
+regdate
+registernumber
+status
+imgsig
+
+Driver Management
+-----------------
+sn
+regdate
+washvehicleid
+name
+place
+address
+contact1
+contact2
+licenceno
+imgsig
+licenceimgsig
+loginstatus
+status
+
+vehiclelocation
+--------------
+sn
+regdate
+washvehicleid
+latitude
+longtitude
+status
+
+Offer Management
+-------------------
+sn
+vehicleid
+washcount
+offercount
+status
+
+Vehcile Management
+----------------
+Sn
+vehicletype
+Model
+status
+
+Price Management
+-------------------
+sn
+vehicleid
+ogprice
+offerprice
+status
+
+
+
+
+
+
+
+
+
+
+
+

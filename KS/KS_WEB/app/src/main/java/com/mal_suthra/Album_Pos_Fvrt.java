@@ -245,7 +245,7 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
 
     public void loadata1()
     {
-        if(db.get_shouldshow().equalsIgnoreCase("1"))
+        if(db.get_shouldshow().equalsIgnoreCase("1") && db.get_purchase().equalsIgnoreCase(""))
         {
             startActivity(new Intent(getApplicationContext(),Lock_Layout.class));
         }
@@ -255,7 +255,7 @@ public class Album_Pos_Fvrt extends AppCompatActivity {
                 show_image(pos);
             } else if (cd.isConnectingToInternet()) {
 
-                if(Integer.parseInt(db.get_showedads())>=5)
+                if(Integer.parseInt(db.get_showedads())>=10)
                 {
                     db.add_shouldshow("1");
                     startActivity(new Intent(getApplicationContext(),Lock_Layout.class));

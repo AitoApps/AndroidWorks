@@ -165,10 +165,6 @@ public class Mobile_verification extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Recharge.class));
                         finish();
                     }
-                    else if (Static_Veriable.clickedmethod == 7) {
-                        startActivity(new Intent(getApplicationContext(), Complete_Task.class));
-                        finish();
-                    }
                 } else if (result.contains("2:")) {
                     alert_show();
                 } else if (result.contains("1:")) {
@@ -195,10 +191,6 @@ public class Mobile_verification extends AppCompatActivity {
                     finish();
                 } else if (Static_Veriable.clickedmethod == 6) {
                     startActivity(new Intent(getApplicationContext(), Recharge.class));
-                    finish();
-                }
-                else if (Static_Veriable.clickedmethod == 7) {
-                    startActivity(new Intent(getApplicationContext(), Complete_Task.class));
                     finish();
                 }
                 else {

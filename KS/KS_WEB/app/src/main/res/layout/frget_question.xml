@@ -1,19 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/roundedcornerbackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView android:id="@+id/locklyt" android:background="@drawable/bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="500.0dip" android:layout_above="@+id/footer" android:layout_below="@+id/header">
-        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/txtquestion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="sahgshag" android:layout_centerHorizontal="true" />
-            <TableLayout android:id="@+id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:stretchColumns="*" android:layout_below="@+id/txtquestion" android:layout_centerHorizontal="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/roundedcornerbackground">
+
+    <ScrollView
+        android:id="@+id/locklyt"
+        android:layout_width="fill_parent"
+        android:layout_height="500.0dip"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:background="@drawable/bg"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/txtquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:gravity="center"
+                android:text="sahgshag"
+                android:textColor="#ffffffff"
+                android:textSize="18.0dip" />
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtquestion"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10.0dip"
+                android:stretchColumns="*">
+
                 <TableRow>
-                    <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/txtquestion1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Choose Pack" />
+
+                    <TextView
+                        android:id="@+id/txtquestion1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5.0dip"
+                        android:text="Choose Pack"
+                        android:textColor="#ffffffff"
+                        android:textSize="18.0dip" />
                 </TableRow>
+
                 <TableRow>
-                    <EditText android:textColor="#ff000000" android:id="@+id/question1" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" />
+
+                    <EditText
+                        android:id="@+id/question1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_margin="5.0dip"
+                        android:background="@drawable/the_border1"
+                        android:padding="5.0dip"
+                        android:textColor="#ff000000" />
                 </TableRow>
             </TableLayout>
-            <TextView android:textSize="22.0dip" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@+id/lockkey" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="" android:layout_below="@+id/table" />
-            <Button android:textSize="18.0dip" android:textColor="#ffffffff" android:id="@+id/verify" android:background="@drawable/btn_paymnt" android:layout_width="100.0dip" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:text="Verify" android:layout_below="@+id/lockkey" android:layout_alignRight="@+id/table" />
+
+            <TextView
+                android:id="@+id/lockkey"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_horizontal"
+                android:padding="5.0dip"
+                android:text=""
+                android:textColor="#ffffffff"
+                android:textSize="22.0dip" />
+
+            <Button
+                android:id="@+id/verify"
+                android:layout_width="100.0dip"
+                android:layout_height="40.0dip"
+                android:layout_below="@+id/lockkey"
+                android:layout_alignRight="@+id/table"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/btn_paymnt"
+                android:text="Verify"
+                android:textColor="#ffffffff"
+                android:textSize="18.0dip" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

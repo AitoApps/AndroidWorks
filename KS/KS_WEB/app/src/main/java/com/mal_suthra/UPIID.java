@@ -54,7 +54,7 @@ public class UPIID extends AppCompatActivity {
         verify = (Button) findViewById(R.id.verify);
         pd = new ProgressDialog(this);
         nc = new NetConnect(this);
-        String amount = "25";
+        String amount = "40";
         try {
             ArrayList<Integer> numbers = new ArrayList<>();
             numbers.add(Integer.valueOf(25));
@@ -66,7 +66,7 @@ public class UPIID extends AppCompatActivity {
         if (db.get_amt_recharge().equalsIgnoreCase("")) {
             db.add_amt_recharge(amount);
         }
-        txt_pymnt.setText(Static_Veriable.upitext1+" 35 "+Static_Veriable.paytmtext2);
+        txt_pymnt.setText(Static_Veriable.upitext1+" 40 "+Static_Veriable.paytmtext2);
         wponly.setTypeface(face);
         verify.setTypeface(face);
         text.setText(Static_Veriable.upiidtext);
@@ -102,7 +102,7 @@ public class UPIID extends AppCompatActivity {
 
     public void window_exit() {
         Intent intent = new Intent(getApplicationContext(), Cpanel.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
@@ -133,7 +133,7 @@ public class UPIID extends AppCompatActivity {
 
                 String link= Static_Veriable.weblink +"resgisterrecharge_upiid1.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(db.get_veriid()+":%"+str_date+":%"+db.get_posbyapss(), "UTF-8");
+                        + "=" + URLEncoder.encode(db.get_veriid()+"%:"+str_date+"%:"+db.get_posbyapss(), "UTF-8");
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);
@@ -158,12 +158,15 @@ public class UPIID extends AppCompatActivity {
 
         public void onPostExecute(String result) {
             try {
+                pd.dismiss();
                 if (result.contains("ok")) {
                     alert_show(Static_Veriable.afterpost);
-                    return;
                 }
-                db.drop_veriid();
-                Toasty.info(getApplicationContext(), Static_Veriable.tmpproblem, Toasty.LENGTH_LONG).show();
+                else
+                {
+                    db.drop_veriid();
+                    Toasty.info(getApplicationContext(), Static_Veriable.tmpproblem, 1).show();
+                }
             } catch (Exception e) {
             }
         }

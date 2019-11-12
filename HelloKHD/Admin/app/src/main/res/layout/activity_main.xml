@@ -138,6 +138,27 @@
                 <TableRow>
 
                     <ImageView
+                        android:id="@+id/atm"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/atm"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/pumb"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/pumb"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
                         android:id="@+id/video"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
@@ -167,7 +188,10 @@
                         android:layout_margin="5dp"
                         />
 
+
+
                 </TableRow>
+
 
             </TableLayout>
 

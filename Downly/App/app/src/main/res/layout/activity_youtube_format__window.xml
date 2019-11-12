@@ -64,24 +64,15 @@
 
           </com.facebook.shimmer.ShimmerFrameLayout>
 
-          <com.google.android.gms.ads.AdView
-              xmlns:ads="http://schemas.android.com/apk/res-auto"
-              android:id="@+id/adView1"
-              android:layout_below="@+id/header"
-              ads:adSize="BANNER"
-              android:layout_width="match_parent"
-              android:layout_height="50dp"
-              ads:adUnitId="ca-app-pub-5517777745693327/4015093400"
-              android:visibility="visible"
-              />
 
           <ListView
-              android:layout_below="@+id/adView1"
+              android:layout_above="@+id/adplaceholder"
               android:id="@+id/list"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="@android:color/transparent"
               android:listSelector="@android:color/transparent"
+              android:layout_below="@+id/header"
               android:divider="@null"
               android:scrollbars="none"
               android:layout_marginLeft="5dp"
@@ -89,6 +80,20 @@
               android:layout_marginBottom="10dp"
               android:layout_marginTop="10dp"
               />
+
+
+          <FrameLayout
+              android:id="@+id/adplaceholder"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_marginLeft="5.0dip"
+              android:padding="5dp"
+              android:layout_marginTop="5.0dip"
+              android:layout_marginRight="5.0dip"
+              android:background="@drawable/the_border2"
+              android:visibility="visible" />
+
 
 
       </RelativeLayout>

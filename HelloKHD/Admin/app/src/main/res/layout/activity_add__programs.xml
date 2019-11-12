@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Programs">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add /Edit Programs"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtitemname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Item Name"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/itemname"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txtitemname"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtitemcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Item Code"
+                android:layout_below="@+id/itemname"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/itemcode"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txtitemcode"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/itemcode"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

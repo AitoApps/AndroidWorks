@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.dlkitmaker_feeds.BrushEdit">
+
+    <!--This is Sal Files -->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar"
+        >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Draw using finger"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toLeftOf="@+id/save"
+            android:textColor="#ffffff"
+            style="@android:style/TextAppearance.Medium"
+            />
+        <ImageView
+            android:id="@+id/clearall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/undoicon"
+            android:layout_toLeftOf="@+id/save"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            />
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/saveicon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@+id/header"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5517777745693327/5945216196" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controls"
+        android:layout_below="@+id/adView1"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:id="@+id/image_preview"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                />
+
+               <com.ahmedadeltito.photoeditorsdk.BrushDrawingView
+                android:id="@+id/drawing_view"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:layout_toLeftOf="@+id/eraserlyt"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            >
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/brushcolor"
+                android:layout_centerVertical="true"
+                android:max="100"
+                android:min="1"
+                android:progress="10"
+                android:layout_margin="5dp"
+                />
+             <ImageView
+                android:id="@+id/brushcolor"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/textcolor"
+                android:layout_margin="5dp"
+                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/eraserlyt"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        >
+
+        <ImageView
+            android:id="@+id/eraser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/eraser"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:id="@+id/blackeraser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/blackbrush"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/txteraser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eraser"
+            android:layout_below="@+id/eraser"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -31,7 +32,7 @@ import data.Advt_FeedItem;
 import data.Stage_FeedItem;
 
 public class Stage_List extends AppCompatActivity {
-    ImageView addproduct;
+    Button addproduct;
     ImageView back;
     ConnectionDetecter cd;
     Typeface face;
@@ -49,7 +50,7 @@ public class Stage_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stage__list);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
-        addproduct = (ImageView) findViewById(R.id.addproduct);
+        addproduct = findViewById(R.id.addproduct);
         back = (ImageView) findViewById(R.id.back);
         text = (TextView) findViewById(R.id.text);
         addproduct.setOnClickListener(new View.OnClickListener() {

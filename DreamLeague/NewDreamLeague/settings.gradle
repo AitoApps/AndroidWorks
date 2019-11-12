@@ -1,0 +1,3 @@
+include ':app', ':photoeditorsdk', ':android-StickerView-master'
+include ':voronImageView'
+include ':gestureimageview'

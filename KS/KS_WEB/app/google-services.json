@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "475796039546",
+    "firebase_url": "https://kmcrash-18215.firebaseio.com",
+    "project_id": "kmcrash-18215",
+    "storage_bucket": "kmcrash-18215.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475796039546:android:06cb640a14a2e1bb23d8c3",
+        "android_client_info": {
+          "package_name": "com.mal_suthra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475796039546-v5afuu93sm20ocnvj4an77uel1a3vvv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeIG-29lwdthK8QQ3fOR6fDtMOZ5u-xo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475796039546-v5afuu93sm20ocnvj4an77uel1a3vvv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="#e9ebee"
+     >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       
+        >
+        
+        <RelativeLayout 
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+            >
+        
+        <TextView 
+            android:id="@+id/cowboyd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Cowboyd"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+             android:layout_marginTop="1dp"
+             android:layout_below="@+id/one"
+            >
+        
+        <TextView 
+            android:id="@+id/deutschlander"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Deutschlander"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+        
+         <RelativeLayout 
+            android:id="@+id/three"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+             android:layout_marginTop="1dp"
+             android:layout_below="@+id/two"
+            >
+        
+        <TextView 
+            android:id="@+id/emilio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Emilio"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+        
+           <RelativeLayout 
+            android:id="@+id/four"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+             android:layout_marginTop="1dp"
+             android:layout_below="@+id/three"
+            >
+        
+        <TextView 
+            android:id="@+id/enfatica"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Enfatica"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:id="@+id/five"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+             android:layout_marginTop="1dp"
+             android:layout_below="@+id/four"
+            >
+        
+        <TextView 
+            android:id="@+id/mexcellent3D"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Mexcellent3D"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+         <RelativeLayout 
+            android:id="@+id/six"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+             android:layout_marginTop="1dp"
+             android:layout_below="@+id/five"
+            >
+        
+        <TextView 
+            android:id="@+id/mexcellentrg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Mexcellentrg"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+        
+          <RelativeLayout 
+            android:id="@+id/seven"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:background="#ffffff"
+             android:padding="5dp"
+             android:layout_marginTop="1dp"
+             android:layout_below="@+id/six"
+            >
+        
+        <TextView 
+            android:id="@+id/mionta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            style="@android:style/TextAppearance.Large"
+            android:text="Mionta"
+            android:textColor="#000000"
+            />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/eight"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/seven"
+            >
+
+            <TextView
+                android:id="@+id/octinsports"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Octinsports"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/nine"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/eight"
+            >
+
+            <TextView
+                android:id="@+id/onick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Onick"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ten"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/nine"
+            >
+
+            <TextView
+                android:id="@+id/rechargebd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Rechargebd"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/eleven"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/ten"
+            >
+
+            <TextView
+                android:id="@+id/redseven"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Redseven"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/twoleve"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/eleven"
+            >
+
+            <TextView
+                android:id="@+id/sattermatter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Sattermatter"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/thirteen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/twoleve"
+            >
+
+            <TextView
+                android:id="@+id/sfsportsnight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Sfsportsnight"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourteen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/thirteen"
+            >
+
+            <TextView
+                android:id="@+id/sfssports"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Sfssports"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/fifteen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/fourteen"
+            >
+
+            <TextView
+                android:id="@+id/soccerLeague"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="SoccerLeague"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/sixteen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/fifteen"
+            >
+
+            <TextView
+                android:id="@+id/suissnord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Suissnord"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/seventeen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_below="@+id/sixteen"
+            >
+
+            <TextView
+                android:id="@+id/teamspiritnf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@android:style/TextAppearance.Large"
+                android:text="Teamspiritnf"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+
+
+
+        
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ControlPanel">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/logo_small" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/logo"
+            android:text="DLK Maker"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:gravity="center"
+        >
+
+        <RelativeLayout
+            android:id="@+id/makekit"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundedcornerbackground"
+            android:layout_margin="10dp"
+            >
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

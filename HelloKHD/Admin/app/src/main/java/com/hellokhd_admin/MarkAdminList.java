@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -30,7 +31,7 @@ import data.MarkAdminlist_FeedItem;
 import data.Stage_FeedItem;
 
 public class MarkAdminList extends AppCompatActivity {
-    ImageView addproduct;
+    Button addproduct;
     ImageView back;
     ConnectionDetecter cd;
     Typeface face;
@@ -48,7 +49,7 @@ public class MarkAdminList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_markadmin__list);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
-        addproduct = (ImageView) findViewById(R.id.addproduct);
+        addproduct =findViewById(R.id.addproduct);
         back = (ImageView) findViewById(R.id.back);
         text = (TextView) findViewById(R.id.text);
         addproduct.setOnClickListener(new View.OnClickListener() {

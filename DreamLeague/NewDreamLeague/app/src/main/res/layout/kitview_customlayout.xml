@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    >
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#ffffff"
+        >
+        <TextView
+            android:id="@+id/kittype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_margin="2dp"
+            style="@android:style/TextAppearance.Medium"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            />
+
+              <ImageView
+                  android:id="@+id/image"
+                  android:layout_width="match_parent"
+                  android:minHeight="200dp"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/kittype"
+                  />
+
+        <RelativeLayout
+            android:id="@+id/controlls"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/image"
+            android:layout_margin="5dp"
+            >
+
+            <Button
+                android:id="@+id/copyurl"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="Copy URL"
+                android:background="@drawable/roundedcornerbutton"
+                android:textColor="#ffffff"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

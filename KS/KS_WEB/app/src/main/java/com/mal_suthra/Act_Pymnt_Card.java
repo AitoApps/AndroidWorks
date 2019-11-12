@@ -2,6 +2,7 @@ package com.mal_suthra;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -40,7 +41,6 @@ public class Act_Pymnt_Card extends AppCompatActivity {
     Typeface face;
     Typeface face1;
     NetConnect nc;
-    Button paydo;
     TextView pymenttext;
     TextView text;
     ProgressDialog pd;
@@ -48,6 +48,7 @@ public class Act_Pymnt_Card extends AppCompatActivity {
     String cardnumber="";
     final DataBase_MobileNumber mdb = new DataBase_MobileNumber(this);
     private PayUmoneySdkInitializer.PaymentParam mPaymentParams;
+    Button card_atm,ecreacharge,paytm,upiid;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((int) R.layout.avty_pymtn_card);
@@ -58,22 +59,70 @@ public class Act_Pymnt_Card extends AppCompatActivity {
         nc = new NetConnect(this);
         pd=new ProgressDialog(this);
         pymenttext = (TextView) findViewById(R.id.pymenttext);
-        paydo = (Button) findViewById(R.id.do_pay);
         pymenttext.setText(Html.fromHtml(Static_Veriable.cardpayment));
-        paydo.setText(Static_Veriable.dopay);
-        text.setText(Static_Veriable.atmcard);
-        text.setTypeface(face1);
+        upiid = (Button) findViewById(R.id.upiid);
+        ecreacharge = (Button) findViewById(R.id.ecreacharge);
+        card_atm = (Button) findViewById(R.id.atmcard);
+        paytm = (Button) findViewById(R.id.paytm);
+
+        text.setText("Payment");
+        text.setTypeface(face);
         pymenttext.setTypeface(face1);
-        paydo.setTypeface(face1);
+        upiid .setTypeface(face1);
+        pymenttext.setText("40 രൂപ പേയ്‌മെന്റ് ചെയ്താല്‍ താങ്കള്‍ക്ക് എല്ലാ പൊസിഷനുകളും ആല്‍ബവും പരസ്യങ്ങളില്ലാതെ കാണാവുന്നതാണ്. താഴെയുള്ള ഏത് വഴി ഉപയോഗിച്ചും പേയ്‌മെന്റ് ചെയ്യാവുന്നതാണ്‌");
+        pymenttext.setTypeface(face1);
+
+        ecreacharge.setText(Static_Veriable.eacyrecharge);
+        ecreacharge.setTypeface(face1);
+        card_atm.setText(Static_Veriable.atmcard);
+        card_atm.setTypeface(face1);
+        pymenttext.setTypeface(face1);
+        paytm.setText(Static_Veriable.paytm);
+        paytm.setTypeface(face1);
+        upiid.setText(Static_Veriable.upiid);
+        upiid.setTypeface(face1);
+
+
         back.setOnClickListener(new OnClickListener() {
             public void onClick(View view) { onBackPressed();
             }
         });
-        paydo.setOnClickListener(new OnClickListener() {
+        card_atm.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 launchPayUMoneyFlow();
             }
         });
+
+
+        ecreacharge.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                if (nc.isConnectingToInternet()) {
+                    Static_Veriable.clickedmethod = 6;
+                    startActivity(new Intent(getApplicationContext(), Recharge.class));
+                    return;
+                }
+                Toasty.info(getApplicationContext(), Static_Veriable.nonet, 0).show();
+            }
+        });
+        paytm.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+                try {
+                    Static_Veriable.clickedmethod = 3;
+                    startActivity(new Intent(getApplicationContext(), Paytm.class));
+                } catch (Exception e) {
+                }
+            }
+        });
+        upiid.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+                try {
+                    Static_Veriable.clickedmethod = 4;
+                    startActivity(new Intent(getApplicationContext(), UPIID.class));
+                } catch (Exception e) {
+                }
+            }
+        });
+
     }
 
 
@@ -89,7 +138,7 @@ public class Act_Pymnt_Card extends AppCompatActivity {
         payUmoneyConfig.setPayUmoneyActivityTitle("Purchase Full Version");
         payUmoneyConfig.disableExitConfirmation(false);
         PayUmoneySdkInitializer.PaymentParam.Builder builder = new PayUmoneySdkInitializer.PaymentParam.Builder();
-        String amount = "39.0";
+        String amount = "40.0";
         String txnId = System.currentTimeMillis() + "";
         String phone = mdb.get_mob();
         String productName = "Purchase Full Version";
@@ -260,7 +309,7 @@ public class Act_Pymnt_Card extends AppCompatActivity {
 
     public void activty_exit() {
         Intent intent = new Intent(getApplicationContext(), Cpanel.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }

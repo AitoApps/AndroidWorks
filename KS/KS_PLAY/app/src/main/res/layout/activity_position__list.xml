@@ -38,6 +38,7 @@
         android:id="@+id/content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_above="@+id/adView1"
         android:layout_below="@+id/header">
 
         <ListView
@@ -55,5 +56,13 @@
             android:visibility="gone" />
     </RelativeLayout>
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5452894935816879/1662302358" />
 
 </RelativeLayout>

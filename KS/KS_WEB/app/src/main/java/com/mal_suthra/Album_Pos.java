@@ -214,7 +214,7 @@ public class Album_Pos extends AppCompatActivity {
 
     public void reloaddata1()
     {
-        if(db.get_shouldshow().equalsIgnoreCase("1"))
+        if(db.get_shouldshow().equalsIgnoreCase("1") && db.get_purchase().equalsIgnoreCase(""))
         {
             startActivity(new Intent(getApplicationContext(),Lock_Layout.class));
         }
@@ -225,7 +225,7 @@ public class Album_Pos extends AppCompatActivity {
                 reload_data();
             } else if (cd.isConnectingToInternet()) {
 
-                if(Integer.parseInt(db.get_showedads())>=5)
+                if(Integer.parseInt(db.get_showedads())>=10)
                 {
                     db.add_shouldshow("1");
                     startActivity(new Intent(getApplicationContext(),Lock_Layout.class));

@@ -54,7 +54,7 @@ public class Paytm extends AppCompatActivity {
         pyment_text = (TextView) findViewById(R.id.pymenttext);
         pd = new ProgressDialog(this);
         cd = new NetConnect(this);
-        String amount = "25";
+        String amount = "40";
         try {
             ArrayList<Integer> numbers = new ArrayList<>();
             numbers.add(Integer.valueOf(25));
@@ -66,7 +66,7 @@ public class Paytm extends AppCompatActivity {
         if (db.get_amt_recharge().equalsIgnoreCase("")) {
             db.add_amt_recharge(amount);
         }
-        pyment_text.setText(Static_Veriable.paytmtext1+" "+" 35 "+Static_Veriable.paytmtext2);
+        pyment_text.setText(Static_Veriable.paytmtext1+" "+" 40 "+Static_Veriable.paytmtext2);
         text.setText(Static_Veriable.paytmtext);
         text.setTypeface(face);
         pyment_text.setTypeface(face);
@@ -103,7 +103,7 @@ public class Paytm extends AppCompatActivity {
 
     public void window_exit() {
         Intent intent = new Intent(getApplicationContext(), Cpanel.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
     public void alert_show(String message) {
@@ -130,7 +130,7 @@ public class Paytm extends AppCompatActivity {
 
                 String link= Static_Veriable.weblink +"resgisterrecharge_paytm1.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(db.get_veriid()+":%"+str_date+":%"+db.get_posbyapss(), "UTF-8");
+                        + "=" + URLEncoder.encode(db.get_veriid()+"%:"+str_date+"%:"+db.get_posbyapss(), "UTF-8");
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);
@@ -156,9 +156,9 @@ public class Paytm extends AppCompatActivity {
 
         public void onPostExecute(String result) {
             try {
+                pd.dismiss();
                 if (result.contains("ok")) {
                     alert_show(Static_Veriable.afterpost);
-                    return;
                 }
                 else
                 {

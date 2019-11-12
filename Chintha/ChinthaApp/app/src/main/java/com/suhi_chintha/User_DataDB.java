@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class User_DataDB extends SQLiteOpenHelper {
 
- 	private static final int DATABASE_VERSION =1;
+ 	private static final int DATABASE_VERSION =24;
 	private static final String DATABASE_NAME = "chinthadb10";
 	private static final String table1 = "user";
 	private static final String userid = "userid";

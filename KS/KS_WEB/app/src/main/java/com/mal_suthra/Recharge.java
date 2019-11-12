@@ -54,7 +54,7 @@ public class Recharge extends AppCompatActivity {
         date = (EditText) findViewById(R.id.date);
         pd = new ProgressDialog(this);
         nc = new NetConnect(this);
-        String amount = "30";
+        String amount = "40";
         try {
             ArrayList<Integer> numbers = new ArrayList<>();
             numbers.add(Integer.valueOf(30));
@@ -67,7 +67,7 @@ public class Recharge extends AppCompatActivity {
             db.add_amt_recharge(amount);
         }
 
-        payment_text.setText(Static_Veriable.rechargetext1+" 35 "+Static_Veriable.rechargetext2);
+        payment_text.setText(Static_Veriable.rechargetext1+" 40 "+Static_Veriable.rechargetext2);
         text.setText(Static_Veriable.eacyrecharge);
         text.setTypeface(face);
         payment_text.setTypeface(face);
@@ -104,7 +104,7 @@ public class Recharge extends AppCompatActivity {
 
     public void window_exit() {
         Intent intent = new Intent(getApplicationContext(), Cpanel.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
@@ -132,7 +132,7 @@ public class Recharge extends AppCompatActivity {
 
                 String link= Static_Veriable.weblink +"resgisterrecharge1.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(db.get_veriid()+":%"+str_date+":%"+db.get_posbyapss(), "UTF-8");
+                        + "=" + URLEncoder.encode(db.get_veriid()+"%:"+str_date+"%:"+db.get_posbyapss(), "UTF-8");
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
                 conn.setDoOutput(true);
@@ -159,12 +159,15 @@ public class Recharge extends AppCompatActivity {
 
         public void onPostExecute(String result) {
             try {
+                pd.dismiss();
                 if (result.contains("ok")) {
                     alert_show(Static_Veriable.afterpost);
-                    return;
                 }
-                db.drop_veriid();
-                Toasty.info(getApplicationContext(), Static_Veriable.tmpproblem, 1).show();
+                else
+                {
+                    db.drop_veriid();
+                    Toasty.info(getApplicationContext(), Static_Veriable.tmpproblem, 1).show();
+                }
             } catch (Exception e) {
             }
         }

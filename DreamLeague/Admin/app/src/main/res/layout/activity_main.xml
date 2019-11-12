@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/notificationlogo" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Football Feed Admin"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/uploadlyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/instagramtofacebook"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Insta To facebook"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uplaodtochintha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_below="@+id/instagramtofacebook"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

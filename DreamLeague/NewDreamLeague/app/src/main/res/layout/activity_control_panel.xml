@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ControlPanel">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="DL Kit Maker"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/back"
+            android:textColor="#ffffff"
+            style="@android:style/TextAppearance.Medium"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:gravity="center"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/create"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundedcornerbackground1"
+            android:layout_margin="10dp"
+            android:alpha="0.9"
+            >
+
+            <ImageView
+                android:id="@+id/imgcreate"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/printing"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txtcreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create KIT"
+                android:layout_below="@+id/imgcreate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mykits"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundedcornerbackground1"
+            android:layout_margin="10dp"
+            android:alpha="0.9"
+            android:layout_toRightOf="@+id/create"
+            >
+            <ImageView
+                android:id="@+id/imgmykits"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mykits"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txtmykits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Kits"
+                android:layout_below="@+id/imgmykits"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/feeds"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundedcornerbackground1"
+            android:layout_margin="10dp"
+            android:alpha="0.9"
+            android:layout_below="@+id/create"
+            >
+            <ImageView
+                android:id="@+id/imgfeeds"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/feeds"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txtfeeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feeds"
+                android:layout_below="@+id/imgfeeds"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/webresource"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/roundedcornerbackground1"
+            android:layout_margin="10dp"
+            android:alpha="0.9"
+            android:layout_below="@+id/mykits"
+            android:layout_toRightOf="@+id/feeds"
+            >
+
+            <ImageView
+                android:id="@+id/imgwebresouce"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/web"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txtwebresouce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Resources"
+                android:layout_below="@+id/imgwebresouce"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    </RelativeLayout>

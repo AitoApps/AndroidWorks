@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Theme_Selection">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Choose a Theme"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/back"
+            android:textColor="#ffffff"
+            style="@android:style/TextAppearance.Medium"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lytselecttheme"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:id="@+id/movenext"
+            android:layout_width="30dp"
+            android:layout_height="59dp"
+            android:src="@drawable/movenext"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/moveback"
+            android:layout_width="30dp"
+            android:layout_height="59dp"
+            android:src="@drawable/moveback"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/lytselecttheme"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/txtselectheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@android:style/TextAppearance.Medium"
+            android:text="Choose this Theme"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>

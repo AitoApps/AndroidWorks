@@ -57,14 +57,6 @@
             android:src="@drawable/positionbutton"/>
 
 
-        <ImageView
-            android:id="@+id/loan"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:padding="10dp"
-            android:layout_below="@+id/positions"
-            android:src="@drawable/loan"/>
-
     </RelativeLayout>
 
 
@@ -84,6 +76,7 @@
             android:layout_margin="10dp"
             android:textColor="#fff"
             android:textSize="18dp"
+            android:lineSpacingExtra="3dp"
             android:textStyle="bold"
             android:shadowColor="#7F000000"
             android:shadowDx="5"
@@ -93,52 +86,23 @@
 
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="130dp"
+              android:layout_height="100dp"
               android:layout_below="@+id/help1"
-              android:gravity="center"
               android:layout_margin="10dp"
               >
 
-              <ImageView
-                  android:id="@+id/web"
-                  android:layout_width="100dp"
-                  android:layout_height="100dp"
-                  android:src="@drawable/webicon"
-                  android:padding="10dp"
-                  />
-
-                <TextView
-                    android:id="@+id/txtweb"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="Website"
-                    android:gravity="center_horizontal"
-                    android:layout_below="@+id/web"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    />
 
               <ImageView
                   android:id="@+id/whatsapp"
                   android:layout_width="100dp"
                   android:layout_height="100dp"
-                  android:layout_toRightOf="@+id/web"
                   android:layout_marginLeft="100dp"
                   android:src="@drawable/whatsapp"
-                  android:padding="10dp"
+                  android:padding="14dp"
+                  android:layout_centerInParent="true"
                   />
 
-              <TextView
-                  android:id="@+id/txtwhatsapp"
-                  android:layout_width="100dp"
-                  android:layout_height="wrap_content"
-                  android:text="Whatsapp"
-                  android:gravity="center_horizontal"
-                  android:layout_below="@+id/whatsapp"
-                  android:layout_alignRight="@+id/whatsapp"
-                  android:textColor="#fff"
-                  android:textStyle="bold"
-                  />
+
           </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

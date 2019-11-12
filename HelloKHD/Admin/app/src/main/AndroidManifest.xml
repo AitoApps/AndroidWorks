@@ -21,48 +21,54 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".VideoList"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Add_Students"></activity>
+        <activity android:name=".Students" />
+        <activity android:name=".Add_Scholls" />
+        <activity android:name=".Schools" />
+        <activity android:name=".Add_Programs" />
+        <activity android:name=".Programs" />
+        <activity
+            android:name=".VideoList"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            ></activity>
-        <activity android:name=".Anouncments"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Anouncments"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Video"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Video"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Anouncment"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Anouncment"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".News_List"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".News_List"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_News"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_News"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Shop_List"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Shop_List"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Shops"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Shops"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".Add_VerificationAdmin"
             android:screenOrientation="portrait"
@@ -120,14 +126,15 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.hellokhd_admin.FcmMessagingService"
+        <service
+            android:name=".FcmMessagingService"
             android:enabled="true"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"

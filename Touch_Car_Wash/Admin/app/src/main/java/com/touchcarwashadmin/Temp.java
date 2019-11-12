@@ -8,4 +8,15 @@ public class Temp {
     public static String tempproblem = "Temporary Error ! Please try later";
     public static String weblink = "https://apistatuschinthakal.in/touchcarwash/";
 
+    public static int washveiedit=0,driveredit=0,vehicleedit=0,washpriceedit=0,offeredit=0;
+
+    public static String wv_sn="",wv_registernumber="",wv_imgsig="";
+
+    public static String driver_sn="",driver_washvehicleid="",driver_name="",driver_place="",driver_address="",driver_contact1="",driver_contact2="",driver_licenceno="",driver_imgsig="",driver_licenceimgsig="";
+
+    public static String vehcile_sn="",vehcile_vehiclecompany="",vehcile_imgsig="";
+
+    public static String washprice_sn="",washprice_companyname="",washprice_vehicleid="",washprice_ogprice="",washprice_offerprice="",washprice_imgsig="";
+
+    public static String offer_sn="",offer_companyname="",offer_vehicleid="",offer_washcount="",offer_offercount="",offer_imgsig="";
 }

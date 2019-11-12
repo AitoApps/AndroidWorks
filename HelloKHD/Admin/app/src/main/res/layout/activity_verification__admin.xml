@@ -31,14 +31,7 @@
             android:text="Verification Admin"
             android:textColor="#000" />
 
-        <ImageView
-            android:id="@+id/addproduct"
-            android:layout_width="40.0dip"
-            android:layout_height="40.0dip"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5.0dip"
-            android:src="@drawable/addnew" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -46,10 +39,21 @@
         android:layout_height="fill_parent"
         android:layout_below="@+id/header">
 
+        <Button
+            android:id="@+id/addproduct"
+            android:layout_width="200dp"
+            android:layout_height="40.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="Add Verification Admin"/>
+
         <ListView
             android:id="@+id/list"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:layout_below="@+id/addproduct"
             android:divider="@null" />
 
         <ImageView

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="#e9ebee"
+     >
+    
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >
+        <TextView
+            android:id="@+id/txtbrushwidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brush"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+        <SeekBar
+            android:id="@+id/brushwidth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:progress="40"
+            android:layout_toLeftOf="@+id/brushcolor"
+            android:layout_below="@+id/txtbrushwidth"
+            android:layout_margin="5dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/brushcolor"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/textcolor"
+           android:layout_marginRight="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Apply"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/brushcolor"
+            android:background="@drawable/roundedcornerbutton"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            />
+
+        
+    </RelativeLayout>
+</ScrollView>

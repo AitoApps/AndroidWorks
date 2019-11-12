@@ -14,17 +14,27 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.VideoController;
+import com.google.android.gms.ads.VideoOptions;
+import com.google.android.gms.ads.formats.MediaView;
+import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
+import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -80,9 +90,11 @@ public class YoutubeFormat_Window extends Activity {
     String sdlink = "NA";
     private MediaPlayer mp;
     final DataBase db=new DataBase(this);
-    AdRequest adRequest;
-    public AdView adView1;
     int count = 0;
+
+    UnifiedNativeAd nativeAd;
+    FrameLayout adplaceholder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,31 +107,17 @@ public class YoutubeFormat_Window extends Activity {
             StrictMode.setThreadPolicy(policy);
         }
 
-        adView1 = (AdView) findViewById(R.id.adView1);
-        adRequest = new AdRequest.Builder().build();
-        try {
-            adView1.setAdListener(new AdListener() {
-                public void onAdFailedToLoad(int errorCode) {
-                    try {
-                        if (count <= 10) {
-                            adView1.loadAd(adRequest);
-                            count++;
-                        }
-                    } catch (Exception e) {
-                    }
-                }
-            });
-
-        } catch (Exception e) {
-        }
 
         shimmer_view_container=findViewById(R.id.shimmer_view_container);
         list=findViewById(R.id.list);
         txtheader=findViewById(R.id.txtheader);
+        adplaceholder=findViewById(R.id.adplaceholder);
         feedItems = new ArrayList();
         feedItems1 = new ArrayList();
         listAdapter = new Adapter_Formats(this, feedItems);
         list.setAdapter(listAdapter);
+
+        refreshad();
 
         if(Temp.videosource.equalsIgnoreCase("1"))
         {
@@ -153,6 +151,40 @@ public class YoutubeFormat_Window extends Activity {
 
     }
 
+public void refreshad()
+{
+    AdLoader.Builder builder = new AdLoader.Builder((this), "ca-app-pub-5517777745693327/7431594234");
+    builder.forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+        public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+            if (nativeAd != null) {
+                nativeAd.destroy();
+            }
+            nativeAd = unifiedNativeAd;
+            UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater().inflate(R.layout.ad_unified, null);
+            populateUnifiedNativeAdView(unifiedNativeAd, adView);
+            adplaceholder.removeAllViews();
+            adplaceholder.addView(adView);
+        }
+    });
+    builder.withNativeAdOptions(new NativeAdOptions.Builder().setVideoOptions(new VideoOptions.Builder().setStartMuted(true).build()).build());
+
+    builder.withAdListener(new AdListener() {
+        public void onAdFailedToLoad(int errorCode) {
+            try {
+                if (count <= 15) {
+
+                    refreshad();
+                    count++;
+                }
+            } catch (Exception e) {
+            }
+        }
+        public void onAdLoaded() {
+            super.onAdLoaded();
+            adplaceholder.setVisibility(View.VISIBLE);
+        }
+    }).build().loadAd(new AdRequest.Builder().build());
+}
 
     public String extractYTId(String ytUrl) {
         Matcher matcher = Pattern.compile("^https?://.*(?:youtu.be/|v/|u/\\w/|embed/|watch?v=)([^#&?]*).*$", Pattern.CASE_INSENSITIVE).matcher(ytUrl);
@@ -1346,11 +1378,6 @@ public class YoutubeFormat_Window extends Activity {
         try
         {
             count = 0;
-            try {
-                adView1.loadAd(adRequest);
-            } catch (Exception e) {
-
-            }
         }
         catch (Exception a)
         {
@@ -1478,5 +1505,69 @@ public class YoutubeFormat_Window extends Activity {
         }
 
 
+    }
+
+    public void populateUnifiedNativeAdView(UnifiedNativeAd nativeAd2, UnifiedNativeAdView adView) {
+        adView.setMediaView((MediaView) adView.findViewById(R.id.ad_media));
+        adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
+        adView.setBodyView(adView.findViewById(R.id.ad_body));
+        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+        adView.setIconView(adView.findViewById(R.id.ad_app_icon));
+        adView.setPriceView(adView.findViewById(R.id.ad_price));
+        adView.setStarRatingView(adView.findViewById(R.id.ad_stars));
+        adView.setStoreView(adView.findViewById(R.id.ad_store));
+        adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
+        ((TextView) adView.getHeadlineView()).setText(nativeAd2.getHeadline());
+        if (nativeAd2.getBody() == null) {
+            adView.getBodyView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getBodyView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getBodyView()).setText(nativeAd2.getBody());
+        }
+        if (nativeAd2.getCallToAction() == null) {
+            adView.getCallToActionView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getCallToActionView().setVisibility(View.VISIBLE);
+            ((Button) adView.getCallToActionView()).setText(nativeAd2.getCallToAction());
+        }
+        if (nativeAd2.getIcon() == null) {
+            adView.getIconView(). setVisibility(View.GONE);
+        } else {
+            ((ImageView) adView.getIconView()).setImageDrawable(nativeAd2.getIcon().getDrawable());
+            adView.getIconView().setVisibility(View.VISIBLE);
+        }
+        if (nativeAd2.getPrice() == null) {
+            adView.getPriceView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getPriceView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getPriceView()).setText(nativeAd2.getPrice());
+        }
+        if (nativeAd2.getStore() == null) {
+            adView.getStoreView().setVisibility(View.INVISIBLE);
+        } else {
+            adView.getStoreView().setVisibility(View.VISIBLE);
+            ((TextView) adView.getStoreView()).setText(nativeAd2.getStore());
+        }
+        if (nativeAd2.getStarRating() == null) {
+            adView.getStarRatingView().setVisibility(View.INVISIBLE);
+        } else {
+            ((RatingBar) adView.getStarRatingView()).setRating(nativeAd2.getStarRating().floatValue());
+            adView.getStarRatingView().setVisibility(View.VISIBLE);
+        }
+        if (nativeAd2.getAdvertiser() == null) {
+            adView.getAdvertiserView().setVisibility(View.INVISIBLE);
+        } else {
+            ((TextView) adView.getAdvertiserView()).setText(nativeAd2.getAdvertiser());
+            adView.getAdvertiserView().setVisibility(View.VISIBLE);
+        }
+        adView.setNativeAd(nativeAd2);
+        VideoController vc = nativeAd2.getVideoController();
+        if (vc.hasVideoContent()) {
+            vc.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
+                public void onVideoEnd() {
+                    super.onVideoEnd();
+                }
+            });
+        }
     }
 }

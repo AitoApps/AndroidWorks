@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -30,7 +31,7 @@ import data.Shop_FeedItem;
 import data.Stage_FeedItem;
 
 public class Shop_List extends AppCompatActivity {
-    ImageView addproduct;
+    Button addproduct;
     ImageView back;
     ConnectionDetecter cd;
     Typeface face;
@@ -48,7 +49,7 @@ public class Shop_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop__list);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
-        addproduct = (ImageView) findViewById(R.id.addproduct);
+        addproduct = findViewById(R.id.addproduct);
         back = (ImageView) findViewById(R.id.back);
         text = (TextView) findViewById(R.id.text);
         addproduct.setOnClickListener(new View.OnClickListener() {
@@ -61,18 +62,32 @@ public class Shop_List extends AppCompatActivity {
         if(Temp.shoptypes.equalsIgnoreCase("0"))
         {
             text.setText("Shops");
+            addproduct.setText("Add Shops");
         }
         else if(Temp.shoptypes.equalsIgnoreCase("1"))
         {
             text.setText("Places");
+            addproduct.setText("Add Place");
         }
         else if(Temp.shoptypes.equalsIgnoreCase("2"))
         {
             text.setText("Rooms");
+            addproduct.setText("Add Rooms");
         }
         else if(Temp.shoptypes.equalsIgnoreCase("3"))
         {
             text.setText("Docters");
+            addproduct.setText("Add Docter");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("4"))
+        {
+            text.setText("ATM");
+            addproduct.setText("Add ATM");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("5"))
+        {
+            text.setText("Petrol Pumb");
+            addproduct.setText("Add Petrol Pumb");
         }
 
         text.setTypeface(face);

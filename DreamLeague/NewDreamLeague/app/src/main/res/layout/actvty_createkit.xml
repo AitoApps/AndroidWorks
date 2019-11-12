@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Kit_Creation">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar"
+        >
+        <ImageView
+            android:id="@+id/back"
+            android:layout_height="20dp"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Kit Maker"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toLeftOf="@+id/save"
+            android:textColor="#ffffff"
+            style="@android:style/TextAppearance.Medium"
+            />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:src="@drawable/uploadicon"
+           android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"
+            android:fontFamily=""
+            android:textStyle="bold"
+            android:layout_below="@+id/save"
+            />
+
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        android:layout_below="@+id/header"
+        ads:adUnitId="ca-app-pub-5517777745693327/5945216196" />
+
+    <RelativeLayout
+        android:id="@+id/lytimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controls"
+        android:layout_below="@+id/adView1"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <RelativeLayout
+                android:id="@+id/lytfilter"
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/addfilter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/addfilter"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="Filter"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:layout_below="@+id/addfilter"
+                    />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/lyttext"
+                android:layout_width="70dp"
+                android:layout_toRightOf="@+id/lytfilter"
+                android:layout_marginLeft="15dp"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/addtext"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/addtext"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="Text"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:layout_below="@+id/addtext"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lytbrush"
+                android:layout_width="70dp"
+                android:layout_toRightOf="@+id/lyttext"
+                android:layout_marginLeft="15dp"
+                android:layout_height="70dp">
+
+
+                <ImageView
+                    android:id="@+id/addbrush"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/addbrush"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="Brush"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_below="@+id/addbrush"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytimg"
+                android:layout_width="70dp"
+                android:layout_toRightOf="@+id/lytbrush"
+                android:layout_marginLeft="15dp"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/addimage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/addimage"
+                    android:layout_marginLeft="10dp"
+                    android:padding="7dp"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="Image"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_below="@+id/addimage"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
