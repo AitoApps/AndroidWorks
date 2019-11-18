@@ -13,6 +13,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,9 +28,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.footballstatus.ConnectionDetecter;
+import com.footballstatus.R;
+import com.footballstatus.Temp;
+import com.footballstatus.UserDatabaseHandler;
+import com.footballstatus.VideoPlayer;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader.Builder;
 import com.google.android.gms.ads.AdRequest;
@@ -41,15 +48,9 @@ import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAd.OnUnifiedNativeAdLoadedListener;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
-import com.suhi_chintha.DataDB1;
-import com.suhi_chintha.DataDB2;
-import com.suhi_chintha.DataDB4;
-import com.suhi_chintha.NetConnection;
-import com.suhi_chintha.R;
-import com.suhi_chintha.Static_Variable;
-import com.suhi_chintha.VideoPlayer;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.URL;
@@ -64,11 +65,9 @@ import es.dmoral.toasty.Toasty;
 public class Video_List_Adapter extends BaseAdapter {
 
     public Activity activity;
-    NetConnection cd;
+    ConnectionDetecter cd;
     public Context context;
-    public DataDB1 db;
-    public DataDB2 db2;
-    public DataDB4 db4;
+    public UserDatabaseHandler udb;
     Typeface face;
     Typeface face1;
 
@@ -76,17 +75,24 @@ public class Video_List_Adapter extends BaseAdapter {
     private LayoutInflater inflater;
     UnifiedNativeAd nativeAd;
     ProgressDialog pd;
+
+    String[] PERMISSIONS = {
+            android.Manifest.permission.INTERNET,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            android.Manifest.permission.READ_EXTERNAL_STORAGE,
+            android.Manifest.permission.ACCESS_NETWORK_STATE,
+            android.Manifest.permission.ACCESS_WIFI_STATE
+    };
+
     public Video_List_Adapter(Activity activity2, List<videoList_Feed> feedItems2) {
         activity = activity2;
         feedItems = feedItems2;
         context = activity2.getApplicationContext();
         pd = new ProgressDialog(activity2);
-        db = new DataDB1(context);
-        db2 = new DataDB2(context);
-        db4 = new DataDB4(context);
-        cd=new NetConnection(context);
-        face = Typeface.createFromAsset(context.getAssets(), "asset_fonts/proximanormal.ttf");
-        face1 = Typeface.createFromAsset(context.getAssets(), "asset_fonts/proxibold.otf");
+        udb = new UserDatabaseHandler(context);
+        cd=new ConnectionDetecter(context);
+        face = Typeface.createFromAsset(context.getAssets(), "proximanormal.ttf");
+        face1 = Typeface.createFromAsset(context.getAssets(), "proxibold.otf");
     }
 
     public int getCount() {
@@ -124,13 +130,14 @@ public class Video_List_Adapter extends BaseAdapter {
         time.setTypeface(face1);
         time.setText(item.getRegdate());
         String[] k = item.getDim().split("x");
-        float calheight = (Float.valueOf(k[1]).floatValue() / Float.valueOf(k[0]).floatValue()) * (Float.valueOf(db2.get_screenwidth()).floatValue() - 40.0f);
+        float calheight = (Float.valueOf(k[1]).floatValue() / Float.valueOf(k[0]).floatValue()) * (Float.valueOf(udb.getscreenwidth()).floatValue() - 40.0f);
         img.getLayoutParams().height = Math.round(calheight);
         Glide.with(context).load(item.getImgsrc()).transition(DrawableTransitionOptions.withCrossFade()).into(img);
-        if (i == 0 || i / 3 != 1) {
+        if (item.getIsadshow()==0) {
             adplaceholder. setVisibility(View.GONE);
         } else {
-            Builder builder = new Builder((Context) activity, "ca-app-pub-2432830627480060/5890429850");
+            adplaceholder. setVisibility(View.VISIBLE);
+            Builder builder = new Builder((Context) activity, "ca-app-pub-5517777745693327/9083774607");
             builder.forUnifiedNativeAd(new OnUnifiedNativeAdLoadedListener() {
                 public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
                     if (nativeAd != null) {
@@ -150,7 +157,6 @@ public class Video_List_Adapter extends BaseAdapter {
 
                 public void onAdLoaded() {
                     super.onAdLoaded();
-                    adplaceholder.setVisibility(View.VISIBLE);
                 }
             }).build().loadAd(new AdRequest.Builder().build());
         }
@@ -171,18 +177,18 @@ public class Video_List_Adapter extends BaseAdapter {
                 if (item.getMediatype().equalsIgnoreCase("1")) {
 
                     if (item.getTitle().equalsIgnoreCase("NA") || item.getTitle().equalsIgnoreCase("")) {
-                        Static_Variable.videodownslink = System.currentTimeMillis()+".mp4";
+                       Temp.videodownslink = System.currentTimeMillis()+".mp4";
                     } else {
-                        Static_Variable.videodownslink = item.getTitle().replaceAll(" ", "_")+".mp4";
+                        Temp.videodownslink = item.getTitle().replaceAll(" ", "_")+".mp4";
                     }
                     download(item.getVideosrc());
                 }
                 else
                 {
                     if (item.getTitle().equalsIgnoreCase("NA") || item.getTitle().equalsIgnoreCase("")) {
-                        Static_Variable.videodownslink = System.currentTimeMillis()+".jpg";
+                        Temp.videodownslink = System.currentTimeMillis()+".jpg";
                     } else {
-                        Static_Variable.videodownslink = item.getTitle().replaceAll(" ", "_")+".jpg";
+                        Temp.videodownslink = item.getTitle().replaceAll(" ", "_")+".jpg";
                     }
                     download(item.getImgsrc());
                 }
@@ -191,7 +197,8 @@ public class Video_List_Adapter extends BaseAdapter {
         layout.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
                 if (item.getMediatype().equalsIgnoreCase("1")) {
-                    Static_Variable.videolinks = ((videoList_Feed) feedItems.get(i)).getVideosrc();
+                    Temp.isvideo=1;
+                    Temp.videolinks = ((videoList_Feed) feedItems.get(i)).getVideosrc();
                     Intent i = new Intent(context, VideoPlayer.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(i);
@@ -206,7 +213,7 @@ public class Video_List_Adapter extends BaseAdapter {
         builder.setMessage(message).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 if (!cd.isConnectingToInternet()) {
-                    Toast.makeText(context, Static_Variable.nonet, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, Temp.nointernet, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -282,15 +289,24 @@ public class Video_List_Adapter extends BaseAdapter {
 
     public void download(String downlink1) {
         try {
-            Request request = new Request(Uri.parse(downlink1));
-            request.allowScanningByMediaScanner();
-            request.setNotificationVisibility(1);
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, Static_Variable.videodownslink);
-            Context context2 = context;
-            Context context3 = context;
-            ((DownloadManager) context2.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
-            Toasty.success(context, (CharSequence) "Download Started", Toast.LENGTH_SHORT).show();
+
+            if (!hasPermissions(context, PERMISSIONS)) {
+                ActivityCompat.requestPermissions(activity,PERMISSIONS, 1);
+
+            }
+            else
+            {
+                Request request = new Request(Uri.parse(downlink1));
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(1);
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, Temp.videodownslink);
+                ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                Toasty.success(context, (CharSequence) "Download Started", Toast.LENGTH_SHORT).show();
+            }
+
+
         } catch (Exception e) {
+         // Log.w("Gdsd",Log.getStackTraceString(e));
         }
     }
 
@@ -401,48 +417,24 @@ public class Video_List_Adapter extends BaseAdapter {
         }
     }
 
-    public class downloadfb extends AsyncTask<String, Void, String> {
-        public void onPreExecute() {
-            pd.setMessage("Please wait...");
-            pd.setCancelable(false);
-            pd.show();
-        }
-        public String doInBackground(String... arg0) {
-            try {
+    public static boolean hasPermissions(Context context, String... permissions) {
 
-                String link= Static_Variable.entypoint1 +"download.php";
-                String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(Static_Variable.videolinks, "UTF-8");
-                URL url = new URL(link);
-                URLConnection conn = url.openConnection();
-                conn.setDoOutput(true);
-                OutputStreamWriter wr = new OutputStreamWriter
-                        (conn.getOutputStream());
-                wr.write(data);
-                wr.flush();
-                BufferedReader reader = new BufferedReader
-                        (new InputStreamReader(conn.getInputStream()));
-                StringBuilder sb = new StringBuilder();
-                String line = null;
-                while((line = reader.readLine()) != null)
-                {
-                    sb.append(line);
+        try
+        {
+            if (!(context == null || permissions == null)) {
+                for (String permission : permissions) {
+                    if (ActivityCompat.checkSelfPermission(context, permission) != 0) {
+                        return false;
+                    }
                 }
-                return sb.toString();
-            } catch (Exception e) {
-                return new String("Unable to connect server! Please check your internet connection");
             }
+
         }
-        public void onPostExecute(String result) {
-            try {
-                pd.dismiss();
-                if (result != "") {
-                    String[] k = result.split(",");
-                    addvideo(k[0], k[1], k[2], k[3]);
-                }
-            } catch (Exception e) {
-            }
+        catch (Exception a)
+        {
+            //Log.w("Athiss",Log.getStackTraceString(a));
         }
+        return true;
     }
 
 }

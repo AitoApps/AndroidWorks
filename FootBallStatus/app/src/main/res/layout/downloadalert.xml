@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe9ebee">
+
+    <RelativeLayout
+        android:id="@+id/first"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:padding="10.0dip">
+
+        <ImageView
+            android:id="@+id/sdicon"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/img_download" />
+
+        <TextView
+            android:id="@+id/sd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/sdicon"
+            android:text="SD MP4(3.3MB)"
+            android:textColor="#ff075a50" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/hline"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@+id/first"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/second"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hline"
+        android:background="#ffffffff"
+        android:padding="10.0dip">
+
+        <ImageView
+            android:id="@+id/hdicon"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/img_download" />
+
+        <TextView
+            android:id="@+id/hd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/hdicon"
+            android:text="HD MP4(7.3MB)"
+            android:textColor="#ffe91f25" />
+    </RelativeLayout>
+</RelativeLayout>

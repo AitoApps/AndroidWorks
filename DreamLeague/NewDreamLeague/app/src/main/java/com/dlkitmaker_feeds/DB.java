@@ -9,12 +9,13 @@ import java.util.ArrayList;
 
 public class DB extends SQLiteOpenHelper {
 
- 	private static final int DATABASE_VERSION =2;
+ 	private static final int DATABASE_VERSION =5;
 	private static final String DATABASE_NAME = "dream_db";
 	private static final String TABLE_name1 = "scwidth";
 	private static final String TABLE_name2 = "teamlist";
 	private static final String TABLE_name3= "kit_theme";
 	private static final String TABLE_name4= "mykits";
+	private static final String TABLE_name5= "topisss";
 
  	private static final String pkey= "pkey";
 	private static final String screenwidth = "screenwidth";
@@ -29,12 +30,15 @@ public class DB extends SQLiteOpenHelper {
 	private static String CREATE_videoid_TABLE2 = "CREATE TABLE " + TABLE_name2 + "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+team_id +" TEXT,"+team_kitname +" TEXT,"+team_imgurl+" TEXT"+")";
 	private static String CREATE_videoid_TABLE3 = "CREATE TABLE " + TABLE_name3+ "("+common+" TEXT"+")";
 	private static String CREATE_videoid_TABLE4 = "CREATE TABLE " + TABLE_name4+ "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+common+" TEXT"+")";
+	private static String CREATE_videoid_TABLE5 = "CREATE TABLE " + TABLE_name5+ "("+pkey +" INTEGER PRIMARY KEY AUTOINCREMENT,"+common+" TEXT"+")";
+
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(CREATE_videoid_TABLE1);
 		db.execSQL(CREATE_videoid_TABLE2);
 		db.execSQL(CREATE_videoid_TABLE3);
 		db.execSQL(CREATE_videoid_TABLE4);
+		db.execSQL(CREATE_videoid_TABLE5);
 	}
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -42,6 +46,7 @@ public class DB extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name2);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name3);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name4);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name5);
         onCreate(db);
 	}
 	@Override
@@ -50,6 +55,7 @@ public class DB extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name2);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name3);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name4);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_name5);
 		onCreate(db);
 	}
 
@@ -184,5 +190,34 @@ public class DB extends SQLiteOpenHelper {
 	{
 		SQLiteDatabase db = this.getWritableDatabase();
 		db.execSQL("delete from "+ TABLE_name1);
+	}
+
+
+	public void addcommon(String common1)
+	{
+		deletecommon();
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(common,common1);
+		db.insert(TABLE_name5,null, values);
+		db.close();
+	}
+	public String getcommon(){
+		String link="";
+		SQLiteDatabase sql=this.getReadableDatabase();
+		String query = "SELECT  * FROM " + TABLE_name5;
+
+		Cursor c=sql.rawQuery(query,null);
+		while(c.moveToNext()) {
+			link=c.getString(1);
+		}
+		c.close();
+		return link;
+	}
+
+	public void deletecommon()
+	{
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.execSQL("delete from "+ TABLE_name5);
 	}
 }

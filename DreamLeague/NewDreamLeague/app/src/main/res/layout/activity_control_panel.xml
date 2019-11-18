@@ -43,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/header"
-        android:gravity="center"
+        android:layout_above="@+id/adplaceholder"
+        android:gravity="center_horizontal"
         >
 
 
@@ -186,5 +187,15 @@
     </RelativeLayout>
 
 
-
+    <FrameLayout
+        android:id="@+id/adplaceholder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5.0dip"
+        android:padding="5dp"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/the_border2"
+        android:visibility="visible" />
     </RelativeLayout>

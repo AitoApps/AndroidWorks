@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Bus">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Add /Edit Video"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Title"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txttitle"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtstation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Station"
+                android:layout_below="@+id/title"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/station"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txtstation"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <TextView
+                android:id="@+id/txtfromstation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="From Station"
+                android:layout_below="@+id/station"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/fromstation"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txtfromstation"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <TextView
+                android:id="@+id/txttostation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="From Station"
+                android:layout_below="@+id/fromstation"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/tostation"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txttostation"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <TextView
+                android:id="@+id/txttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Time"
+                android:layout_below="@+id/tostation"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_below="@+id/txttime"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/time"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

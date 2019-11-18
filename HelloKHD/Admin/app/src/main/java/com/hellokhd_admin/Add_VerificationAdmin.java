@@ -70,7 +70,12 @@ public class Add_VerificationAdmin extends AppCompatActivity {
         mobile.setTypeface(face);
         update.setTypeface(face);
 
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         if (Temp.adminedit == 1) {
             name.setText(Temp.admin_name);

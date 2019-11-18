@@ -100,7 +100,12 @@ public class Add_Mark_Admin extends AppCompatActivity {
         update.setTypeface(face);
 
 
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         if (Temp.adminedit == 1) {
             name.setText(Temp.admin_name);
             username.setText(Temp.admin_username);

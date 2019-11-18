@@ -66,6 +66,13 @@ public class Add_Video extends AppCompatActivity {
         duration.setTypeface(face);
         update.setTypeface(face);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         if (Temp.videoedit== 1) {
             title.setText(Temp.videotitle);
             video.setText(Temp.videoid);

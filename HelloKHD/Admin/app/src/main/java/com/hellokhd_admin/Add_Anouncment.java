@@ -63,7 +63,12 @@ public class Add_Anouncment extends AppCompatActivity {
         anouncment.setTypeface(face);
         update.setTypeface(face);
 
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         if (Temp.anouncmentedit == 1) {
             anouncment.setText(Temp.anouncment);

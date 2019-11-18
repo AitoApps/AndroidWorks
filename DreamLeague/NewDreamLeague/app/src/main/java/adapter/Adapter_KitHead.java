@@ -22,16 +22,13 @@ import java.util.List;
 import data.Feed_KitHeads;
 
 public class Adapter_KitHead extends RecyclerView.Adapter<Adapter_KitHead.Myviewholder> {
-
     private List<Feed_KitHeads> items;
     private Context context;
-
     Activity activity;
     public Adapter_KitHead(Activity activity, List<Feed_KitHeads> items, Context context) {
         this.items = items;
         this.context=context;
         this.activity=activity;
-
     }
     @Override
     public Myviewholder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -50,7 +47,6 @@ public class Adapter_KitHead extends RecyclerView.Adapter<Adapter_KitHead.Myview
                 }
                 else
                 {
-
                     switch (holder.getAdapterPosition())
                     {
                         case 0:
@@ -78,30 +74,23 @@ public class Adapter_KitHead extends RecyclerView.Adapter<Adapter_KitHead.Myview
                             Temp.resourcetitle="DL Soccer 2";
                             opensubkit();
                             break;
-
                         case 5:
-                              opendownmate();
+                            Temp.resourcelink="https://www.dream11.today/";
+                            Temp.resourcetitle="Dream 11";
+                            opensubkit();
                             break;
 
+                        case 6:
+                            Temp.resourcelink="https://www.dreamkitsoccer.com/";
+                            Temp.resourcetitle="DLS";
+                            opensubkit();
+                            break;
                     }
                 }
             }
         });
     }
 
-    @Override
-    public int getItemCount() {
-        return items.size();
-    }
-
-    class Myviewholder extends RecyclerView.ViewHolder {
-        public ImageView imageView;
-
-        public Myviewholder(View itemView) {
-            super(itemView);
-            imageView = (ImageView) itemView.findViewById(R.id.imageview);
-        }
-    }
 
     public void opensubkit()
     {
@@ -126,16 +115,18 @@ public class Adapter_KitHead extends RecyclerView.Adapter<Adapter_KitHead.Myview
 
     }
 
-
-    public void opendownmate()
-    {
-
-        try {
-            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.down_mate")));
-        } catch (android.content.ActivityNotFoundException anfe) {
-            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.down_mate")));
-        }
+    @Override
+    public int getItemCount() {
+        return items.size();
     }
 
+    class Myviewholder extends RecyclerView.ViewHolder {
+        public ImageView imageView;
+
+        public Myviewholder(View itemView) {
+            super(itemView);
+            imageView = (ImageView) itemView.findViewById(R.id.imageview);
+        }
+    }
 
 }

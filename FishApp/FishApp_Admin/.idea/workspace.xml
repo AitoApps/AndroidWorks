@@ -7,246 +7,104 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e02328b-5215-4c9d-b6c1-4e312fa009bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../DayDeal/Marketting/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/layout/ad_unified.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/assets/font/proxibold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/assets/font/proximanormal.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/adapter/ColorsList_Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/adapter/FiltersList_Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/adapter/TextColorsList_Adapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/com/dreamkitmaker_feeds/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/com/dreamkitmaker_feeds/Temp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/data/Colors_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/data/Filters_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/java/data/TextColors_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/auto_fix.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/b_n_w.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/brightness.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/contrast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/cross_process.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/documentary.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/dual_tone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/fill_light.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/fish_eye.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/flip_horizental.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/flip_vertical.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/grain.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/gray_scale.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/lomish.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/negative.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/original.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/posterize.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/rotate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/saturate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/sepia.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/sharpen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/temprature.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/the_border1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/the_border2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/tint.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/drawable/vignette.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/layout/color_picker_item_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/layout/footerview.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/layout/fullloaded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/layout/imgfilter_item_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DreamLeague/App/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Add_Programs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Add_Scholls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Add_Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Programs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Schools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/data/Programs_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_add__programs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_add__scholls.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_add__students.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_programs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_schools.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_students.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/custom_districs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/custom_itemtype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/assets/heading.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/assets/proxibold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/assets/proximanormal.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/adapter/Verificationlist_ListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/ConnectionDetecter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/FcmMessagingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/NotificationID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/Registration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/Temp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/com/hello_khd_verification_admin/UserDatabaseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/java/data/Verification_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/confirm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/nointernet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/nophoto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/nostatus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/roundedcornerbackground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/roundedcornerbutton.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/the_border.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/title_bar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/drawable/titlebargradiant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/layout/custom_stdulist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/layout/customnotification.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/layout/footerview.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/layout/fullloaded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/Hello_KHD_Verification_Admin/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/java/com/hellokhd/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/google-services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Driverslist_ListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Offercountlist_ListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Vehicles_ListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Washpricelist_ListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Washvehicles_ListAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Drivers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Offer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Wash_Vehicles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Washprice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/DriverList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/FcmMessagingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Offer_Management.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Vehicle_Management.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/WashPrice_List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Wash_Vehicles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/Drivers_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/OfferCount_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/Vehicles_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/WashVehicles_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/Washprice_FeedItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__drivers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__offer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__vehicle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__wash__vehicles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__washprice.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_driver_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_offer__management.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_wash__vehicles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_wash_price__list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_driverslist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_offer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_prices.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_vehicles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_washvehicles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/dialogupload.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/footerview.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/fullloaded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DailyBill/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DailyBill/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Downly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Downly/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Downly/App/app/src/main/java/com/downly_app/YoutubeFormat_Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Downly/App/app/src/main/java/com/downly_app/YoutubeFormat_Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/layout/activity_youtube_format__window.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/layout/activity_youtube_format__window.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Downly/App/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/java/com/hellokhd/Location_Mapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/nointernet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/roundedcornerbackground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/roundedcornerbutton.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/roundedcornergreen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/smalllogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/the_border1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/drawable/titlebargradiant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/layout/activity_location__mapping.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Accorieslist_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Vehicles_For_Price_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/adapter/Washtypes_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Accorie_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Accories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Add_Wash_Types.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/WashTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/Accories_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/Vehicles_For_Price_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/data/WashTypes_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_accorie__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__accories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_add__wash__types.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_accories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_vehicles_forprice.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/custom_washtypes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/assets/heading.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/assets/proxibold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/assets/proximanormal.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/java/com/touchcarwash_driver/ConnectionDetecter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/java/com/touchcarwash_driver/FcmMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/java/com/touchcarwash_driver/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/java/com/touchcarwash_driver/Temp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/java/com/touchcarwash_driver/UserDatabaseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/accounts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/availaibility.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/myjobs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/notierror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/option.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/roundedcorner_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/roundedcornerbackground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/roundedcornerbutton.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/roundedcornergreen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/roundedcornerradious.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/smalllogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/the_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/titlebargradiant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/drawable/update.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/layout/navigation_header.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Driver/app/src/main/res/menu/drawr_actvty.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/java/com/touchcarwash_user/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/User/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -255,65 +113,21 @@
       <change beforePath="$PROJECT_DIR$/../FishApp_User/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp_User/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FishApp_User/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp_User/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FishApp_User/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp_User/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Add_Shops.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Add_Shops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Advt_List.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Advt_List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Anouncments.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Anouncments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/DatabaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/MarkAdminList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/MarkAdminList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/News_List.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/News_List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Shop_List.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Shop_List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Stage_List.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Stage_List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Temp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Verification_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/Verification_Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/VideoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/java/com/hellokhd_admin/VideoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_advt__list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_advt__list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_anouncments.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_anouncments.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_markadmin__list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_markadmin__list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_news__list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_news__list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_shop__list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_shop__list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_stage__list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_stage__list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_verification__admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_verification__admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_video_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/layout/activity_video_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/Admin/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Act_Pos_Subcat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Act_Pos_Subcat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Act_Pymnt_Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Act_Pymnt_Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Album_Pos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Album_Pos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Album_Pos_Fvrt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Album_Pos_Fvrt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Complete_Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Complete_Task_Confirm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Cpanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Cpanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Mobile_verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Mobile_verification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Paytm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Paytm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Position_View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Position_View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Recharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/Recharge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/UPIID.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/java/com/mal_suthra/UPIID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/activity_complete__task.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/activity_complete__task__confirm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/actvty_pos_result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/actvty_pos_result.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/avty_pymtn_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/avty_pymtn_card.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/confirm_age.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/confirm_age.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/frget_question.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/app/src/main/res/layout/frget_question.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/KS_WEB/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/KS_WEB/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../KS/server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../KS/server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/debug/app-debug.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/java/com/hellokhd/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/java/com/hellokhd/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/User/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/User/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/User/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HelloKHD/srever.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HelloKHD/srever.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Servers" beforeDir="false" afterPath="$PROJECT_DIR$/../../Servers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/DatabaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/Temp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/drawable/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/drawable/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/drawable/smalllogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/drawable/smalllogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/WashPrice_List.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Touch_Car_Wash/Admin/app/src/main/java/com/touchcarwashadmin/WashPrice_List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Touch_Car_Wash/dbss.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -345,13 +159,50 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="58" column="69" lean-forward="true" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/FishCatogery_ListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/Fishlist_ListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="105" column="60" lean-forward="true" selection-start-line="105" selection-start-column="60" selection-end-line="105" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_fishlist.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edit.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="432">
               <caret line="24" column="42" selection-start-line="20" selection-start-column="7" selection-end-line="24" selection-end-column="42" />
             </state>
           </provider>
@@ -360,7 +211,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fishappadmin/FcmMessagingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
+            <state relative-caret-position="72">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
@@ -368,15 +219,15 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
+            <state relative-caret-position="2268">
               <caret line="126" column="18" selection-start-line="119" selection-start-column="7" selection-end-line="126" selection-end-column="18" />
             </state>
           </provider>
+          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fishappadmin/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -391,9 +242,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="105" />
-    <option name="y" value="410" />
-    <option name="width" value="1920" />
+    <option name="x" value="165" />
+    <option name="y" value="230" />
+    <option name="width" value="1505" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -402,9 +253,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -421,7 +269,7 @@
               <item name="FishApp_Admin" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="fishappadmin" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="adapter" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="FishApp_Admin" type="1abcf292:AndroidViewProjectNode" />
@@ -432,13 +280,7 @@
               <item name="FishApp_Admin" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="FishApp_Admin" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="FishApp_Admin" type="1abcf292:AndroidViewProjectNode" />
@@ -448,6 +290,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -545,10 +390,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14295302" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1785235" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -563,6 +407,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.17280453" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
+      <window_info anchor="right" id="Preview" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -579,30 +424,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="432">
           <caret line="24" column="42" selection-start-line="20" selection-start-column="7" selection-end-line="24" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fishappadmin/FcmMessagingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
+        <state relative-caret-position="72">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="2268">
           <caret line="126" column="18" selection-start-line="119" selection-start-column="7" selection-end-line="126" selection-end-column="18" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/fishappadmin/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -610,6 +452,38 @@
           <caret line="25" column="40" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="58" column="69" lean-forward="true" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/FishCatogery_ListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/Fishlist_ListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="105" column="60" lean-forward="true" selection-start-line="105" selection-start-column="60" selection-end-line="105" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_fishlist.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edit.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>

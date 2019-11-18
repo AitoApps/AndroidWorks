@@ -17,6 +17,6 @@
     <string name="filter_normal">Normal</string>
     <string name="action_save">SAVE</string>
     <string name="action_open">OPEN</string>
-
+    <string name="ad_attribution">Ad</string>
 
 </resources>

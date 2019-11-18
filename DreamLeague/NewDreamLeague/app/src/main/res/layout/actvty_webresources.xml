@@ -28,7 +28,7 @@
             android:layout_centerVertical="true"
             android:text=""
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/back"
+            android:layout_toRightOf="@+id/moveback"
             android:textColor="#ffffff"
             android:textSize="20dp"
             android:textStyle="bold"

@@ -19,7 +19,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:scaleType="fitXY"
-            android:src="@drawable/logo"
+            android:src="@drawable/back"
             android:layout_centerVertical="true"
             android:layout_marginLeft="3dp"
             />
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="DL Kit Maker"
+            android:text="Web Resources"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/back"
             android:textColor="#ffffff"
@@ -47,56 +47,14 @@
         android:layout_above="@+id/adView1"
         >
 
-        <RelativeLayout
-            android:id="@+id/control"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:layout_margin="5dp"
-            >
-
-            <Button
-                android:id="@+id/create"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="Create"
-                android:layout_margin="5dp"
-                android:textColor="#fff"
-                android:background="@drawable/roundedcornerbutton"
-                />
-
-            <Button
-                android:id="@+id/mykits"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="My Kits"
-                android:layout_toRightOf="@+id/create"
-                android:layout_margin="5dp"
-                android:textColor="#fff"
-
-                android:background="@drawable/roundedcornerbutton"
-                />
-        </RelativeLayout>
 
 
-        <TextView
-            android:id="@+id/dreamwebs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DreamKit Web Sites"
-            android:layout_below="@+id/control"
-            android:layout_margin="5dp"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            />
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:splitMotionEvents="false"
             android:id="@+id/recylerview"
             android:layout_margin="5dp"
-            android:layout_below="@+id/dreamwebs"
 
             />
         <ImageView

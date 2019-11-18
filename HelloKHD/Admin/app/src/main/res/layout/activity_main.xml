@@ -32,6 +32,16 @@
             android:layout_toRightOf="@+id/logo"
             android:text="Admin"
             android:textColor="#000000" />
+
+
+           <ImageView
+               android:id="@+id/logout"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:src="@drawable/logout"
+               android:layout_alignParentRight="true"
+               android:padding="10dp"
+               />
     </RelativeLayout>
 
     <ScrollView
@@ -48,6 +58,28 @@
                 android:layout_height="match_parent"
                 android:stretchColumns="*"
                 >
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/districresult"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/districlist"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/schoolresult"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/schoolreult"
+                        android:layout_margin="5dp"
+                        />
+
+
+                </TableRow>
+
 
                 <TableRow>
 
@@ -188,10 +220,89 @@
                         android:layout_margin="5dp"
                         />
 
+                    <ImageView
+                        android:id="@+id/hospital"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/hospital"
+                        android:layout_margin="5dp"
+                        />
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/accomedation"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/accomedation"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/food"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/food"
+                        android:layout_margin="5dp"
+                        />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/ambulance"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ambulance"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/transport"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/transportation"
+                        android:layout_margin="5dp"
+                        />
+
+                </TableRow>
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/bus"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/bus"
+                        android:layout_margin="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/train"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/train"
+                        android:layout_margin="5dp"
+                        />
+
 
 
                 </TableRow>
 
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/cinema"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/cinema"
+                        android:layout_margin="5dp"
+                        />
+
+                </TableRow>
 
             </TableLayout>
 

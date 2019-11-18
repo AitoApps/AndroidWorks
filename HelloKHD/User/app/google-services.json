@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "837505932252",
+    "firebase_url": "https://hellokhd-474a0.firebaseio.com",
+    "project_id": "hellokhd-474a0",
+    "storage_bucket": "hellokhd-474a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837505932252:android:b9cade3faeaf10e0338d19",
+        "android_client_info": {
+          "package_name": "com.hello_khd_verification_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837505932252-va957hjfp9007t2qd0uol7qrbalpr8jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkAz34nt-C1a5c_TccddZ96zypqi0hmys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837505932252-va957hjfp9007t2qd0uol7qrbalpr8jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837505932252:android:e7ccb7f78a0800bc338d19",
+        "android_client_info": {
+          "package_name": "com.hellokhd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837505932252-va957hjfp9007t2qd0uol7qrbalpr8jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkAz34nt-C1a5c_TccddZ96zypqi0hmys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837505932252-va957hjfp9007t2qd0uol7qrbalpr8jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837505932252:android:7149983045e748db338d19",
+        "android_client_info": {
+          "package_name": "com.hellokhd_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837505932252-va957hjfp9007t2qd0uol7qrbalpr8jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkAz34nt-C1a5c_TccddZ96zypqi0hmys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837505932252-va957hjfp9007t2qd0uol7qrbalpr8jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

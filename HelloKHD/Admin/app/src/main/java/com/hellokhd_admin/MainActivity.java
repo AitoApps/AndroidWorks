@@ -29,16 +29,22 @@ public class MainActivity extends AppCompatActivity {
 
     UserDatabaseHandler udb = new UserDatabaseHandler(this);
     final DatabaseHandler db=new DatabaseHandler(this);
-    ImageView advts,stages,markadmin,veriadmin,shops,tourspot,room,docters,video,announcment,news,atm,pumb;
+    ImageView districresult,schoolresult,advts,stages,markadmin,veriadmin,shops,tourspot,room,docters,video,announcment,news,atm,pumb;
+    ImageView hospital,accomedation,food,ambulance,bus,train,cinema,transporation;
     List<String> lst_itemtype= new ArrayList();
     List<String> lst_distric= new ArrayList();
     Typeface face;
+    ImageView logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
         FirebaseApp.initializeApp(this);
+        logout=findViewById(R.id.logout);
+        districresult=findViewById(R.id.districresult);
+        transporation=findViewById(R.id.transport);
+        schoolresult=findViewById(R.id.schoolresult);
         advts=findViewById(R.id.advts);
         stages=findViewById(R.id.stages);
         markadmin=findViewById(R.id.markadmin);
@@ -52,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
         news=findViewById(R.id.news);
         atm=findViewById(R.id.atm);
         pumb=findViewById(R.id.pumb);
+
+        hospital=findViewById(R.id.hospital);
+        accomedation=findViewById(R.id.accomedation);
+        food=findViewById(R.id.food);
+
+        ambulance=findViewById(R.id.ambulance);
+        bus=findViewById(R.id.bus);
+        train=findViewById(R.id.train);
+        cinema=findViewById(R.id.cinema);
 
 
         if (db.getscreenwidth().equalsIgnoreCase("")) {
@@ -188,8 +203,99 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        hospital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.shoptypes="6";
+                Intent i=new Intent(getApplicationContext(),Shop_List.class);
+                startActivity(i);
+            }
+        });
+        accomedation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.shoptypes="7";
+                Intent i=new Intent(getApplicationContext(),Shop_List.class);
+                startActivity(i);
+            }
+        });
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.shoptypes="8";
+                Intent i=new Intent(getApplicationContext(),Shop_List.class);
+                startActivity(i);
+            }
+        });
 
+        districresult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Distric_Result.class);
+                startActivity(i);
+            }
+        });
+
+        schoolresult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),School_Result.class);
+                startActivity(i);
+            }
+        });
+
+        ambulance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.is_amb_trans="1";
+                Intent i=new Intent(getApplicationContext(),Ambulance_List.class);
+                startActivity(i);
+            }
+        });
+        transporation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.is_amb_trans="2";
+                Intent i=new Intent(getApplicationContext(),Ambulance_List.class);
+                startActivity(i);
+            }
+        });
+        bus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.is_train_bus="1";
+                Intent i=new Intent(getApplicationContext(),Bus_List.class);
+                startActivity(i);
+            }
+        });
+        train.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.is_train_bus="2";
+                Intent i=new Intent(getApplicationContext(),Bus_List.class);
+                startActivity(i);
+            }
+        });
+        cinema.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),CinemaList.class);
+                startActivity(i);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                udb.deleteuserid();
+
+                startActivity(new Intent(getApplicationContext(), Registration.class));
+                finish();
+                return;
+            }
+        });
     }
+
 
 
     public void selectitemtype() {

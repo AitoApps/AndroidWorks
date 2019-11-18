@@ -109,6 +109,14 @@ public class Add_Advt extends AppCompatActivity {
         text.setTypeface(face);
         referance.setTypeface(face);
         update.setTypeface(face);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         lst_advttype.add("Select Ad Type");
         lst_advttype.add("Banner (4:1");
         lst_advttype.add("FullScreen (720x1280)");

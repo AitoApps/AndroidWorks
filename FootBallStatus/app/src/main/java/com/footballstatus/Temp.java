@@ -9,5 +9,7 @@ public class Temp {
     public static String packagename = "com.footballstatus";
     public static String tempproblem = "Temporary Error ! Please try later";
     public static String weblink = "https://apistatuschinthakal.in/football/";
+    public static String videodownslink="",videolinks="";
+    public static int isvideo=0;
 
 }

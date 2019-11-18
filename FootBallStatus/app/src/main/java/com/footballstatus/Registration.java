@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -47,12 +48,13 @@ public class Registration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        FirebaseApp.initializeApp(this);
         text = (TextView) findViewById(R.id.text);
         name = (EditText) findViewById(R.id.name);
         register = (Button) findViewById(R.id.register);
         cd = new ConnectionDetecter(this);
         pd = new ProgressDialog(this);
-        face = Typeface.createFromAsset(getAssets(), "font/proxibold.otf");
+        face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
         text.setText("FootBall Status");
         text.setTypeface(face);
         name.setTypeface(face);

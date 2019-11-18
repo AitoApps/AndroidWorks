@@ -6,12 +6,580 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Hello KHD"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/lytads"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+           <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adsrecylerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lytlatest"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lytads"
+        >
+
+        <TextView
+            android:id="@+id/latestinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info......"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
+    </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mainbuttons"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/lytlatest"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/findstage"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/accomedation"
+                    />
+
+                 <TextView
+                     android:id="@+id/txtfindsatge"
+                     android:layout_width="85dp"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/findstage"
+                     android:layout_alignLeft="@+id/findstage"
+                     android:textColor="#000"
+                     android:gravity="center_horizontal"
+                     android:text="Find Stage"
+                     />
+
+                <ImageView
+                    android:id="@+id/nearstage"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/findstage"
+                    android:src="@drawable/accomedation"
+                    />
+
+                <TextView
+                    android:id="@+id/txtnearstage"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nearstage"
+                    android:layout_alignLeft="@+id/nearstage"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Near Stages"
+                    />
+
+                <ImageView
+                    android:id="@+id/nowrunning"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/nearstage"
+                    android:src="@drawable/accomedation"
+                    />
+
+                <TextView
+                    android:id="@+id/txtnowrunning"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nowrunning"
+                    android:layout_alignLeft="@+id/nowrunning"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Now Running"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/findyourresult"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/nowrunning"
+                    android:src="@drawable/accomedation"
+                    />
+
+                <TextView
+                    android:id="@+id/txtfindyourresult"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/findyourresult"
+                    android:layout_alignLeft="@+id/findyourresult"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Your Result"
+                    />
+            </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lytads1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/soon"
-        android:scaleType="fitXY"
-        />
+        android:layout_below="@+id/mainbuttons"
+        >
 
+        <ImageView
+            android:id="@+id/ads1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+    </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lytresults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytads1"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/districwise"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/roundedcornerbackground"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtdistricwise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Distric Wise"
+                        android:textColor="#000"
+                        />
+
+                      <androidx.recyclerview.widget.RecyclerView
+                          android:id="@+id/districrecyclerview"
+                          android:layout_width="match_parent"
+                          android:layout_height="170dp"
+                          android:layout_marginTop="5dp"
+                          android:layout_below="@+id/txtdistricwise"
+                          />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/statewise"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:layout_below="@+id/districwise"
+                    android:background="@drawable/roundedcornerbackground"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtstatewise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="State Wise"
+                        android:textColor="#000"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/staterecyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txtstatewise"
+                        />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <!-- Ads  -->
+
+            <RelativeLayout
+                android:id="@+id/lytads2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytresults"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ads2recylerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:splitMotionEvents="false"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/mainbuttons1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/lytads2"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/hospital"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/hospital"
+                    />
+
+                <TextView
+                    android:id="@+id/txthospital"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hospital"
+                    android:layout_alignLeft="@+id/hospital"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Hospital"
+                    />
+
+                <ImageView
+                    android:id="@+id/ambulance"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/hospital"
+                    android:src="@drawable/ambulance"
+                    />
+
+                <TextView
+                    android:id="@+id/txtambulance"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ambulance"
+                    android:layout_alignLeft="@+id/ambulance"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Ambulance"
+                    />
+
+                <ImageView
+                    android:id="@+id/docters"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/ambulance"
+                    android:src="@drawable/docter"
+                    />
+                <TextView
+                    android:id="@+id/txtdocters"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/docters"
+                    android:layout_alignLeft="@+id/docters"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Docters"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/atm"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/docters"
+                    android:src="@drawable/atm"
+                    />
+                <TextView
+                    android:id="@+id/txtatm"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/atm"
+                    android:layout_alignLeft="@+id/atm"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Atm"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytads3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainbuttons1"
+                >
+
+                <ImageView
+                    android:id="@+id/ads3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"/>
+
+            </RelativeLayout>
+
+
+
+            <!-- Button 3-->
+
+            <RelativeLayout
+                android:id="@+id/mainbuttons2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/lytads3"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/accomodation"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/accomedation"
+                    />
+
+                <TextView
+                    android:id="@+id/txtaccomodation"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accomodation"
+                    android:layout_alignLeft="@+id/accomodation"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Accomodation"
+                    />
+
+                <ImageView
+                    android:id="@+id/bus"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/accomodation"
+                    android:src="@drawable/bus"
+                    />
+
+                <TextView
+                    android:id="@+id/txtbus"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bus"
+                    android:layout_alignLeft="@+id/bus"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Bus"
+                    />
+
+                <ImageView
+                    android:id="@+id/petrol"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/bus"
+                    android:src="@drawable/petrol"
+                    />
+
+                <TextView
+                    android:id="@+id/txtpetrol"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/petrol"
+                    android:layout_alignLeft="@+id/petrol"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Petrol"
+                    />
+
+                <ImageView
+                    android:id="@+id/train"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/petrol"
+                    android:src="@drawable/train"
+                    />
+                <TextView
+                    android:id="@+id/txttrain"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/train"
+                    android:layout_alignLeft="@+id/train"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Train"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytads4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainbuttons2"
+                >
+
+                <ImageView
+                    android:id="@+id/ads4"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"/>
+
+            </RelativeLayout>
+
+
+
+            <!-- Button 4-->
+
+            <RelativeLayout
+                android:id="@+id/mainbuttons3"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/lytads4"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/cinema"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/cinema"
+                    />
+
+                <TextView
+                    android:id="@+id/txtcinema"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cinema"
+                    android:layout_alignLeft="@+id/cinema"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Cinema"
+                    />
+
+                <ImageView
+                    android:id="@+id/tourism"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/cinema"
+                    android:src="@drawable/tourism"
+                    />
+                <TextView
+                    android:id="@+id/txttourism"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tourism"
+                    android:layout_alignLeft="@+id/tourism"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Tourism"
+                    />
+
+                <ImageView
+                    android:id="@+id/food"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/tourism"
+                    android:src="@drawable/food"
+                    />
+
+                <TextView
+                    android:id="@+id/txtfood"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food"
+                    android:layout_alignLeft="@+id/food"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Helpdesk"
+                    />
+
+                <ImageView
+                    android:id="@+id/helpdesk"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/food"
+                    android:src="@drawable/helpdesk"
+                    />
+
+                <TextView
+                    android:id="@+id/txthelpdesk"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/helpdesk"
+                    android:layout_alignLeft="@+id/helpdesk"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+                    android:text="Helpdesk"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytads5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainbuttons3"
+                >
+
+                <ImageView
+                    android:id="@+id/ads5"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

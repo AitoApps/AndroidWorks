@@ -170,7 +170,21 @@ public class Add_Shops extends AppCompatActivity implements GoogleApiClient.Conn
             txtshopname.setText("Pumb Name");
             text.setText("Add / Edit Petrol Pumb");
         }
-
+        else if(Temp.shoptypes.equalsIgnoreCase("6"))
+        {
+            txtshopname.setText("Hospital");
+            text.setText("Add / Edit Hospital");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("7"))
+        {
+            txtshopname.setText("Accomodation");
+            text.setText("Add / Edit Accomodation");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("8"))
+        {
+            txtshopname.setText("Food");
+            text.setText("Add / Edit Food");
+        }
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 onBackPressed();
@@ -314,7 +328,18 @@ public class Add_Shops extends AppCompatActivity implements GoogleApiClient.Conn
         {
             builder.setTitle("Pumb Photo");
         }
-
+        else if(Temp.shoptypes.equalsIgnoreCase("6"))
+        {
+            builder.setTitle("Hospital");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("7"))
+        {
+            builder.setTitle("Accomodation");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("8"))
+        {
+            builder.setTitle("Food");
+        }
         builder.setItems(options, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 if (options[item].equals("Take Photo")) {
@@ -564,7 +589,6 @@ public class Add_Shops extends AppCompatActivity implements GoogleApiClient.Conn
                         try {
 
                             String result=response.body().string();
-                            Log.w("Resue",result);
                             pb1.setVisibility(View.GONE);
                             persentage.setVisibility(View.GONE);
                             update.setEnabled(true);

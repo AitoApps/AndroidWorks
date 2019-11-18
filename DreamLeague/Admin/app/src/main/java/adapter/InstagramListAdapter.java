@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,8 +41,6 @@ public class InstagramListAdapter extends BaseAdapter {
     int pos = 0;
     public String t_title = "";
     public String txtsn = "";
-    public View views;
-
     public InstagramListAdapter(Activity activity2, List<Instagram_FeedItem> feedItems2) {
         activity = activity2;
         feedItems = feedItems2;

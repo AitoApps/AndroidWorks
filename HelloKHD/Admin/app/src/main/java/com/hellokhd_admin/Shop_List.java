@@ -89,6 +89,21 @@ public class Shop_List extends AppCompatActivity {
             text.setText("Petrol Pumb");
             addproduct.setText("Add Petrol Pumb");
         }
+        else if(Temp.shoptypes.equalsIgnoreCase("6"))
+        {
+            text.setText("Hospital");
+            addproduct.setText("Add Hospital");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("7"))
+        {
+            text.setText("Accomodation");
+            addproduct.setText("Add Accomodation");
+        }
+        else if(Temp.shoptypes.equalsIgnoreCase("8"))
+        {
+            text.setText("Food");
+            addproduct.setText("Add Food");
+        }
 
         text.setTypeface(face);
         back.setOnClickListener(new View.OnClickListener() {

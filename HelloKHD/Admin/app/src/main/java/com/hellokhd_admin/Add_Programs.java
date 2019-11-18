@@ -63,6 +63,13 @@ public class Add_Programs extends AppCompatActivity {
         itemcode.setTypeface(face);
         update.setTypeface(face);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         if (Temp.videoedit== 1) {
             itemcode.setText(Temp.programeitemcode);
             itemname.setText(Temp.programeitemname);

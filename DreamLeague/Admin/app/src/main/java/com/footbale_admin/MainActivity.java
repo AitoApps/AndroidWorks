@@ -26,7 +26,7 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
     ConnectionDetecter cd;
     final DatabaseHandler db = new DatabaseHandler(this);
-    Button instagramtofacebook;
+    Button instagramtofacebook,sendnoti;
     Button uplaodtochintha;
     ProgressDialog pd;
     @Override
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView((int) R.layout.activity_main);
         uplaodtochintha = (Button) findViewById(R.id.uplaodtochintha);
         instagramtofacebook = (Button) findViewById(R.id.instagramtofacebook);
+        sendnoti=findViewById(R.id.sendnoti);
         cd = new ConnectionDetecter(this);
         pd = new ProgressDialog(this);
         if (db.getscreenwidth().equalsIgnoreCase("")) {
@@ -54,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
         instagramtofacebook.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), InstagramToFacebook.class));
+            }
+        });
+        sendnoti.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                showalertnoti("Are you sure want to notify?");
             }
         });
 
@@ -120,4 +128,71 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
+
+
+
+    public void showalertnoti(String message) {
+        Builder builder = new Builder(this);
+        builder.setMessage(message).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                if (cd.isConnectingToInternet()) {
+                    new noti().execute(new String[0]);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please make sure your internet connection is active", Toast.LENGTH_SHORT).show();
+                }
+                dialog.dismiss();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
+    }
+    public class noti extends AsyncTask<String, Void, String> {
+        public void onPreExecute() {
+            pd.setMessage("Please wait...");
+            pd.setCancelable(false);
+            pd.show();
+        }
+        public String doInBackground(String... arg0) {
+            try {
+                String link=Tempvariable.weblink+"sendnoti.php";
+                String data  = URLEncoder.encode("item", "UTF-8")
+                        + "=" + URLEncoder.encode("", "UTF-8");
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter
+                        (conn.getOutputStream());
+                wr.write(data);
+                wr.flush();
+                BufferedReader reader = new BufferedReader
+                        (new InputStreamReader(conn.getInputStream()));
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                }
+                return sb.toString();
+            } catch (Exception e) {
+                return new String("Unable to connect server! Please check your internet connection");
+            }
+        }
+        public void onPostExecute(String result) {
+            if (pd != null || pd.isShowing()) {
+                pd.dismiss();
+                if (result.contains("ok")) {
+                    Toast.makeText(getApplicationContext(), "Notified", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
+
 }
