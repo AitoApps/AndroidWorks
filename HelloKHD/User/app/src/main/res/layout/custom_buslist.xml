@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcornerbackground">
+
+
+        <TextView
+            android:id="@+id/busname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="BusName"
+            android:textColor="#ff000000" />
+
+
+        <TextView
+            android:id="@+id/stationname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Station Name"
+            android:layout_below="@+id/busname"
+            android:textColor="#ff000000" />
+
+
+        <TextView
+            android:id="@+id/fromtostation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Station Name"
+            android:layout_below="@+id/stationname"
+            android:textColor="#ff000000" />
+
+
+        <TextView
+            android:id="@+id/times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Time"
+            android:layout_below="@+id/fromtostation"
+            android:textColor="#ff000000" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -302,6 +302,16 @@
                         android:layout_margin="5dp"
                         />
 
+
+                    <ImageView
+                        android:id="@+id/helpdesk"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/helpdesk"
+                        android:layout_margin="5dp"
+                        />
+
+
                 </TableRow>
 
             </TableLayout>

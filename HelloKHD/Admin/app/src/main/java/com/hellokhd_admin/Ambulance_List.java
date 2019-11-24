@@ -69,6 +69,11 @@ public class Ambulance_List extends AppCompatActivity {
             text.setText("Transportation");
             addproduct.setText("Add Transportation");
         }
+        else if(Temp.is_amb_trans.equalsIgnoreCase("3"))
+        {
+            text.setText("Help Desk");
+            addproduct.setText("Add Help Desk");
+        }
 
         text.setTypeface(face);
         back.setOnClickListener(new View.OnClickListener() {

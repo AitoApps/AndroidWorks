@@ -90,7 +90,7 @@ public class Advt_ListAdapter extends BaseAdapter {
         float calheight = 0.75f * Float.valueOf(db.getscreenwidth()).floatValue();
         image.getLayoutParams().height = Math.round(calheight);
         RequestOptions rep = new RequestOptions().signature(new ObjectKey(item.getImgsig()));
-        Glide.with(context).load(Temp.weblink+"advt/"+item.getSn()+".png").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(image);
+        Glide.with(context).load(Temp.weblink+"advt/"+item.getSn()+".jpg").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(image);
 
         adtype.setTypeface(face);
         if (item.getLinktype().equalsIgnoreCase("1")) {
@@ -98,6 +98,25 @@ public class Advt_ListAdapter extends BaseAdapter {
         } else if (item.getLinktype().equalsIgnoreCase("2")) {
             adtype.setText("Full Screen");
         }
+        else if (item.getLinktype().equalsIgnoreCase("3")) {
+            adtype.setText("Featured");
+        }
+        else if (item.getLinktype().equalsIgnoreCase("4")) {
+            adtype.setText("StartUp");
+        }
+        else if (item.getLinktype().equalsIgnoreCase("5")) {
+            adtype.setText("Accomodation");
+        }
+        else if (item.getLinktype().equalsIgnoreCase("6")) {
+            adtype.setText("Food");
+        }
+        else if (item.getLinktype().equalsIgnoreCase("7")) {
+            adtype.setText("Rooms");
+        }
+        else if (item.getLinktype().equalsIgnoreCase("8")) {
+            adtype.setText("Other");
+        }
+
         delete.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 try {

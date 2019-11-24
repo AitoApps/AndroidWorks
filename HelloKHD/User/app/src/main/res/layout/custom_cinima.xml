@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="1.0dip">
+
+        <RelativeLayout
+            android:id="@+id/lyttheatorname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            >
+
+            <TextView
+                android:id="@+id/theatorname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textColor="#000"
+                android:layout_toLeftOf="@+id/location"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/location"
+                android:padding="5dp"
+                />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cinimaposter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lyttheatorname"
+            android:scaleType="fitStart"
+            />
+
+        <RelativeLayout
+            android:id="@+id/lytcontrols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cinimaposter"
+            >
+
+            <TextView
+                android:id="@+id/filmname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FilmName"
+                android:textSize="18dp"
+                android:padding="5dp"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:id="@+id/showtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Time"
+                android:textSize="18dp"
+                android:padding="5dp"
+                android:layout_below="@+id/filmname"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:id="@+id/discription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disc"
+                android:textSize="18dp"
+                android:padding="5dp"
+                android:layout_below="@+id/showtime"
+                android:textColor="#000"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

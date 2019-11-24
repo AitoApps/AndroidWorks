@@ -91,7 +91,7 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
     Location mLocation;
     private LocationRequest mLocationRequest;
     public float ogheight;
-    EditText stagename;
+    EditText stagename,place,stagenumber;
     public ProgressBar pb1;
     ProgressDialog pd;
     public TextView persentage;
@@ -100,7 +100,7 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
     ProgressBar prb1;
     public Button stop;
     TextView text;
-    TextView txtphoto1,txtlongtitude,txtlattiude,txtstagename;
+    TextView txtplace,txtphoto1,txtlongtitude,txtlattiude,txtstagename;
     Button update;
     Call call;
     boolean requestgoing=true;
@@ -121,12 +121,15 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
         pd = new ProgressDialog(this);
         txtstagename = findViewById(R.id.txtstagename);
         stagename = findViewById(R.id.stagename);
+        place=findViewById(R.id.place);
+        txtplace=findViewById(R.id.txtplace);
         cd = new ConnectionDetecter(this);
         back = (ImageView) findViewById(R.id.back);
         prb1 = (ProgressBar) findViewById(R.id.pb1);
         photo1 = (ImageView) findViewById(R.id.photo1);
         update = (Button) findViewById(R.id.update);
         text = (TextView) findViewById(R.id.text);
+        stagenumber=findViewById(R.id.stagenumber);
         text.setTypeface(face);
         update.setTypeface(face);
         location1 = (ImageView) findViewById(R.id.location);
@@ -139,10 +142,12 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
 
         lattiude.setTypeface(face);
         longtitude.setTypeface(face);
-
+        txtplace.setTypeface(face);
+        place.setTypeface(face);
         txtlattiude.setTypeface(face1);
         txtlongtitude.setTypeface(face1);
         txtphoto1.setTypeface(face1);
+        stagenumber.setTypeface(face);
 
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -201,11 +206,19 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
         update.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 try {
-
-                    if (stagename.getText().toString().equalsIgnoreCase("")) {
+                    if (stagenumber.getText().toString().equalsIgnoreCase("")) {
+                        Toasty.info(getApplicationContext(), "Please enter stagenumber", Toast.LENGTH_SHORT).show();
+                        stagenumber.requestFocus();
+                    }
+                    else if (stagename.getText().toString().equalsIgnoreCase("")) {
                         Toasty.info(getApplicationContext(), "Please enter stagename", Toast.LENGTH_SHORT).show();
                         stagename.requestFocus();
-                    } else {
+                    }
+                    else if (place.getText().toString().equalsIgnoreCase("")) {
+                        Toasty.info(getApplicationContext(), "Please enter place", Toast.LENGTH_SHORT).show();
+                        place.requestFocus();
+                    }
+                    else {
 
                         if (cd.isConnectingToInternet()) {
                             uploadingprogress();
@@ -224,13 +237,22 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
 
         if (Temp.stagedit == 1) {
             stagename.setText(Temp.stagename);
+            place.setText(Temp.stageplace);
+            stagenumber.setText(Temp.stagenumber);
 
-            if (Temp.stagelocation.contains(",")) {
-                String[] s = Temp.stagelocation.split(",");
-                lattiude.setText(s[0]);
-                longtitude.setText(s[1]);
+            try
+            {
+                if (Temp.stagelocation.contains(",") && !Temp.stagelocation.equalsIgnoreCase("") && !Temp.stagelocation.equalsIgnoreCase("NA")) {
+                    String[] s = Temp.stagelocation.split(",");
+                    lattiude.setText(s[0]);
+                    longtitude.setText(s[1]);
+                }
+            }
+            catch (Exception a)
+            {
 
             }
+
             new Handler(Looper.getMainLooper()).post(new Runnable() {
                 public void run() {
                     prb1.setVisibility(View.VISIBLE);
@@ -442,7 +464,9 @@ public class Add_Stage extends AppCompatActivity implements GoogleApiClient.Conn
         }
         bodyBuilder.addFormDataPart("isedit", null,RequestBody.create(contentType, Temp.stagedit+""));
         bodyBuilder.addFormDataPart("editsn", null,RequestBody.create(contentType, Temp.stagesn));
+        bodyBuilder.addFormDataPart("stagenumber", null,RequestBody.create(contentType, stagenumber.getText().toString()));
         bodyBuilder.addFormDataPart("stagename", null,RequestBody.create(contentType, stagename.getText().toString()));
+        bodyBuilder.addFormDataPart("place", null,RequestBody.create(contentType, place.getText().toString()));
         bodyBuilder.addFormDataPart("latitude", null,RequestBody.create(contentType, lattiude.getText().toString()));
         bodyBuilder.addFormDataPart("longtitude", null,RequestBody.create(contentType, longtitude.getText().toString()));
 

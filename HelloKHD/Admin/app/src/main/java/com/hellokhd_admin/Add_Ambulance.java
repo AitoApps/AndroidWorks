@@ -79,6 +79,10 @@ public class Add_Ambulance extends AppCompatActivity {
         {
             text.setText("Add / Edit Transportation");
         }
+        else if(Temp.is_amb_trans.equalsIgnoreCase("3"))
+        {
+            text.setText("Add / Edit Help Desk");
+        }
         if (Temp.amb_trasnedit== 1) {
             ambulance.setText(Temp.amb_title);
             contact.setText(Temp.amb_contact);

@@ -1,7 +1,23 @@
 package data;
 
 public class Stage_FeedItem {
-    private String sn,stagename,stageloc,imgsig;
+    private String sn,stagenumber,stagename,place,stageloc,imgsig;
+
+    public String getStagenumber() {
+        return stagenumber;
+    }
+
+    public void setStagenumber(String stagenumber) {
+        this.stagenumber = stagenumber;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
 
     public String getSn() {
         return sn;

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/curvedcornerlayout">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:background="@drawable/nophoto"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/stagenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Stage Name"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/stagename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Stage Name"
+            android:layout_below="@+id/stagenumber"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Place"
+            android:layout_below="@+id/stagename"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="KM"
+            android:layout_below="@+id/place"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_margin="5.0dip"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/place"
+            android:src="@drawable/location" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

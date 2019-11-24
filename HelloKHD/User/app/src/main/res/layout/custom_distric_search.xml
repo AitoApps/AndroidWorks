@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lyt"
+    android:layout_margin="2.0dip">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcornerbackground"
+        android:layout_margin="5dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/lytschoolname"
+            android:layout_width="match_parent"
+            android:background="#e9e9e9"
+            android:padding="5dp"
+            android:layout_height="35dp">
+
+            <TextView
+                android:id="@+id/schoolname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/totalmark"
+                android:text="School Name"
+                android:layout_marginRight="5dp"
+                android:textSize="18dp"
+                android:textColor="#000"
+                />
+
+            <TextView
+                android:id="@+id/totalmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="30"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/down"
+                android:textSize="18dp"
+                android:textColor="#000"
+                />
+
+               <ImageView
+                   android:id="@+id/down"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:src="@drawable/down"
+                   android:layout_alignParentRight="true"
+                   android:padding="5dp"
+                   />
+            <ImageView
+                android:id="@+id/up"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/up"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lytmark"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/lytschoolname"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                >
+
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/txthsgeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="HS General"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/hsgeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="100"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/txthssgeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="HSS General"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/hssgeneral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="100"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/txthsarabic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="HSS Arabic"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/hsarabic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="100"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/txthssanskrit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="HSS Sanskrit"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/hssanskrit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="100"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

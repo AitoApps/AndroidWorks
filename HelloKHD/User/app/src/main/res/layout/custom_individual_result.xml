@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lyt"
+    android:layout_margin="2.0dip">
+
+    <TextView
+        android:id="@+id/studentname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salman"
+        android:padding="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/studentname"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/txtitemname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:padding="2dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:id="@+id/itemnamedot"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="--"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:id="@+id/mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30%"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

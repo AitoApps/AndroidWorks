@@ -160,14 +160,18 @@ public class Stage_List extends AppCompatActivity {
                 if (result.trim().contains(":%ok")) {
                     feedItems.clear();
                     String[] got = result.trim().split(":%");
-                    int k = (got.length - 1) / 4;
+                    int k = (got.length - 1) / 6;
                     int m = -1;
                     for (int i = 1; i <= k; i++) {
                         Stage_FeedItem item = new Stage_FeedItem();
                         m=m+1;
                         item.setSn(got[m].trim());
                         m=m+1;
+                        item.setStagenumber(got[m]);
+                        m=m+1;
                         item.setStagename(got[m]);
+                        m=m+1;
+                        item.setPlace(got[m]);
                         m=m+1;
                         item.setStageloc(got[m]);
                         m=m+1;

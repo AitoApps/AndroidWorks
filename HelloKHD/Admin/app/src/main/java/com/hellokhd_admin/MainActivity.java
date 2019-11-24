@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     UserDatabaseHandler udb = new UserDatabaseHandler(this);
     final DatabaseHandler db=new DatabaseHandler(this);
     ImageView districresult,schoolresult,advts,stages,markadmin,veriadmin,shops,tourspot,room,docters,video,announcment,news,atm,pumb;
-    ImageView hospital,accomedation,food,ambulance,bus,train,cinema,transporation;
+    ImageView hospital,accomedation,food,ambulance,bus,train,cinema,transporation,helpdesk;
     List<String> lst_itemtype= new ArrayList();
     List<String> lst_distric= new ArrayList();
     Typeface face;
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
         FirebaseApp.initializeApp(this);
         logout=findViewById(R.id.logout);
+        helpdesk=findViewById(R.id.helpdesk);
         districresult=findViewById(R.id.districresult);
         transporation=findViewById(R.id.transport);
         schoolresult=findViewById(R.id.schoolresult);
@@ -166,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -248,6 +250,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Temp.is_amb_trans="1";
+                Intent i=new Intent(getApplicationContext(),Ambulance_List.class);
+                startActivity(i);
+            }
+        });
+        helpdesk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.is_amb_trans="3";
                 Intent i=new Intent(getApplicationContext(),Ambulance_List.class);
                 startActivity(i);
             }

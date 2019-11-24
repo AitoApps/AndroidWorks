@@ -42,6 +42,7 @@ import java.util.List;
 
 import data.Advt_FeedItem;
 import data.Stage_FeedItem;
+import es.dmoral.toasty.Toasty;
 
 public class Stagelist_ListAdapter extends BaseAdapter {
 
@@ -110,13 +111,15 @@ public class Stagelist_ListAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Stage_FeedItem item = (Stage_FeedItem) feedItems.get(position);
                 Temp.stagesn=item.getSn();
+                Temp.stagenumber=item.getStagenumber();
                 Temp.stagename=item.getStagename();
                 Temp.stagelocation=item.getStageloc();
                 Temp.stageimgsig=item.getImgsig();
+                Temp.stageplace=item.getPlace();
                 Temp.stagedit = 1;
                 Intent i = new Intent(context, Add_Stage.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(i);
+               context.startActivity(i);
             }
         });
         return convertView;

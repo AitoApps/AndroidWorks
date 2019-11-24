@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -276,6 +277,8 @@ public class InstagramListAdapter extends BaseAdapter {
             }
         }
         public void onPostExecute(String result) {
+//            Log.w("Result",result);
+//            Toast.makeText(context,result,Toast.LENGTH_LONG).show();
             if (pd != null || pd.isShowing()) {
                 pd.dismiss();
                 if (result.contains("ok")) {

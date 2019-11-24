@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/curvedcornerlayout">
+
+        <TextView
+            android:id="@+id/programname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Program Name"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+
+        <TextView
+            android:id="@+id/programtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Program Time"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:layout_below="@+id/programname"
+            android:layout_margin="5dp"
+            />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"
+            android:layout_below="@+id/programtime"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/stagenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Stage Name"
+            android:layout_below="@+id/view1"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/stagename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Stage Name"
+            android:layout_below="@+id/stagenumber"
+            android:layout_toRightOf="@+id/image"
+            android:textColor="#ff000000" />
+
+
+        <TextView
+            android:id="@+id/km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="KM"
+
+            android:layout_below="@+id/stagename"
+            android:layout_toLeftOf="@+id/location"
+            android:textColor="#ff000000" />
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_margin="5.0dip"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/stagename"
+            android:src="@drawable/location" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

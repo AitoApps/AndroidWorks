@@ -1,35 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@+id/layout" android:background="@drawable/roundedcornerbackground3" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TableLayout android:id="@+id/table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:stretchColumns="*" android:layout_centerHorizontal="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcornerbackground3">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5.0dip"
+            android:stretchColumns="*">
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Name : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtplace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Place : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtplace"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Place : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/place"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtmobile1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile 1 : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/mobile1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtmobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Mobile 1 : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/mobile1"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtmobile2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile 2 : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/mobile2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtmobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Mobile 2 : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/mobile2"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtaddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtaddress"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Address : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtpincode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pincode : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/pincode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtpincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Pincode : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/pincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
+
             <TableRow android:layout_marginTop="5.0dip">
-                <TextView android:textColor="#ff000000" android:gravity="right" android:id="@+id/txtlandmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Landmark : " style="@android:style/TextAppearance.Medium" />
-                <TextView android:textColor="#ff000000" android:id="@+id/landmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" style="@android:style/TextAppearance.Medium" />
+
+                <TextView
+                    android:id="@+id/txtlandmark"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Landmark : "
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/landmark"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text=""
+                    android:textColor="#ff000000" />
             </TableRow>
         </TableLayout>
     </RelativeLayout>

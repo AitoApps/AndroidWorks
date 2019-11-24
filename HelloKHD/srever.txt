@@ -5,3 +5,9 @@ godady
 133143007
 Cinbuz*6767*
 
+PlayEmail
+----------------
+ceocinbuz@gmail.com
+admin2019
+
+keytool -importcert -alias Salman -file deployment_cert.der -keystore certificate.jks -storepass salman

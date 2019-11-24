@@ -147,6 +147,7 @@ public class ProductList_New extends AppCompatActivity {
             float f2 = calheight;
             RequestOptions rep = new RequestOptions().signature(new ObjectKey(Temp.shopimgsig));
             Glide.with(this).load(Temp.weblink+"shoppics/"+Temp.shopid+".jpg").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(image);
+
             shopname.setText(Temp.shopname);
             placename.setText(Temp.shopplace);
             km.setText(" , "+Temp.shopkm);
@@ -591,76 +592,48 @@ public class ProductList_New extends AppCompatActivity {
     }
 
     public void openwebsite(String url) {
-        Intent i = new Intent("android.intent.action.VIEW");
+        Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
     }
 
     public void openfacebook(String username) {
-        String str = "android.intent.action.VIEW";
         try {
             getPackageManager().getPackageInfo("com.facebook.katana", 0);
-            StringBuilder sb = new StringBuilder();
-            sb.append("fb://facewebmodal/f?href=https://www.facebook.com/");
-            sb.append(username);
-            startActivity(new Intent(str, Uri.parse(sb.toString())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href=https://www.facebook.com/"+username)));
         } catch (Exception e) {
-            StringBuilder sb2 = new StringBuilder();
-            sb2.append("https://www.facebook.com/");
-            sb2.append(username);
-            startActivity(new Intent(str, Uri.parse(sb2.toString())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/"+username)));
         }
     }
 
     public void openinstagram(String username) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("http://instagram.com/_u/");
-        sb.append(username);
-        String str = "android.intent.action.VIEW";
-        Intent likeIng = new Intent(str, Uri.parse(sb.toString()));
+        Intent likeIng = new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/_u/"+username));
         likeIng.setPackage("com.instagram.android");
         try {
             startActivity(likeIng);
         } catch (ActivityNotFoundException e) {
-            StringBuilder sb2 = new StringBuilder();
-            sb2.append("http://instagram.com/");
-            sb2.append(username);
-            startActivity(new Intent(str, Uri.parse(sb2.toString())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/"+username)));
         }
     }
 
     public void openpinterest(String username) {
-        String str = "android.intent.action.VIEW";
         try {
-            StringBuilder sb = new StringBuilder();
-            sb.append("pinterest://www.pinterest.com/");
-            sb.append(username);
-            startActivity(new Intent(str, Uri.parse(sb.toString())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("pinterest://www.pinterest.com/")));
         } catch (Exception e) {
-            StringBuilder sb2 = new StringBuilder();
-            sb2.append("https://www.pinterest.com/");
-            sb2.append(username);
-            startActivity(new Intent(str, Uri.parse(sb2.toString())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.pinterest.com/"+username)));
         }
     }
 
     public void openyoutube(String channelname) {
-        String str = "https://www.youtube.com/user/";
-        String str2 = "android.intent.action.VIEW";
+
         try {
-            Intent intent = new Intent(str2);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setPackage("com.google.android.youtube");
-            StringBuilder sb = new StringBuilder();
-            sb.append(str);
-            sb.append(channelname);
-            intent.setData(Uri.parse(sb.toString()));
+            intent.setData(Uri.parse("https://www.youtube.com/user/"+channelname));
             startActivity(intent);
         } catch (ActivityNotFoundException e) {
-            Intent intent2 = new Intent(str2);
-            StringBuilder sb2 = new StringBuilder();
-            sb2.append(str);
-            sb2.append(channelname);
-            intent2.setData(Uri.parse(sb2.toString()));
+            Intent intent2 = new Intent(Intent.ACTION_VIEW);
+            intent2.setData(Uri.parse("https://www.youtube.com/user/"+channelname));
             startActivity(intent2);
         }
     }

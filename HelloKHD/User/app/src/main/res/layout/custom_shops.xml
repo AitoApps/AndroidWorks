@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curvedcornerlayout"
+        android:padding="1.0dip">
+
+        <RelativeLayout
+            android:id="@+id/lytshopname"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            >
+
+            <TextView
+                android:id="@+id/shopname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textColor="#000"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/shoppic"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/lytshopname"
+            android:scaleType="fitXY"
+            />
+
+        <RelativeLayout
+            android:id="@+id/lytcontrols"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shoppic"
+            >
+
+            <com.hellokhd.ExpandableTextView
+                android:id="@+id/discription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discription"
+                android:textSize="18dp"
+                android:padding="5dp"
+                android:textColor="#000"
+                />
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/location"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:layout_below="@+id/discription"
+                />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@+id/location"
+                android:src="@drawable/callicon"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/discription"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -118,11 +118,14 @@ public class Add_Advt extends AppCompatActivity {
         });
 
         lst_advttype.add("Select Ad Type");
-        lst_advttype.add("Banner (4:1");
-        lst_advttype.add("FullScreen (720x1280)");
-        lst_advttype.add("Featured (350x350)");
-        lst_advttype.add("StartUp (720x1280)");
-
+        lst_advttype.add("Banner (4:1"); //1
+        lst_advttype.add("FullScreen (720x1280)"); //2
+        lst_advttype.add("Featured (400x200)"); //3
+        lst_advttype.add("StartUp (720x1280)"); //4
+        lst_advttype.add("Accomodation"); //5
+        lst_advttype.add("Food"); //6
+        lst_advttype.add("Rooms"); //7
+        lst_advttype.add("Other"); //8
 
         ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lst_advttype) {
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -153,12 +156,12 @@ public class Add_Advt extends AppCompatActivity {
         });
 
         lst_linktype.add("Select Link Type");
-        lst_linktype.add("Call");
-        lst_linktype.add("App");
-        lst_linktype.add("Web");
-        lst_linktype.add("Youtube Channel");
-        lst_linktype.add("Facebook Page");
-        lst_linktype.add("Direction");
+        lst_linktype.add("Call"); //1
+        lst_linktype.add("App"); //2
+        lst_linktype.add("Web"); //3
+        lst_linktype.add("Youtube Channel"); //4
+        lst_linktype.add("Facebook Page"); //5
+        lst_linktype.add("Direction"); //6
 
 
         ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lst_linktype) {
@@ -231,7 +234,7 @@ public class Add_Advt extends AppCompatActivity {
                 public void run() {
                     prb1.setVisibility(View.VISIBLE);
                     RequestBuilder apply = Glide.with(getApplicationContext()).asBitmap().apply(new RequestOptions().signature(new ObjectKey(Temp.ad_imgsig)));
-                    apply.load(Temp.weblink+"advt/"+Temp.ad_sn+".png").into(new SimpleTarget<Bitmap>() {
+                    apply.load(Temp.weblink+"advt/"+Temp.ad_sn+".jpg").into(new SimpleTarget<Bitmap>() {
                         public void onResourceReady(Bitmap bitmap, Transition<? super Bitmap> transition) {
                             prb1.setVisibility(View.GONE);
                             photo1.setImageBitmap(bitmap);
@@ -383,7 +386,7 @@ public class Add_Advt extends AppCompatActivity {
         } else {
             bodyBuilder.addFormDataPart("image1","filled");
             File sourceFile = new File(photopath1);
-            bodyBuilder.addFormDataPart("photo1", sourceFile.getName(), RequestBody.create(MediaType.parse("image/png"), sourceFile));
+            bodyBuilder.addFormDataPart("photo1", sourceFile.getName(), RequestBody.create(MediaType.parse("image/jpg"), sourceFile));
         }
         bodyBuilder.addFormDataPart("isedit", null,RequestBody.create(contentType, Temp.adedit+""));
         bodyBuilder.addFormDataPart("editsn", null,RequestBody.create(contentType, Temp.ad_sn));

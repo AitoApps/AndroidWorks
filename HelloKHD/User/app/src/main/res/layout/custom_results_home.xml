@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lyt"
+    android:layout_margin="2.0dip">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/txtresults"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="GHSS Thrikkavu Hares dsksd sdsd "
+                android:padding="2dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:id="@+id/resultsdot"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="--"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="30%"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="#000"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

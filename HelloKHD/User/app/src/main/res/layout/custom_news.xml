@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curvedcornerlayout"
+        android:padding="1.0dip">
+
+        <RelativeLayout
+            android:id="@+id/lytheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textColor="#000"
+                android:layout_marginLeft="5dp"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/newspic"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/lytheading"
+            android:scaleType="fitXY"
+            />
+        <RelativeLayout
+            android:id="@+id/lytnews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newspic"
+            >
+            <com.hellokhd.ExpandableTextView
+                android:id="@+id/news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textColor="#000"
+                android:layout_marginLeft="5dp"
+                android:textSize="16dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
