@@ -12,14 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -32,6 +36,9 @@ import android.view.GestureDetector;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -45,7 +52,13 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.bumptech.glide.signature.ObjectKey;
+import com.google.android.gms.common.util.ArrayUtils;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.w3c.dom.Text;
 
@@ -59,7 +72,9 @@ import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.util.AbstractMap;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import adapter.DistricHome_Adapter;
@@ -71,6 +86,15 @@ import data.SchoolResult_FeedItem;
 import es.dmoral.toasty.Toasty;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    String[] PERMISSIONS = {
+            android.Manifest.permission.INTERNET,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            android.Manifest.permission.READ_EXTERNAL_STORAGE,
+            android.Manifest.permission.ACCESS_NETWORK_STATE,
+            android.Manifest.permission.ACCESS_WIFI_STATE,
+            android.Manifest.permission.ACCESS_COARSE_LOCATION,
+            android.Manifest.permission.ACCESS_FINE_LOCATION
+    };
 
     RelativeLayout startupadlyt;
     ImageView startupads,fulscreenad;
@@ -104,6 +128,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView schoolviewall,dsitricviewall;
     TextView txttransportation,txtroom,txtnews,txtvideo,txtaboutus;
     ImageView transportation,room,news,video,aboutus;
+    ImageView story;
+    TextView txtstory;
+    FrameLayout content_frame;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,6 +139,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startupadlyt=findViewById(R.id.startupadlyt);
         startupads=findViewById(R.id.startupads);
         adsskip=findViewById(R.id.adsskip);
+        story=findViewById(R.id.story);
+        txtstory=findViewById(R.id.txtstory);
+        txtstory.setTypeface(face);
         fulscreenad=findViewById(R.id.fulscreenad);
         schoolviewall=findViewById(R.id.schoolviewall);
         dsitricviewall=findViewById(R.id.dsitricviewall);
@@ -128,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ambulance=findViewById(R.id.ambulance);
         docters=findViewById(R.id.docters);
         atm=findViewById(R.id.atm);
+        content_frame=findViewById(R.id.content_frame);
         accomodation=findViewById(R.id.accomodation);
         bus=findViewById(R.id.bus);
         petrol=findViewById(R.id.petrol);
@@ -190,13 +221,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             udb.addscreenwidth(width+"");
         }
 
-        if (udb.get_userid().equalsIgnoreCase("")) {
-            startActivity(new Intent(getApplicationContext(), Primary_Registration.class));
-            finish();
-            return;
+
+        if(udb.get_userid().equalsIgnoreCase(""))
+        {
+            FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                    if (!task.isSuccessful()) {
+                        return;
+                    }
+                    udb.addfcmid(((InstanceIdResult) task.getResult()).getToken());
+                    try {
+                        FirebaseMessaging.getInstance().subscribeToTopic(Temp.fcmtopic);
+                    }
+                    catch (Exception a)
+                    {
+                        Toasty.info(getApplicationContext(), Temp.tempproblem, Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
         }
 
 
+        txtstory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Instagram.class));
+            }
+        });
+        story.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Instagram.class));
+            }
+        });
         lytlatest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -342,7 +399,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         docters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Temp.shoptypetext="Docters";
+                Temp.shoptypetext="Doctors";
                 Temp.shoptype=3;
                 startActivity(new Intent(getApplicationContext(),Shops.class));
             }
@@ -516,7 +573,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Temp.shoptype=4;
             startActivity(new Intent(getApplicationContext(),Shops.class));
         }
-        else if(id==R.id.accomodation)
+        else if(id==R.id.accomedation)
         {
             Temp.shoptypetext="Free Accomodation";
             Temp.shoptype=7;
@@ -584,6 +641,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             startActivity(new Intent(getApplicationContext(), News.class));
         }
+        else if(id==R.id.programchart)
+        {
+              download(Temp.weblink+"programchart.pdf");
+        }
+        else if(id==R.id.routemap)
+        {
+            download(Temp.weblink+"policeroutemap.pdf");
+        }
+        else if(id==R.id.disha)
+        {
+            download(Temp.weblink+"dishaprograms.pdf");
+        }
+        else if(id==R.id.advertisement)
+        {
+            startActivity(new Intent(getApplicationContext(), Advertisments.class));
+        }
         ((DrawerLayout) findViewById(R.id.drawer_layout)).closeDrawer((int) GravityCompat.START);
         return true;
     }
@@ -598,10 +671,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             File file = new File(completePath);
             if(file.exists())
             {
-               startupadlyt.setVisibility(View.VISIBLE);
+                startupadlyt.setVisibility(View.VISIBLE);
                 Uri imageUri = Uri.fromFile(file);
+                RequestOptions rep = new RequestOptions().signature(new ObjectKey(System.currentTimeMillis()));
                 Glide.with(this)
-                        .load(imageUri)
+                        .load(imageUri).apply(rep)
                         .into(startupads);
 
                 startupadlyt.setOnClickListener(new View.OnClickListener() {
@@ -611,7 +685,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         openlinks(k[1],k[2]);
                     }
                 });
-                new CountDownTimer(5000, 1000) {
+                new CountDownTimer(3000, 1000) {
 
                     public void onTick(long millisUntilFinished) {
                         adsskip.setText((millisUntilFinished / 1000)+"");
@@ -637,8 +711,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
 
                 Uri imageUri = Uri.fromFile(file);
+                RequestOptions rep = new RequestOptions().signature(new ObjectKey(System.currentTimeMillis()));
                 Glide.with(this)
-                        .load(imageUri)
+                        .load(imageUri).apply(rep)
                         .into(fulscreenad);
 
 
@@ -789,7 +864,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         public String doInBackground(String... arg0) {
             try {
-                String link= Temp.weblink +"getstartupads_user.php";
+                String link= Temp.weblink +"getstartupads_user1.php";
                 String data  = URLEncoder.encode("item", "UTF-8")
                         + "=" + URLEncoder.encode("", "UTF-8");
                 URL url = new URL(link);
@@ -815,12 +890,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         public void onPostExecute(String result) {
             try {
+
+
                 String[] p=result.split("###");
 
                 String startup=p[0];
                 String fullscreen=p[1];
                 String featured=p[2];
                 String banner=p[3];
+                String accomodation=p[4];
+                String food=p[5];
+                String rooms=p[6];
+                String turism=p[7];
+                String cinima=p[8];
+
                 if(!startup.trim().equalsIgnoreCase("noadvt"))
                 {
                     String[] got = startup.trim().split(":%");
@@ -832,11 +915,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
 
                                     db.addstartupads(got[0],got[1],got[2],got[3]);
-
                                     String filename=Environment.getExternalStorageDirectory()+"/"+Temp.foldername+"/startupads.jpg";
                                     write(filename,resource);
                                 }
                             });
+                }
+                else
+                {
+                    db.deletestartupads();
                 }
                 if(!fullscreen.trim().equalsIgnoreCase("noadvt"))
                 {
@@ -855,6 +941,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             });
                 }
+                else
+                {
+                    db.deletefullscreen();
+                }
+
                 if(!featured.trim().equalsIgnoreCase("noadvt"))
                 {
                     db.deletefeatured();
@@ -872,6 +963,117 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     }
                     load_featuredad();
                 }
+                else
+                {
+                    db.deletefeatured();
+                }
+
+                if(!accomodation.trim().equalsIgnoreCase("noadvt"))
+                {
+                    db.deleteaccomodation();
+                    String[] got = accomodation.trim().split(":%");
+                    for(int i=0;i<got.length;i++)
+                    {
+                        int a1=i;
+                        i++;
+                        int a2=i;
+                        i++;
+                        int a3=i;
+                        i++;
+                        int a4=i;
+                        db.addaccomodation(got[a1],got[a2],got[a3],got[a4]);
+                    }
+                }
+                else
+                {
+                    db.deleteaccomodation();
+                }
+
+                if(!food.trim().equalsIgnoreCase("noadvt"))
+                {
+                    db.deletefood();
+                    String[] got = food.trim().split(":%");
+                    for(int i=0;i<got.length;i++)
+                    {
+                        int a1=i;
+                        i++;
+                        int a2=i;
+                        i++;
+                        int a3=i;
+                        i++;
+                        int a4=i;
+                        db.addfood(got[a1],got[a2],got[a3],got[a4]);
+                    }
+                }
+                else
+                {
+                    db.deletefood();
+                }
+
+
+                if(!rooms.trim().equalsIgnoreCase("noadvt"))
+                {
+                    db.deleterooms();
+                    String[] got = rooms.trim().split(":%");
+                    for(int i=0;i<got.length;i++)
+                    {
+                        int a1=i;
+                        i++;
+                        int a2=i;
+                        i++;
+                        int a3=i;
+                        i++;
+                        int a4=i;
+                        db.addrooms(got[a1],got[a2],got[a3],got[a4]);
+                    }
+                }
+                else
+                {
+                    db.deleterooms();
+                }
+
+                if(!turism.trim().equalsIgnoreCase("noadvt"))
+                {
+                    db.deletetourism();
+                    String[] got = turism.trim().split(":%");
+                    for(int i=0;i<got.length;i++)
+                    {
+                        int a1=i;
+                        i++;
+                        int a2=i;
+                        i++;
+                        int a3=i;
+                        i++;
+                        int a4=i;
+                        db.addtourism(got[a1],got[a2],got[a3],got[a4]);
+                    }
+                }
+                else
+                {
+                    db.deletetourism();
+                }
+
+                if(!cinima.trim().equalsIgnoreCase("noadvt"))
+                {
+                    db.deletecinima();
+                    String[] got = cinima.trim().split(":%");
+                    for(int i=0;i<got.length;i++)
+                    {
+                        int a1=i;
+                        i++;
+                        int a2=i;
+                        i++;
+                        int a3=i;
+                        i++;
+                        int a4=i;
+                        db.addcinima(got[a1],got[a2],got[a3],got[a4]);
+                    }
+                }
+                else
+                {
+                    db.deletecinima();
+                }
+
                 if(!banner.trim().equalsIgnoreCase("noadvt"))
                 {
                     db.deletebanner();
@@ -890,14 +1092,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     load_bannerad();
                 }
+                else
+                {
+                    db.deletebanner();
+                    load_bannerad();
+                }
 
 
             } catch (Exception e) {
+
+                Log.w("Exceperiom",Log.getStackTraceString(e));
             }
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (!hasPermissions(getApplicationContext(), PERMISSIONS)) {
+            ActivityCompat.requestPermissions(MainActivity.this,PERMISSIONS, 1);
+        }
+    }
+
     public void write(String fileName, Bitmap bitmap) {
+        Log.w("promode","olasa");
         FileOutputStream outputStream;
         try {
             OutputStream fOut = null;
@@ -907,6 +1125,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fOut.flush();
             fOut.close(); // do not forget to close the stream
         } catch (Exception error) {
+            Log.w("dsadasdas",error.toString());
             error.printStackTrace();
         }
     }
@@ -914,7 +1133,61 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void load_bannerad()
     {
         ArrayList<String> id1 = db.getbanner();
-        String[] k= (String[]) id1.toArray(new String[id1.size()]);
+      // String[] k1= (String[]) id1.toArray(new String[id1.size()]);
+
+        ArrayList<String> id2 = db.getaccomodation();
+      //  String[] k2= (String[]) id2.toArray(new String[id2.size()]);
+
+        ArrayList<String> id3 = db.getfood();
+      //  String[] k3= (String[]) id3.toArray(new String[id3.size()]);
+
+        ArrayList<String> id4 = db.getrooms();
+       // String[] k4= (String[]) id4.toArray(new String[id4.size()]);
+
+        ArrayList<String> id5 = db.gettourism();
+        //String[] k5= (String[]) id5.toArray(new String[id5.size()]);
+
+        ArrayList<String> id6 = db.getcinima();
+        //String[] k6= (String[]) id6.toArray(new String[id6.size()]);
+
+        ArrayList<String> arraylist=new ArrayList<String>();
+
+        ArrayList<String> arraylist1=new ArrayList<String>();
+        arraylist1.clear();
+        arraylist1.add("1");
+        arraylist1.add("2");
+        arraylist1.add("3");
+        arraylist1.add("4");
+        arraylist1.add("5");
+
+        Collections.shuffle(arraylist1);
+        for(int i=0;i<arraylist1.size();i++)
+        {
+            if(arraylist1.get(i).equalsIgnoreCase("1"))
+            {
+                arraylist.addAll(id1);
+            }
+            else if(arraylist1.get(i).equalsIgnoreCase("2"))
+            {
+                arraylist.addAll(id2);
+            }
+            else if(arraylist1.get(i).equalsIgnoreCase("3"))
+            {
+                arraylist.addAll(id3);
+            }
+            else if(arraylist1.get(i).equalsIgnoreCase("4"))
+            {
+                arraylist.addAll(id4);
+            }
+            else if(arraylist1.get(i).equalsIgnoreCase("5"))
+            {
+                arraylist.addAll(id5);
+            }
+        }
+
+
+        String[] k= (String[]) arraylist.toArray(new String[arraylist.size()]);
+
         if(k.length>0)
         {
             String ad1="",ad2="",ad3="",ad4="",ad5="";
@@ -949,10 +1222,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                   else if(m==5)
                   {
                       ad5=k[a1]+":%"+k[a2]+":%"+k[a3]+":%"+k[a4];
+                      break;
                   }
-
             }
-
             if(!ad1.equalsIgnoreCase(""))
             {
                 String[] p=ad1.split(":%");
@@ -1207,9 +1479,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void call(final String mob) {
         try {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Are you sure want to call to ? "+mob).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
+            final Dialog dialog3 = new Dialog(this);
+            dialog3.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog3.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog3.setContentView(R.layout.custom_call);
+            dialog3.setCancelable(true);
+            TextView title=dialog3.findViewById(R.id.title);
+            Button no=dialog3.findViewById(R.id.no);
+            Button yes=dialog3.findViewById(R.id.yes);
+
+
+            title.setTypeface(face);
+            no.setTypeface(face);
+            yes.setTypeface(face);
+
+
+            no.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    dialog3.dismiss();
+                }
+            });
+
+            yes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     if (ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != 0) {
                         callmob=mob;
                         ActivityCompat.requestPermissions(MainActivity.this, new String[]{ android.Manifest.permission.CALL_PHONE}, 1);
@@ -1218,18 +1513,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         callIntent.setData(Uri.parse("tel:"+mob));
                         startActivity(callIntent);
                     }
-                    dialog.dismiss();
+                    dialog3.dismiss();
                 }
             });
-            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    dialog.dismiss();
-                }
-            });
-            builder.create().show();
+            dialog3.show();
         } catch (Exception e) {
         }
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
@@ -1238,28 +1529,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case 1: {
 
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != 0) {
-                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{ android.Manifest.permission.CALL_PHONE}, 1);
-                    } else {
-                        Intent callIntent = new Intent(Intent.ACTION_CALL);
-                        callIntent.setData(Uri.parse("tel:"+callmob));
-                        startActivity(callIntent);
-                    }
-
-                } else {
-
+                if (!hasPermissions(getApplicationContext(), PERMISSIONS)) {
+                    ActivityCompat.requestPermissions(MainActivity.this,PERMISSIONS, 1);
                 }
                 return;
             }
         }
     }
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev){
-        super.dispatchTouchEvent(ev);
-        return mDetector.onTouchEvent(ev);
-    }
+
 
 View.OnTouchListener touchListener = new View.OnTouchListener() {
     public boolean onTouch(View v, MotionEvent event) {
@@ -1311,4 +1588,53 @@ View.OnTouchListener touchListener = new View.OnTouchListener() {
             return super.onFling(e1, e2, velocityX, velocityY);
         }
     }
+
+    public void download(String downlink1) {
+        try {
+
+            if (!hasPermissions(getApplicationContext(), PERMISSIONS)) {
+                ActivityCompat.requestPermissions(MainActivity.this,PERMISSIONS, 1);
+
+            }
+            else
+            {
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(downlink1));
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(1);
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, Temp.videodownslink);
+                ((DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                Toasty.info(getApplicationContext(), (CharSequence) "Download Started", Toast.LENGTH_SHORT).show();
+            }
+
+
+        } catch (Exception e) {
+            // Log.w("Gdsd",Log.getStackTraceString(e));
+        }
+    }
+
+
+    public static boolean hasPermissions(Context context, String... permissions) {
+
+        try
+        {
+            if (!(context == null || permissions == null)) {
+                for (String permission : permissions) {
+                    if (ActivityCompat.checkSelfPermission(context, permission) != 0) {
+                        return false;
+                    }
+                }
+            }
+
+        }
+        catch (Exception a)
+        {
+            //Log.w("Athiss",Log.getStackTraceString(a));
+        }
+        return true;
+    }
+
+
+
+
+
 }

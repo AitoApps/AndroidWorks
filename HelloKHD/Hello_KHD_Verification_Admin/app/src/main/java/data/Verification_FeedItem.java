@@ -1,7 +1,7 @@
 package data;
 
 public class Verification_FeedItem {
-    private String sn,studentname,itemname,schoolname,distric,mark;
+    private String sn,studentname,itemname,schoolname,mark;
 
     public String getSn() {
         return sn;
@@ -33,14 +33,6 @@ public class Verification_FeedItem {
 
     public void setSchoolname(String schoolname) {
         this.schoolname = schoolname;
-    }
-
-    public String getDistric() {
-        return distric;
-    }
-
-    public void setDistric(String distric) {
-        this.distric = distric;
     }
 
     public String getMark() {

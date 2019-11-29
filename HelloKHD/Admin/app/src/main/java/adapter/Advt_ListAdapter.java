@@ -114,9 +114,11 @@ public class Advt_ListAdapter extends BaseAdapter {
             adtype.setText("Rooms");
         }
         else if (item.getLinktype().equalsIgnoreCase("8")) {
-            adtype.setText("Other");
+            adtype.setText("Tourism");
         }
-
+        else if (item.getLinktype().equalsIgnoreCase("9")) {
+            adtype.setText("Cinima");
+        }
         delete.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 try {

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/actback"
     tools:context=".Announcement_List">
     <RelativeLayout
         android:id="@+id/header"
@@ -29,7 +30,8 @@
             android:layout_marginLeft="10.0dip"
             android:layout_toRightOf="@+id/back"
             android:text="Stages"
-            android:textColor="#000" />
+            android:textStyle="bold"
+            android:textColor="#fff" />
     </RelativeLayout>
 
 
@@ -66,7 +68,6 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            android:src="@drawable/nodata"
             android:visibility="gone" />
 
 

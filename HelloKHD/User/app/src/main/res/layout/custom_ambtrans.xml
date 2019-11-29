@@ -8,7 +8,8 @@
         android:id="@+id/layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundedcornerbackground">
+        android:layout_margin="5dp"
+        android:background="@drawable/curvedcornerlayout">
 
 
         <TextView
@@ -17,6 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="5.0dip"
             android:text="Title"
+            android:textSize="18dp"
+            android:textStyle="bold"
             android:textColor="#ff000000" />
 
         <TextView
@@ -25,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5.0dip"
             android:text="Contact"
+            android:textSize="16dp"
             android:layout_below="@+id/title"
             android:textColor="#ff000000" />
 
@@ -34,10 +38,10 @@
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/callicon"
-            android:padding="5dp"
+            android:padding="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
-            android:layout_below="@+id/contact"
+           android:layout_centerVertical="true"
             />
 
     </RelativeLayout>

@@ -62,22 +62,116 @@
                 android:layout_margin="5.0dip"
                 android:background="@drawable/the_border1"
                 android:maxLines="1"
+                android:layout_toLeftOf="@+id/search"
                 android:padding="5.0dip" />
 
+               <Button
+                   android:id="@+id/search"
+                   android:layout_width="100dp"
+                   android:layout_height="50dp"
+                   android:text="Search"
+                   android:layout_margin="5dp"
+                   android:layout_below="@+id/txtschoolcode"
+                   android:textColor="#fff"
+                   android:background="@drawable/roundedcornerbutton"
+                   android:layout_alignParentRight="true"
+                   />
+
             <TextView
-                android:id="@+id/txtmark"
+                android:id="@+id/txtschoolname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5.0dip"
-                android:text="Mark"
+                android:text="School Name"
                 android:layout_below="@+id/schoolcode"
                 android:textColor="#ff000000" />
 
             <EditText
-                android:id="@+id/mark"
+                android:id="@+id/schoolname"
                 android:layout_width="fill_parent"
                 android:layout_height="50dip"
-                android:layout_below="@+id/txtmark"
+                android:layout_below="@+id/txtschoolname"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+            <TextView
+                android:id="@+id/txthsgeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="HS General"
+                android:layout_below="@+id/schoolname"
+                android:textColor="#ff000000" />
+
+
+            <EditText
+                android:id="@+id/hsgeneral"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txthsgeneral"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <TextView
+                android:id="@+id/txthssgeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="HSS General"
+                android:layout_below="@+id/hsgeneral"
+                android:textColor="#ff000000" />
+
+
+            <EditText
+                android:id="@+id/hssgeneral"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txthssgeneral"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+
+            <TextView
+                android:id="@+id/txthsarabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="HSS Arabic"
+                android:layout_below="@+id/hssgeneral"
+                android:textColor="#ff000000" />
+
+
+            <EditText
+                android:id="@+id/hsarabic"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txthsarabic"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border1"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txthssanskrit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="HSS Sanskrit"
+                android:layout_below="@+id/hsarabic"
+                android:textColor="#ff000000" />
+
+
+            <EditText
+                android:id="@+id/hssanskrit"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/txthssanskrit"
                 android:layout_margin="5.0dip"
                 android:background="@drawable/the_border1"
                 android:maxLines="1"
@@ -88,7 +182,7 @@
                 android:id="@+id/update"
                 android:layout_width="fill_parent"
                 android:layout_height="50.0dip"
-                android:layout_below="@+id/mark"
+                android:layout_below="@+id/hssanskrit"
                 android:layout_margin="5.0dip"
                 android:background="@drawable/roundedcornerbutton"
                 android:text="Update"

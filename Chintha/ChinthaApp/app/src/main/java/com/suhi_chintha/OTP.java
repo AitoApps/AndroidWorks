@@ -95,7 +95,7 @@ public class OTP extends AppCompatActivity {
             OkHttpClient client = new OkHttpClient();
             RequestBody body = new Builder().setType(MultipartBody.FORM).addFormDataPart(ConditionalUserProperty.NAME, dataDb2.get_usrtmp()).addFormDataPart("mobile", dataDb2.get_mobiletmp()).addFormDataPart("countrycode", dataDb2.get_codetemp()).addFormDataPart("fcmid", dataDb2.getfcmid()).addFormDataPart("aid", android_id).build();
             Request.Builder builder = new Request.Builder();
-            client.newCall(builder.url(Static_Variable.entypoint1+"registrationfresh_verify.php").post(body).build()).enqueue(new Callback() {
+            client.newCall(builder.url(Static_Variable.entypoint1+"appuserregistration_verify.php").post(body).build()).enqueue(new Callback() {
                 public void onFailure(Call call, IOException e) {
                     runOnUiThread(new Runnable() {
                         public void run() {

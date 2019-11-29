@@ -125,7 +125,8 @@ public class Add_Advt extends AppCompatActivity {
         lst_advttype.add("Accomodation"); //5
         lst_advttype.add("Food"); //6
         lst_advttype.add("Rooms"); //7
-        lst_advttype.add("Other"); //8
+        lst_advttype.add("Tourism"); //8
+        lst_advttype.add("Cinima"); //9
 
         ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lst_advttype) {
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -162,6 +163,7 @@ public class Add_Advt extends AppCompatActivity {
         lst_linktype.add("Youtube Channel"); //4
         lst_linktype.add("Facebook Page"); //5
         lst_linktype.add("Direction"); //6
+        lst_linktype.add("No Action"); //7
 
 
         ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lst_linktype) {
@@ -258,7 +260,7 @@ public class Add_Advt extends AppCompatActivity {
                 }
                 else if (linktype.getSelectedItemPosition() <= 0) {
                     Toast.makeText(getApplicationContext(), "Please select link type", Toast.LENGTH_SHORT).show();
-                }else if (referance.getText().toString().equalsIgnoreCase("")) {
+                }else if (linktype.getSelectedItemPosition()!=7 && referance.getText().toString().equalsIgnoreCase("")) {
                     Toast.makeText(getApplicationContext(), "Please enter refrence", Toast.LENGTH_SHORT).show();
                 } else {
                     uploadingprogress();
@@ -312,14 +314,57 @@ public class Add_Advt extends AppCompatActivity {
                     options.setCompressionFormat(Bitmap.CompressFormat.JPEG);
                     options.setCompressionQuality(80);
                     options.setToolbarTitle("Crop Image");
+
+                    lst_advttype.add("Banner (4:1"); //1
+                    lst_advttype.add("FullScreen (720x1280)"); //2
+                    lst_advttype.add("Featured (400x200)"); //3
+                    lst_advttype.add("StartUp (720x1280)"); //4
+                    lst_advttype.add("Accomodation"); //5
+                    lst_advttype.add("Food"); //6
+                    lst_advttype.add("Rooms"); //7
+                    lst_advttype.add("Other"); //8
+
                     if(txt_adtype.equalsIgnoreCase("1"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
+                    }
+                    if(txt_adtype.equalsIgnoreCase("2"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(0.0f, 0.0f).start(Add_Advt.this);
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("3"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 2.0f).start(Add_Advt.this);
+
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("4"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(0.0f, 0.0f).start(Add_Advt.this);
+
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("5"))
                     {
                         UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
 
                     }
-                    else if(txt_adtype.equalsIgnoreCase("3"))
+                    else if(txt_adtype.equalsIgnoreCase("6"))
                     {
-                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(1.0f, 1.0f).start(Add_Advt.this);
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
+
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("7"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
+
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("8"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
+
+                    }
+                    else if(txt_adtype.equalsIgnoreCase("9"))
+                    {
+                        UCrop.of(Uri.fromFile(imageFile), uri).withOptions(options).withAspectRatio(4.0f, 1.0f).start(Add_Advt.this);
 
                     }
                 } catch (Exception e2) {

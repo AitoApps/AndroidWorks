@@ -114,7 +114,7 @@ public class SchoolSearch_Adapter extends Adapter<ViewHolder> {
                 viewHolder2.txthssanskrit.setTypeface(face);
                 viewHolder2.hssanskrit.setTypeface(face);
                 viewHolder2.schoolname.setText(item.getSchoolname());
-                viewHolder2.totalmark.setText((Integer.parseInt(item.getHsgeneral())+Integer.parseInt(item.getHssgeneral())+Integer.parseInt(item.getHssanskrit())+Integer.parseInt(item.getHsarabic()))+"");
+                viewHolder2.totalmark.setText((Integer.parseInt(item.getHsgeneral())+Integer.parseInt(item.getHssgeneral()))+"");
                 viewHolder2.hsgeneral.setText(item.getHsgeneral());
                 viewHolder2.hssgeneral.setText(item.getHssgeneral());
                 viewHolder2.hsarabic.setText(item.getHsarabic());

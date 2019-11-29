@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -146,80 +147,24 @@ public class MainActivity extends AppCompatActivity {
 
         public void onPostExecute(String result) {
             try {
+                Log.w("Reslsdsd",result);
                 if (result.trim().contains(":%ok")) {
                     feedItems.clear();
                     String[] got = result.trim().split(":%");
-                    int k = (got.length - 1) / 6;
+                    int k = (got.length - 1) / 5;
                     int m = -1;
                     for (int i = 1; i <= k; i++) {
                         Verification_FeedItem item = new Verification_FeedItem();
                         m=m+1;
-                        item.setSn(got[m].trim());
+                        item.setSn(got[m]);
                         m=m+1;
                         item.setStudentname(got[m]);
+                        m=m+1;
+                        item.setMark(got[m]);
                         m=m+1;
                         item.setItemname(got[m]);
                         m=m+1;
                         item.setSchoolname(got[m]);
-                        m=m+1;
-                        if(got[m].equalsIgnoreCase("1"))
-                        {
-                            item.setDistric("Kasaragod");
-                        }
-                        else if(got[m].equalsIgnoreCase("2"))
-                        {
-                            item.setDistric("Kannur");
-                        }
-                        else if(got[m].equalsIgnoreCase("3"))
-                        {
-                            item.setDistric("Wayanad");
-                        }
-                        else if(got[m].equalsIgnoreCase("4"))
-                        {
-                            item.setDistric("Kozhikode");
-                        }
-                        else if(got[m].equalsIgnoreCase("5"))
-                        {
-                            item.setDistric("Malappuram");
-                        }
-                        else if(got[m].equalsIgnoreCase("6"))
-                        {
-                            item.setDistric("Palakkad");
-                        }
-                        else if(got[m].equalsIgnoreCase("7"))
-                        {
-                            item.setDistric("Thrissur");
-                        }
-                        else if(got[m].equalsIgnoreCase("8"))
-                        {
-                            item.setDistric("Ernakulam");
-                        }
-                        else if(got[m].equalsIgnoreCase("9"))
-                        {
-                            item.setDistric("Idukki");
-                        }
-                        else if(got[m].equalsIgnoreCase("10"))
-                        {
-                            item.setDistric("Kottayam");
-                        }
-                        else if(got[m].equalsIgnoreCase("11"))
-                        {
-                            item.setDistric("Alappuzha");
-                        }
-                        else if(got[m].equalsIgnoreCase("12"))
-                        {
-                            item.setDistric("Pathanamthitta");
-                        }
-                        else if(got[m].equalsIgnoreCase("13"))
-                        {
-                            item.setDistric("Kollam");
-                        }
-                        else if(got[m].equalsIgnoreCase("14"))
-                        {
-                            item.setDistric("Thiruvananthapuram");
-                        }
-                        m=m+1;
-                        item.setMark(got[m]);
                         feedItems.add(item);
                     }
                     heart.setVisibility(View.GONE);

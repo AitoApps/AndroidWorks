@@ -8,7 +8,7 @@
         <item
             android:id="@+id/nowrunning"
             android:icon="@drawable/nearstage"
-            android:title="Now Running" />
+            android:title="Live Program" />
         <item
             android:id="@+id/findstage"
             android:icon="@drawable/nearstage"
@@ -91,9 +91,27 @@
             android:icon="@drawable/videos"
             android:title="Video" />
 
+        <item
+            android:id="@+id/programchart"
+            android:icon="@drawable/downloads"
+            android:title="Program Chart" />
+
+        <item
+            android:id="@+id/routemap"
+            android:icon="@drawable/downloads"
+            android:title="Police Route Map" />
+        <item
+            android:id="@+id/disha"
+            android:icon="@drawable/downloads"
+            android:title="Disha Program" />
+
     </group>
     <item android:title="Communicate">
         <menu>
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/aboutus"
+                android:title="About Us" />
             <item
                 android:id="@+id/helpdesk"
                 android:icon="@drawable/helpdesk"
@@ -102,10 +120,12 @@
                 android:id="@+id/shareapp"
                 android:icon="@drawable/share"
                 android:title="Share App" />
+
             <item
-                android:id="@+id/about"
-                android:icon="@drawable/aboutus"
-                android:title="About Us" />
+                android:id="@+id/advertisement"
+                android:icon="@drawable/ads"
+                android:title="Advertisement" />
+
         </menu>
     </item>
 </menu>

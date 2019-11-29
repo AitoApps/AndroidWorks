@@ -17,6 +17,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -42,12 +43,19 @@ import com.bumptech.glide.request.transition.Transition;
 import com.bumptech.glide.signature.ObjectKey;
 import com.yalantis.ucrop.UCrop;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import data.Shop_FeedItem;
 import io.github.lizhangqu.coreprogress.ProgressHelper;
 import io.github.lizhangqu.coreprogress.ProgressUIListener;
 import okhttp3.Call;
@@ -72,7 +80,7 @@ public class Distric_Result extends AppCompatActivity {
     public ProgressBar pb1;
     ProgressDialog pd;
     public TextView persentage;
-    EditText result;
+    EditText hsgeneral,hssgeneral,hsarabic,hssanskrit;
     ProgressBar prb1;
     public Button stop;
     TextView text;
@@ -90,8 +98,12 @@ public class Distric_Result extends AppCompatActivity {
         update = (Button) findViewById(R.id.update);
         cd = new ConnectionDetecter(this);
         prb1 = (ProgressBar) findViewById(R.id.pb1);
-        result=findViewById(R.id.result);
         pd = new ProgressDialog(this);
+        hsgeneral=findViewById(R.id.hsgeneral);
+        hssgeneral=findViewById(R.id.hssgeneral);
+        hsarabic=findViewById(R.id.hsarabic);
+        hssanskrit=findViewById(R.id.hssanskrit);
+
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
         text.setTypeface(face);
         update.setTypeface(face);
@@ -142,6 +154,12 @@ public class Distric_Result extends AppCompatActivity {
         distric.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> adapterView, View arg1, int arg2, long arg3) {
                 txt_distric = arg2+"";
+                if(!txt_distric.equalsIgnoreCase("0")){
+                    new getresult().execute();
+                }
+
+
+
             }
 
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -157,9 +175,23 @@ public class Distric_Result extends AppCompatActivity {
                 } else if (distric.getSelectedItemPosition() <= 0) {
                     Toast.makeText(getApplicationContext(), "Please select distric", Toast.LENGTH_SHORT).show();
                 }
-                else if (result.getText().toString().equalsIgnoreCase("")) {
+                else if (hsgeneral.getText().toString().equalsIgnoreCase("")) {
                     Toast.makeText(getApplicationContext(), "Please enter result", Toast.LENGTH_SHORT).show();
-                } else {
+                    hsgeneral.requestFocus();
+                }
+                else if (hssgeneral.getText().toString().equalsIgnoreCase("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter result", Toast.LENGTH_SHORT).show();
+                    hssgeneral.requestFocus();
+                }
+                else if (hsarabic.getText().toString().equalsIgnoreCase("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter result", Toast.LENGTH_SHORT).show();
+                    hssgeneral.requestFocus();
+                }
+                else if (hssanskrit.getText().toString().equalsIgnoreCase("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter result", Toast.LENGTH_SHORT).show();
+                    hssanskrit.requestFocus();
+                }
+                else {
                     uploadingprogress();
 
                 }
@@ -214,7 +246,10 @@ public class Distric_Result extends AppCompatActivity {
         bodyBuilder.setType(MultipartBody.FORM);
 
         bodyBuilder.addFormDataPart("distric", null,RequestBody.create(contentType, lst_distric.get(distric.getSelectedItemPosition())));
-        bodyBuilder.addFormDataPart("result", null,RequestBody.create(contentType, result.getText().toString()));
+        bodyBuilder.addFormDataPart("hsgeneral", null,RequestBody.create(contentType, hsgeneral.getText().toString()));
+        bodyBuilder.addFormDataPart("hssgeneral", null,RequestBody.create(contentType, hssgeneral.getText().toString()));
+        bodyBuilder.addFormDataPart("hsarabic", null,RequestBody.create(contentType, hsarabic.getText().toString()));
+        bodyBuilder.addFormDataPart("hssanskrit", null,RequestBody.create(contentType, hssanskrit.getText().toString()));
 
         MultipartBody body = bodyBuilder.build();
 
@@ -294,5 +329,64 @@ public class Distric_Result extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    public class getresult extends AsyncTask<String, Void, String> {
+
+
+        public void onPreExecute() {
+            pd.setMessage("Please wait...");
+            pd.setCancelable(false);
+            pd.show();
+        }
+
+        public String doInBackground(String... arg0) {
+
+            try {
+                String link=Temp.weblink +"getdistricresult_admin.php";
+                String data  = URLEncoder.encode("item", "UTF-8")
+                        + "=" + URLEncoder.encode(lst_distric.get(Integer.parseInt(txt_distric)), "UTF-8");
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter
+                        (conn.getOutputStream());
+                wr.write(data);
+                wr.flush();
+                BufferedReader reader = new BufferedReader
+                        (new InputStreamReader(conn.getInputStream()));
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                }
+                return sb.toString();
+            } catch (Exception e) {
+                return new String("Unable to connect server! Please check your internet connection");
+            }
+        }
+
+
+        public void onPostExecute(String result) {
+            try {
+                pd.dismiss();
+                if (result.trim().contains(",")) {
+                    String[] k=result.split(",");
+                    hsgeneral.setText(k[0]);
+                    hssgeneral.setText(k[1]);
+                    hsarabic.setText(k[2]);
+                    hssanskrit.setText(k[3]);
+                }
+                else
+                {
+                    hssgeneral.setText("");
+                    hsgeneral.setText("");
+                    hsarabic.setText("");
+                    hssanskrit.setText("");
+                }
+            } catch (Exception e) {
+            }
+        }
     }
 }

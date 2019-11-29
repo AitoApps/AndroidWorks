@@ -81,7 +81,6 @@ public class Verificationlist_ListAdapter extends BaseAdapter {
         TextView name= (TextView) convertView.findViewById(R.id.name);
         TextView itemname= (TextView) convertView.findViewById(R.id.itemname);
         TextView schoolname= (TextView) convertView.findViewById(R.id.schoolname);
-        TextView distric= (TextView) convertView.findViewById(R.id.distric);
         TextView txtmark=convertView.findViewById(R.id.txtmark);
         EditText mark=convertView.findViewById(R.id.mark);
 
@@ -93,14 +92,12 @@ public class Verificationlist_ListAdapter extends BaseAdapter {
         name.setTypeface(face);
         itemname.setTypeface(face);
         schoolname.setTypeface(face);
-        distric.setTypeface(face);
         mark.setTypeface(face);
         txtmark.setTypeface(face);
 
         name.setText(item.getStudentname());
         itemname.setText(item.getItemname());
         schoolname.setText(item.getSchoolname());
-        distric.setText(item.getDistric());
         mark.setText(item.getMark());
 
 

@@ -107,7 +107,7 @@ public class ShopsList_Adapter extends Adapter<ViewHolder> {
                 viewHolder2.shopname.setTypeface(face);
                 viewHolder2.discription.setTypeface(face);
 
-                viewHolder2.shopname.setText(item.getShopname());
+                viewHolder2.shopname.setText(item.getShopname().toUpperCase());
                 viewHolder2.discription.setText(item.getDiscription());
                 ogheight = Float.parseFloat(udb.getscreenwidth()) / 4.0f;
                 ogheight *= 3.0f;

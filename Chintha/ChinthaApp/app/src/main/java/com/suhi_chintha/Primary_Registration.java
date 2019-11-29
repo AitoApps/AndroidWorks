@@ -196,9 +196,10 @@ public class Primary_Registration extends AppCompatActivity {
                     .addFormDataPart("countrycode", dataDb2.get_codetemp())
                     .addFormDataPart("fcmid", dataDb2.getfcmid())
                     .addFormDataPart("aid", android_id)
+                    .addFormDataPart("regtype", "1")
                     .build();
             Request request = new Request.Builder()
-                    .url(Static_Variable.entypoint1 + "registrationfresh.php")
+                    .url(Static_Variable.entypoint1 + "appuserregistraion.php")
                     .post(body)
                     .build();
 
@@ -225,7 +226,6 @@ public class Primary_Registration extends AppCompatActivity {
                             try {
 
                                 String result=response.body().string();
-                                Toasty.success(getApplicationContext(),result,Toast.LENGTH_LONG).show();
                                 if (result.contains("404")) {
                                     pd.dismiss();
 
@@ -285,6 +285,7 @@ public class Primary_Registration extends AppCompatActivity {
                                                 pd.dismiss();
                                                 mVerificationId = verificationId;
                                                 Intent i = new Intent(getApplicationContext(), OTP.class);
+                                                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                                 startActivity(i);
                                                 finish();
                                                 return;

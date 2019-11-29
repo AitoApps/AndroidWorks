@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/actback"
     tools:context=".School_Wise_Result">
 
 
@@ -32,7 +33,8 @@
             android:layout_marginLeft="10.0dip"
             android:layout_toRightOf="@+id/back"
             android:text="School Wise Result"
-            android:textColor="#000" />
+            android:textStyle="bold"
+            android:textColor="#fff"  />
     </RelativeLayout>
 
 
@@ -41,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/header"
+        android:layout_above="@+id/lytads"
         >
 
         <RelativeLayout
@@ -90,10 +93,22 @@
             android:layout_width="150.0dip"
             android:layout_height="150.0dip"
             android:layout_centerInParent="true"
-            android:src="@drawable/nodata"
             android:visibility="gone" />
 
 
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lytads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:id="@+id/ads"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
 
     </RelativeLayout>
 

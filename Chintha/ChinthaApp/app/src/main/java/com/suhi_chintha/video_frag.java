@@ -49,7 +49,6 @@ public class video_frag extends Fragment {
     RelativeLayout footerview;
     public int limit = 0;
     ListView list;
-
     public Video_List_Adapter listAdapter;
     LottieAnimationView loadingicon;
     ImageView nointernet;
@@ -86,7 +85,6 @@ public class video_frag extends Fragment {
                         }
                     }
                 }
-
                 public void onScrollStateChanged(AbsListView arg0, int arg1) {
                     if (arg1 == 2) {
                         flag = true;
@@ -109,22 +107,22 @@ public class video_frag extends Fragment {
         }
         return rootView;
     }
-
     public void refresh() {
         try {
             if (cd.isConnectingToInternet()) {
                 nointernet. setVisibility(View.GONE);
                 limit = 0;
                 new getyoutube().execute(new String[0]);
-                return;
             }
-            nointernet.setVisibility(View.VISIBLE);
-            Toast.makeText(context, Static_Variable.nonet, Toast.LENGTH_SHORT).show();
+            else
+            {
+                nointernet.setVisibility(View.VISIBLE);
+                Toast.makeText(context, Static_Variable.nonet, Toast.LENGTH_SHORT).show();
+            }
         } catch (Exception a) {
             Toasty.info(context, (CharSequence) Log.getStackTraceString(a), Toast.LENGTH_LONG).show();
         }
     }
-
     public void timerDelayRemoveDialog(long time, final Dialog d) {
         new Handler().postDelayed(new Runnable() {
             public void run() {
@@ -210,7 +208,6 @@ public class video_frag extends Fragment {
             }
         }
     }
-
     public class getyoutube1 extends AsyncTask<String, Void, String> {
         public getyoutube1() {
         }
@@ -251,7 +248,7 @@ public class video_frag extends Fragment {
                     int m = -1;
                     for (int i = 1; i <= k; i++) {
                         videoList_Feed item = new videoList_Feed();
-                        m=m+1;
+                        m = m + 1;
                         try {
                             Calendar c1 = Calendar.getInstance(TimeZone.getTimeZone("Asia/Calcutta"));
                             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss a", Locale.ENGLISH);
@@ -261,24 +258,30 @@ public class video_frag extends Fragment {
                         } catch (Exception e) {
                             item.setRegdate(got[m]);
                         }
-                        m=m+1;
+                        m = m + 1;
                         item.setMediatype(got[m]);
-                        m=m+1;
+                        m = m + 1;
                         item.setTitle(got[m]);
-                        m=m+1;
+                        m = m + 1;
                         item.setFbid(got[m]);
-                        m=m+1;
+                        m = m + 1;
                         item.setDim(got[m]);
-                        m=m+1;
+                        m = m + 1;
                         item.setImgsrc(got[m]);
-                        m=m+1;
+                        m = m + 1;
                         item.setVideosrc(got[m]);
                         feedItems.add(item);
                     }
-                    return;
+                    footerview. setVisibility(View.GONE);
+                    listAdapter.notifyDataSetChanged();
+                    list.setVisibility(View.VISIBLE);
+                    loadingicon. setVisibility(View.GONE);
                 }
-                loadingicon. setVisibility(View.GONE);
-                footerview. setVisibility(View.GONE);
+                else
+                {
+                    loadingicon. setVisibility(View.GONE);
+                    footerview. setVisibility(View.GONE);
+                }
             } catch (Exception e2) {
             }
         }

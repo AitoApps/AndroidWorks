@@ -94,7 +94,7 @@ public class News_ListAdapter extends BaseAdapter {
         RequestOptions rep = new RequestOptions().signature(new ObjectKey(item.getImgsig()));
         Glide.with(context).load(Temp.weblink+"newssmall/"+item.getSn()+".jpg").apply(rep).transition(DrawableTransitionOptions.withCrossFade()).into(image);
         heading.setTypeface(face);
-        heading.setText(Temp.shopname);
+        heading.setText(item.getHeading());
 
         delete.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {

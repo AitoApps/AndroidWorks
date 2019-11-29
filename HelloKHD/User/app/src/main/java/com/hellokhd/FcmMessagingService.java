@@ -67,11 +67,47 @@ public class FcmMessagingService extends FirebaseMessagingService {
                     }
                 }
 
+                if (new JSONObject(json1.toString()).getString("notitype").equalsIgnoreCase("instagram")) {
+                    try {
+                        generate_isntagram(json1.getString("message"));
+                    } catch (Exception e2) {
+                    }
+                }
+
             } catch (Exception e3) {
 
             }
 
         }
+    }
+
+
+    public void generate_isntagram(String anouncement) {
+        Intent intent = new Intent(this, Instagram.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+        RemoteViews contentView = new RemoteViews(Temp.packagename, R.layout.customnotification);
+        contentView.setTextViewText(R.id.title, anouncement);
+        if (VERSION.SDK_INT < 26) {
+            Notification notification = new Builder(this).setSmallIcon(R.drawable.smalllogo).setContentIntent(pendingIntent).setContent(contentView).build();
+            notification.flags |= Notification.FLAG_AUTO_CANCEL;
+            notification.defaults |= Notification.DEFAULT_SOUND;
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+            ((NotificationManager) getSystemService(NOTIFICATION_SERVICE)).notify(NotificationID.getID(), notification);
+
+        }
+        else
+        {
+            String str = "HelloKHDChannel";
+            NotificationChannel channel = new NotificationChannel(str, "HelloKHD_VER", NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription("HelloKHDNotification");
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+            Notification notification2 = new Builder(this, str).setSmallIcon(R.drawable.smalllogo).setContentIntent(pendingIntent).setContent(contentView).setPriority(0).build();
+            notification2.flags |= Notification.FLAG_AUTO_CANCEL;
+            notificationManager.notify(NotificationID.getID(), notification2);
+        }
+
     }
 
     public void generate_anouncement(String anouncement) {

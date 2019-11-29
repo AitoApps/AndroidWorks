@@ -14,6 +14,8 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -91,10 +93,8 @@ public class YoutubeFormat_Window extends Activity {
     private MediaPlayer mp;
     final DataBase db=new DataBase(this);
     int count = 0;
-
     UnifiedNativeAd nativeAd;
     FrameLayout adplaceholder;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,8 +106,6 @@ public class YoutubeFormat_Window extends Activity {
                     .permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-
-
         shimmer_view_container=findViewById(R.id.shimmer_view_container);
         list=findViewById(R.id.list);
         txtheader=findViewById(R.id.txtheader);
@@ -1212,163 +1210,226 @@ public void refreshad()
             shimmer_view_container.startShimmerAnimation();
             list.setVisibility(View.INVISIBLE);
 
+            if(link.contains("referrer=copiedLink") && link.contains("https://b.sharechat.com"))
+            {
+                OkHttpClient client = new OkHttpClient();
+                Request request = new Request.Builder()
+                        .url(link)
+                        .build();
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try
-                    {
-                        final StringBuilder builder = new StringBuilder();
+                Call call = client.newCall(request);
 
-                        URL url = new URL(link);
-                        BufferedReader in = new BufferedReader(
-                                new InputStreamReader(
-                                        url.openStream()));
-
-                        String line = null;
-                        while ((line = in.readLine()) != null) {
-                            builder.append(line);
-                        }
-
-                        String datas = builder.toString();
-                        String newurl="";
-                        String downname="";
-                        if (datas.contains("compressedVideoUrl") && datas.contains("videoCompressedSize")) {
-                            int index = datas.indexOf("compressedVideoUrl");
-                            int index1 = datas.indexOf("videoCompressedSize");
-                            String a1 = datas.substring(index + 21, index1 - 3);
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
-                            String ctime = sdf.format(new Date());
-                            downname = "SC_" + ctime + ".mp4";
-                            String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
-                            String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
-                            newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
-                            //download(path,newurl,downname,"SC",ctime);
-
-                        } else if (datas.contains("og:video:url") && datas.contains("_c_v.mp4")) {
-                            int index = datas.indexOf("og:video:url");
-                            int index1 = datas.indexOf("_c_v.mp4");
-                            String a1 = datas.substring(index + 23, index1) + "_c_v.mp4";
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
-                            String ctime = sdf.format(new Date());
-                            downname = "SC_" + ctime + ".mp4";
-                            String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
-                            String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
-                            newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
-                            //download(path,newurl,downname,"SC",ctime);
-                        } else if (datas.contains("og:video:url") && datas.contains("compressed_vat.mp4")) {
-                            int index = datas.indexOf("og:video:url");
-                            int index1 = datas.indexOf("compressed_vat.mp4");
-                            String a1 = datas.substring(index + 23, index1) + "compressed_vat.mp4";
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
-                            String ctime = sdf.format(new Date());
-                            downname = "SC_" + ctime + ".mp4";
-                            String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
-                            String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
-                            newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
-                            //  download(path,newurl,downname,"SC",ctime);
-                        } else if (datas.contains("og:video:url") && datas.contains("compressed.mp4")) {
-                            int index = datas.indexOf("og:video:url");
-                            int index1 = datas.indexOf("compressed.mp4");
-                            String a1 = datas.substring(index + 23, index1) + "compressed.mp4";
-
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
-                            String ctime = sdf.format(new Date());
-                            downname = "SC_" + ctime + ".mp4";
-                            String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
-                            String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
-                            newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
-                            //download(path,newurl,downname,"SC",ctime);
-                        } else if (datas.contains("og:video:url") && datas.contains(".mp4")) {
-                            int index = datas.indexOf("og:video:url");
-                            int index1 = datas.indexOf(".mp4");
-                            String a1 = datas.substring(index + 23, index1) + ".mp4";
-
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
-                            String ctime = sdf.format(new Date());
-                            downname = "SC_" + ctime + ".mp4";
-                            String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
-                            String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
-                            newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
-                            //download(path,newurl,downname,"SC",ctime);
-                        } else if (datas.contains("og:image") && !datas.contains("compressed_thumb.jpeg")) {
-                            int index = datas.indexOf("og:image");
-                            int index1 = datas.indexOf("da:req:type");
-                            String a1 = datas.substring(index + 19, index1 - 34);
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
-                            String ctime = sdf.format(new Date());
-                            downname = "SC_" + ctime + ".jpg";
-                            String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
-                            String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
-                            newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
-                            //  download(path,newurl,downname,"SC",ctime);
-                        }
-
-                        if(!newurl.equalsIgnoreCase(""))
-                        {
-                            Feed_Formats item=new Feed_Formats();
-                            item.setUrl(newurl);
-                            item.setVideosource("sharechat");
-                            item.setItag(0);
-                            if(downname.toLowerCase().contains(".jpg") || downname.toLowerCase().contains(".png"))
-                            {
-                                item.setType("JPG");
-                            }
-                            else if(downname.toLowerCase().contains(".gif"))
-                            {
-                                item.setType("GIF");
-                            }
-                            else
-                            {
-                                item.setType("MP4");
-                            }
-                            item.setSize("0");
-                            item.setAudiourl("");
-                            item.setAudiobitrate("128");
-                            item.setAudiourlsize("");
-                            item.setHeight(0);
-                            feedItems.add(item);
-                        }
-                        else
-                        {
-                            Feed_Formats item=new Feed_Formats();
-                            item.setUrl("");
-                            item.setVideosource("sharechat");
-                            item.setItag(0);
-                            item.setSize("0");
-                            item.setAudiourl("");
-                            item.setAudiobitrate("");
-                            item.setAudiourlsize("");
-                            item.setHeight(0);
-                            item.setType("");
-                            feedItems.add(item);
-
-                        }
+                call.enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
 
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                txtheader.setText("Download");
-                                shimmer_view_container.stopShimmerAnimation();
-                                shimmer_view_container.setVisibility(View.GONE);
-                                list.setVisibility(View.VISIBLE);
-                                listAdapter.notifyDataSetChanged();
-                                calculatesize();
+
+                               Toasty.info(getApplicationContext(), Temp.nointernet, Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
-                    catch (Exception a)
-                    {
 
+                    @Override
+                    public void onResponse(Call call, final Response response) {
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+
+                                    String result = response.body().string();
+                                    List<String> extractedUrls = extractUrls(result);
+
+                                    for (String url : extractedUrls)
+                                    {
+                                        if(url.contains("https://sharechat.com/post/"))
+                                        {
+                                            downloadsharechat(url);
+                                            break;
+                                        }
+                                    }
+
+                                } catch (Exception a) {
+
+
+                                    //Toasty.info(getApplicationContext(), "1"+Log.getStackTraceString(a), Toast.LENGTH_SHORT).show();
+
+                                }
+                            }
+                        });
                     }
-                }
-            }).start();
+                });
+
+            }
+            else
+            {
+                downloadsharechat(link);
+            }
+
 
 
 
         } catch (Exception a) {
 
+
         }
+    }
+
+    public void downloadsharechat(String link)
+    {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try
+                {
+                    final StringBuilder builder = new StringBuilder();
+
+                    URL url = new URL(link);
+                    BufferedReader in = new BufferedReader(
+                            new InputStreamReader(
+                                    url.openStream()));
+
+                    String line = null;
+                    while ((line = in.readLine()) != null) {
+                        builder.append(line);
+                    }
+
+                    String datas = builder.toString();
+                    String newurl="";
+                    String downname="";
+                    if (datas.contains("compressedVideoUrl") && datas.contains("videoCompressedSize")) {
+                        int index = datas.indexOf("compressedVideoUrl");
+                        int index1 = datas.indexOf("videoCompressedSize");
+                        String a1 = datas.substring(index + 21, index1 - 3);
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
+                        String ctime = sdf.format(new Date());
+                        downname = "SC_" + ctime + ".mp4";
+                        String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
+                        String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
+                        newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
+                        //download(path,newurl,downname,"SC",ctime);
+
+                    } else if (datas.contains("og:video:url") && datas.contains("_c_v.mp4")) {
+                        int index = datas.indexOf("og:video:url");
+                        int index1 = datas.indexOf("_c_v.mp4");
+                        String a1 = datas.substring(index + 23, index1) + "_c_v.mp4";
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
+                        String ctime = sdf.format(new Date());
+                        downname = "SC_" + ctime + ".mp4";
+                        String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
+                        String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
+                        newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
+                        //download(path,newurl,downname,"SC",ctime);
+                    } else if (datas.contains("og:video:url") && datas.contains("compressed_vat.mp4")) {
+                        int index = datas.indexOf("og:video:url");
+                        int index1 = datas.indexOf("compressed_vat.mp4");
+                        String a1 = datas.substring(index + 23, index1) + "compressed_vat.mp4";
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
+                        String ctime = sdf.format(new Date());
+                        downname = "SC_" + ctime + ".mp4";
+                        String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
+                        String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
+                        newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
+                        //  download(path,newurl,downname,"SC",ctime);
+                    } else if (datas.contains("og:video:url") && datas.contains("compressed.mp4")) {
+                        int index = datas.indexOf("og:video:url");
+                        int index1 = datas.indexOf("compressed.mp4");
+                        String a1 = datas.substring(index + 23, index1) + "compressed.mp4";
+
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
+                        String ctime = sdf.format(new Date());
+                        downname = "SC_" + ctime + ".mp4";
+                        String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
+                        String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
+                        newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
+                        //download(path,newurl,downname,"SC",ctime);
+                    } else if (datas.contains("og:video:url") && datas.contains(".mp4")) {
+                        int index = datas.indexOf("og:video:url");
+                        int index1 = datas.indexOf(".mp4");
+                        String a1 = datas.substring(index + 23, index1) + ".mp4";
+
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
+                        String ctime = sdf.format(new Date());
+                        downname = "SC_" + ctime + ".mp4";
+                        String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
+                        String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
+                        newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
+                        //download(path,newurl,downname,"SC",ctime);
+                    } else if (datas.contains("og:image") && !datas.contains("compressed_thumb.jpeg")) {
+                        int index = datas.indexOf("og:image");
+                        int index1 = datas.indexOf("da:req:type");
+                        String a1 = datas.substring(index + 19, index1 - 34);
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HHmmss");
+                        String ctime = sdf.format(new Date());
+                        downname = "SC_" + ctime + ".jpg";
+                        String path = "file://" + Environment.getExternalStorageDirectory() + "/SharechatDownloads/" + downname;
+                        String newdownpath = URLEncoder.encode(a1.substring(a1.lastIndexOf('/') + 1), "UTF-8");
+                        newurl = a1.substring(0, a1.lastIndexOf('/') + 1) + newdownpath;
+                        //download(path,newurl,downname,"SC",ctime);
+                    }
+
+                    if(!newurl.equalsIgnoreCase(""))
+                    {
+                        Feed_Formats item=new Feed_Formats();
+                        item.setUrl(newurl);
+                        item.setVideosource("sharechat");
+                        item.setItag(0);
+                        if(downname.toLowerCase().contains(".jpg") || downname.toLowerCase().contains(".png"))
+                        {
+                            item.setType("JPG");
+                        }
+                        else if(downname.toLowerCase().contains(".gif"))
+                        {
+                            item.setType("GIF");
+                        }
+                        else
+                        {
+                            item.setType("MP4");
+                        }
+                        item.setSize("0");
+                        item.setAudiourl("");
+                        item.setAudiobitrate("128");
+                        item.setAudiourlsize("");
+                        item.setHeight(0);
+                        feedItems.add(item);
+                    }
+                    else
+                    {
+                        Feed_Formats item=new Feed_Formats();
+                        item.setUrl("");
+                        item.setVideosource("sharechat");
+                        item.setItag(0);
+                        item.setSize("0");
+                        item.setAudiourl("");
+                        item.setAudiobitrate("");
+                        item.setAudiourlsize("");
+                        item.setHeight(0);
+                        item.setType("");
+                        feedItems.add(item);
+
+                    }
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            txtheader.setText("Download");
+                            shimmer_view_container.stopShimmerAnimation();
+                            shimmer_view_container.setVisibility(View.GONE);
+                            list.setVisibility(View.VISIBLE);
+                            listAdapter.notifyDataSetChanged();
+                            calculatesize();
+                        }
+                    });
+                }
+                catch (Exception a)
+                {
+
+                }
+            }
+        }).start();
     }
 
     @Override
@@ -1387,7 +1448,6 @@ public void refreshad()
 
     public void download(String path, String downurl, String downname1, String appid,boolean hide,String audioreq,String ctime,String isshow) {
         try {
-
 
             DownloadManager.Request req = new DownloadManager.Request(Uri.parse(downurl));
             req.setDestinationUri(Uri.parse(path));
@@ -1569,5 +1629,21 @@ public void refreshad()
                 }
             });
         }
+    }
+
+    public static List<String> extractUrls(String text)
+    {
+        List<String> containedUrls = new ArrayList<String>();
+        String urlRegex = "((https?|ftp|gopher|telnet|file):((//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)";
+        Pattern pattern = Pattern.compile(urlRegex, Pattern.CASE_INSENSITIVE);
+        Matcher urlMatcher = pattern.matcher(text);
+
+        while (urlMatcher.find())
+        {
+            containedUrls.add(text.substring(urlMatcher.start(0),
+                    urlMatcher.end(0)));
+        }
+
+        return containedUrls;
     }
 }

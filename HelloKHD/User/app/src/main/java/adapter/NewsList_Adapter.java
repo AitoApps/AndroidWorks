@@ -36,7 +36,7 @@ public class NewsList_Adapter extends Adapter<ViewHolder> {
     private Activity activity;
     float ogheight;
     public Context context;
-    Typeface face;
+    Typeface face,face1;
     public UserDatabaseHandler udb;
     public List<NewsList_FeedItem> feedItems;
     private LayoutInflater inflater;
@@ -46,6 +46,7 @@ public class NewsList_Adapter extends Adapter<ViewHolder> {
         context = activity2.getApplicationContext();
         udb=new UserDatabaseHandler(context);
         face=Typeface.createFromAsset(context.getAssets(), "proximanormal.ttf");
+        face1=Typeface.createFromAsset(context.getAssets(), "proxibold.otf");
     }
     public class viewHolder extends ViewHolder {
 
@@ -106,7 +107,7 @@ public class NewsList_Adapter extends Adapter<ViewHolder> {
                 NewsList_FeedItem item = (NewsList_FeedItem)feedItems.get(position);
                 viewHolder viewHolder2 = (viewHolder) holder;
                 viewHolder2.news.setTypeface(face);
-                viewHolder2.heading.setTypeface(face);
+                viewHolder2.heading.setTypeface(face1);
                 ogheight = Float.parseFloat(udb.getscreenwidth()) / 4.0f;
                 ogheight *= 3.0f;
 

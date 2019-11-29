@@ -10,13 +10,19 @@ import java.util.ArrayList;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "hellokhddb";
-    private static final int DATABASE_VERSION =6;
+    private static final int DATABASE_VERSION =8;
 
     private static final String TABLE_name1 = "startupads";
     private static final String TABLE_name2 = "fullscreen";
     private static final String TABLE_name3 = "featured";
     private static final String TABLE_name4 = "banner";
     private static final String TABLE_name5 = "location";
+    private static final String TABLE_name7 = "accomodation";
+    private static final String TABLE_name8 = "food";
+    private static final String TABLE_name9 = "rooms";
+    private static final String TABLE_name10 = "tourism";
+    private static final String TABLE_name11 = "cinima";
+
 
     private static final String pkey = "pkey";
     private static final String adsn = "adsn";
@@ -32,19 +38,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static String CREATE_videoid_TABLE3 = "CREATE TABLE "+TABLE_name3+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
     private static String CREATE_videoid_TABLE4 = "CREATE TABLE "+TABLE_name4+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
     private static String CREATE_videoid_TABLE5 = "CREATE TABLE "+TABLE_name5+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+latitude+" TEXT,"+longitude+" TEXT"+")";
-
+    private static String CREATE_videoid_TABLE7 = "CREATE TABLE "+TABLE_name7+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
+    private static String CREATE_videoid_TABLE8 = "CREATE TABLE "+TABLE_name8+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
+    private static String CREATE_videoid_TABLE9 = "CREATE TABLE "+TABLE_name9+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
+    private static String CREATE_videoid_TABLE10 = "CREATE TABLE "+TABLE_name10+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
+    private static String CREATE_videoid_TABLE11 = "CREATE TABLE "+TABLE_name11+"("+pkey+" INTEGER PRIMARY KEY AUTOINCREMENT,"+adsn+" TEXT,"+linktype+" TEXT,"+reference+" TEXT,"+imgsig+" TEXT"+")";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     public void onCreate(SQLiteDatabase db) {
-
         db.execSQL(CREATE_videoid_TABLE1);
         db.execSQL(CREATE_videoid_TABLE2);
         db.execSQL(CREATE_videoid_TABLE3);
         db.execSQL(CREATE_videoid_TABLE4);
         db.execSQL(CREATE_videoid_TABLE5);
+        db.execSQL(CREATE_videoid_TABLE7);
+        db.execSQL(CREATE_videoid_TABLE8);
+        db.execSQL(CREATE_videoid_TABLE9);
+        db.execSQL(CREATE_videoid_TABLE10);
+        db.execSQL(CREATE_videoid_TABLE11);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -54,6 +68,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name3);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name4);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name5);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name7);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name8);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name9);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name10);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name11);
         onCreate(db);
     }
 
@@ -64,7 +83,155 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name3);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name4);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_name5);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name7);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name8);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name9);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name10);
+        db.execSQL("DROP TABLE IF EXISTS "+TABLE_name11);
         onCreate(db);
+    }
+
+
+    public void addcinima(String adsn1,String linktype1,String reference1,String imgsig1) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(adsn,adsn1);
+        values.put(linktype,linktype1);
+        values.put(reference, reference1);
+        values.put(imgsig, imgsig1);
+        db.insert(TABLE_name11, null, values);
+        db.close();
+    }
+
+    public ArrayList<String> getcinima() {
+        ArrayList<String> arraylist = new ArrayList<>();
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name11, null);
+        while (c.moveToNext()) {
+            arraylist.add(c.getString(1));
+            arraylist.add(c.getString(2));
+            arraylist.add(c.getString(3));
+            arraylist.add(c.getString(4));
+        }
+        c.close();
+        return arraylist;
+    }
+
+    public void deletecinima() {
+        getWritableDatabase().execSQL("delete from "+TABLE_name11);
+    }
+
+
+    public void addtourism(String adsn1,String linktype1,String reference1,String imgsig1) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(adsn,adsn1);
+        values.put(linktype,linktype1);
+        values.put(reference, reference1);
+        values.put(imgsig, imgsig1);
+        db.insert(TABLE_name10, null, values);
+        db.close();
+    }
+
+    public ArrayList<String> gettourism() {
+        ArrayList<String> arraylist = new ArrayList<>();
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name10, null);
+        while (c.moveToNext()) {
+            arraylist.add(c.getString(1));
+            arraylist.add(c.getString(2));
+            arraylist.add(c.getString(3));
+            arraylist.add(c.getString(4));
+        }
+        c.close();
+        return arraylist;
+    }
+
+    public void deletetourism() {
+        getWritableDatabase().execSQL("delete from "+TABLE_name10);
+    }
+
+    public void addrooms(String adsn1,String linktype1,String reference1,String imgsig1) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(adsn,adsn1);
+        values.put(linktype,linktype1);
+        values.put(reference, reference1);
+        values.put(imgsig, imgsig1);
+        db.insert(TABLE_name9, null, values);
+        db.close();
+    }
+
+    public ArrayList<String> getrooms() {
+        ArrayList<String> arraylist = new ArrayList<>();
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name9, null);
+        while (c.moveToNext()) {
+            arraylist.add(c.getString(1));
+            arraylist.add(c.getString(2));
+            arraylist.add(c.getString(3));
+            arraylist.add(c.getString(4));
+        }
+        c.close();
+        return arraylist;
+    }
+
+    public void deleterooms() {
+        getWritableDatabase().execSQL("delete from "+TABLE_name9);
+    }
+
+    public void addfood(String adsn1,String linktype1,String reference1,String imgsig1) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(adsn,adsn1);
+        values.put(linktype,linktype1);
+        values.put(reference, reference1);
+        values.put(imgsig, imgsig1);
+        db.insert(TABLE_name8, null, values);
+        db.close();
+    }
+
+    public ArrayList<String> getfood() {
+        ArrayList<String> arraylist = new ArrayList<>();
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name8, null);
+        while (c.moveToNext()) {
+            arraylist.add(c.getString(1));
+            arraylist.add(c.getString(2));
+            arraylist.add(c.getString(3));
+            arraylist.add(c.getString(4));
+        }
+        c.close();
+        return arraylist;
+    }
+
+    public void deletefood() {
+        getWritableDatabase().execSQL("delete from "+TABLE_name8);
+    }
+
+
+    public void addaccomodation(String adsn1,String linktype1,String reference1,String imgsig1) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(adsn,adsn1);
+        values.put(linktype,linktype1);
+        values.put(reference, reference1);
+        values.put(imgsig, imgsig1);
+        db.insert(TABLE_name7, null, values);
+        db.close();
+    }
+
+    public ArrayList<String> getaccomodation() {
+        ArrayList<String> arraylist = new ArrayList<>();
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name7, null);
+        while (c.moveToNext()) {
+            arraylist.add(c.getString(1));
+            arraylist.add(c.getString(2));
+            arraylist.add(c.getString(3));
+            arraylist.add(c.getString(4));
+        }
+        c.close();
+        return arraylist;
+    }
+
+    public void deleteaccomodation() {
+        getWritableDatabase().execSQL("delete from "+TABLE_name7);
     }
 
     public String get_longtitude() {
@@ -118,7 +285,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     public ArrayList<String> getbanner() {
         ArrayList<String> arraylist = new ArrayList<>();
-        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name4, null);
+        Cursor c = getReadableDatabase().rawQuery("SELECT  * FROM "+TABLE_name4+" order by RANDOM()", null);
         while (c.moveToNext()) {
             arraylist.add(c.getString(1));
             arraylist.add(c.getString(2));

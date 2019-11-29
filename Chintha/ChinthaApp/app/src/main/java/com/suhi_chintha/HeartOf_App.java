@@ -31,6 +31,7 @@ import android.support.v4.media.session.PlaybackStateCompat;
 import android.text.ClipboardManager;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -275,7 +276,7 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
             ArrayList<String> id1 = userDataDB.get_user();
             String[] c = (String[]) id1.toArray(new String[id1.size()]);
             if (c.length <= 0) {
-                startActivity(new Intent(getApplicationContext(), Primary_Registration.class));
+                startActivity(new Intent(getApplicationContext(), Registrations.class));
                 finish();
                 return;
             }
@@ -364,6 +365,24 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
                     } catch (Exception e) {
                     }
                 }
+            });
+
+            popup.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+
+
+                    if(dataDb1.get_cmntnoti().contains(""))
+                    {
+                        dataDb1.drop_cmntnoti();;
+                    }
+                    else {
+                        if(dataDb2.get_codetemp().contains("1"))
+                        {
+                            dataDb4.drop_wpstatusopen();
+                        }
+                    }
+                };
             });
             if (dataDb1.get_notistatus().equalsIgnoreCase("")) {
                 dataDb1.drop_statusnoti();
@@ -501,6 +520,19 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
                     }
                 }
             });
+
+            first.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+
+                     if(settingslayout.getVisibility()==View.VISIBLE)
+                     {
+                         settingslayout.setVisibility(View.GONE);
+                     }
+
+                    return  true;
+                };
+            });
             second.setOnClickListener(new OnClickListener() {
                 public void onClick(View arg0) {
                     try {
@@ -592,6 +624,19 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
                         }
                     } catch (Exception e) {
                     }
+                }
+            });
+            ads.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+
+                    if(dataDb.get_fvrtusr1("1").size()>10)
+                    {
+
+
+                    }
+
+                    return false;
                 }
             });
             ArrayList<String> id3 = dataDb1.get_message();
@@ -743,13 +788,10 @@ public class HeartOf_App extends AppCompatActivity implements OnNavigationItemSe
             {
 
             }
-
-
         } catch (Exception a) {
 
         }
     }
-
     public void notice_legal() {
         final Dialog dialog2 = new Dialog(this);
         dialog2.requestWindowFeature(1);

@@ -166,7 +166,6 @@ public class Registration_Bypassing extends AppCompatActivity {
 
         }
     }
-
     public void neregistration()
     {
         try
@@ -184,7 +183,7 @@ public class Registration_Bypassing extends AppCompatActivity {
                     .addFormDataPart("aid", android_id)
                     .build();
             Request request = new Request.Builder()
-                    .url(Static_Variable.entypoint1 + "registrationnewbypass.php")
+                    .url(Static_Variable.entypoint1 + "appregistratonbypass.php")
                     .post(body)
                     .build();
 
@@ -226,7 +225,7 @@ public class Registration_Bypassing extends AppCompatActivity {
 
                                         Toasty.info(getApplicationContext(), Static_Variable.cmplted_veri,Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), HeartOf_App.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                         startActivity(intent);
                                         finish();
 

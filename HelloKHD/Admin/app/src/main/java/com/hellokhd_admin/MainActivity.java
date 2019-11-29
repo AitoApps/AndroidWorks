@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,12 @@ import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,14 +43,18 @@ public class MainActivity extends AppCompatActivity {
     List<String> lst_distric= new ArrayList();
     Typeface face;
     ImageView logout;
+    ImageView insta;
+    ProgressDialog pd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
         FirebaseApp.initializeApp(this);
+        pd=new ProgressDialog(this);
         logout=findViewById(R.id.logout);
         helpdesk=findViewById(R.id.helpdesk);
+        insta=findViewById(R.id.insta);
         districresult=findViewById(R.id.districresult);
         transporation=findViewById(R.id.transport);
         schoolresult=findViewById(R.id.schoolresult);
@@ -304,9 +316,63 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         });
+
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                new getresult().execute();
+
+            }
+        });
     }
 
+    public class getresult extends AsyncTask<String, Void, String> {
 
+
+        public void onPreExecute() {
+            pd.setMessage("Please wait...");
+            pd.setCancelable(false);
+            pd.show();
+        }
+
+        public String doInBackground(String... arg0) {
+
+            try {
+                String link=Temp.weblink +"pagefeedupdate.php";
+                String data  = URLEncoder.encode("item", "UTF-8")
+                        + "=" + URLEncoder.encode("", "UTF-8");
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter
+                        (conn.getOutputStream());
+                wr.write(data);
+                wr.flush();
+                BufferedReader reader = new BufferedReader
+                        (new InputStreamReader(conn.getInputStream()));
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                }
+                return sb.toString();
+            } catch (Exception e) {
+                return new String("Unable to connect server! Please check your internet connection");
+            }
+        }
+
+
+        public void onPostExecute(String result) {
+            try {
+                pd.dismiss();
+                Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+            }
+        }
+    }
 
     public void selectitemtype() {
         try {

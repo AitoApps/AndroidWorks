@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/curvedcornerlayout_green">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are you sure want to call ? "
+            android:textSize="16dp"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
+            android:layout_margin="5dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/callbtns"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/title"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/no"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="No"
+                android:layout_toLeftOf="@+id/yes"
+                android:textColor="#fff"
+                android:background="@drawable/roundedcornergreen"
+                android:layout_margin="10dp"
+                />
+
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="Yes"
+                android:textColor="#fff"
+                android:background="@drawable/roundedcornergreen"
+                android:layout_margin="10dp"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

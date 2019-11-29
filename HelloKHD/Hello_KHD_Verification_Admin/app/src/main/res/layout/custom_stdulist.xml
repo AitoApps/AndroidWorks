@@ -38,15 +38,7 @@
             android:textSize="18dp"
             android:layout_below="@+id/itemname"
             android:textColor="#ff000000" />
-        <TextView
-            android:id="@+id/distric"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5.0dip"
-            android:text="Distric"
-            android:textSize="18dp"
-            android:layout_below="@+id/schoolname"
-            android:textColor="#ff000000" />
+
 
 
 
@@ -59,7 +51,7 @@
             android:text="Mark"
             android:textSize="18dp"
             android:layout_toLeftOf="@+id/mark"
-            android:layout_below="@+id/distric"
+            android:layout_below="@+id/schoolname"
             android:textColor="#ff000000" />
 
         <EditText
@@ -70,14 +62,14 @@
             android:padding="5dp"
             android:layout_margin="5dp"
             android:layout_toLeftOf="@+id/confirm"
-            android:layout_below="@+id/distric"
+            android:layout_below="@+id/schoolname"
             />
         <ImageView
             android:id="@+id/confirm"
             android:layout_width="50.0dip"
             android:layout_height="50.0dip"
             android:layout_margin="5.0dip"
-            android:layout_below="@+id/distric"
+            android:layout_below="@+id/schoolname"
             android:layout_alignParentRight="true"
             android:src="@drawable/confirm" />
 

@@ -10,4 +10,14 @@ PlayEmail
 ceocinbuz@gmail.com
 admin2019
 
+
+https://www.dropbox.com/s/0gzbsjpf964ugnw/hellokhdadmin.apk?dl=1
+
+https://www.dropbox.com/s/0q8oarig59t0skd/hellokhdveriadmin.apk?dl=1
+
+http://hellokhd.xyz/hellokhd/web/adminlogin.php
+
+
 keytool -importcert -alias Salman -file deployment_cert.der -keystore certificate.jks -storepass salman
+
+keytool -exportcert -alias Salman -keystore certificate.jks | xxd -p | tr -d "[:space:]" | echo -n com.hellokhd `cat` | sha256sum | tr -d "[:space:]-" | xxd -r -p | base64 | cut -c1-11

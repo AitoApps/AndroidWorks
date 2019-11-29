@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.signature.ObjectKey;
 import com.hellokhd_admin.Add_Advt;
+import com.hellokhd_admin.Add_LiveProgram;
 import com.hellokhd_admin.Add_Stage;
 import com.hellokhd_admin.Advt_List;
 import com.hellokhd_admin.ConnectionDetecter;
@@ -89,6 +91,7 @@ public class Stagelist_ListAdapter extends BaseAdapter {
         ImageView delete = (ImageView) convertView.findViewById(R.id.delete);
         ImageView edit = (ImageView) convertView.findViewById(R.id.edit);
         ImageView image = (ImageView) convertView.findViewById(R.id.image);
+        Button live=convertView.findViewById(R.id.live);
         Stage_FeedItem item = (Stage_FeedItem) feedItems.get(position);
 
         RequestOptions rep = new RequestOptions().signature(new ObjectKey(item.getImgsig()));
@@ -96,6 +99,16 @@ public class Stagelist_ListAdapter extends BaseAdapter {
         stagename.setTypeface(face);
         stagename.setText(item.getStagename());
 
+        live.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Temp.stagesn=item.getSn();
+                Temp.stagenumber=item.getStagenumber();
+                Intent i = new Intent(context, Add_LiveProgram.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
+            }
+        });
         delete.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 try {

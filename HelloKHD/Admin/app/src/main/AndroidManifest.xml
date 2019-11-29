@@ -23,86 +23,91 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".School_Result"
+        <activity android:name=".Add_LiveProgram"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden"
             ></activity>
-        <activity android:name=".Distric_Result"
+        <activity
+            android:name=".School_Result"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Cinema"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Distric_Result"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".CinemaList"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Cinema"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Bus"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".CinemaList"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Bus_List"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Bus"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Transportation"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Bus_List"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".TransporationList"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Transportation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Ambulance_List"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".TransporationList"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Ambulance"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Ambulance_List"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Students"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Ambulance"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Students"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Students"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Scholls"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Students"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Schools"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Scholls"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Add_Programs"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Schools"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
-        <activity android:name=".Programs"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Add_Programs"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            />
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Programs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".VideoList"
             android:screenOrientation="portrait"

@@ -7,4 +7,6 @@
     <color name="bg">#ffe0e0e0</color>
     <color name="blue">#ff4267b2</color>
     <color name="yellow">#f4be13</color>
+    <color name="lightblue">#2873f0</color>
+    <color name="actback">#ffbdc1ca</color>
 </resources>

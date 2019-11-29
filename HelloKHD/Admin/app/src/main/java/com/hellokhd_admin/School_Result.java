@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +17,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.concurrent.TimeUnit;
 
 import io.github.lizhangqu.coreprogress.ProgressHelper;
@@ -40,12 +47,14 @@ public class School_Result extends AppCompatActivity {
     ProgressDialog pd;
     public TextView persentage;
     ProgressBar prb1;
-    EditText schoolcode,mark;
+    EditText schoolcode,schoolname,hsgeneral,hssgeneral,hsarabic,hssanskrit;
     public Button stop;
     TextView text;
     Button update;
     Call call;
     boolean requestgoing=true;
+    Button search;
+    String txt_schoolcode="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,11 +66,14 @@ public class School_Result extends AppCompatActivity {
         prb1 = (ProgressBar) findViewById(R.id.pb1);
         pd = new ProgressDialog(this);
         schoolcode=findViewById(R.id.schoolcode);
-        mark=findViewById(R.id.mark);
+        schoolname=findViewById(R.id.schoolname);
+        hsgeneral=findViewById(R.id.hsgeneral);
+        hssgeneral=findViewById(R.id.hssgeneral);
+        hsarabic=findViewById(R.id.hsarabic);
+        hssanskrit=findViewById(R.id.hssanskrit);
+        search=findViewById(R.id.search);
         face = Typeface.createFromAsset(getAssets(), "proxibold.otf");
         text.setTypeface(face);
-        schoolcode.setTypeface(face);
-        mark.setTypeface(face);
         update.setTypeface(face);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -78,17 +90,88 @@ public class School_Result extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please Enter School Code", Toast.LENGTH_SHORT).show();
                     schoolcode.requestFocus();
                 }
-                else if (mark.getText().toString().equalsIgnoreCase("")) {
-                    Toast.makeText(getApplicationContext(), "Please Enter Mark", Toast.LENGTH_SHORT).show();
-                    mark.requestFocus();
-                }
                 else {
                     uploadingprogress();
                 }
             }
         });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(schoolcode.getText().toString().equalsIgnoreCase(""))
+                {
+                    Toast.makeText(getApplicationContext(),"Please enter schoolcode",Toast.LENGTH_SHORT).show();
+                    schoolcode.requestFocus();
+                }
+                else
+                {
+                    txt_schoolcode=schoolcode.getText().toString();
+                    new getresult().execute();
+                }
+            }
+        });
     }
 
+    public class getresult extends AsyncTask<String, Void, String> {
+
+
+        public void onPreExecute() {
+            pd.setMessage("Please wait...");
+            pd.setCancelable(false);
+            pd.show();
+        }
+
+        public String doInBackground(String... arg0) {
+
+            try {
+                String link=Temp.weblink +"getschoolcoderesult_admin.php";
+                String data  = URLEncoder.encode("item", "UTF-8")
+                        + "=" + URLEncoder.encode(txt_schoolcode, "UTF-8");
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter
+                        (conn.getOutputStream());
+                wr.write(data);
+                wr.flush();
+                BufferedReader reader = new BufferedReader
+                        (new InputStreamReader(conn.getInputStream()));
+                StringBuilder sb = new StringBuilder();
+                String line = null;
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                }
+                return sb.toString();
+            } catch (Exception e) {
+                return new String("Unable to connect server! Please check your internet connection");
+            }
+        }
+
+
+        public void onPostExecute(String result) {
+            try {
+                pd.dismiss();
+                if (result.trim().contains(",")) {
+                    String[] k=result.split(",");
+                    schoolname.setText(k[0]);
+                    hsgeneral.setText(k[1]);
+                    hssgeneral.setText(k[2]);
+                    hsarabic.setText(k[3]);
+                    hssanskrit.setText(k[4]);
+                }
+                else
+                {
+                    hssgeneral.setText("");
+                    hsgeneral.setText("");
+                    hsarabic.setText("");
+                    hssanskrit.setText("");
+                }
+            } catch (Exception e) {
+            }
+        }
+    }
     public void uploadingprogress() {
         try {
             dialog = new Dialog(this);
@@ -134,7 +217,12 @@ public class School_Result extends AppCompatActivity {
         bodyBuilder.setType(MultipartBody.FORM);
 
         bodyBuilder.addFormDataPart("schoolcode", null, RequestBody.create(contentType, schoolcode.getText().toString()));
-        bodyBuilder.addFormDataPart("mark", null,RequestBody.create(contentType, mark.getText().toString()));
+        bodyBuilder.addFormDataPart("schoolname", null,RequestBody.create(contentType,schoolname.getText().toString()));
+        bodyBuilder.addFormDataPart("hsgeneral", null,RequestBody.create(contentType, hsgeneral.getText().toString()));
+        bodyBuilder.addFormDataPart("hssgeneral", null,RequestBody.create(contentType, hssgeneral.getText().toString()));
+        bodyBuilder.addFormDataPart("hsarabic", null,RequestBody.create(contentType, hsarabic.getText().toString()));
+        bodyBuilder.addFormDataPart("hssanskrit", null,RequestBody.create(contentType, hssanskrit.getText().toString()));
+
 
         MultipartBody body = bodyBuilder.build();
 

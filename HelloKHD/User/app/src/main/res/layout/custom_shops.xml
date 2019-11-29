@@ -61,7 +61,7 @@
                 android:layout_alignParentRight="true"
                 android:src="@drawable/location"
                 android:layout_marginTop="5dp"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:layout_below="@+id/discription"
                 />
 
@@ -71,7 +71,7 @@
                 android:layout_height="50dp"
                 android:layout_toLeftOf="@+id/location"
                 android:src="@drawable/callicon"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_below="@+id/discription"

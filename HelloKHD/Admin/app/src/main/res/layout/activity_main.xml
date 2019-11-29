@@ -67,6 +67,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/districlist"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -75,6 +76,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/schoolreult"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -89,6 +91,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/adsmngment"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -97,6 +100,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/stages"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -111,6 +115,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/markadmin"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -119,6 +124,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/markverificationadmin"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -132,6 +138,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/shops"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -140,6 +147,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/touristspot"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -154,6 +162,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/rooms"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -162,6 +171,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/docters"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -175,6 +185,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/atm"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -183,6 +194,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/pumb"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -196,6 +208,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/videos"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -204,6 +217,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/announcement"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -218,6 +232,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/news"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -226,6 +241,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/hospital"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                 </TableRow>
@@ -239,6 +255,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/accomedation"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -247,6 +264,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/food"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                 </TableRow>
@@ -259,6 +277,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/ambulance"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -267,6 +286,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/transportation"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                 </TableRow>
@@ -278,6 +298,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/bus"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
                     <ImageView
@@ -286,6 +307,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/train"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
@@ -300,6 +322,7 @@
                         android:layout_height="150dp"
                         android:src="@drawable/cinema"
                         android:layout_margin="5dp"
+                        android:visibility="visible"
                         />
 
 
@@ -309,11 +332,26 @@
                         android:layout_height="150dp"
                         android:src="@drawable/helpdesk"
                         android:layout_margin="5dp"
+                        android:visibility="gone"
                         />
 
 
                 </TableRow>
+                <TableRow>
 
+                    <ImageView
+                        android:id="@+id/insta"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/updateinsta"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        />
+
+
+
+
+                </TableRow>
             </TableLayout>
 
         </RelativeLayout>
