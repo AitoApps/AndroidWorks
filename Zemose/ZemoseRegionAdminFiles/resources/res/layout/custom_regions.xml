@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/roundedlayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+    <RelativeLayout android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18dp" android:textColor="#000" android:id="@+id/regionname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Region Name"/>
+        <Button android:textColor="#fff" android:id="@+id/heads" android:background="@drawable/button1" android:layout_width="150dp" android:layout_height="40dp" android:layout_margin="5dp" android:text="Heads" android:layout_below="@+id/regionname"/>
+        <ImageView android:id="@+id/delete" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:src="@drawable/closeicon" android:layout_below="@+id/regionname" android:layout_alignParentRight="true"/>
+        <ImageView android:id="@+id/edit" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="10dp" android:layout_marginRight="30dp" android:layout_marginBottom="10dp" android:src="@drawable/edit" android:layout_toLeftOf="@+id/delete" android:layout_below="@+id/regionname"/>
+    </RelativeLayout>
+</RelativeLayout>

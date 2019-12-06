@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            />
+
+
+        <TextView
+            android:id="@+id/name"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name"
+            android:layout_toRightOf="@+id/image"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/housename"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Place"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/image"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/pending"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:layout_below="@+id/housename"
+            android:layout_toRightOf="@+id/image"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+
+         <Button
+             android:id="@+id/viewall"
+             android:layout_width="100dp"
+             android:layout_height="40dp"
+             android:text="View"
+             android:textColor="#fff"
+             android:layout_below="@+id/pending"
+             android:layout_alignParentRight="true"
+             android:background="@drawable/roundedcornerbutton"
+             />
+
+    </RelativeLayout>
+</RelativeLayout>

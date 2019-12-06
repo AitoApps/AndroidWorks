@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/layout" android:background="@drawable/roundedlayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+    <RelativeLayout android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/image" android:background="@drawable/noimage" android:layout_width="80dp" android:layout_height="80dp" android:layout_margin="5dp"/>
+        <TextView android:textSize="18dp" android:textColor="#000" android:id="@+id/productname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Product Name" android:layout_toRightOf="@+id/image"/>
+        <TextView android:textSize="18dp" android:textColor="#000" android:id="@+id/txtqty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Qty : " android:layout_toRightOf="@+id/image" android:layout_below="@+id/productname"/>
+        <TextView android:textSize="18dp" android:textColor="#000" android:id="@+id/qty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="10" android:layout_toRightOf="@+id/txtqty" android:layout_below="@+id/productname"/>
+    </RelativeLayout>
+</RelativeLayout>

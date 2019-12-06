@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/layout" android:background="@drawable/roundedlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:background="@drawable/noimage" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_centerVertical="true" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <TextView android:textSize="16.0dip" android:textColor="#ff000000" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Name" android:layout_toLeftOf="@id/lycount" android:layout_toRightOf="@id/image" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="Date" android:layout_toRightOf="@id/image" android:layout_below="@id/name" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/customer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="Customer" android:layout_toRightOf="@id/image" android:layout_below="@id/date" />
+</RelativeLayout>

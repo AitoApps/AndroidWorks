@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/layout" android:background="@drawable/roundedlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Shop Name" android:layout_toLeftOf="@id/amount" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="Date" android:layout_toLeftOf="@id/amount" android:layout_below="@id/name" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/mode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="Mode" android:layout_toLeftOf="@id/amount" android:layout_below="@id/date" />
+    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="100" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

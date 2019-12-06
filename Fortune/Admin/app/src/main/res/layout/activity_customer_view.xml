@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff6f6f6"
+    tools:context=".CustomerView">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Customer Details"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/loading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/nodata"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/noproducts"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/nointernet"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/nointernet"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/heart"
+                    android:layout_width="70.0dip"
+                    android:layout_height="70.0dip"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            <TextView
+                android:id="@+id/txtbasicinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Personal Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/basicinform"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtbasicinfo"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Name"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/housename"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Housename"
+                    android:layout_below="@+id/name"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/streetlandmarkcity"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Housename"
+                    android:layout_below="@+id/housename"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/districstatecountry"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Housename"
+                    android:layout_below="@+id/streetlandmarkcity"
+                    android:textColor="#ff000000" />
+
+
+                <TextView
+                    android:id="@+id/postpincode"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:text="Housename"
+                    android:layout_below="@+id/districstatecountry"
+                    android:textColor="#ff000000" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtcontactinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basicinform"
+                android:layout_margin="5.0dip"
+                android:text="Contact Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytcontactinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtcontactinfo"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/mobile"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_centerVertical="true"
+                    android:text="+91 9037631786"
+                    android:textSize="20dp"
+                    android:layout_toLeftOf="@+id/call"
+                    android:textColor="#ff000000" />
+
+                  <ImageView
+                      android:id="@+id/call"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:src="@drawable/logo"
+                      android:scaleType="fitCenter"
+                      android:layout_alignParentRight="true"
+                      />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtbatchinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytcontactinfo"
+                android:layout_margin="5.0dip"
+                android:text="Batch Info"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytbatchinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtbatchinfo"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/batchname"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="Batch Name"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_below="@+id/batchname"
+                    android:text="Amount"
+                    android:textColor="#ff000000" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytbatchinfo"
+                android:layout_margin="5.0dip"
+                android:text="Account"
+                android:textSize="16.0dip"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/lytaccount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtaccount"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/roundedcornerbackground"
+                android:padding="5.0dip">
+
+                <TextView
+                    android:id="@+id/fromto"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="24-01-2019 -- 21-01-2029"
+                    android:textStyle="bold"
+                    android:textColor="#ff000000" />
+
+                <TextView
+                    android:id="@+id/totalpaid"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_below="@+id/fromto"
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Paid : 254  | Balance : 300"
+                    android:textColor="#ff000000" />
+
+                   <View
+                       android:id="@+id/view"
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:background="#ccc"
+                       android:layout_marginTop="2dp"
+                       android:layout_below="@+id/totalpaid"
+                       android:layout_marginBottom="2dp"
+                       />
+                <TextView
+                    android:id="@+id/paymenthistory"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_below="@+id/view"
+                    android:text="Payment History"
+                    android:textColor="#ccc" />
+
+                   <ListView
+                       android:id="@+id/accounthistory"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/paymenthistory"/>
+
+            </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

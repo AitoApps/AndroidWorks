@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/header" android:background="@drawable/titlebargradiant" android:layout_width="match_parent" android:layout_height="50dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:id="@+id/back" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="3dp" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true"/>
+        <TextView android:textColor="#ffffff" android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Report" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" style="@style/TextAppearance.Medium"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="50dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0">
+        <android.support.design.widget.TabLayout android:id="@+id/tabs" android:background="#c7c7c7" android:layout_width="match_parent" android:layout_height="30dp" app:tabGravity="0" app:tabIndicatorColor="#000" app:tabMode="1" app:tabSelectedTextColor="#000" app:tabTextColor="#000" style="@style/MyTabLayout"/>
+        <android.support.v4.view.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/tabs"/>
+    </RelativeLayout>
+</RelativeLayout>

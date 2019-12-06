@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Fish App Admin"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/areamanagement"
+            android:layout_width="150.0dip"
+            android:layout_height="100.0dip"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/roundedcornergreen"
+            android:padding="5.0dip"
+            android:text="Area Management"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/neworder"
+            android:layout_width="150.0dip"
+            android:layout_height="100.0dip"
+            android:layout_margin="10.0dip"
+            android:layout_toRightOf="@+id/areamanagement"
+            android:background="@drawable/roundedcornergreen"
+            android:text="New Order"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/outtodelivery"
+            android:layout_width="150.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@+id/areamanagement"
+            android:layout_margin="10.0dip"
+            android:background="@drawable/roundedcornergreen"
+            android:text="Out to Delivery"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/delivery"
+            android:layout_width="150.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@+id/neworder"
+            android:layout_margin="10.0dip"
+            android:layout_toRightOf="@+id/outtodelivery"
+            android:background="@drawable/roundedcornergreen"
+            android:text="Delivery"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fishapp.user.test">
+
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
+
+    <application android:debuggable="true" >
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation android:name="androidx.test.runner.AndroidJUnitRunner"
+                     android:targetPackage="com.fishapp.user"
+                     android:handleProfiling="false"
+                     android:functionalTest="false"
+                     android:label="Tests for com.fishapp.user"/>
+</manifest>

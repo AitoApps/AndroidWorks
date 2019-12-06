@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:text="Order your Favourite Fish"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+    `
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/cartlyt"
+        android:layout_below="@+id/header">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fishcatlist"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5.0dip" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fishlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/fishcatlist"
+            android:layout_margin="5.0dip" />
+
+        <ImageView
+            android:id="@+id/nodata"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/nointernet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nointernet"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cartlyt"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/itemcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip"
+            android:text="2 Fish | 4399"
+            android:textColor="#ffffffff" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/cartlyt1"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/cartborder"
+            >
+            <ImageView
+                android:id="@+id/carticon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cartsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/viewcart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/carticon"
+                android:text="View Cart"
+                android:textStyle="bold"
+                android:textColor="#1c505d"
+                android:textSize="14.0dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

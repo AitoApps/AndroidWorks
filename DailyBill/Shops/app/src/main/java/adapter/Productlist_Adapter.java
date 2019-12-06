@@ -372,7 +372,6 @@ public class Productlist_Adapter extends RecyclerView.Adapter<RecyclerView.ViewH
         Button update = (Button) dialog1.findViewById(R.id.add);
         TextView txtunit = (TextView) dialog1.findViewById(R.id.txtunit);
         Spinner unit = (Spinner) dialog1.findViewById(R.id.unit);
-        TextView txtminimum = (TextView) dialog1.findViewById(R.id.txtminimum);
         EditText minimum = (EditText) dialog1.findViewById(R.id.minimum);
         TextView itemname = (TextView) dialog1.findViewById(R.id.itemname);
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip"
+    android:background="@drawable/roundedlayout">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/headname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:text="Head Name"
+            android:textColor="#ff000000"
+            android:textSize="18.0dip" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headname"
+            android:layout_margin="5.0dip"
+            android:text="User Name"
+            android:textColor="#ff000000"
+            android:textSize="18.0dip" />
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_margin="5.0dip"
+            android:text="Password"
+            android:textColor="#ff000000"
+            android:textSize="18.0dip" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/password"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            emojicon:srcCompat="@drawable/closeicon" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_toLeftOf="@+id/delete"
+            emojicon:srcCompat="@drawable/edit" />
+    </RelativeLayout>
+</RelativeLayout>

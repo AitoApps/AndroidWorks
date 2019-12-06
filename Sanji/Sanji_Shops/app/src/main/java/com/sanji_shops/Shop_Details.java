@@ -32,12 +32,15 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
@@ -1018,23 +1021,30 @@ public class Shop_Details extends AppCompatActivity implements ConnectionCallbac
         return true;
     }
 
-    public boolean setListViewHeightBasedOnItems(ListView listView) {
+    public void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter == null) {
-            return false;
+            // pre-condition
+            return;
         }
-        int numberOfItems = listAdapter.getCount();
-        int totalItemsHeight = 0;
-        for (int itemPos = 0; itemPos < numberOfItems; itemPos++) {
-            View item = listAdapter.getView(itemPos, null, listView);
-            item.measure(MeasureSpec.makeMeasureSpec((int) (listView.getResources().getDisplayMetrics().density * 500.0f), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
-            totalItemsHeight += item.getMeasuredHeight();
+
+        int totalHeight = listView.getPaddingTop() + listView.getPaddingBottom();
+        int desiredWidth = MeasureSpec.makeMeasureSpec(listView.getWidth(), MeasureSpec.AT_MOST);
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+
+            if(listItem != null){
+                // This next line is needed before you call measure or else you won't get measured height at all. The listitem needs to be drawn first to know the height.
+                listItem.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+                listItem.measure(desiredWidth, MeasureSpec.UNSPECIFIED);
+                totalHeight += listItem.getMeasuredHeight();
+
+            }
         }
-        int totalDividersHeight = listView.getDividerHeight() * (numberOfItems - 1);
-        int totalPadding = listView.getPaddingTop() + listView.getPaddingBottom();
-        LayoutParams params = listView.getLayoutParams();
-        params.height = totalItemsHeight + totalDividersHeight + totalPadding;
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
         listView.requestLayout();
-        return true;
     }
 }

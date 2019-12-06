@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/header" android:background="@drawable/titlebargradiant" android:layout_width="match_parent" android:layout_height="50dp">
+        <ImageView android:id="@+id/back" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="3dp" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true"/>
+        <TextView android:textColor="#ffffff" android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Add Region" android:layout_toRightOf="@+id/back" android:layout_centerVertical="true" style="@style/TextAppearance.Medium"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/header">
+        <TextView android:textSize="14dp" android:textColor="#000" android:id="@+id/txtregion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Region Name"/>
+        <EditText android:id="@+id/region" android:background="@drawable/the_border1" android:padding="5dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="5dp" android:layout_below="@+id/txtregion"/>
+        <Button android:textColor="#fff" android:id="@+id/update" android:background="@drawable/button1" android:layout_width="150dp" android:layout_height="40dp" android:layout_margin="5dp" android:text="Update" android:layout_below="@+id/region" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>

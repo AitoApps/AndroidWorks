@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Lucky_Draw_Types">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:paddingTop="5.0dip"
+            android:text="Add / Edit LuckyDrawType"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtdrawtype"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Batch Name"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/drawtype"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="5.0dip"
+                android:layout_below="@+id/txtdrawtype"
+                android:background="@drawable/the_border"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtprice"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Price"
+                android:layout_below="@+id/drawtype"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="5.0dip"
+                android:layout_below="@+id/txtprice"
+                android:background="@drawable/the_border"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtstartdate"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Firstweek Date"
+                android:layout_below="@+id/price"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/startdate"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_margin="5.0dip"
+                android:layout_below="@+id/txtstartdate"
+                android:background="@drawable/the_border"
+                android:maxLines="1"
+                android:padding="5.0dip" />
+
+            <TextView
+                android:id="@+id/txtdiscirption"
+                style="@android:style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text="Discription"
+                android:layout_below="@+id/startdate"
+                android:textColor="#ff000000" />
+
+            <EditText
+                android:id="@+id/discirption"
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_below="@+id/txtdiscirption"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/the_border"
+                android:gravity="center|left|top"
+                android:padding="5.0dip" />
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_below="@+id/discirption"
+                android:layout_margin="5.0dip"
+                android:background="@drawable/roundedcornerbutton"
+                android:text="Update"
+                android:textColor="#ffffffff" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

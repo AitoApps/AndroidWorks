@@ -23,12 +23,23 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
+
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class Register extends AppCompatActivity {
     int PERMISSION_ALL = 1;
@@ -38,7 +49,6 @@ public class Register extends AppCompatActivity {
     ProgressDialog pd;
     Button register;
     TextView text;
-    public String txtname = "";
     final UserDatabaseHandler udb = new UserDatabaseHandler(this);
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,62 +93,71 @@ public class Register extends AppCompatActivity {
                                 return;
                             }
                             udb.addfcmid(((InstanceIdResult) task.getResult()).getToken());
-                            txtname = name.getText().toString();
-                            new registration().execute(new String[0]);
+                            registration();
+                }
+            });
+                }
+            }
+        });
+    }
+    public void registration()
+    {
+        OkHttpClient httpClient = new OkHttpClient();
+        String url =Temp.weblink+"admin_registration.php";
+        httpClient.newCall(new Request.Builder().url(url).post(new FormBody.Builder()
+                .add("secretkey", name.getText().toString())
+                .add("fcmid",udb.getfcmid())
+                .build()).build()).enqueue(new Callback() {
+            public void onFailure(Call call, IOException e) {
+                register.setEnabled(true);
+                pd.dismiss();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getApplicationContext(),Temp.tempproblem,Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            public void onResponse(Call call, Response response) throws IOException {
+                final String result = response.body().string();
+                Log.w("Resulsssss",result);
+                if (response.isSuccessful()) {
+                    runOnUiThread(new Runnable() {
+                        public void run() {
+                            try {
+                                register.setEnabled(true);
+                                pd.dismiss();
+                                JSONObject job=new JSONObject(result);
+                                JSONObject job1=job.getJSONObject("response");
+                                JSONObject data=job.getJSONObject("data");
+                                if(job1.getString("status").equalsIgnoreCase("success"))
+                                {
+                                    udb.adduser("ok");
+                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    finish();
+                                    return;
+                                }
+                                else if(job1.getString("status").equalsIgnoreCase("error"))
+                                {
+                                    Toast.makeText(getApplicationContext(), data.getString("msg"), Toast.LENGTH_SHORT).show();
+                                }
+                                else
+                                {
+                                    Toast.makeText(getApplicationContext(), Temp.tempproblem, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                            catch (Exception a)
+                            {
+
+                                Log.w("Resulsssss",Log.getStackTraceString(a));
+                            }
+
                         }
                     });
                 }
             }
         });
-    }
-    public class registration extends AsyncTask<String, Void, String> {
-        public void onPreExecute() {
-            register.setEnabled(false);
-        }
-        public String doInBackground(String... arg0) {
-            try {
-                String link=Temp.weblink+"admin_registration.php";
-                String data  = URLEncoder.encode("item", "UTF-8")
-                        + "=" + URLEncoder.encode(txtname+":%"+udb.getfcmid(), "UTF-8");
-                URL url = new URL(link);
-                URLConnection conn = url.openConnection();
-                conn.setDoOutput(true);
-                OutputStreamWriter wr = new OutputStreamWriter
-                        (conn.getOutputStream());
-                wr.write(data);
-                wr.flush();
-                BufferedReader reader = new BufferedReader
-                        (new InputStreamReader(conn.getInputStream()));
-                StringBuilder sb = new StringBuilder();
-                String line = null;
-                while((line = reader.readLine()) != null)
-                {
-                    sb.append(line);
-                }
-                return sb.toString();
-            } catch (Exception e) {
-                return new String("Unable to connect server! Please check your internet connection");
-            }
-        }
-        public void onPostExecute(String result) {
-            try {
-                register.setEnabled(true);
-                pd.dismiss();
-                if (result.contains("ok")) {
-                    udb.adduser("ok");
-                    Toast.makeText(getApplicationContext(), "Registration Successfull", 1).show();
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    finish();
-                    return;
-                }
-                if (result.contains("error")) {
-                    Toast.makeText(getApplicationContext(), "Please check your mobile number", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), Temp.tempproblem, Toast.LENGTH_SHORT).show();
-                }
-            } catch (Exception e) {
-            }
-        }
     }
     public static boolean hasPermissions(Context context, String... permissions) {
         if (!(context == null || permissions == null)) {

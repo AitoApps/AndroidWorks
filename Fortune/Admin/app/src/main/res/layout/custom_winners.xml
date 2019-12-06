@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/nophoto"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:text="Name"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/mobile"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:layout_below="@+id/name"
+            android:text="Mobile"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+           <View
+               android:id="@+id/view"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_below="@+id/image"
+               android:layout_marginTop="2dp"
+               android:layout_marginBottom="2dp"
+               android:background="#ccc"
+               />
+          <RelativeLayout
+              android:id="@+id/prizelyt"
+              android:layout_width="match_parent"
+              android:layout_below="@+id/view"
+              android:layout_height="75dp">
+
+              <ImageView
+                  android:id="@+id/priceimg"
+                  android:layout_width="75dp"
+                  android:layout_height="75dp"
+                  android:layout_margin="5dp"
+                  android:src="@drawable/nophoto"
+                  />
+
+              <TextView
+                  android:id="@+id/pricename"
+                  style="@android:style/TextAppearance.Medium"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_toRightOf="@+id/priceimg"
+                  android:text="Name"
+                  android:textStyle="bold"
+                  android:layout_centerVertical="true"
+                  android:layout_margin="5dp"
+                  android:textColor="#ff000000" />
+          </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/prizelyt"
+            android:padding="10dp"
+            android:src="@drawable/delete"
+            />
+
+         <ImageView
+             android:id="@+id/delete"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_below="@+id/prizelyt"
+             android:layout_alignParentRight="true"
+             android:padding="10dp"
+             android:src="@drawable/delete"
+             />
+    </RelativeLayout>
+</RelativeLayout>

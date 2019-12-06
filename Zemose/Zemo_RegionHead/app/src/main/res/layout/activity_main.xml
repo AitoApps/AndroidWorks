@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/titlebargradiant">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Registration"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/walletreport"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_margin="25.0dip"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Wallet Report"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/onlinepayment"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_margin="25.0dip"
+                android:layout_toRightOf="@+id/walletreport"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Payment"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/walletupdate"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/walletreport"
+                android:layout_margin="25.0dip"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Wallet Update"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/chats"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/onlinepayment"
+                android:layout_margin="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/walletupdate"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Chats"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/wallets"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/walletupdate"
+                android:layout_margin="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Wallets"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/orders"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/chats"
+                android:layout_margin="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/wallets"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Orders"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/traferdorder"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/wallets"
+                android:layout_margin="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Transfered Order"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/product"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/orders"
+                android:layout_margin="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toRightOf="@+id/traferdorder"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Search Suppliers"
+                android:textSize="18.0dip" />
+
+            <Button
+                android:id="@+id/supplier"
+                android:layout_width="150.0dip"
+                android:layout_height="150.0dip"
+                android:layout_below="@+id/traferdorder"
+                android:layout_margin="25.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/button"
+                android:padding="5.0dip"
+                android:text="Suppliers"
+                android:textSize="18.0dip" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

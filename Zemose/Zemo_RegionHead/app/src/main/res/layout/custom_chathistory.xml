@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5.0dip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/userchat"
+        android:layout_width="250.0dip"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedlayout"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sample Message"
+            android:textColor="#ff000000"
+            android:textSize="16.0dip" />
+
+        <TextView
+            android:id="@+id/chattime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msg"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:text="2:64 PM"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/adminchat"
+        android:layout_width="250.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedlayout_admin"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/adminmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sample Message"
+            android:textColor="#ff000000"
+            android:textSize="16.0dip" />
+
+        <TextView
+            android:id="@+id/adminchattime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/adminmsg"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:text="2:64 PM"
+            android:textColor="#ff000000" />
+    </RelativeLayout>
+</RelativeLayout>

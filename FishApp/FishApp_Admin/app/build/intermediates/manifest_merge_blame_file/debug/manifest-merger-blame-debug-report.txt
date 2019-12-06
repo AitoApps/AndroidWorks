@@ -6,347 +6,347 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml
+8-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml
+9-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:5:5-67
-11-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:5:22-64
+11-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.CAMERA" />
-12-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:6:5-65
-12-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:6:22-62
+12-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:6:5-65
+12-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:6:22-62
 13    <uses-permission android:name="android.permission.CALL_PHONE" />
-13-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:7:5-69
-13-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:7:22-66
+13-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:7:5-69
+13-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:7:22-66
 14    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-14-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:8:5-76
-14-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:8:22-73
+14-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:8:5-76
+14-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:8:22-73
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:9:5-79
-15-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:9:22-76
+15-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:9:5-79
+15-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:9:22-76
 16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:10:5-81
-16-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:10:22-78
+16-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:10:5-81
+16-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:10:22-78
 17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-17-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:11:5-80
-17-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:11:22-77
+17-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:11:5-80
+17-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:11:22-77
 18    <uses-permission android:name="android.permission.VIBRATE" />
-18-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:12:5-66
-18-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:12:22-63
+18-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:12:5-66
+18-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:12:22-63
 19    <uses-permission android:name="android.permission.WAKE_LOCK" />
-19-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:13:5-68
-19-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:13:22-65
+19-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:13:5-68
+19-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:13:22-65
 20    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-20-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:14:5-82
-20-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:14:22-79
+20-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:14:5-82
+20-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:14:22-79
 21
 22    <application
-22-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:16:5-129:19
+22-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:16:5-129:19
 23        android:allowBackup="true"
-23-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:17:9-35
+23-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:17:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.0.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\06765f3ecebe357db4e2ec12966c9e91\core-1.0.1\AndroidManifest.xml:22:18-86
+24-->[androidx.core:core:1.0.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/06765f3ecebe357db4e2ec12966c9e91/core-1.0.1/AndroidManifest.xml:22:18-86
 25        android:debuggable="true"
 26        android:icon="@drawable/logo"
-26-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:18:9-38
+26-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:18:9-38
 27        android:label="@string/app_name"
-27-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:19:9-41
+27-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:19:9-41
 28        android:roundIcon="@drawable/logo"
-28-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:20:9-43
+28-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:20:9-43
 29        android:supportsRtl="true"
-29-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:21:9-35
+29-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:21:9-35
 30        android:theme="@style/AppTheme"
-30-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:22:9-40
+30-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:22:9-40
 31        android:usesCleartextTraffic="true" >
-31-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:23:9-44
+31-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:23:9-44
 32        <activity
-32-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:24:9-28:63
+32-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:24:9-28:63
 33            android:name="com.fishappadmin.Add_Advt"
-33-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:25:13-53
+33-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:25:13-53
 34            android:screenOrientation="portrait"
-34-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:26:13-49
+34-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:26:13-49
 35            android:theme="@style/AppTheme.NoActionBar"
-35-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:27:13-56
+35-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:27:13-56
 36            android:windowSoftInputMode="stateAlwaysHidden" />
-36-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:28:13-60
+36-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:28:13-60
 37        <activity
-37-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:29:9-33:63
+37-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:29:9-33:63
 38            android:name="com.fishappadmin.Advt_List"
-38-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:30:13-54
+38-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:30:13-54
 39            android:screenOrientation="portrait"
-39-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:31:13-49
+39-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:31:13-49
 40            android:theme="@style/AppTheme.NoActionBar"
-40-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:32:13-56
+40-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:32:13-56
 41            android:windowSoftInputMode="stateAlwaysHidden" />
-41-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:33:13-60
+41-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:33:13-60
 42        <activity
-42-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:34:9-38:63
+42-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:34:9-38:63
 43            android:name="com.fishappadmin.Add_Fish_Catogery"
-43-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:35:13-62
+43-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:35:13-62
 44            android:screenOrientation="portrait"
-44-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:36:13-49
+44-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:36:13-49
 45            android:theme="@style/AppTheme.NoActionBar"
-45-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:37:13-56
+45-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:37:13-56
 46            android:windowSoftInputMode="stateAlwaysHidden" />
-46-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:38:13-60
+46-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:38:13-60
 47        <activity
-47-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:39:9-43:63
+47-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:39:9-43:63
 48            android:name="com.fishappadmin.FishCatogery"
-48-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:40:13-57
+48-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:40:13-57
 49            android:screenOrientation="portrait"
-49-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:41:13-49
+49-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:41:13-49
 50            android:theme="@style/AppTheme.NoActionBar"
-50-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:42:13-56
+50-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:42:13-56
 51            android:windowSoftInputMode="stateAlwaysHidden" />
-51-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:43:13-60
+51-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:43:13-60
 52
 53        <uses-library
-53-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:45:9-47:40
+53-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:45:9-47:40
 54            android:name="org.apache.http.legacy"
-54-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:46:13-50
+54-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:46:13-50
 55            android:required="false" />
-55-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:47:13-37
+55-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:47:13-37
 56
 57        <activity
-57-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:49:9-53:63
+57-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:49:9-53:63
 58            android:name="com.fishappadmin.Order_List"
-58-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:50:13-55
+58-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:50:13-55
 59            android:screenOrientation="portrait"
-59-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:51:13-49
+59-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:51:13-49
 60            android:theme="@style/AppTheme.NoActionBar"
-60-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:52:13-56
+60-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:52:13-56
 61            android:windowSoftInputMode="stateAlwaysHidden" />
-61-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:53:13-60
+61-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:53:13-60
 62        <activity
-62-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:54:9-58:63
+62-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:54:9-58:63
 63            android:name="com.fishappadmin.Add_Clients"
-63-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:55:13-56
+63-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:55:13-56
 64            android:screenOrientation="portrait"
-64-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:56:13-49
+64-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:56:13-49
 65            android:theme="@style/AppTheme.NoActionBar"
-65-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:57:13-56
+65-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:57:13-56
 66            android:windowSoftInputMode="stateAlwaysHidden" />
-66-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:58:13-60
+66-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:58:13-60
 67        <activity
-67-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:59:9-63:63
+67-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:59:9-63:63
 68            android:name="com.fishappadmin.Clients"
-68-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:60:13-52
+68-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:60:13-52
 69            android:screenOrientation="portrait"
-69-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:61:13-49
+69-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:61:13-49
 70            android:theme="@style/AppTheme.NoActionBar"
-70-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:62:13-56
+70-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:62:13-56
 71            android:windowSoftInputMode="stateAlwaysHidden" />
-71-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:63:13-60
+71-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:63:13-60
 72        <activity
-72-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:64:9-68:63
+72-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:64:9-68:63
 73            android:name="com.fishappadmin.Add_Client_Catogery"
-73-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:65:13-64
+73-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:65:13-64
 74            android:screenOrientation="portrait"
-74-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:66:13-49
+74-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:66:13-49
 75            android:theme="@style/AppTheme.NoActionBar"
-75-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:67:13-56
+75-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:67:13-56
 76            android:windowSoftInputMode="stateAlwaysHidden" />
-76-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:68:13-60
+76-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:68:13-60
 77        <activity
-77-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:69:9-73:63
+77-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:69:9-73:63
 78            android:name="com.fishappadmin.Client_Catogery"
-78-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:70:13-60
+78-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:70:13-60
 79            android:screenOrientation="portrait"
-79-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:71:13-49
+79-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:71:13-49
 80            android:theme="@style/AppTheme.NoActionBar"
-80-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:72:13-56
+80-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:72:13-56
 81            android:windowSoftInputMode="stateAlwaysHidden" />
-81-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:73:13-60
+81-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:73:13-60
 82        <activity
-82-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:74:9-78:63
+82-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:74:9-78:63
 83            android:name="com.fishappadmin.Add_Fish"
-83-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:75:13-53
+83-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:75:13-53
 84            android:screenOrientation="portrait"
-84-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:76:13-49
+84-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:76:13-49
 85            android:theme="@style/AppTheme.NoActionBar"
-85-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:77:13-56
+85-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:77:13-56
 86            android:windowSoftInputMode="stateAlwaysHidden" />
-86-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:78:13-60
+86-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:78:13-60
 87        <activity
-87-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:79:9-83:63
+87-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:79:9-83:63
 88            android:name="com.fishappadmin.Add_Area"
-88-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:80:13-53
+88-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:80:13-53
 89            android:screenOrientation="portrait"
-89-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:81:13-49
+89-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:81:13-49
 90            android:theme="@style/AppTheme.NoActionBar"
-90-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:82:13-56
+90-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:82:13-56
 91            android:windowSoftInputMode="stateAlwaysHidden" />
-91-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:83:13-60
+91-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:83:13-60
 92        <activity
-92-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:84:9-88:63
+92-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:84:9-88:63
 93            android:name="com.fishappadmin.FishList"
-93-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:85:13-53
+93-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:85:13-53
 94            android:screenOrientation="portrait"
-94-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:86:13-49
+94-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:86:13-49
 95            android:theme="@style/AppTheme.NoActionBar"
-95-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:87:13-56
+95-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:87:13-56
 96            android:windowSoftInputMode="stateAlwaysHidden" />
-96-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:88:13-60
+96-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:88:13-60
 97        <activity
-97-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:89:9-93:63
+97-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:89:9-93:63
 98            android:name="com.fishappadmin.OrderGroup"
-98-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:90:13-55
+98-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:90:13-55
 99            android:screenOrientation="portrait"
-99-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:91:13-49
+99-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:91:13-49
 100            android:theme="@style/AppTheme.NoActionBar"
-100-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:92:13-56
+100-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:92:13-56
 101            android:windowSoftInputMode="stateAlwaysHidden" />
-101-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:93:13-60
+101-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:93:13-60
 102        <activity
-102-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:94:9-98:63
+102-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:94:9-98:63
 103            android:name="com.fishappadmin.Area_Management"
-103-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:95:13-60
+103-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:95:13-60
 104            android:screenOrientation="portrait"
-104-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:96:13-49
+104-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:96:13-49
 105            android:theme="@style/AppTheme.NoActionBar"
-105-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:97:13-56
+105-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:97:13-56
 106            android:windowSoftInputMode="stateAlwaysHidden" />
-106-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:98:13-60
+106-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:98:13-60
 107        <activity
-107-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:99:9-103:63
+107-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:99:9-103:63
 108            android:name="com.fishappadmin.Registration"
-108-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:100:13-57
+108-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:100:13-57
 109            android:screenOrientation="portrait"
-109-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:101:13-49
+109-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:101:13-49
 110            android:theme="@style/AppTheme.NoActionBar"
-110-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:102:13-56
+110-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:102:13-56
 111            android:windowSoftInputMode="stateAlwaysHidden" />
-111-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:103:13-60
+111-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:103:13-60
 112        <activity
-112-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:104:9-114:20
+112-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:104:9-114:20
 113            android:name="com.fishappadmin.MainActivity"
-113-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:105:13-57
+113-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:105:13-57
 114            android:screenOrientation="portrait"
-114-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:106:13-49
+114-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:106:13-49
 115            android:theme="@style/AppTheme.NoActionBar"
-115-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:107:13-56
+115-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:107:13-56
 116            android:windowSoftInputMode="stateAlwaysHidden" >
-116-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:108:13-60
+116-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:108:13-60
 117            <intent-filter>
-117-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:109:13-113:29
+117-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:109:13-113:29
 118                <action android:name="android.intent.action.MAIN" />
-118-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:110:17-69
-118-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:110:25-66
+118-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:110:17-69
+118-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:110:25-66
 119
 120                <category android:name="android.intent.category.LAUNCHER" />
-120-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:112:17-77
-120-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:112:27-74
+120-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:112:17-77
+120-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:112:27-74
 121            </intent-filter>
 122        </activity>
 123        <activity
-123-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:115:9-118:72
+123-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:115:9-118:72
 124            android:name="com.yalantis.ucrop.UCropActivity"
-124-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:116:13-60
+124-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:116:13-60
 125            android:screenOrientation="portrait"
-125-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:117:13-49
+125-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:117:13-49
 126            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-126-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:118:13-69
+126-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:118:13-69
 127
 128        <service
-128-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:120:9-127:19
+128-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:120:9-127:19
 129            android:name="com.fishappadmin.FcmMessagingService"
-129-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:120:18-69
+129-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:120:18-69
 130            android:enabled="true"
-130-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:121:13-35
+130-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:121:13-35
 131            android:exported="true" >
-131-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:122:13-36
+131-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:122:13-36
 132            <intent-filter>
-132-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:124:13-126:29
+132-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:124:13-126:29
 133                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-133-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:125:17-78
-133-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:125:25-75
+133-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:125:17-78
+133-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:125:25-75
 134            </intent-filter>
 135        </service>
 136
 137        <provider
-137-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:12:9-20:20
+137-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:12:9-20:20
 138            android:name="androidx.core.content.FileProvider"
-138-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:13:13-62
+138-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:13:13-62
 139            android:authorities="com.fishappadmin.easyphotopicker.fileprovider"
-139-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:14:13-80
+139-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:14:13-80
 140            android:exported="false"
-140-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:15:13-37
+140-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:15:13-37
 141            android:grantUriPermissions="true" >
-141-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:16:13-47
+141-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:16:13-47
 142            <meta-data
-142-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:17:13-19:53
+142-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:17:13-19:53
 143                android:name="android.support.FILE_PROVIDER_PATHS"
-143-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:18:17-67
+143-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:18:17-67
 144                android:resource="@xml/filepaths" />
-144-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\ee38caef645fa060e1b36195b09113f3\jetified-EasyImage-1.3.1\AndroidManifest.xml:19:17-50
+144-->[com.github.jkwiecien:EasyImage:1.3.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/59909125848d06561d25913b693dfb27/jetified-EasyImage-1.3.1/AndroidManifest.xml:19:17-50
 145        </provider>
 146        <!--
 147             FirebaseMessagingService performs security checks at runtime,
 148             no need for explicit permissions despite exported="true"
 149        -->
 150        <service
-150-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\51942206edc1d9f00c9a3629440900a5\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:28:9-34:19
+150-->[com.google.firebase:firebase-messaging:17.3.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/7042305e6172996d219d329181cb7905/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:28:9-34:19
 151            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-151-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\51942206edc1d9f00c9a3629440900a5\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:29:13-82
+151-->[com.google.firebase:firebase-messaging:17.3.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/7042305e6172996d219d329181cb7905/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:29:13-82
 152            android:exported="true" >
-152-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\51942206edc1d9f00c9a3629440900a5\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:30:13-36
+152-->[com.google.firebase:firebase-messaging:17.3.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/7042305e6172996d219d329181cb7905/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:30:13-36
 153            <intent-filter android:priority="-500" >
-153-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:124:13-126:29
+153-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:124:13-126:29
 154                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-154-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:125:17-78
-154-->E:\Android Works\FishApp\FishApp_Admin\app\src\main\AndroidManifest.xml:125:25-75
+154-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:125:17-78
+154-->/Users/apple/Desktop/AndroidWorks/FishApp/FishApp_Admin/app/src/main/AndroidManifest.xml:125:25-75
 155            </intent-filter>
 156        </service>
 157
 158        <activity
-158-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:24:9-31:50
+158-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:24:9-31:50
 159            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-159-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:25:13-85
+159-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:25:13-85
 160            android:excludeFromRecents="true"
-160-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:26:13-46
+160-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:26:13-46
 161            android:exported="true"
-161-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:27:13-36
+161-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:27:13-36
 162            android:launchMode="singleTask"
-162-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:28:13-44
+162-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:28:13-44
 163            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-163-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:29:13-102
+163-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:29:13-102
 164            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-164-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:30:13-72
+164-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:30:13-72
 165
 166        <service
-166-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:33:9-39:19
+166-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:33:9-39:19
 167            android:name="com.google.firebase.components.ComponentDiscoveryService"
-167-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:34:13-84
+167-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:34:13-84
 168            android:exported="false" >
-168-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:35:13-37
+168-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:35:13-37
 169            <meta-data
-169-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:36:13-38:85
+169-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:36:13-38:85
 170                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-170-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:37:17-109
+170-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:37:17-109
 171                android:value="com.google.firebase.components.ComponentRegistrar" />
-171-->[com.google.firebase:firebase-auth:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\a2f0520d274f063bc0e21aa2c1bdc282\jetified-firebase-auth-16.1.0\AndroidManifest.xml:38:17-82
+171-->[com.google.firebase:firebase-auth:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2b503e311460f771f20da05e31449c46/jetified-firebase-auth-16.1.0/AndroidManifest.xml:38:17-82
 172            <meta-data
-172-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:32:13-34:85
+172-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:32:13-34:85
 173                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-173-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:33:17-96
+173-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:33:17-96
 174                android:value="com.google.firebase.components.ComponentRegistrar" />
-174-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:34:17-82
+174-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:34:17-82
 175        </service>
 176
 177        <receiver
-177-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:37:9-44:20
+177-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:37:9-44:20
 178            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-178-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:38:13-78
+178-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:38:13-78
 179            android:exported="true"
-179-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:39:13-36
+179-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:39:13-36
 180            android:permission="com.google.android.c2dm.permission.SEND" >
-180-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:40:13-73
+180-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:40:13-73
 181            <intent-filter>
-181-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:41:13-43:29
+181-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:41:13-43:29
 182                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-182-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:42:17-81
-182-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:42:25-78
+182-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:42:17-81
+182-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:42:25-78
 183            </intent-filter>
 184        </receiver>
 185        <!--
@@ -354,46 +354,46 @@
 187             no need for explicit permissions despite exported="true"
 188        -->
 189        <service
-189-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:50:9-56:19
+189-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:50:9-56:19
 190            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-190-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:51:13-77
+190-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:51:13-77
 191            android:exported="true" >
-191-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:52:13-36
+191-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:52:13-36
 192            <intent-filter android:priority="-500" >
-192-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:53:13-55:29
-192-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:53:28-51
+192-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:53:13-55:29
+192-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:53:28-51
 193                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-193-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:54:17-80
-193-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\e31d251eed7fa41944a2604d5ea01370\jetified-firebase-iid-17.0.4\AndroidManifest.xml:54:25-77
+193-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:54:17-80
+193-->[com.google.firebase:firebase-iid:17.0.4] /Users/apple/.gradle/caches/transforms-2/files-2.1/efd2575f7d7fa01ff93010e0ad9ac232/jetified-firebase-iid-17.0.4/AndroidManifest.xml:54:25-77
 194            </intent-filter>
 195        </service>
 196
 197        <provider
-197-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\0d15c2f0cf919ca7898d62dd9a319a6d\jetified-firebase-common-16.0.3\AndroidManifest.xml:10:9-14:39
+197-->[com.google.firebase:firebase-common:16.0.3] /Users/apple/.gradle/caches/transforms-2/files-2.1/17004c834c276c5c4cc886b61e74b2dd/jetified-firebase-common-16.0.3/AndroidManifest.xml:10:9-14:39
 198            android:name="com.google.firebase.provider.FirebaseInitProvider"
-198-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\0d15c2f0cf919ca7898d62dd9a319a6d\jetified-firebase-common-16.0.3\AndroidManifest.xml:11:13-77
+198-->[com.google.firebase:firebase-common:16.0.3] /Users/apple/.gradle/caches/transforms-2/files-2.1/17004c834c276c5c4cc886b61e74b2dd/jetified-firebase-common-16.0.3/AndroidManifest.xml:11:13-77
 199            android:authorities="com.fishappadmin.firebaseinitprovider"
-199-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\0d15c2f0cf919ca7898d62dd9a319a6d\jetified-firebase-common-16.0.3\AndroidManifest.xml:12:13-72
+199-->[com.google.firebase:firebase-common:16.0.3] /Users/apple/.gradle/caches/transforms-2/files-2.1/17004c834c276c5c4cc886b61e74b2dd/jetified-firebase-common-16.0.3/AndroidManifest.xml:12:13-72
 200            android:exported="false"
-200-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\0d15c2f0cf919ca7898d62dd9a319a6d\jetified-firebase-common-16.0.3\AndroidManifest.xml:13:13-37
+200-->[com.google.firebase:firebase-common:16.0.3] /Users/apple/.gradle/caches/transforms-2/files-2.1/17004c834c276c5c4cc886b61e74b2dd/jetified-firebase-common-16.0.3/AndroidManifest.xml:13:13-37
 201            android:initOrder="100" />
-201-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\0d15c2f0cf919ca7898d62dd9a319a6d\jetified-firebase-common-16.0.3\AndroidManifest.xml:14:13-36
+201-->[com.google.firebase:firebase-common:16.0.3] /Users/apple/.gradle/caches/transforms-2/files-2.1/17004c834c276c5c4cc886b61e74b2dd/jetified-firebase-common-16.0.3/AndroidManifest.xml:14:13-36
 202
 203        <activity
-203-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\99f513413be289d19d579fdd2b18423c\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+203-->[com.google.android.gms:play-services-base:16.0.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/c076426ccef2928be7865d81b696df34/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
 204            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-204-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\99f513413be289d19d579fdd2b18423c\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+204-->[com.google.android.gms:play-services-base:16.0.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/c076426ccef2928be7865d81b696df34/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
 205            android:exported="false"
-205-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\99f513413be289d19d579fdd2b18423c\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+205-->[com.google.android.gms:play-services-base:16.0.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/c076426ccef2928be7865d81b696df34/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
 206            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-206-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\99f513413be289d19d579fdd2b18423c\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+206-->[com.google.android.gms:play-services-base:16.0.1] /Users/apple/.gradle/caches/transforms-2/files-2.1/c076426ccef2928be7865d81b696df34/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
 207
 208        <meta-data
-208-->[com.google.android.gms:play-services-basement:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\f38994daa29150ccb39d248653c5559c\jetified-play-services-basement-16.1.0\AndroidManifest.xml:23:9-25:69
+208-->[com.google.android.gms:play-services-basement:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0e26f010d901d841f50d2454b7d5b848/jetified-play-services-basement-16.1.0/AndroidManifest.xml:23:9-25:69
 209            android:name="com.google.android.gms.version"
-209-->[com.google.android.gms:play-services-basement:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\f38994daa29150ccb39d248653c5559c\jetified-play-services-basement-16.1.0\AndroidManifest.xml:24:13-58
+209-->[com.google.android.gms:play-services-basement:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0e26f010d901d841f50d2454b7d5b848/jetified-play-services-basement-16.1.0/AndroidManifest.xml:24:13-58
 210            android:value="@integer/google_play_services_version" />
-210-->[com.google.android.gms:play-services-basement:16.1.0] C:\Users\Salman\.gradle\caches\transforms-2\files-2.1\f38994daa29150ccb39d248653c5559c\jetified-play-services-basement-16.1.0\AndroidManifest.xml:25:13-66
+210-->[com.google.android.gms:play-services-basement:16.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0e26f010d901d841f50d2454b7d5b848/jetified-play-services-basement-16.1.0/AndroidManifest.xml:25:13-66
 211    </application>
 212
 213</manifest>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00adef"
+    >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#00adef">
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Fish App"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_toLeftOf="@+id/option"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffffff" />
+
+
+        <ImageView
+            android:id="@+id/option"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/option" />
+
+
+
+        <ImageView
+            android:id="@+id/anchorview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?android:attr/textSelectHandle"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/option"
+            />
+
+        <ImageView
+            android:id="@+id/changeloc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:visibility="invisible"
+            android:src="@drawable/changeloc"
+            android:layout_centerVertical="true"
+          />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footerlyt"
+        android:background="#fff"
+        >
+
+        <ImageView
+            android:id="@+id/fishlyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background1"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            />
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/homelogo"
+               android:padding="20dp"
+               android:layout_centerInParent="true"
+               />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+            android:id="@+id/footerlyt"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00adef"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+            <RelativeLayout
+                android:id="@+id/myorder"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                >
+
+                <ImageView
+                    android:id="@+id/orderpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/myorder"
+                    android:padding="25dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtmyorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orderpic"
+                    android:text="My Order"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17.0dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cart"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:layout_toRightOf="@+id/myorder"
+                >
+
+
+                <ImageView
+                    android:id="@+id/cartpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/carticon"
+                    android:padding="25dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtcart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cartpic"
+                    android:text="Cart"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17.0dip" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/clients"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:layout_toRightOf="@+id/cart"
+               >
+
+                <ImageView
+                    android:id="@+id/clientspic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cleints"
+                    android:padding="25dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtclients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clientspic"
+                    android:text="Cleints"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="17.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

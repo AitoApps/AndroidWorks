@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditText android:id="@id/mobilenumber" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="10.0dip" android:hint="Enter mobile number" android:layout_centerInParent="true" />
+    <Button android:textSize="15.0dip" android:textColor="#ff000000" android:gravity="center" android:id="@id/get" android:background="@drawable/button" android:layout_width="150.0dip" android:layout_height="50.0dip" android:layout_marginTop="14.0dip" android:layout_marginRight="10.0dip" android:text="GET" android:layout_below="@id/mobilenumber" android:layout_alignParentRight="true" />
+</RelativeLayout>

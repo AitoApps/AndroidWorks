@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/regionmanager"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Region Manager"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/walletreport"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="25dp"
+                android:layout_toRightOf="@+id/regionmanager"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Wallet Report"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/onlinepayment"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/walletreport"
+                android:layout_margin="25dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Payment"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/walletupdate"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/walletreport"
+                android:layout_margin="25dp"
+                android:layout_toRightOf="@+id/onlinepayment"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Wallet Update"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/chats"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/onlinepayment"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Chats"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/wallets"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/onlinepayment"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/chats"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Wallets"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/orders"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/chats"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Orders"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/traferdorder"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/chats"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/orders"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Transfered Order"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/product"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/orders"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Products"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/requets"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/orders"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/product"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Requets"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/supplier"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/product"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Suppliers"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/customers"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/product"
+                android:layout_margin="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/supplier"
+                android:background="@drawable/button"
+                android:padding="5dp"
+                android:text="Customers"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

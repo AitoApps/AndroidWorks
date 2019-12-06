@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/lltop" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_app_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <TextView android:textSize="18sp" android:textColor="@color/cb_heading_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="@string/upi_chooser_title"/>
+            <android.support.v7.widget.RecyclerView android:scrollbarSize="10dp" android:scrollbarThumbVertical="@android:color/darker_gray" android:layout_gravity="center" android:id="@+id/rvApps" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="150dp" android:layout_marginLeft="@dimen/eight" android:layout_marginTop="@dimen/twelve" android:fadeScrollbars="false"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_separator" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <View android:layout_gravity="center" android:background="@color/cb_divider_color" android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColor="@color/cb_or_color" android:gravity="center" android:paddingLeft="6dp" android:paddingRight="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Or"/>
+            <View android:layout_gravity="center" android:background="@color/cb_divider_color" android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_vpa" android:paddingLeft="35dp" android:paddingRight="35dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <TextView android:textSize="16sp" android:textColor="@color/cb_heading_color" android:id="@+id/tvHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/vpa_title"/>
+            <RelativeLayout android:id="@+id/rlInputVpa" android:background="@drawable/cb_rectangle_round" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="@color/cb_verify_color" android:id="@+id/tvVerifyVpa" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cb_verify" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                <EditText android:textColor="@color/cb_border_color" android:textColorHint="@color/cb_textColor" android:id="@+id/edit_vpa" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hint_vpa" android:maxLines="1" android:layout_toLeftOf="@+id/tvVerifyVpa" android:inputType="text"/>
+                <com.payu.custombrowser.custombar.CircularProgressView android:id="@+id/progressBar" android:paddingRight="4dp" android:layout_width="24dp" android:layout_height="24dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" app:cpv_thickness="2dp"/>
+                <ImageView android:id="@+id/ivVpaSuccess" android:visibility="gone" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/cb_ic_vpa_verified" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <TextView android:textSize="14sp" android:id="@+id/tvVpaName" android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llPayment" android:background="@drawable/cb_background_round_drawable" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="35dp" android:layout_marginTop="8dp" android:layout_marginRight="35dp" android:layout_marginBottom="8dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="#ddd" android:gravity="center" android:id="@+id/tv_vpa_submit" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/proceed_to_pay" android:textAllCaps="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

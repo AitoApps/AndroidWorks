@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="180.0dip"
+    android:layout_margin="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/itemname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Nalla Mean"
+            android:textColor="#ff000000"
+            android:textSize="18.0dip" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200.0dip"
+            android:layout_height="150.0dip"
+            android:layout_below="@+id/itemname"
+            android:background="@drawable/fishpic"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/pricelyt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/itemname"
+            android:layout_toRightOf="@+id/image">
+
+            <TextView
+                android:id="@+id/outofstock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5.0dip"
+                android:text="Out Of Stock"
+                android:textColor="#ffe34d54"
+                android:textSize="18.0dip"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_margin="5.0dip"
+                android:padding="5.0dip"
+                android:src="@drawable/minus" />
+
+            <RelativeLayout
+                android:id="@+id/qtylyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13.0dip"
+                android:layout_toLeftOf="@+id/plus"
+                android:layout_toRightOf="@+id/minus"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100.75"
+                    android:textColor="#ff000000"
+                    android:textSize="18.0dip" />
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/qty"
+                    android:text=" Kg"
+                    android:textColor="#ff000000"
+                    android:textSize="18.0dip" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5.0dip"
+                android:padding="5.0dip"
+                android:src="@drawable/plus" />
+
+
+             <View
+                 android:id="@+id/view1"
+                 android:layout_width="180dp"
+                 android:layout_height="1dp"
+                 android:layout_below="@+id/qtylyt"
+                 android:layout_marginTop="10dp"
+                 android:background="#ccc"
+                 android:layout_marginLeft="5dp"
+                 />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/minus"
+                android:layout_centerInParent="true"
+                android:text="$100000"
+                android:textColor="@color/blue"
+                android:textSize="20.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/add"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/buyborder"
+                android:layout_marginTop="20dp"
+                 android:layout_centerHorizontal="true"
+                android:layout_below="@+id/price"
+                >
+                <ImageView
+                    android:id="@+id/carticon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/carticonwhite"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:id="@+id/buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/carticon"
+                    android:text="Buy"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="14.0dip" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

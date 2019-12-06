@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="cb_dialog">
+    </style>
+    <style name="cb_snooze_dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

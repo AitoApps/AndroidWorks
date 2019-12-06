@@ -28,7 +28,7 @@ public class Temp {
     public static String townsn="";
     public static String unit="";
     public static String unitprice="";
-    public static String weblink = "http://apistatuschinthakal.in/billmaza/";
+    public static String weblink = "https://apistatuschinthakal.in/dailybill/";
     public static int isshopedit=0;
     public static String edit_catid = "",edit_catogeryname="",edit_ddisc="",edit_delichrge="",edit_delidisc="",edit_delinkm="",edit_dltype="",edit_dscription="",edit_dtype="0",editshop_homedelivery="0";
     public static String edit_imgsig="",edit_imgsig1="",edit_imgsig2="",edit_imgsig3="",edit_itemkeywords="",edit_itemname="",edit_latitude="",edit_longitude="",edit_minimum="",edit_shopcatogery="",edit_minorderamt="",edit_mkt_id="",edit_mkt_mobile="",edit_mkt_name="",edit_mobile1="",edit_mobile2="",edit_offerprice="",edit_orginalprice="",edit_ownername="",edit_place = "",edit_productid = "0",edit_shopdays = "",edit_shopid = "",edit_shopname = "",edit_unit = "",edit_website="",edit_youtube = "";

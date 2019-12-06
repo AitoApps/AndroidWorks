@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#ccc"
     android:fitsSystemWindows="true">
 
     <RelativeLayout
@@ -37,7 +38,6 @@
         android:id="@+id/content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/sendnoti"
         android:layout_below="@+id/header">
 
         <RelativeLayout
@@ -48,27 +48,37 @@
                 android:id="@+id/uploadlyt"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#ffffffff"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
                 android:padding="10.0dip">
 
                 <Button
                     android:id="@+id/instagramtofacebook"
-                    android:layout_width="fill_parent"
+                    android:layout_width="150dp"
                     android:layout_height="50.0dip"
                     android:layout_margin="10.0dip"
-                    android:text="Insta To facebook"
+                    android:text="FootBall"
                     android:textColor="#ff000000"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/uplaodtochintha"
-                    android:layout_width="fill_parent"
+                    android:layout_width="150dp"
                     android:layout_height="50.0dip"
-                    android:layout_below="@+id/instagramtofacebook"
+                    android:layout_toRightOf="@+id/instagramtofacebook"
                     android:layout_margin="10.0dip"
                     android:text="Upload To App"
                     android:textColor="#ff000000"
                     android:textStyle="bold" />
+
+                  <ImageView
+                      android:id="@+id/notifootball"
+                      android:layout_width="50dp"
+                      android:layout_height="50dp"
+                      android:src="@drawable/notification"
+                      android:padding="10dp"
+                      android:layout_alignParentRight="true"
+                      />
 
 
 
@@ -76,17 +86,240 @@
 
 
 
+            <RelativeLayout
+                android:id="@+id/actresslyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/uploadlyt"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/actress"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Actress"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uploadactress"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_toRightOf="@+id/actress"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/actressnoti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/vijaylyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/actresslyt"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/vijay"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Vijay"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uploadvijay"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_toRightOf="@+id/vijay"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/vijaynoti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/narendramodilyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/vijaylyt"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/narendramodi"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Narendra Modi"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uploadnarendramodi"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_toRightOf="@+id/narendramodi"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/narendramodinoti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/amithyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/narendramodilyt"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/amith"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Amith"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uploadamith"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_toRightOf="@+id/amith"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/amothnoti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+
+                      <RelativeLayout
+                android:id="@+id/alluarjunyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/amithyt"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/alluarjun"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Allu Arjun"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uploadalluarjun"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_toRightOf="@+id/alluarjun"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/alluarjunnoti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dulqaryt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcornerbackground"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/alluarjunyt"
+                android:padding="10.0dip">
+
+                <Button
+                    android:id="@+id/dulqar"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="10.0dip"
+                    android:text="Dulqar"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/uploaddulqar"
+                    android:layout_width="150dp"
+                    android:layout_height="50.0dip"
+                    android:layout_toRightOf="@+id/dulqar"
+                    android:layout_margin="10.0dip"
+                    android:text="Upload To App"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/dulqarnoti"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/notification"
+                    android:padding="10dp"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+
         </RelativeLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/sendnoti"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="5dp"
-        android:text="Send Noti"
-        android:textColor="#ff000000"
-        android:textStyle="bold"
-        />
 </RelativeLayout>

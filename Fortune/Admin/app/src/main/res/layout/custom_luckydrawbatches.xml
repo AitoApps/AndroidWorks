@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/batchname"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="BatchName"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+
+        <TextView
+            android:id="@+id/customercount"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Count"
+            android:textStyle="bold"
+            android:layout_below="@+id/batchname"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+
+        <Button
+            android:id="@+id/prizes"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Prizes"
+            android:textColor="#fff"
+            android:layout_below="@+id/customercount"
+            android:background="@drawable/roundedcornerbutton"
+            android:layout_margin="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/prizes"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_below="@+id/prizes"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@+id/delete"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+</RelativeLayout>

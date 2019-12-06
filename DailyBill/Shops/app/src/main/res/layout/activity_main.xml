@@ -54,7 +54,7 @@
                     android:layout_width="150.0dip"
                     android:layout_height="150.0dip"
                     android:layout_margin="5.0dip"
-                    android:src="@drawable/townmanagement" />
+                    android:src="@drawable/productmanagment" />
 
 
                 <ImageView
@@ -63,7 +63,7 @@
                     android:layout_height="150.0dip"
                     android:layout_margin="5.0dip"
                     android:layout_toRightOf="@+id/productmanagment"
-                    android:src="@drawable/townmanagement" />
+                    android:src="@drawable/deliveryboy" />
 
                 <ImageView
                     android:id="@+id/newbill"
@@ -71,7 +71,7 @@
                     android:layout_height="150.0dip"
                     android:layout_margin="5.0dip"
                     android:layout_below="@+id/productmanagment"
-                    android:src="@drawable/townmanagement" />
+                    android:src="@drawable/newbill" />
 
                 <ImageView
                     android:id="@+id/processedbill"
@@ -80,7 +80,7 @@
                     android:layout_margin="5.0dip"
                     android:layout_below="@+id/delvieryboy"
                     android:layout_toRightOf="@+id/newbill"
-                    android:src="@drawable/townmanagement" />
+                    android:src="@drawable/proceecedbill" />
 
                 <ImageView
                     android:id="@+id/shopdetails"
@@ -88,7 +88,7 @@
                     android:layout_height="150.0dip"
                     android:layout_margin="5.0dip"
                     android:layout_below="@+id/newbill"
-                    android:src="@drawable/townmanagement" />
+                    android:src="@drawable/shopdetails" />
 
                 <ImageView
                 android:id="@+id/accounts"
@@ -96,17 +96,17 @@
                 android:layout_height="150.0dip"
                 android:layout_margin="5.0dip"
                 android:layout_below="@+id/processedbill"
-                android:src="@drawable/townmanagement"
+                android:src="@drawable/accounts"
                 android:layout_toRightOf="@+id/shopdetails"
                 />
 
                 <ImageView
-                    android:id="@+id/amountpendingcustomer"
+                    android:id="@+id/cashpendingcustomer"
                     android:layout_width="150.0dip"
                     android:layout_height="150.0dip"
                     android:layout_margin="5.0dip"
                     android:layout_below="@+id/shopdetails"
-                    android:src="@drawable/townmanagement"
+                    android:src="@drawable/cashpendingcustomer"
                     />
 
                 <ImageView
@@ -115,9 +115,19 @@
                     android:layout_height="150.0dip"
                     android:layout_margin="5.0dip"
                     android:layout_below="@+id/accounts"
-                    android:layout_toRightOf="@+id/amountpendingcustomer"
-                    android:src="@drawable/townmanagement"
+                    android:layout_toRightOf="@+id/cashpendingcustomer"
+                    android:src="@drawable/contactus"
                     />
+
+                <ImageView
+                    android:id="@+id/bestoffer"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_below="@+id/cashpendingcustomer"
+                    android:src="@drawable/cashpendingcustomer"
+                    />
+
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

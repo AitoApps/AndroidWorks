@@ -1,0 +1,301 @@
+{
+  "project_info": {
+    "project_number": "757400461333",
+    "firebase_url": "https://zemose-35792.firebaseio.com",
+    "project_id": "zemose-35792",
+    "storage_bucket": "zemose-35792.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:0eafb10d44376bfe",
+        "android_client_info": {
+          "package_name": "com.football.chatting_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:d905276303f0a7af",
+        "android_client_info": {
+          "package_name": "com.zemose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:7d89526cfefdb1b9",
+        "android_client_info": {
+          "package_name": "com.zemose.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:9f1e0b0e370ed520abae1c",
+        "android_client_info": {
+          "package_name": "com.zemose.regionadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:93cbc892efb36f35",
+        "android_client_info": {
+          "package_name": "com.zemose.siteadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:a310d62e9eeda8e3",
+        "android_client_info": {
+          "package_name": "com.zemose.sitesuperwisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:69866d699dfff2fd",
+        "android_client_info": {
+          "package_name": "com.zemose.store_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:67ed789084e62e71",
+        "android_client_info": {
+          "package_name": "com.zemose.storemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:3b5141e122477165",
+        "android_client_info": {
+          "package_name": "com.zemose.storemanager_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757400461333:android:93e7851d8647df82",
+        "android_client_info": {
+          "package_name": "com.zemose.supplier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRHKS8H0ejIFL4CZEnRsWy8dJJZ_9zcjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757400461333-g9g29jel2m1cbb4q0ope5m0nbu0sv50o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools=" http://schemas.android.com/tools" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/layout" android:background="@drawable/roundedlayout" android:layout_width="match_parent" android:layout_height="70dp" android:layout_margin="5dp">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/image" android:background="@drawable/noimage" android:layout_width="60dp" android:layout_height="60dp" android:layout_centerVertical="true" app:civ_border_color="#ff000000" app:civ_border_width="1dp"/>
+    <TextView android:textSize="16dp" android:textColor="#000" android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="Name" android:layout_toLeftOf="@+id/lycount" android:layout_toRightOf="@+id/image"/>
+    <TextView android:textSize="14dp" android:textColor="#000" android:id="@+id/amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="Wallet Amount" android:layout_toLeftOf="@+id/lytcall" android:layout_toRightOf="@+id/image" android:layout_below="@+id/name"/>
+    <RelativeLayout android:id="@+id/lytcall" android:layout_width="30dp" android:layout_height="30dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/call" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/call"/>
+    </RelativeLayout>
+</RelativeLayout>

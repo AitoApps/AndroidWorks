@@ -330,7 +330,7 @@ public class Add_New_Product extends AppCompatActivity {
         } else {
             bodyBuilder.addFormDataPart("image1","filled");
             File sourceFile = new File(photopath1);
-            bodyBuilder.addFormDataPart("photo1", sourceFile.getName(), RequestBody.create(MediaType.parse("image/png"), sourceFile));
+            bodyBuilder.addFormDataPart("photo1", sourceFile.getName(), RequestBody.create(MediaType.parse("image/jpg"), sourceFile));
         }
 
         bodyBuilder.addFormDataPart("isedit", null,RequestBody.create(contentType, Temp.isproductedit+""));

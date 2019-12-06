@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground"
+        android:padding="5.0dip">
+
+        <TextView
+            android:id="@+id/weekid"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/amount"
+            android:text="Week Id"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/amount"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-- 100 "
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+         <View
+             android:id="@+id/view"
+             android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:layout_below="@+id/weekid"
+             android:layout_marginTop="2dp"
+             android:layout_marginBottom="2dp"
+             android:background="#ccc"
+             />
+
+        <TextView
+            android:id="@+id/paidinform"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_toLeftOf="@+id/paidorunpaid"
+            android:text="Google Play -- 12-05-2019"
+            android:textSize="14dp"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/paidorunpaid"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:text="Paid"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/remarks"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paidinform"
+            android:layout_toLeftOf="@+id/paidorunpaid"
+            android:text="Remarks"
+            android:textSize="12dp"
+            android:layout_margin="5dp"
+            android:textColor="#ff000000" />
+
+    </RelativeLayout>
+</RelativeLayout>

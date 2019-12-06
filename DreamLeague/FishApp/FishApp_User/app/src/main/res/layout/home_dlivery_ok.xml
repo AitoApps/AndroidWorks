@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10.0dip"
+    android:layout_marginTop="30.0dip"
+    android:layout_marginRight="10.0dip"
+    android:layout_marginBottom="30.0dip"
+    android:background="@drawable/roundedcornerbackground">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/txtmsg"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:gravity="center"
+            android:text="Thankyou !"
+            android:textColor="#ff000000" />
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="100.0dip"
+            android:layout_height="40.0dip"
+            android:layout_below="@+id/txtmsg"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/roundedcornerbutton"
+            android:text="OK"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</ScrollView>

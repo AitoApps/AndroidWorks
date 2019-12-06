@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.takwolf.android:hf-recyclerview:0.4.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d57dda8710c4026b48e82be11409af8/hf-recyclerview-0.4.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d57dda8710c4026b48e82be11409af8/hf-recyclerview-0.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d57dda8710c4026b48e82be11409af8/hf-recyclerview-0.4.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.takwolf.android/hf-recyclerview/0.4.0/8ad5d5a3b5bac96e31d85ba709726923cfb392db/hf-recyclerview-0.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.takwolf.android/hf-recyclerview/0.4.0/7023219e19ea0b4cd9b2c43e2f8d087345ab33e0/hf-recyclerview-0.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

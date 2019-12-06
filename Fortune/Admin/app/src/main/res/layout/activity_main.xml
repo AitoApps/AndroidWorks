@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/title_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/text"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:paddingTop="5.0dip"
+            android:text="Fortune Admin"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/pending"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:src="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/luckydrawbatches"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/pending"
+                    android:src="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/luckydrawwinner"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_below="@+id/pending"
+                    android:src="@drawable/logo" />
+
+
+                <ImageView
+                    android:id="@+id/customer"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_below="@+id/pending"
+                    android:layout_toRightOf="@+id/luckydrawwinner"
+                    android:src="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/agents"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_below="@+id/luckydrawwinner"
+                    android:src="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/accounts"
+                    android:layout_width="150.0dip"
+                    android:layout_height="150.0dip"
+                    android:layout_margin="5.0dip"
+                    android:layout_toRightOf="@+id/agents"
+                    android:layout_below="@+id/customer"
+                    android:src="@drawable/logo" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

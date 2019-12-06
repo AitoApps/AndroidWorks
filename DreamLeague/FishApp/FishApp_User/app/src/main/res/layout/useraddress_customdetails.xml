@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:background="@drawable/roundedcornerbackground">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_margin="5.0dip" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/edit"
+            android:layout_toRightOf="@+id/radio1"
+            android:text="Sayyid Salman"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/radio1"
+            android:text="Hassanganakath House Ponnai kErqalalasskalh jhgdjs hgd" />
+
+        <TextView
+            android:id="@+id/place"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="3.0dip"
+            android:layout_toRightOf="@+id/radio1"
+            android:text="Ponnani"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pincode"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="3.0dip"
+            android:layout_toRightOf="@+id/place"
+            android:text=", 679577"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mobile1"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="3.0dip"
+            android:layout_toRightOf="@+id/radio1"
+            android:text="+91 9037631786 , 91037631786"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_margin="5.0dip"
+            android:layout_toLeftOf="@+id/delete"
+            android:src="@drawable/editicon" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/delete" />
+    </RelativeLayout>
+</RelativeLayout>

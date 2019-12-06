@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/chatdb" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/header" android:background="@drawable/titlebargradiant" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/back" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Chat History" android:layout_toRightOf="@id/back" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer" android:layout_below="@id/header">
+        <android.support.v7.widget.RecyclerView android:id="@id/recylerview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" />
+        <ImageView android:id="@id/nodata" android:visibility="gone" android:layout_width="150.0dip" android:layout_height="150.0dip" android:src="@drawable/nochats" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/loading" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_alignParentBottom="true">
+        <EditText android:id="@id/chatbox" android:background="@drawable/the_border1" android:padding="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:minHeight="50.0dip" android:maxLines="4" android:minLines="1" android:layout_weight="1.0" android:layout_toLeftOf="@id/send" android:layout_centerVertical="true" android:inputType="textMultiLine" android:fadeScrollbars="false" />
+        <ImageView android:id="@id/send" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/addnewstatus" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

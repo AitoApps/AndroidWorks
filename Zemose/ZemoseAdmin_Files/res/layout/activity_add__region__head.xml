@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/header" android:background="@drawable/titlebargradiant" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <ImageView android:id="@id/back" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0dip" android:src="@drawable/back" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textColor="#ffffffff" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Add Region Head" android:layout_toRightOf="@id/back" android:layout_centerVertical="true" style="@android:style/TextAppearance.Medium" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/header">
+        <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/txtheadname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Head Name" />
+        <EditText android:id="@id/headname" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" android:layout_below="@id/txtheadname" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/txtusername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="User Name" android:layout_below="@id/headname" />
+        <EditText android:id="@id/username" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" android:layout_below="@id/txtusername" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/txtpassword" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Password" android:layout_below="@id/username" />
+        <EditText android:id="@id/password" android:background="@drawable/the_border1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="5.0dip" android:layout_below="@id/txtpassword" />
+        <Button android:textColor="#ffffffff" android:id="@id/update" android:background="@drawable/button1" android:layout_width="150.0dip" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:text="Update" android:layout_below="@id/password" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="410d8e3a-4baf-46cc-9602-5f578c353646" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../AppsBag/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppsBag/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppsBag/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppsBag/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chintha/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chintha/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chintha/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chintha/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/assets/heading.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/assets/proxibold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/assets/proximanormal.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/Agents_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/CustomerBatches_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/Customer_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/LuckyDrawBatches_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/LuckyDrawPrizes_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/PaymentHistory_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/Pendingpayment_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/Weeklist_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/WinnerBatches_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/adapter/Winners_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Accounts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Add_Agents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Add_LuckyDrawPrize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Add_Lucky_Draw_Types.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Agents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Batchlist_ForWinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Choose_Winner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/ConnectionDetecter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/CustomerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Customer_Batches.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/FcmMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/LuckyDrawPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/LuckyDrawWinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Lucky_Draw_Types.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/NotificationID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Pending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/SetWinnerPrize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Temp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/UserDatabaseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/com/fortune_admin/Weeklist_ForWinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/AgentList_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/Customers_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/LuckyDrawBatches_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/LuckyDrawPrizes_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/PaymentHistory_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/Weeklist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/java/data/Winnerslist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/addnew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/clearroundedlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/closeicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/nointernet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/nophoto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/noproducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/roundedcornerbackground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/roundedcornerbutton.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/roundedcornerspecial.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/smallogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/the_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/drawable/title_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_accounts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_add__agents.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_add__lucky__draw__types.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_add__lucky_draw_prize.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_agents.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_batchlist__for_winner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_batchlist_forcustomer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_choose__winner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_customer__batches.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_customer_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_customers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_lucky__draw__types.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_lucky_draw_prize.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_lucky_draw_winner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_pending.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_set_winner_prize.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/activity_weeklist__for_winner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_agents.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_customerbatches.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_customers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_luckydrawbatches.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_luckydrawprizes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_payment_history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_weeks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/custom_winners.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/customnotification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/dialogupload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/Admin/app/src/main/res/layout/footerview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/ConnectionDetecter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/FcmMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/NotificationID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/Temp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/java/com/fortune_user/UserDatabaseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/addnew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/bottomnavselectcolor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/clearroundedlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/closeicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/nophoto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/noproducts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/roundedcornerbackground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/roundedcornerbutton.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/roundedcornerspecial.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/smallogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/the_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/drawable/title_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/layout/customnotification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/menu/navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Fortune/User/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/assets/font/proxibold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/assets/font/proximanormal.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/ChatHeads_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/ChatHistory_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Cna_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Customer_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/PaymentApprove_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Product_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/RegionsHeadList_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/RegionsList_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Request_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Sna_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Supplier_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Supplier_List_ForPayment_Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Transfered_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Wallet_History_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/adapter/Wallet_Report_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Add_Region.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Add_Region_Head.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/ChatDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Chat_History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Chatting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/ConnectionDetecter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Customers_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Do_Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/FcmMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/NotificationID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Order_Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Payment_Approve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Product_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Product_Search_For_Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Region_Management.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Regional_Heads.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Requests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Search_Suppliers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Supplier_Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Suppliers_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Temp_Variable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Transfered_Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/UserDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Wallet_History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Wallet_Update.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/Wallets_Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/cna_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/com/zemose/admin/sna_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/ChatHeads_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/ChatHistory_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Customerlist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/PaymentApprove_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Productlist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/RegionsHeads_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Regions_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/RequestPro_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Sna_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Supplierlist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Wallet_History_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/java/data/Wallet_Report_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/addnewstatus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/approve_otp_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/background_drawable.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/bg_rounded_grey_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/bg_rounded_search_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/bg_rounded_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/button1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/chatdb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/closeicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/confirm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/edit_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/edit_bg_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/gree_roundedlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/ic_lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/line_divider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/medal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/navigation_empty_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/nochats.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/noorders.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/notification_icon_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/notification_tile_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/nouser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/novendor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/roundedlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/roundedlayout_admin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/shadow_top.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/the_border1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/titlebargradiant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/drawable/trusticon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_add__region.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_add__region__head.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_chat__history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_chatting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_customers__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_do__payment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_order__report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_payment__approve.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_product__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_product__search__for__add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_region__management.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_regional__heads.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_registration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_requests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_review_order.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_search__suppliers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_supplier__product.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_suppliers__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_transfered__report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_wallet__history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_wallet__update.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/activity_wallets__report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/add_new_card_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/amount_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/cna_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/custom_chat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/custom_chathistory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/custom_paymentapprove.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/custom_regions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/custom_regionsheads.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/customechat_noti.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/customenotification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/customer_list_customelayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/footer_checkout_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/footerview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/fullloaded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/product_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/register_pin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/reqproduct_update.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/request_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/sna_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/sna_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/supplier_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/supplier_details_product.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/supplier_list_customelayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/supplier_list_payment_customelayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/support_simple_spinner_dropdown_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/wallet_amount.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/wallet_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/wallethistory_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/layout/walletreport_custom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/raw/msgrecived.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/ZemoAdmin/app/src/main/res/raw/msgsend.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/assets/font/proxibold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/assets/font/proximanormal.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/ChatHeads_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/ChatHistory_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Cna_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Customer_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/PaymentApprove_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Product_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Sna_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Supplier_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Supplier_List_ForPayment_Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Transfered_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Wallet_History_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/adapter/Wallet_Report_ListAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/ChatDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Chat_History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Chatting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/ConnectionDetecter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Customers_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Do_Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/FcmMessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/NotificationID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Order_Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Payment_Approve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Product_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Product_Search_For_Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Search_Suppliers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Supplier_Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Suppliers_List.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Temp_Variable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Transfered_Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/UserDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/User_registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Wallet_History.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Wallet_Update.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/Wallets_Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/cna_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/com/zemose/regionadmin/sna_fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/ChatHeads_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/ChatHistory_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/Customerlist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/PaymentApprove_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/Productlist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/Sna_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/Supplierlist_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/Wallet_History_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/java/data/Wallet_Report_FeedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/addnewstatus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/approve_otp_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/avd_hide_password.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/avd_show_password.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/background_drawable.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/bg_rounded_grey_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/bg_rounded_search_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/bg_rounded_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/button1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/chatdb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/closeicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/confirm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/edit_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/edit_bg_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/gree_roundedlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/line_divider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/medal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/nochats.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/noimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/noorders.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/notification_tile_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/nouser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/novendor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/roundedlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/roundedlayout_admin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/shape_progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/the_border1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/titlebargradiant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/drawable/trusticon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_chat__history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_chatting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_citrus_ui.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_customers__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_do__payment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_order__report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_payment__approve.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_product__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_product__search__for__add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_review_order.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_search__suppliers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_supplier__product.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_suppliers__list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_transfered__report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_user_registration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_wallet__history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_wallet__update.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/activity_wallets__report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/add_new_card_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/amount_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/cna_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/custom_chat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/custom_chathistory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/custom_paymentapprove.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/custom_regions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/custom_regionsheads.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/customechat_noti.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/customenotification.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/customer_list_customelayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/footer_checkout_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/footerview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/fullloaded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/product_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/sna_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/sna_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/supplier_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/supplier_details_product.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/supplier_list_customelayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/supplier_list_payment_customelayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/transferedorder_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/wallet_amount.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/wallet_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/wallethistory_customlayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/layout/walletreport_custom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/raw/msgrecived.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zemose/Zemo_RegionHead/app/src/main/res/raw/msgsend.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chintha/ChinthaAdmin/app/src/main/java/com/chintha_admin/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chintha/ChinthaAdmin/app/src/main/java/com/chintha_admin/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Admin/app/src/main/java/com/dailybill_admin/Add_New_Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Admin/app/src/main/java/com/dailybill_admin/Add_New_Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Admin/app/src/main/java/com/dailybill_admin/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Admin/app/src/main/java/com/dailybill_admin/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Admin/app/src/main/java/com/dailybill_admin/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Admin/app/src/main/java/com/dailybill_admin/Temp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/java/adapter/Productlist_Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/java/adapter/Productlist_Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/java/com/dialybill_shops/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/java/com/dialybill_shops/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/java/com/dialybill_shops/Temp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/java/com/dialybill_shops/Temp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DailyBill/Shops/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Downly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Downly/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_airbnb_android_lottie_2_7_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_airbnb_android_lottie_2_7_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_GrenderG_Toasty_1_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_GrenderG_Toasty_1_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_jkwiecien_EasyImage_1_3_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_jkwiecien_EasyImage_1_3_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_matecode_Snacky_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_matecode_Snacky_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_yalantis_ucrop_2_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_github_yalantis_ucrop_2_2_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_auth_16_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_auth_16_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_0_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_0_4_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_17_3_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_17_3_4_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/FishApp_Admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/FishApp_Admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FishApp/FishApp_Admin/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../FishApp/FishApp_Admin/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sanji/Sanji_Shops/app/src/main/java/com/sanji_shops/Shop_Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sanji/Sanji_Shops/app/src/main/java/com/sanji_shops/Shop_Details.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/BusTrain_Adapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-687" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/DistricHome_Adapter.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/FeaturedAds_Adapter.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/CinimaList_Adapter.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/ShopsList_Adapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-814">
+              <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/User/app/src/main/java/com/hellokhd/Shops.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="450" lean-forward="true" selection-start-line="444" selection-start-column="4" selection-end-line="467" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/HelloKHD.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="playstore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloKHD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloKHD" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hellokhd" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="410d8e3a-4baf-46cc-9602-5f578c353646" name="Default Changelist" comment="" />
+      <created>1575644433096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575644433096</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32980973" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/BusTrain_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-687" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/DistricHome_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/FeaturedAds_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/CinimaList_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/app/src/main/java/adapter/ShopsList_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-814">
+          <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User/app/src/main/java/com/hellokhd/Shops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="450" lean-forward="true" selection-start-line="444" selection-start-column="4" selection-end-line="467" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
